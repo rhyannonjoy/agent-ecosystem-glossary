@@ -1,4 +1,14 @@
 baseURL = 'https://rhyannonjoy.github.io/agent-ecosystem-glossary/'
-locale = 'en-us'
+languageCode = 'en-us'
 title = "Agent Ecosystem Glossary"
-theme = "ananke"
+
+[module]
+  [[module.imports]]
+    path = "github.com/alex-shpak/hugo-book"
+
+[params]
+  BookRepo = 'https://github.com/rhyannonjoy/agent-ecosystem-glossary'
+  BookEditPath = 'edit/main'
+  BookSearch = true
+  BookToC = true  # This enables the right sidebar TOC
+  BookSection = '*'
