@@ -30,10 +30,7 @@ jobs:
       - run: hugo --minify
       
       - name: Remove symlinks
-        run: |
-          cd public
-          find . -type l -exec rm {} \;
-          cd ..
+        run: find ./public -type l -delete
       
       - name: Upload Pages artifact
         uses: actions/upload-artifact@v4
