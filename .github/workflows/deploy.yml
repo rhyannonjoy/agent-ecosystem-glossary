@@ -32,12 +32,10 @@ jobs:
       - name: Remove symlinks
         run: find ./public -type l -delete
       
-      - name: Upload Pages artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: ./public
-          retention-days: 1
 
   deploy:
     needs: build
