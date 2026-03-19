@@ -9,4 +9,4 @@ Welcome to the Agent Ecosystem Glossary - a comprehensive reference for AI agent
 
 ## Contents
 
-- [Quick Reference](docs/quick-reference) - Brief definitions of key terms
+- [Quick Reference](quick-reference) - Brief definitions of key terms
