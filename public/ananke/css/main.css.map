@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/rhyannonjoy/Documents/GitHub/agent-ecosystem-glossary/hugo",
+	"sourceRoot": "/Users/rhyannonjoy/Documents/GitHub/agent-ecosystem-glossary",
 	"sources": [
 		"ananke/css/main.css"
 	],

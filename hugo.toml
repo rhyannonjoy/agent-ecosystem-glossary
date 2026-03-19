@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://rhyannonjoy.github.io/agent-ecosystem-glossary/'
 locale = 'en-us'
 title = "Agent Ecosystem Glossary"
 theme = "ananke"
