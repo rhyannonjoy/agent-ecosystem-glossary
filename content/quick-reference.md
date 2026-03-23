@@ -124,6 +124,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### cost-efficiency
+
+- evaluation metric measuring computational resources required relative to task performance
+- factors include token usage, API calls, processing time, energy consumption
+- increasingly important as agents scale to production environments
+- **trade-off**: higher accuracy often requires higher costs
+
+---
+
 ## **D**
 
 ---
@@ -178,6 +187,15 @@ Brief definitions for key terms in the Agent Ecosystem
 ---
 
 ## **F**
+
+---
+
+### Final Response Evaluation
+
+- evaluation methodology that assesses only the end result or output of an agent's execution
+- judges success based on whether final answer or outcome is correct
+- **advantages**: simple to implement, clear success criteria
+- **limitations**: provides no insight into reasoning process, intermediate steps, or failure points
 
 ---
 
@@ -256,6 +274,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### memory
+
+- in agent context - ability to store and retrieve information across interactions and tasks
+- enables agents to maintain context, learn from experience, and reference past actions
+- critical for multi-step reasoning and adapting behavior based on history
+- types include short-term - current task, long-term - across sessions, episodic - specific events
+
+---
+
 ### model checking
 
 - process of evaluating whether statistical model assumptions are satisfied by the data
@@ -328,6 +355,15 @@ Brief definitions for key terms in the Agent Ecosystem
 - any data that could identify a specific individual
 - requires special handling for privacy and security compliance
 - **examples**: Social Security numbers, addresses, dates of birth, biometric data
+
+---
+
+### planning
+
+- fundamental building block for autonomous task execution
+- agent capability to decompose complex goals into sequences of executable actions
+- involves reasoning about future states, choosing strategies, and organizing steps
+- ranges from basic linear plans to complex multi-step reasoning with contingencies
 
 ---
 
@@ -407,7 +443,29 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+## **R**
+
+---
+
+### robustness
+
+- system's ability to maintain performance under varying or adverse conditions
+- critical for deployment in real-world, unpredictable environments
+- evaluated through stress testing, edge cases, and challenging scenarios
+- in agent context - handling unexpected inputs, recovering from errors, adapting to environment changes
+
+---
+
 ## **S**
+
+---
+
+### self-reflection
+
+- agent capability to evaluate its own reasoning, actions, and outputs
+- involves identifying errors, assessing performance, and adjusting strategy
+- enables learning from mistakes and iterative improvement without external feedback
+- distinguishes more sophisticated agents from basic reactive systems
 
 ---
 
@@ -427,6 +485,16 @@ how files should be structured, what behavior is required vs optional
 - embodies full web of assumptions beyond just equations with parameters
 - violation of any assumption, not just test hypothesis, can produce misleading P values
 - often presented in compressed form, with many assumptions unstated or unrecognized
+
+---
+
+### Stepwise Evaluation
+
+- evaluation methodology that assesses agent performance at each individual step of task execution
+- examines correctness of intermediate actions, decisions, and reasoning at granular level
+- enables debugging and improvement of specific reasoning or action-taking capabilities
+- more resource-intensive than final response evaluation but provides richer diagnostic information
+- **advantages**: identifies exactly where agent succeeds or fails in multi-step processes
 
 ---
 
@@ -467,6 +535,33 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
+### tool use
+
+- also known as function calling or API calling
+- agent capability to interact with external functions, APIs, or resources to accomplish tasks
+- essential for extending agent capabilities beyond pure language generation
+- **examples**: executing code, querying databases, accessing web services, controlling software
+
+---
+
+### training data
+
+- dataset used to teach an AI model patterns, relationships, and knowledge
+- model learns by processing examples and adjusting internal parameters
+- quality and composition of training data directly affects model capabilities and biases
+
+---
+
+### Trajectory-Based Assessment
+
+- evaluation methodology that analyzes the complete path or sequence of actions an agent takes
+- examines entire decision-making process from initial state to final outcome
+- considers not just correctness but efficiency, reasoning quality, and recovery from errors
+- provides holistic view of agent behavior including planning, adaptation, and tool use patterns
+- enables evaluation of process quality, not just outcome quality
+
+---
+
 ## **V**
 
 ---
@@ -486,17 +581,5 @@ how files should be structured, what behavior is required vs optional
 - abbreviation for _voice of the client_
 - invaluable for service and produce improvement
 - data where people often share problems they're encountering, provide feedback, and seek further help
-
----
-
-## **T**
-
----
-
-### training data
-
-- dataset used to teach an AI model patterns, relationships, and knowledge
-- model learns by processing examples and adjusting internal parameters
-- quality and composition of training data directly affects model capabilities and biases
 
 ---
