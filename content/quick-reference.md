@@ -75,6 +75,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### confidence interval
+
+- range of values likely to contain the true effect size, given the statistical model assumptions
+- commonly reported as _95% confidence interval_ - if computed repeatedly under valid conditions, 95% will contain the true value
+- width indicates precision of estimate; narrower intervals mean more precise estimates
+- not to be confused with "95% probability the true value is in this range" for any single interval
+
+---
+
 ### controlled vs natural
 
 - experimental design distinction based on environment
@@ -174,6 +183,19 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+## **M**
+
+---
+
+### model checking
+
+- process of evaluating whether statistical model assumptions are satisfied by the data
+- includes diagnostic tests for fit, examining residuals, and testing additional model terms
+- identifies violations that could invalidate statistical inferences
+- itself relies on further assumptions that become part of the full model
+
+---
+
 ## **N**
 
 ---
@@ -184,6 +206,24 @@ Brief definitions for key terms in the Agent Ecosystem
 - often A/B tests run by organizations to improve products or operations
 - **advantages**: highest naturalness, directly applicable findings
 - **disadvantages**: low feasibility, hard to replicate, narrow scope, limited control
+
+---
+
+### non-parametric methods
+
+- statistical techniques that make fewer assumptions about data distribution than parametric methods
+- somewhat misleading - these methods are not assumption-free
+- don't assume data follows specific distribution, such as normal distribution
+- still require assumptions such as random sampling or randomization
+
+---
+
+### null hypothesis
+
+- serves as a baseline for testing - premise proposing zero effect or no relationship between variables
+- tested to determine if observed data are _unusual enough_ to reject the hypothesis
+- random chance vs true effect - failure to reject doesn't prove the null is true, _only that data are compatible with it_
+- **example**: treatment makes no difference in average outcome compared to control
 
 ---
 
@@ -200,6 +240,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### one-sided hypothesis
+
+- also known as dividing hypothesis
+- test premise about whether an effect is _greater than or less than a specific value_
+- differs from two-sided tests that check if effect differs in either direction
+- **example**: testing whether new treatment is at least as good as standard treatment
+
+---
+
 ## **P**
 
 ---
@@ -213,12 +262,31 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### power
+
+- probability that a statistical test will reject the test hypothesis when a specific alternative is correct
+- calculated before study to determine adequate sample size
+- typically designed for 80% power: test will detect true effect 80% of the time
+- doesn't measure compatibility of alternative hypothesis with observed data
+- shouldn't be used to interpret results after data collection
+
+---
+
 ### prediction model
 
 - algorithm or statistical model that forecasts outcomes based on input data
 - learns patterns from training data to make predictions about new cases
 - ranges from basic regression models to complex neural networks
 - accuracy depends on data quality, feature selection, and algorithm sophistication
+
+---
+
+### probability
+
+- in frequentist statistics: refers to hypothetical frequencies of data patterns under assumed model
+- often confused with hypothesis probability, leading to common statistical misinterpretations
+- doesn't refer to probability of hypotheses being true or false
+- measured over many repetitions of same procedure under identical conditions
 
 ---
 
@@ -236,6 +304,16 @@ Brief definitions for key terms in the Agent Ecosystem
 - substitutes an observable indicator for an unmeasurable or impractical characteristic
 - **example**: using "developed exclusively for research" as a proxy for AI sophistication
 - **trade-off**: easier to apply but may occasionally misclassify
+
+---
+
+### P value
+
+- probability that observed data, or more extreme, would occur if all model assumptions including test hypothesis were correct
+- ranges from 0 - complete incompatibility, to 1 - perfect compatibility
+- measures fit between data and entire statistical model, not just the hypothesis being tested
+- commonly misinterpreted; doesn't indicate probability that hypothesis is true or false
+- often degraded into "significant" `(P ≤ 0.05)` vs "insignificant" dichotomy
 
 ---
 
@@ -270,6 +348,16 @@ Brief definitions for key terms in the Agent Ecosystem
 - implementation guide
 - informs everyone building on a format exactly what to expect: which fields exist, what values are valid,
 how files should be structured, what behavior is required vs optional
+
+---
+
+### statistical model
+
+- mathematical representation of data variability and all assumptions used to compute statistics
+- includes assumptions about - data collection, randomization, treatment allocation, analysis choices
+- embodies full web of assumptions beyond just equations with parameters
+- violation of any assumption, not just test hypothesis, can produce misleading P values
+- often presented in compressed form, with many assumptions unstated or unrecognized
 
 ---
 
