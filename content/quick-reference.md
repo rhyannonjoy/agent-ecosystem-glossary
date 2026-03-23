@@ -31,11 +31,42 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### agent
+
+- autonomous system that perceives environment, makes decisions, and takes actions to achieve goals
+- typically LLM-based system that can use tools, maintain memory, and execute multi-step tasks
+- capabilities include reasoning, planning, tool use, memory management, and interaction
+- distinct from chatbots through autonomy and task execution abilities
+
+---
+
+### Agent-as-a-Judge
+
+- evaluation methodology where an AI agent assesses the performance of other agents
+- agent evaluator examines outputs, behaviors, or decision-making processes
+- enables scalable evaluation compared to human-only assessment
+- related to LLM-as-a-Judge, but focuses on agent-level evaluation rather than just text outputs
+
+---
+
 ### automation
 
 - use of technology to perform tasks with _minimal human intervention_
 - can range from basic rule-based systems to complex machine learning models
 - in AI context - delegation of decision-making or execution to algorithms, robots, or automated agents
+
+---
+
+## **B**
+
+---
+
+### benchmark
+
+- standardized test or dataset used to evaluate and compare system performance
+- provides consistent metrics across different models, agents, or approaches
+- task completion rates, accuracy scores, reasoning capabilities
+- enables objective comparison and tracks progress in the field
 
 ---
 
@@ -110,6 +141,16 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### EDD
+
+- acronym for _Evaluation-driven Development_
+- software development methodology where evaluation guides design and iteration
+- incorporates continuous assessment of agent capabilities, reliability, and safety
+- testing and metrics inform architectural decisions throughout development lifecycle
+- emphasizes measurable outcomes and systematic improvement
+
+---
+
 ### edge case
 
 - critical for testing AI reliability and robustness
@@ -170,6 +211,25 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### heuristic
+
+- practical problem-solving approach that uses shortcuts or rules of thumb to find satisfactory solutions
+- in agent systems, guide decision-making when perfect information or unlimited computation is unavailable
+- trades optimality for speed and feasibility when exhaustive search is impractical
+- differs from algorithms that guarantee optimal solutions
+- **examples**: A* search, greedy algorithms, hand-crafted evaluation functions
+
+---
+
+### human-in-the-loop
+
+- system design where humans actively participate in AI decision-making or evaluation process
+- human provides feedback, validation, or intervention at critical points
+- balances automation with human judgment and oversight
+- common in agent evaluation to assess quality, safety, and alignment with human values
+
+---
+
 ## **L**
 
 ---
@@ -180,6 +240,15 @@ Brief definitions for key terms in the Agent Ecosystem
 - AI model trained on vast amounts of text data to understand and generate human language
 - not all AI is LLM-based - such as computer vision models, recommendation systems
 - **examples**: GPT - _Generative Pre-trained Transformer_, Claude, and Llama
+
+---
+
+### LLM-as-a-Judge
+
+- evaluation methodology where a large language model assesses quality of text outputs
+- LLM scores or ranks responses based on criteria like accuracy, helpfulness, or safety
+- enables scalable evaluation compared to human annotation alone
+- limitations include potential biases and consistency issues in LLM judgments
 
 ---
 
