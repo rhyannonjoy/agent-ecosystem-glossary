@@ -6,11 +6,13 @@ bookToc: true
 
 # Quick Reference
 
-Brief definitions for key terms in the Agent Ecosystem.
+Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## C
+## **C**
+
+---
 
 ### Cohen's kappa coefficient
 
@@ -18,7 +20,9 @@ A statistical measure of inter-rater agreement for categorical items. It measure
 
 ---
 
-## F
+## **F**
+
+---
 
 ### Flesch–Kincaid readability tests
 
@@ -26,7 +30,9 @@ Readability tests designed to indicate how difficult a passage in English is to 
 
 ---
 
-## G
+## **G**
+
+---
 
 ### Gunning fog index
 
@@ -34,7 +40,9 @@ A readability test that estimates the years of formal education needed to unders
 
 ---
 
-## S
+## **S**
+
+---
 
 ### Stochastic
 

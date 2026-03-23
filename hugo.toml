@@ -1,3 +1,8 @@
+# test locally
+# rm -rf resources/
+# rm -rf public/
+# hugo server -D
+
 baseURL = 'https://rhyannonjoy.github.io/agent-ecosystem-glossary/'
 languageCode = 'en-us'
 title = "Agent Ecosystem Glossary"

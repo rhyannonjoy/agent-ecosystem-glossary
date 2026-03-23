@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ .Description | default .Site.Params.BookDescription }}">
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  
+  <!-- Open Sauce Font -->
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/open-sauce-one">
+  
+  <style>
+    /* Hide the book theme structure on homepage */
+    .book-menu,
+    .book-header,
+    .book-toc {
+      display: none !important;
+    }
+    
+    .book-page {
+      padding: 0 !important;
+      max-width: 100% !important;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sauce One', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: #f5f4f0 !important;
+      color: #222222;
+      overflow-x: hidden;
+    }
+
+    .hero-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background-color: #f5f4f0;
+      position: relative;
+    }
+
+    a.explore-button,
+    a.explore-button:link,
+    a.explore-button:visited,
+    a.explore-button:active {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background-color: #222222 !important;
+      color: #f5f4f0 !important;
+      text-decoration: none !important;
+      font-size: 1rem !important;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 2px solid #222222;
+    }
+
+    a.explore-button:hover {
+      background-color: #f5f4f0 !important;
+      color: #222222 !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(34, 34, 34, 0.2);
+    }
+
+    .logo-container {
+      width: 100%;
+      max-width: 60vw;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #222222;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .logo-container {
+        max-width: 85vw;
+      }
+
+      .explore-button {
+        top: 1rem;
+        left: 1rem;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        bottom: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-container {
+        max-width: 95vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-container">
+    <a href="{{ "quick-reference" | relURL }}" class="explore-button">Explore</a>
+    
+    <div class="logo-container">
+      <img src="{{ "assets/aeg-logo.png" | relURL }}" alt="Agent Ecosystem Glossary">
+    </div>
+    
+    <footer class="footer">
+      © {{ now.Year }} Rhyannon Rodriguez
+    </footer>
+  </div>
+</body>
+</html>
