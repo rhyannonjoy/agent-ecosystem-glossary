@@ -84,6 +84,19 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+## **D**
+
+---
+
+### dissemination
+
+- systematic sharing of research findings with target audiences beyond the research team
+- ensures knowledge can advance the field, change practice and policy, or inform future research
+- requires planning for audience, timing, and appropriate communication channels
+- methods include journal publications, conference presentations, social media, press releases, websites
+
+---
+
 ## **E**
 
 ---
