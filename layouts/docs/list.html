@@ -130,6 +130,18 @@
         max-width: 95vw;
       }
     }
+
+    /* Footer link styling */
+    .footer a {
+      color: #6b5d52;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .footer a:hover {
+      color: var(--dark-text);
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -141,7 +153,7 @@
     </div>
     
     <footer class="footer">
-      © {{ now.Year }} Rhyannon Rodriguez
+      © {{ now.Year }} Rhyannon Rodriguez • <a href="https://github.com/rhyannonjoy/agent-ecosystem-glossary">GitHub ↗</a>
     </footer>
   </div>
 </body>
