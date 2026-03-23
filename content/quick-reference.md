@@ -70,3 +70,15 @@ how files should be structured, what behavior is required vs optional
 - random probability distribution or pattern that may be analyzed statistically, but may not be predicted precisely
 
 ---
+
+## **V**
+
+---
+
+### VOC
+
+- abbreviation for _voice of the client_
+- invaluable for service and produce improvement
+- data where people often share problems they're encountering, provide feedback, and seek further help
+
+---
