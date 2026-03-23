@@ -55,6 +55,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### spec
+
+- abbreviation for _specification_
+- implementation guide
+- informs everyone building on a format exactly what to expect: which fields exist, what values are valid,
+how files should be structured, what behavior is required vs optional
+
+---
+
 ### Stochastic
 
 - commonly used in mathematics, science, and information theory
