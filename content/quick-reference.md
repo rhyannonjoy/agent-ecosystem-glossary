@@ -478,6 +478,15 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
+### statistical inference
+
+- foundational methodology for evaluating whether observed results are meaningful or due to chance 
+- process of drawing conclusions about populations or processes from sample data
+- includes hypothesis testing, confidence interval estimation, and parameter estimation
+- accounts for uncertainty and random variation when making generalizations
+
+---
+
 ### statistical model
 
 - mathematical representation of data variability and all assumptions used to compute statistics
@@ -559,6 +568,20 @@ how files should be structured, what behavior is required vs optional
 - considers not just correctness but efficiency, reasoning quality, and recovery from errors
 - provides holistic view of agent behavior including planning, adaptation, and tool use patterns
 - enables evaluation of process quality, not just outcome quality
+
+---
+
+## **U**
+
+---
+
+### uncertainty quantification
+
+- process of measuring and characterizing uncertainty in predictions, decisions, or model outputs
+- distinguishes between aleatoric uncertainty - inherent randomness, and epistemic uncertainty - lack of knowledge
+- enables AI systems to express confidence levels and identify when additional data or validation is needed
+- critical for safe deployment in high-stakes domains like healthcare, autonomous systems, and decision support
+- common methods - Bayesian inference, ensemble approaches, and Monte Carlo techniques
 
 ---
 
