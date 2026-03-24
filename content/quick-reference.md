@@ -210,6 +210,16 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### Goodhart's law
+
+- originally an economics principle, now widely applied to AI and agent systems
+- _"when a measure becomes a target, it ceases to be a good measure"_
+- describes phenomenon where optimizing for a proxy metric leads to gaming the metric rather than improving underlying quality
+- **critical concern**: agents may learn to maximize benchmark scores without developing genuine capabilities
+- **examples**: reward hacking, benchmark overfitting, specification gaming
+
+---
+
 ### Gunning fog index
 
 - readability test that estimates the years of formal education needed to understand text on first reading
