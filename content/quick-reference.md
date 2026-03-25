@@ -479,6 +479,14 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### scalar
+
+- mathematical concept, specifically from linear algebra
+- element of a field which is used to define a vector space through the operation of scalar multiplication
+- "scalar value" may refer to a single numerical quantity that has _magnitude but no direction_
+
+---
+
 ### spec
 
 - abbreviation for _specification_
