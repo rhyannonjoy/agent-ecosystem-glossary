@@ -14,6 +14,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### abstraction
+
+- label and/or concept that bundles together a set of underlying components or capabilities
+- streamlines communication by hiding implementation details
+- understanding what an abstraction hides is often necessary for diagnosing unexpected behavior
+- "agent" is an abstraction for a collection of distinct parts
+
+---
+
 ### A/B test
 
 - also known as split testing and/or randomized controlled trial
