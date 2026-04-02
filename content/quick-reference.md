@@ -137,7 +137,15 @@ Brief definitions for key terms in the Agent Ecosystem
 - total amount of text, measured in tokens, an LLM can process at once
 - includes system prompt, conversation history, and any injected context
 - information outside the context window isn't directly available to the model during a given interaction
-- cw mgmt strategies determine what gets retained, compressed, or dropped as conversations grow long
+
+---
+
+### context window management
+
+- agent platform strategies to handle conversations that approach or exceed the context window limit
+- determine what gets retained, compressed, or dropped as conversations grow long
+- common approaches include summarization and/or selective truncation of earlier messages
+- quality of strategy affects whether an agent may "forget" earlier instructions
 
 ---
 
