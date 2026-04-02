@@ -488,6 +488,7 @@ blocking certain categories of action entirely
 - input text or instructions given to an AI model to guide its response
 - quality and specificity of prompts significantly affect output quality
 - distinct from traditional search queries or commands
+- related term: system prompt
 
 ---
 
@@ -635,6 +636,14 @@ how files should be structured, what behavior is required vs optional
 - AI tailored to a research question: rule-based algorithms, historical data replication, or reinforcement learning
 - **advantages**: tight control over algorithm features, feasible and replicable, broad scope
 - **disadvantages**: lower naturalness compared to real-world AI systems
+
+---
+
+### sycophancy
+
+- known limitation of RLHF-trained models, active area of research
+- tendency in LLMs to agree with, validate, or comply with user input rather than reasoning independently
+- amplified by detailed or specific prompts, which push the model into "execution mode"
 
 ---
 
