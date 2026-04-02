@@ -273,6 +273,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### harness
+
+- platform layer that wraps around an LLM
+- provides configuration, permission settings, system prompts, tools
+- may include code search, file operations, shell execution, web access, content management strategy, and temperature settings
+- agents using the same underlying model can behave very differently depending on their harness
+
+---
+
 ### heuristic
 
 - practical problem-solving approach that uses shortcuts or rules of thumb to find satisfactory solutions
