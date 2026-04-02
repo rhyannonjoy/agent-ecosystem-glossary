@@ -527,6 +527,16 @@ blocking certain categories of action entirely
 
 ---
 
+### RLHF
+
+- acronym for _reinforcement learning from human feedback_
+- training methodology in which human evaluators rate model outputs and ratings fine-tune the model toward preferred behaviors
+- creates a strong instruction-following bias
+- models trained with RLHF tend to prioritize explicit user instructions, sometimes at the expense of broader context
+- related terms: compliance, sycophancy
+
+---
+
 ### robustness
 
 - system's ability to maintain performance under varying or adverse conditions
