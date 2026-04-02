@@ -292,6 +292,14 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### hook
+
+- script or callback that runs automatically in response to a specific event in the agent's environment
+- fires deterministically based on triggers, such as a file being edited, without going through the LLM's interpretation loop
+- useful for enforcing constraints reliably without relying on the agent to remember to do them
+
+---
+
 ### human-in-the-loop
 
 - system design where humans actively participate in AI decision-making or evaluation process
