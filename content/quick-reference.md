@@ -132,6 +132,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### context window
+
+- total amount of text, measured in tokens, an LLM can process at once
+- includes system prompt, conversation history, and any injected context
+- information outside the context window isn't directly available to the model during a given interaction
+- cw mgmt strategies determine what gets retained, compressed, or dropped as conversations grow long
+
+---
+
 ### controlled vs natural
 
 - experimental design distinction based on environment
