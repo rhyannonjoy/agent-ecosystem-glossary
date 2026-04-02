@@ -575,6 +575,15 @@ blocking certain categories of action entirely
 
 ---
 
+### slash command
+
+- direct command typed into a chat interface, `/compact`, `/init`
+- triggers specific agent behavior without going through the LLM's interpretation loop
+- more predictable and consistent than natural language prompts for actions that need to happen reliably
+- contrasts with prompts, which the LLM interprets and may execute differently across runs
+
+---
+
 ### spec
 
 - abbreviation for _specification_
