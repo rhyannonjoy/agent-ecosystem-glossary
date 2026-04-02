@@ -335,6 +335,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### MCP server
+
+- acronym for _Model Context Protocol_ server
+- external server that exposes capabilities to an agent - tools, resources, and/or prompts
+- allows agents to interact with databases, APIs, cloud services, or any custom system the server is built to access
+- facilitates portable behavior across agent platforms because implementation is stored in the server rather than the harness
+
+---
+
 ### memory
 
 - in agent context - ability to store and retrieve information across interactions and tasks
