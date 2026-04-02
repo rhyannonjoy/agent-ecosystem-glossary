@@ -419,6 +419,16 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### permission and safety systems
+
+- platform-level rules that define what actions an agent is allowed to take
+- conceptual authorization and/or guardrails
+- shape agent behavior independently of the underlying model
+- examples: requiring confirmation before running shell commands, restricting file access to specific directories,
+blocking certain categories of action entirely
+
+---
+
 ### PII
 
 - abbreviation for _Personally Identifiable Information_
