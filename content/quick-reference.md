@@ -655,6 +655,14 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
+### system prompt
+
+- set of instructions provided to the LLM by the platform before any user interaction begins
+- sits at the beginning of the context window, giving it strong positional attention weight
+- typically not visible to the user, but profoundly shapes the agent's personality, default behaviors, and constraints
+
+---
+
 ## **T**
 
 ---
