@@ -713,6 +713,14 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
+### turn
+
+- single exchange in a conversation: one user message and one assistant message
+- agent considers the full turn history when generating a response
+- related terms: user message, assistant message
+
+---
+
 ## **U**
 
 ---
@@ -724,6 +732,14 @@ how files should be structured, what behavior is required vs optional
 - enables AI systems to express confidence levels and identify when additional data or validation is needed
 - critical for safe deployment in high-stakes domains like healthcare, autonomous systems, and decision support
 - common methods - Bayesian inference, ensemble approaches, and Monte Carlo techniques
+
+---
+
+### user message
+
+- input sent by a human or automated system to an agent during a conversational turn
+- interpreted by the LLM rather than executed as a direct command
+- receives strong positional attention as the most recent content in the context window
 
 ---
 
