@@ -676,6 +676,16 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
+### temperature
+
+- parameter that controls the degree of randomness in an LLM's outputs
+- set by the platform and sometimes adjustable by the user
+- affects agent behavior independently of the model itself
+- low temperature produces more focused, predictable responses
+- high temperature produces more varied, creative ones
+
+---
+
 ### tool use
 
 - also known as function calling or API calling
