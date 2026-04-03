@@ -10,7 +10,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **A**
+## A
 
 ---
 
@@ -82,7 +82,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **B**
+## B
 
 ---
 
@@ -95,7 +95,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **C**
+## C
 
 ---
 
@@ -126,8 +126,8 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - test type in which AI exists as a label or framing device, but _no AI is actually implemented_
 - typically uses vignettes or scenarios to model operational principles or consequences of AI
-- **advantages**: high feasibility, easy to scale and replicate, can study impractical or impossible scenarios
-- **disadvantages**: lower naturalness since subjects don't interact with actual AI
+- advantages: high feasibility, easy to scale and replicate, can study impractical or impossible scenarios
+- disadvantages: lower naturalness since subjects don't interact with actual AI
 
 ---
 
@@ -161,8 +161,8 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - experimental design distinction based on environment
 - trade-off between control/replicability and external validity/generalizability
-- **controlled**: experiments conducted in artificial settings - labs, online platforms - where researchers manipulate variables
-- **natural**: experiments conducted in real-world settings where AI is actually used - workplaces, platforms, markets
+- controlled: experiments conducted in artificial settings - labs, online platforms - where researchers manipulate variables
+- natural: experiments conducted in real-world settings where AI is actually used - workplaces, platforms, markets
 
 ---
 
@@ -171,11 +171,11 @@ Brief definitions for key terms in the Agent Ecosystem
 - evaluation metric measuring computational resources required relative to task performance
 - factors include token usage, API calls, processing time, energy consumption
 - increasingly important as agents scale to production environments
-- **trade-off**: higher accuracy often requires higher costs
+- trade-off: higher accuracy often requires higher costs
 
 ---
 
-## **D**
+## D
 
 ---
 
@@ -188,7 +188,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **E**
+## E
 
 ---
 
@@ -228,7 +228,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **F**
+## F
 
 ---
 
@@ -248,7 +248,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **G**
+## G
 
 ---
 
@@ -257,8 +257,8 @@ Brief definitions for key terms in the Agent Ecosystem
 - originally an economics principle, now widely applied to AI and agent systems
 - _"when a measure becomes a target, it ceases to be a good measure"_
 - describes phenomenon where optimizing for a proxy metric leads to gaming the metric rather than improving underlying quality
-- **critical concern**: agents may learn to maximize benchmark scores without developing genuine capabilities
-- **examples**: reward hacking, benchmark overfitting, specification gaming
+- critical concern: agents may learn to maximize benchmark scores without developing genuine capabilities
+- examples: reward hacking, benchmark overfitting, specification gaming
 
 ---
 
@@ -269,7 +269,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **H**
+## H
 
 ---
 
@@ -293,10 +293,10 @@ Brief definitions for key terms in the Agent Ecosystem
 ### heuristic
 
 - practical problem-solving approach that uses shortcuts or rules of thumb to find satisfactory solutions
-- in agent systems, guide decision-making when perfect information or unlimited computation is unavailable
-- trades optimality for speed and feasibility when exhaustive search is impractical
 - differs from algorithms that guarantee optimal solutions
-- **examples**: A* search, greedy algorithms, hand-crafted evaluation functions
+- trades optimality for speed and feasibility when exhaustive search is impractical
+- in agent systems, guide decision-making when perfect information or unlimited computation is unavailable
+- examples: A* search, greedy algorithms, hand-crafted evaluation functions
 
 ---
 
@@ -317,16 +317,17 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **L**
+## L
 
 ---
 
 ### LLM
 
 - abbreviation for _Large Language Model_
+- also known as "the agent's brain"
 - AI model trained on vast amounts of text data to understand and generate human language
 - not all AI is LLM-based - such as computer vision models, recommendation systems
-- **examples**: GPT - _Generative Pre-trained Transformer_, Claude, and Llama
+- examples: GPT - _Generative Pre-trained Transformer_, Claude, and Llama
 
 ---
 
@@ -339,7 +340,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **M**
+## M
 
 ---
 
@@ -370,7 +371,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-## **N**
+## N
 
 ---
 
@@ -378,8 +379,8 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - test type that features AI in environments where it is actually used - platforms, workplaces, real services
 - often A/B tests run by organizations to improve products or operations
-- **advantages**: highest naturalness, directly applicable findings
-- **disadvantages**: low feasibility, hard to replicate, narrow scope, limited control
+- advantages: highest naturalness, directly applicable findings
+- disadvantages: low feasibility, hard to replicate, narrow scope, limited control
 
 ---
 
@@ -397,11 +398,11 @@ Brief definitions for key terms in the Agent Ecosystem
 - serves as a baseline for testing - premise proposing zero effect or no relationship between variables
 - tested to determine if observed data are _unusual enough_ to reject the hypothesis
 - random chance vs true effect - failure to reject doesn't prove the null is true, _only that data are compatible with it_
-- **example**: treatment makes no difference in average outcome compared to control
+- example: treatment makes no difference in average outcome compared to control
 
 ---
 
-## **O**
+## O
 
 ---
 
@@ -419,11 +420,11 @@ Brief definitions for key terms in the Agent Ecosystem
 - also known as dividing hypothesis
 - test premise about whether an effect is _greater than or less than a specific value_
 - differs from two-sided tests that check if effect differs in either direction
-- **example**: testing whether new treatment is at least as good as standard treatment
+- example: testing whether new treatment is at least as good as standard treatment
 
 ---
 
-## **P**
+## P
 
 ---
 
@@ -442,7 +443,7 @@ blocking certain categories of action entirely
 - abbreviation for _Personally Identifiable Information_
 - any data that could identify a specific individual
 - requires special handling for privacy and security compliance
-- **examples**: Social Security numbers, addresses, dates of birth, biometric data
+- examples: Social Security numbers, addresses, dates of birth, biometric data
 
 ---
 
@@ -496,8 +497,8 @@ blocking certain categories of action entirely
 
 - indirect measure used to evaluate something _difficult to assess directly_
 - substitutes an observable indicator for an unmeasurable or impractical characteristic
-- **example**: using "developed exclusively for research" as a proxy for AI sophistication
-- **trade-off**: easier to apply but may occasionally misclassify
+- trade-off: easier to apply but may occasionally misclassify
+- example: using "developed exclusively for research" as a proxy for AI sophistication
 
 ---
 
@@ -511,7 +512,7 @@ blocking certain categories of action entirely
 
 ---
 
-## **Q**
+## Q
 
 ---
 
@@ -526,13 +527,13 @@ blocking certain categories of action entirely
 ### quasinatural AI experiment
 
 - test type that combines naturalness of real AI systems with feasibility of lab experiments
-- **examples**: testing commercial chatbots in controlled studies, pilot experiments before product launch
-- **advantages**: naturalistic AI, broad research scope, easier data collection than natural experiments
-- **disadvantages**: researchers give up some control over algorithm construction
+- advantages: naturalistic AI, broad research scope, easier data collection than natural experiments
+- disadvantages: researchers give up some control over algorithm construction
+- examples: testing commercial chatbots in controlled studies, pilot experiments before product launch
 
 ---
 
-## **R**
+## R
 
 ---
 
@@ -555,7 +556,7 @@ blocking certain categories of action entirely
 
 ---
 
-## **S**
+## S
 
 ---
 
@@ -619,7 +620,7 @@ how files should be structured, what behavior is required vs optional
 - examines correctness of intermediate actions, decisions, and reasoning at granular level
 - enables debugging and improvement of specific reasoning or action-taking capabilities
 - more resource-intensive than final response evaluation but provides richer diagnostic information
-- **advantages**: identifies exactly where agent succeeds or fails in multi-step processes
+- advantages: identifies exactly where agent succeeds or fails in multi-step processes
 
 ---
 
@@ -634,8 +635,8 @@ how files should be structured, what behavior is required vs optional
 
 - test type conducted in a controlled environment, since the AI typically doesn't exist outside the study
 - AI tailored to a research question: rule-based algorithms, historical data replication, or reinforcement learning
-- **advantages**: tight control over algorithm features, feasible and replicable, broad scope
-- **disadvantages**: lower naturalness compared to real-world AI systems
+- advantages: tight control over algorithm features, feasible and replicable, broad scope
+- disadvantages: lower naturalness compared to real-world AI systems
 
 ---
 
@@ -663,7 +664,7 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
-## **T**
+## T
 
 ---
 
@@ -691,7 +692,7 @@ how files should be structured, what behavior is required vs optional
 - also known as function calling or API calling
 - agent capability to interact with external functions, APIs, or resources to accomplish tasks
 - essential for extending agent capabilities beyond pure language generation
-- **examples**: executing code, querying databases, accessing web services, controlling software
+- examples: executing code, querying databases, accessing web services, controlling software
 
 ---
 
@@ -721,7 +722,7 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
-## **U**
+## U
 
 ---
 
@@ -743,7 +744,7 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
-## **V**
+## V
 
 ---
 
@@ -752,8 +753,8 @@ how files should be structured, what behavior is required vs optional
 - research method presenting hypothetical scenarios to elicit preferences or judgments
 - participants read descriptions of situations and state what they would do
 - common in conceptual AI experiments studying ethical dilemmas or preference patterns
-- **advantages**: can model any situation without implementation constraints, easy to scale
-- **disadvantages**: responses may not reflect actual behavior, lower external validity
+- advantages: can model any situation without implementation constraints, easy to scale
+- disadvantages: responses may not reflect actual behavior, lower external validity
 
 ---
 
