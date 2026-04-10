@@ -252,6 +252,15 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
+### gate
+
+- prompt condition that must be satisfied before work sequence continues
+- provides objectively evaluable agentic checkpoints: thing happens → condition → then proceed
+- different than _hooks_, which are triggered by events in the harness
+- contrasts with _rules_, in which LLMs can interpret, bypass, rationalize around
+
+---
+
 ### Goodhart's law
 
 - originally an economics principle, now widely applied to AI and agent systems
@@ -553,6 +562,15 @@ blocking certain categories of action entirely
 - critical for deployment in real-world, unpredictable environments
 - evaluated through stress testing, edge cases, and challenging scenarios
 - in agent context - handling unexpected inputs, recovering from errors, adapting to environment changes
+
+---
+
+### rule
+
+- prompt instruction an LLM interprets and applies at its own discretion
+- has implicit opt-out path; model can rationalize skipping
+- constrasts with _gates_, which block progression until a condition is met
+- different than _hooks_, which fire deterministically from harness regardless of LLM interpretation
 
 ---
 
