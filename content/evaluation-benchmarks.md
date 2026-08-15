@@ -278,7 +278,7 @@ ground truth that calibrates automated evaluation systems
 
 **Related Terms**: benchmark, evaluation, ground truth, regression testing
 
-**Sources**:
+**Source**:
 
 - [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
 
@@ -311,7 +311,7 @@ on human preferences reflecting real world usage; guides metrics and defines gol
 
 **Related Terms**: accuracy, benchmark, evaluation, exact match, golden dataset
 
-**Sources**:
+**Source**:
 
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -328,7 +328,7 @@ mathematical expressions
 
 **Related Terms**: benchmark, evaluation, few-shot, LLM leaderboard, MMLU
 
-**Sources**:
+**Source**:
 
 - [arXiv: "Training Verifiers to Solve Math Word Problems" by Cobbe et al.](https://arxiv.org/abs/2110.14168)
 
@@ -344,7 +344,7 @@ created through adversarial filtering; evaluates accuracy for few-shot and zero-
 
 **Related Terms**: adversarial filtering, benchmark, evaluation, Winogrande
 
-**Sources**:
+**Source**:
 
 - [arXiv: "HellaSwag: Can a Machine Really Finish Your Sentence?" by Zellers et al.](https://arxiv.org/abs/1905.07830)
 
@@ -359,7 +359,7 @@ LLMs are given programming problems and evaluated on whether generated solutions
 
 **Related Terms**: benchmark, evaluation, functional correctness, pass@k, MBPP, SWE-bench
 
-**Sources**:
+**Source**:
 
 - [arXiv: "Evaluating Large Language Models Trained on Code" by Chen et al.](https://arxiv.org/abs/2107.03374)
 
@@ -393,7 +393,7 @@ LLM-selection aid
 
 **Related Terms**: benchmark, Chatbot Arena, evaluation, MMLU
 
-**Sources**:
+**Source**:
 
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -409,7 +409,7 @@ evaluated in few-shot and fine-tuned settings
 
 **Related Terms**: benchmark, evaluation, functional correctness, HumanEval, pass@k
 
-**Sources**:
+**Source**:
 
 - [arXiv: "Program Synthesis with Large Language Models" by Austin et al.](https://arxiv.org/abs/2108.07732)
 
@@ -426,7 +426,7 @@ subjects, scored by average per-subject accuracy in few-shot and zero-shot setti
 
 **Related Terms**: benchmark, bounded scoring, evaluation, few-shot, LLM leaderboard
 
-**Source**:
+**Sources**:
 
 - [AI Benchmarking Hub, llm-stats: "MMLU"](https://llm-stats.com/benchmarks/mmlu)
 - [arXiv: "Measuring Massive Multitask Language Understanding" by Hendrycks et al.](https://arxiv.org/abs/2009.03300)
@@ -444,7 +444,7 @@ same researchers behind Chatbot Arena
 
 **Related Terms**: benchmark, Chatbot Arena, evaluation, functional correctness, LLM-as-a-Judge
 
-**Sources**:
+**Source**:
 
 - [arXiv: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
 
@@ -481,7 +481,7 @@ benchmarks such as HumanEval
 
 **Related Terms**: benchmark, evaluation, functional correctness, HumanEval, MBPP
 
-**Sources**:
+**Source**:
 
 - [arXiv: "Evaluating Large Language Models Trained on Code" by Chen et al.](https://arxiv.org/abs/2107.03374)
 
@@ -495,7 +495,7 @@ benchmarks such as HumanEval
 
 **Related Terms**: accuracy, benchmark, BLEU, evaluation, exact match, F1 score, ROUGE
 
-**Sources**:
+**Source**:
 
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -512,7 +512,7 @@ responsible AI and security evaluation
 
 **Related Terms**: benchmark, evaluation, functional correctness, functional call evaluation
 
-**Sources**:
+**Source**:
 
 - [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -527,7 +527,7 @@ correct predictions, specifically the number of true positives
 
 **Related Terms**: accuracy, benchmark, evaluation, precision, F1 score
 
-**Sources**:
+**Source**:
 
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -580,7 +580,7 @@ verify syntax and function-call shape
 
 **Related Terms**: benchmark, evaluation, function calling evaluation, ground truth, LLM-as-a-Judge
 
-**Sources**:
+**Source**:
 
 - [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -595,7 +595,7 @@ such tests provide a baseline that general reasoning benchmarks often overlook
 
 **Related Terms**: benchmark, evaluation, TruthfulQA
 
-**Sources**:
+**Source**:
 
 - [OpenAI: "Introducing SimpleQA" by Jason Wei et al.](https://openai.com/index/introducing-simpleqa/)
 
@@ -611,7 +611,7 @@ real-world software maintenance ability
 
 **Related Terms**: benchmark, evaluation, functional correctness, HumanEval
 
-**Sources**:
+**Source**:
 
 - [arXiv: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" by Jimenez et al.](https://arxiv.org/abs/2310.06770)
 
@@ -627,7 +627,7 @@ closely related to success rate, the proportion of tasks or goals completed corr
 
 **Related Terms**: benchmark, error rate, evaluation, functional correctness, function calling evaluation
 
-**Sources**:
+**Source**:
 
 - [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -644,7 +644,7 @@ informativeness and truthfulness; largest models were generally least truthful
 
 **Related Terms**: benchmark, evaluation, hallucination, SimpleQA
 
-**Sources**:
+**Source**:
 
 - [arXiv: "TruthfulQA: Measuring How Models Mimic Human Falsehoods" by Lin et al.](https://arxiv.org/abs/2109.07958)
 
@@ -676,6 +676,6 @@ using adversarial filtering
 
 **Related Terms**: adversarial filtering, HellaSwag
 
-**Sources**:
+**Source**:
 
 - [arXiv: "WinoGrande: An Adversarial Winograd Schema Challenge at Scale" by Sakaguchi et al.](https://arxiv.org/abs/1907.10641)
