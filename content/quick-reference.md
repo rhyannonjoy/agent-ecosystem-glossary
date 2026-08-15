@@ -16,10 +16,9 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ### accuracy
 
+- also known as precision
 - percentage of correct predictions made by an LLM
-- also called precision in some contexts
 - primary metric in classification and reasoning benchmarks
-- high accuracy can mask poor performance on underrepresented categories
 
 ---
 
@@ -27,23 +26,11 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - technique used to generate hard, plausible negatives for benchmark datasets
 - algorithmically constructs incorrect answers that look realistic enough to mislead an LLM
-- used by benchmarks such as HellaSwag and Winogrande to avoid ceiling effects
 - ensures leaderboard scores are meaningful by preventing LLMs from gaming simple patterns
 
 ---
 
-### agent evaluation
-
-- also known as _agent eval_, _eval_ or simply _evaluation_
-- process of assessing and understanding an AI agent's performance in executing tasks, decision-making and interacting with users
-- goes beyond text quality to assess overall behavior, task success and alignment with user intent
-- dimensions include functional - quality, cost and safety - trustworthiness, policy compliance, bias mitigation
-- methods include benchmark testing, human-in-the-loop assessment, A/B testing and real-world simulation
-- each intermediate action - database query, API call, tool invocation - may need separate evaluation
-
----
-
-### allowed values (function calling)
+### allowed values
 
 - rule-based function-calling metric
 - flags when an agent uses a parameter value outside the set of accepted or predefined values for that parameter
@@ -51,11 +38,10 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-### ARC (AI2 Reasoning Challenge)
+### ARC
 
+- acronym for _AI2 Reasoning Challenge_
 - benchmark measuring question answering and reasoning through more than 7,000 grade-school natural science questions
-- questions divided into an easy set and a challenge set
-- scoring: one point for each correct answer, or 1/N points when multiple answers are given and one is correct
 
 ---
 
@@ -96,19 +82,9 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ### Agent-as-a-Judge
 
-- evaluation methodology where an AI agent assesses the performance of other agents
-- agent evaluator examines outputs, behaviors, or decision-making processes
-- enables scalable evaluation compared to human-only assessment
+- evaluation methodology where an agent assesses the performance of other agents
+- examines outputs, behaviors, or decision-making processes
 - related to LLM-as-a-Judge, but focuses on agent-level evaluation rather than just text outputs
-
----
-
-### /SKILL
-
-- the `/skill` slash command, so named to differentiate it from the general term _skill_
-- bundle of instructions and reference material that gives an agent just-in-time context for a specific domain or task
-- distinct from hooks and slash commands in that skills work through LLM interpretation rather than deterministic execution
-- subject to the same context window attention dynamics as other injected content
 
 ---
 
@@ -153,13 +129,6 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - limitation of LLM benchmarks when an LLM reaches the highest possible score
 - once saturated, the benchmark must be updated with more difficult tasks to remain a useful measure
-
----
-
-### broad dataset limitation
-
-- constraint of LLM benchmarks deriving sample data from a broad range of subjects and tasks
-- makes them a poor fit for edge scenarios, specialized areas or specific use cases
 
 ---
 
@@ -291,8 +260,7 @@ Brief definitions for key terms in the Agent Ecosystem
 ### Discriminability Score
 
 - metric used to filter benchmark datasets by identifying tasks that separate a good response from a bad one
-- enables reducing test set size (up to 65%) while maintaining evaluation accuracy
-- creates a tighter, faster regression suite by removing redundant questions
+- intends to create a tighter, faster regression suite by removing redundant questions
 
 ---
 
@@ -337,7 +305,8 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - abbreviation of _evaluation_
 - structured assessment of an agent's outputs, decisions or actions
-- benchmarks, metrics and eval harnesses provide the scaffolding for running evaluations
+- infrastructure includes benchmarks, harnesses, and metrics
+- dimensions include quality, cost and safety; trustworthiness, policy compliance, bias mitigation
 
 ---
 
@@ -387,11 +356,10 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-### few-shot learning
+### few-shot
 
 - prompting approach that supplies an LLM with a small number of examples showing how to fulfill a task before prompting
 - demonstrates an LLM's ability to learn from scarce data
-- one of the three common LLM benchmark testing approaches, alongside zero-shot and fine-tuning
 
 ---
 
@@ -407,7 +375,6 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - evaluation criterion for code generation benchmarks
 - judges solutions by whether they pass the corresponding unit tests
-- used by HumanEval, MBPP and similar coding benchmarks
 
 ---
 
@@ -444,7 +411,6 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - curated set of prompts and verified answers for a specific business domain
 - used as the basis for custom benchmarks and regression testing
-- serves as ground truth for calibrating automated evaluation systems
 
 ---
 
@@ -452,7 +418,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - reference data assumed to be objectively correct
 - annotated data that AI agents and LLMs are tested against
-- benchmarks categorize metrics by whether they rely on ground truth or on human preferences
+- benchmarks categorize metrics by whether they rely on ground truth and/or human preferences
 
 ---
 
@@ -461,7 +427,6 @@ Brief definitions for key terms in the Agent Ecosystem
 - abbreviation for _Grade School Math 8K_
 - benchmark testing an LLM's mathematical reasoning with a corpus of 8,500 grade-school math word problems
 - solutions collected in natural language rather than mathematical expressions
-- AI verifiers are trained to evaluate LLM solutions
 
 ---
 
@@ -524,9 +489,8 @@ Brief definitions for key terms in the Agent Ecosystem
 ### HellaSwag
 
 - acronym for _Harder Endings, Longer contexts and Low-Shot Activities for Situations With Adversarial Generations_
-- benchmark centered on commonsense reasoning and natural language inference
+- benchmark centered on common sense reasoning and natural language inference
 - LLMs complete sentences by choosing from possible endings, including wrong answers created through adversarial filtering
-- evaluates accuracy for both few-shot and zero-shot categories
 
 ---
 
@@ -600,8 +564,6 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - published ranking of LLMs based on a variety of benchmarks
 - provides a way to track and compare the performance of many LLMs
-- each benchmark typically has its own leaderboard, though independent ones exist
-- example: Hugging Face's open LLM leaderboard ranks open-source LLMs on ARC, HellaSwag, MMLU, GSM8K, TruthfulQA and Winogrande
 
 ---
 
@@ -623,7 +585,6 @@ Brief definitions for key terms in the Agent Ecosystem
 - abbreviation for _Mostly Basic Programming Problems_, also known as _Mostly Basic Python Problems_
 - code generation benchmark with a corpus of more than 900 coding tasks
 - assesses functional correctness based on passing a set of test cases
-- evaluated in few-shot and fine-tuned settings using two sample-based metrics
 
 ---
 
@@ -656,8 +617,6 @@ Brief definitions for key terms in the Agent Ecosystem
 
 - abbreviation for _Massive Multitask Language Understanding_
 - benchmark assessing breadth of knowledge, depth of natural language understanding and ability to solve problems from knowledge
-- dataset of more than 15,000 multiple-choice general-knowledge questions across 57 subjects
-- evaluated in few-shot and zero-shot settings; score is the average per-subject accuracy
 - now largely saturated by frontier LLMs, reducing its usefulness as a differentiator
 
 ---
@@ -674,8 +633,7 @@ Brief definitions for key terms in the Agent Ecosystem
 ### MT-Bench
 
 - benchmark designed to test how well an LLM engages in dialogue and follows instructions
-- dataset of open-ended multi-turn questions - 10 each in coding, extraction, knowledge (STEM), humanities/social sciences, math, reasoning, roleplay and writing
-- uses GPT-4 as an LLM judge to evaluate the responses of other LLMs
+- includes open-ended multi-turn questions in coding, humanities, reasoning, roleplay, STEM, writing
 - created by the same researchers behind Chatbot Arena
 
 ---
@@ -744,8 +702,7 @@ Brief definitions for key terms in the Agent Ecosystem
 ### overfitting
 
 - limitation of LLM benchmarks and model training where an LLM performs well on training or test data but poorly on real-world data
-- occurs when an LLM is trained on the same dataset the benchmark uses
-- produces a score that doesn't reflect the LLM's actual abilities
+- risk when an LLM is trained on the same dataset the benchmark uses
 
 ---
 
@@ -756,15 +713,14 @@ Brief definitions for key terms in the Agent Ecosystem
 ### parameter value grounding
 
 - semantic function-calling metric based on LLM-as-a-judge
-- verifies that every parameter value is directly derived from the user's text, the context history (such as previous tool outputs), or API specification defaults
+- verifies that every parameter value is directly derived from the user's text, the context history, or API specification defaults
 - detects fabricated or unsupported argument values
 
 ---
 
 ### pass@k
 
-- code generation evaluation metric measuring the probability that at least one of k generated solutions passes a problem's unit tests
-- used by benchmarks such as HumanEval
+- code generation evaluation metric measuring the probability that at least one of _k_ generated solutions passes a problem's unit tests
 - captures functional correctness across multiple generated candidates
 
 ---
@@ -781,7 +737,7 @@ blocking certain categories of action entirely
 
 ### perplexity
 
-- benchmark metric measuring how good an LLM is at prediction
+- measures how good an LLM is at prediction
 - the lower an LLM's perplexity score, the better it is at comprehending a task
 
 ---
@@ -822,15 +778,6 @@ blocking certain categories of action entirely
 
 ---
 
-### precision
-
-- percentage of correct predictions made by an LLM
-- also called accuracy in some contexts
-- in classification benchmarks, precision focuses on the correctness of positive predictions
-- paired with recall and combined into the F1 score
-
----
-
 ### prediction model
 
 - algorithm or statistical model that forecasts outcomes based on input data
@@ -860,8 +807,7 @@ blocking certain categories of action entirely
 
 ### prompt injection vulnerability
 
-- evaluation metric measuring the success rate of adversarial prompts that alter an agent's intended behavior
-- part of ethical and responsible AI and security evaluation
+- ethical and security evaluation metric measuring the success rate of adversarial prompts that alter an agent's intended behavior
 - identifies susceptibility to manipulation or misuse
 
 ---
@@ -913,16 +859,15 @@ blocking certain categories of action entirely
 ### recall
 
 - also called the sensitivity rate
-- evaluation metric quantifying the number of true positives - the actual correct predictions an LLM identifies
+- evaluation metric quantifying the number of true positives
 - paired with precision and combined into the F1 score
 
 ---
 
 ### regression testing
 
+- release gate discpline that checks whether an agent got worse after a change
 - running a curated benchmark dataset as a test suite every time a base LLM is swapped or a system prompt is updated
-- detects when a new LLM version fails a task a previous version passed
-- reframes benchmarking as an internal measure of stability rather than a global ranking tool
 
 ---
 
@@ -949,8 +894,6 @@ blocking certain categories of action entirely
 
 - abbreviation for _Recall-Oriented Understudy for Gisting Evaluation_
 - metric for evaluating text summarization
-- ROUGE-N performs similar n-gram calculations to BLEU for summaries
-- ROUGE-L computes the longest common subsequence between the predicted summary and the human-produced summary
 
 ---
 
@@ -984,28 +927,25 @@ blocking certain categories of action entirely
 
 ---
 
-### semantic drift
-
-- gradual degradation in the semantic quality or accuracy of a system's outputs over time
-- detectable through continuous evaluation and automated scoring of production outputs
-- catching semantic drift early prevents user-facing quality regression
-
----
-
 ### semantic evaluation
 
 - assessment approach based on meaning rather than structure
 - uses LLM-as-a-judge to score outputs for relevance, factuality and correctness where no ground truth exists
-- answers "did the agent produce a factually correct response" rather than only "did it return the right format"
-- contrasts with rule-based checks that verify syntax and function-call shape
 
 ---
 
 ### SimpleQA
 
-- fact-seeking benchmark for measuring an LLM's ability to provide verifiable answers
+- OpenAI fact-seeking benchmark for measuring an LLM's ability to provide verifiable answers
 - used to track hallucination rates for attempted answers
-- verifiable recall metrics from such tests provide a baseline general reasoning benchmarks often overlook
+
+---
+
+### `/SKILL`
+
+- bundle of instructions and reference material that gives an agent just-in-time context for a specific domain or task
+- distinct from hooks and slash commands in that skills work through LLM interpretation rather than deterministic execution
+- subject to the same context window attention dynamics as other injected content
 
 ---
 
@@ -1074,7 +1014,7 @@ how files should be structured, what behavior is required vs optional
 
 ### SWE-bench
 
-- code generation benchmark focused on issue resolution
+- code generation evaluation framework focused on issue resolution
 - LLMs tasked with fixing a bug or addressing a feature request in a specific code base
 - assessment metric is the percentage of resolved task instances
 
@@ -1110,7 +1050,7 @@ how files should be structured, what behavior is required vs optional
 
 ### task completion rate
 
-- evaluation metric measuring how effectively an AI agent or system helps users complete a task
+- evaluation metric measuring how effectively an agent or system helps users complete a task
 - used for task-specific and interaction/user-experience evaluation
 - closely related to success rate, the proportion of tasks or goals completed correctly
 
@@ -1166,8 +1106,7 @@ how files should be structured, what behavior is required vs optional
 
 - benchmark measuring an LLM's ability to generate truthful answers to questions
 - addresses the tendency of LLMs to hallucinate and produce inaccurate outputs
-- dataset contains more than 800 questions spanning 38 subjects
-- combines human evaluation with a GPT-3 LLM fine-tuned on BLEU and ROUGE to predict human assessments of informativeness and truthfulness
+- combines human evaluation with `GPT`s
 
 ---
 
@@ -1196,8 +1135,8 @@ how files should be structured, what behavior is required vs optional
 ### unit transformation
 
 - semantic function-calling metric based on LLM-as-a-judge
-- verifies unit or format conversions (beyond basic types) between values in the context and parameter values in the tool call
-- detects incorrect conversions such as wrong currency, temperature scale or measurement unit
+- verifies unit or format conversions between values in the context and parameter values in the tool call
+- detects incorrect conversions such as wrong currency, temperature scale, or measurement unit
 
 ---
 
@@ -1238,9 +1177,8 @@ how files should be structured, what behavior is required vs optional
 ### Winogrande
 
 - benchmark evaluating an LLM's commonsense reasoning capabilities
-- builds upon the original Winograd Schema Challenge (WSC) with a dataset of 44,000 crowdsourced problems
+- builds upon WSC, _Winograd Schema Challenge_ with a dataset of 44,000 crowdsourced problems
 - uses adversarial filtering to generate incorrect answers
-- scored based on accuracy
 
 ---
 
@@ -1256,5 +1194,3 @@ how files should be structured, what behavior is required vs optional
 
 - rule-based function-calling metric
 - flags when an agent supplies a parameter value whose type (string, number, boolean) does not match what the function expects
-
----
