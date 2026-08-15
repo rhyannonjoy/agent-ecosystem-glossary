@@ -319,14 +319,6 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ---
 
-### ecological validity gap
-
-- failure of public benchmarks and leaderboards to predict how an LLM performs on messy, real-world tasks
-- LLMs may ace static tests yet fail on domain-specific production data
-- reason high leaderboard scores often don't translate to reliable behavior in production
-
----
-
 ### engagement rate
 
 - interaction metric tracking how often users interact with an AI system
@@ -343,8 +335,8 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ### eval
 
-- short form of _evaluation_
-- structured assessment of an AI agent's outputs, decisions or actions
+- abbreviation of _evaluation_
+- structured assessment of an agent's outputs, decisions or actions
 - benchmarks, metrics and eval harnesses provide the scaffolding for running evaluations
 
 ---
@@ -676,15 +668,6 @@ Brief definitions for key terms in the Agent Ecosystem
 - includes diagnostic tests for fit, examining residuals, and testing additional model terms
 - identifies violations that could invalidate statistical inferences
 - itself relies on further assumptions that become part of the full model
-
----
-
-### model fragility
-
-- tendency of LLMs to degrade in performance when benchmark prompts are rephrased
-- modest rephrasing of benchmark prompts causes measurable performance degradation across leading LLMs
-- indicates LLMs overfit to surface patterns in test questions rather than developing genuine semantic understanding
-- a high leaderboard score can't prevent unexpected behavior if the LLM is prompt-sensitive
 
 ---
 
