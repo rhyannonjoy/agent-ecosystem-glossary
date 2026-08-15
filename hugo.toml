@@ -4,7 +4,7 @@
 # hugo server -D
 
 baseURL = 'https://rhyannonjoy.github.io/agent-ecosystem-glossary/'
-languageCode = 'en-us'
+locale = 'en-us'
 title = "Agent Ecosystem Glossary"
 
 [module]
