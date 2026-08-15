@@ -69,11 +69,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Links */
-a:not(.explore-button) {
+a {
   color: #3d3d3d;
 }
 
-a:not(.explore-button):hover {
+a:hover {
   color: var(--dark-text);
 }
 
