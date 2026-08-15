@@ -1,0 +1,762 @@
+---
+title: "Evaluation & Benchmarks"
+weight: 2
+bookToc: true
+---
+
+# Evaluation & Benchmarks
+
+Ways to measure, compare, and improve agent performance. Understand the difference between
+static benchmarking and dynamic evaluation to choose the appropriate approach
+for LLM selection, regression testing, production monitoring, and general tuning for
+reliable behavior.
+
+---
+
+## accuracy
+
+**Definition**: also known as precision; percentage of correct predictions made by an LLM; foundational
+to evaluation, the most widely reported scoring metric in benchmarks and/or leaderboards
+
+**Purpose**: serves as the primary quantitative metric across classification; provides a single number
+for comparing how often an LLM produces a correct answer
+
+**Example**: a benchmark with 100 questions where an LLM answers 93 correctly yields 93% accuracy
+
+**Related Terms**: precision, recall, F1 score, exact match
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## adversarial filtering
+
+**Definition**: data construction technique used to generate hard, plausible negatives for benchmark
+datasets; algorithmically constructs incorrect answers that look realistic enough to mislead an LLM;
+shapes how evaluation difficulty is calibrated
+
+**Purpose**: avoids ceiling effects and benchmark saturation by ensuring distractors are
+challenging rather than trivially wrong; keeps leaderboard scores meaningful by preventing
+LLMs from gaming simple patterns
+
+**Example**: HellaSwag generates story endings that are realistic, but incorrect, so LLMs
+can't guess by surface plausibility
+
+**Related Terms**: benchmark, HellaSwag, Winogrande
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## BLEU
+
+**Definition**: acronym for _Bilingual Evaluation Understudy_; one of the canonical
+automated metrics used to score LLM output on translation-style semantic meaning;
+evaluates machine translation by computing matching n-grams - sequences of n adjacent
+text symbols - between an LLM's predicted translation and a human-produced translation
+
+**Purpose**: provides a lower-cost alternative to ground-truth-based evaluation; complements
+human evaluation of coherence, relevance and semantic meaning
+
+**Related Terms**: ROUGE, exact match, ground truth
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## bounded scoring
+
+**Definition**: limitation of LLM benchmarks in which an LLM reaches the highest possible score;
+contributes to ineffectiveness of public benchmarks and motivates more custom eval pipelines
+
+**Purpose**: highlights when a benchmark saturates and must be updated with more difficult tasks
+to remain a useful measure
+
+**Example**: once every major LLM scores near 100% on MMLU, that score no longer separates models
+
+**Related Terms**: benchmark, broad dataset limitation, overfitting, model fragility
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker?"](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## broad dataset
+
+**Definition**: includes wide array of subjects and tasks; contributes to the ecological validity
+gap between leaderboard scores and production performance
+
+**Purpose**: possibly exploratory in nature, but makes public benchmarks a poor fit for edge
+scenarios, specialized areas or specific use cases
+
+**Example**: a general-knowledge benchmark may not cover a team's proprietary domain jargon
+
+**Related Terms**: benchmark, bounded scoring, ecological validity gap, benchmark
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker?"](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## benchmark
+
+**Definition**: standardized test or dataset used to evaluate and compare system performance;
+provides consistent metrics - such as task completion rates, accuracy scores, reasoning
+capabilities - across different LLMs, agents or approaches
+
+**Purpose**: enables objective comparison across LLMs and tracks progress in the field;
+typically supplies sample data, a set of questions or tasks, metrics for evaluation and a
+scoring mechanism
+
+**Example**: tests coding, common sense, reasoning, translation capabilities; custom benchmarks
+include a golden dataset and scoring built for a specific domain
+
+**Related Terms**: evaluation, LLM leaderboard
+
+**Sources**:
+
+- [HumanSignal, "Building custom golden datasets for regression testing"](https://humansignal.com/ai-benchmarks/)
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## Chatbot Arena
+
+**Definition**: open benchmark platform that pits two anonymous chatbots against each other;
+users hold real-world conversations and vote on which they prefer before identities are revealed
+
+**Purpose**: produces crowdsourced pairwise comparison data fed into statistical methods that
+estimate scores and create approximate LLM rankings
+
+**Why this belongs in `Evaluation and Benchmarks`**: Chatbot Arena is a leading human-preference-based
+leaderboard, representing a fundamentally different assessment criterion from ground-truth benchmarks
+
+**Example**: user preference votes across matchups generate an Elo-style ranking of anonymous LLMs
+
+**Related Terms**: evaluation, LLM leaderboard, MT-Bench
+
+**Sources**:
+
+- [arXiv: "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference" by Chiang et al.](https://arxiv.org/abs/2403.04132)
+
+---
+
+## Discriminability Score
+
+**Definition**: metric used to filter benchmark datasets by identifying tasks that separate
+a good response from a bad one; supports building lean, custom benchmarks that provide
+a stronger signal than large, generic ones
+
+**Purpose**: intends to reduce test size while maintaining evaluation accuracy; creates
+a tighter, faster regression suite by removing redundant questions
+
+**Example**: a team prunes hundreds of redundant questions down to the edge cases and
+reasoning tasks that actually differentiate its application
+
+**Related Terms**: benchmark, golden dataset, regression testing
+
+**Sources**:
+
+- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## ecological validity gap
+
+**Definition**: failure of public benchmarks and leaderboards to predict how an LLM performs
+on messy, real-world tasks; LLMs may ace static tests yet fail on domain-specific production data;
+central to the case for evaluation over benchmarking
+
+**Purpose**: explains why high leaderboard scores often do not translate to reliable behavior
+in production; motivates golden datasets and continuous evaluation
+
+**Example**: a LLM that handles physics questions on a leaderboard may fail to summarize a standard
+internal meeting transcript
+
+**Related Terms**: benchmark, evaluation, model fragility
+
+**Sources**:
+
+- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## error rate
+
+**Definition**: evaluation metric measuring the percentage of incorrect outputs or failed operations
+
+**Purpose**: provides an inverse view of success, helping teams quantify failures and failed operations
+
+**Why this belongs in `Evaluation and Benchmarks`**: a functional metric commonly tracked alongside success and task completion rates
+
+**Related Terms**: task completion rate, agent evaluation
+
+---
+
+## exact match
+
+**Definition**: proportion of an LLM's predictions that match the expected answer exactly
+
+**Purpose**: valuable criterion for translation and question-answering benchmarks; stricter than semantic similarity metrics
+
+**Why this belongs in `Evaluation and Benchmarks`**: a common ground-truth scoring metric for generative tasks
+
+**Related Terms**: accuracy, BLEU, ROUGE, ground truth
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## eval harness
+
+**Definition**: scaffolding used to run an evaluation; typically combines a dataset of prompts, the LLM or agent under test, and a scoring mechanism
+
+**Purpose**: standardizes how evals are run so results are comparable and reproducible across model versions
+
+**Why this belongs in `Evaluation and Benchmarks`**: eval harnesses operationalize the benchmarks and metrics described in this category
+
+**Related Terms**: eval, benchmark, regression testing
+
+---
+
+## evaluation
+
+**Definition**: process of assessing and understanding an agent's performance in executing tasks,
+decision-making and interacting with users
+
+**Purpose**: assess behavior, task success and alignment with user intent; balances concerns of
+function in terms of quality and cost vs non-functional and/or safety
+
+**Evaluation vs Benchmarking**: benchmarking is static testing against a fixed dataset to establish
+baselines while evaluation describes a dynamic, ongoing measurement of agent performance
+
+**Example**: a team continuously scores a RAG pipeline's answers for relevance and factuality rather
+than running a one-off generic test
+
+**Related Terms**: Final Response Evaluation, Stepwise Evaluation, Trajectory-Based Assessment, observability
+
+**Sources**:
+
+- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+- [IBM: "What is AI agent evaluation?" by Cole Stryker and Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+
+---
+
+## F1 score
+
+**Definition**: common combined metric in classsification and retrieval evaluation;
+blends accuracy and recall into a single measure; treats the two as equally weighted
+to balance false positives and false negatives
+
+**Purpose**: provides a single 0-1 score where 1 signifies excellent recall and precision,
+useful when both false positives and false negatives matter
+
+**Related Terms**: precision, recall, accuracy
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## few-shot
+
+**Definition**: standardized setting under which many benchmarks - ARC, MMLU, HellaSwag -
+are evaluated; prompting approach that supplies an LLM with a small number of examples
+showing how to fulfill a task before prompting
+
+**Purpose**: demonstrates an LLM's ability to learn from scarce data; one of the three
+common LLM benchmark testing approaches, alongside zero-shot and fine-tuning
+
+**Related Terms**: benchmark, zero-shot, MMLU
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## function calling evaluation
+
+**Definition**: assessment of an agent's tool invocation behavior
+
+**Purpose**: rule-based metrics cover structural correctness - wrong function name, missing
+required parameters, wrong parameter value type, disallowed values, hallucinated parameters;
+semantic metrics, based on LLM-as-a-judge, cover parameter value grounding and unit transformation
+
+**Related Terms**: parameter value grounding, unit transformation, LLM-as-a-Judge, tool use
+
+**Sources**:
+
+- [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+
+---
+
+## functional correctness
+
+**Definition**: evaluation criterion for code generation benchmarks; judges solutions
+by whether LLMs pass the corresponding unit tests
+
+**Purpose**: provides an objective, executable measure of code quality used by HumanEval,
+MBPP and similar coding benchmarks
+
+**Related Terms**: pass@k, HumanEval, MBPP
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## golden dataset
+
+**Definition**: curated set of prompts and verified answers for a specific business domain;
+replaces public leaderboards to predict production success for an application
+
+**Purpose**: serves as the basis for custom benchmarks and regression testing;
+ground truth that calibrates automated evaluation systems
+
+**Related Terms**: benchmark, ground truth, regression testing
+
+**Sources**:
+
+- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## Goodhart's law
+
+**Definition**: principle that _"when a measure becomes a target, it ceases to be a good measure"_; optimizing for a proxy metric leads to gaming the metric rather than improving underlying quality
+
+**Purpose**: warns that agents may learn to maximize benchmark scores without developing genuine capabilities
+
+**Why this belongs in `Evaluation and Benchmarks`**: a critical concern for benchmark design, connected to reward hacking and benchmark overfitting
+
+**Example**: training an LLM on benchmark data so it scores well on the test but fails on real-world data
+
+**Related Terms**: overfitting, benchmark, bounded scoring
+
+---
+
+## ground truth
+
+**Definition**: reference data assumed to be objectively correct; annotated data that AI agents and LLMs are tested against
+
+**Purpose**: benchmarks categorize assessment criteria by whether they rely on ground truth or on human preferences
+
+**Why this belongs in `Evaluation and Benchmarks`**: ground truth underlies many scoring metrics and golden datasets in this category
+
+**Related Terms**: golden dataset, exact match, accuracy
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## GSM8K
+
+**Definition**: acronym for _Grade School Math 8K_; benchmark testing an LLM's mathematical reasoning with a corpus of 8,500 grade-school math word problems
+
+**Purpose**: measures math reasoning where solutions are collected in natural language rather than mathematical expressions; AI verifiers are trained to evaluate LLM solutions
+
+**Why this belongs in `Evaluation and Benchmarks`**: one of the most-cited reasoning benchmarks used on LLM leaderboards
+
+**Related Terms**: benchmark, MMLU, LLM leaderboard, few-shot
+
+**Sources**:
+
+- [Cobbe et al., "Training Verifiers to Solve Math Word Problems", arXiv](https://arxiv.org/abs/2110.14168)
+
+---
+
+## HellaSwag
+
+**Definition**: acronym for _Harder Endings, Longer contexts and Low-Shot Activities for Situations With Adversarial Generations_; benchmark centered on commonsense reasoning and natural language inference
+
+**Purpose**: tasks LLMs with completing sentences by choosing among endings, including wrong answers created through adversarial filtering; evaluates accuracy for few-shot and zero-shot categories
+
+**Why this belongs in `Evaluation and Benchmarks`**: measures commonsense reasoning, a distinct capability on many leaderboards
+
+**Related Terms**: benchmark, adversarial filtering, Winogrande
+
+**Sources**:
+
+- [Zellers et al., "HellaSwag: Can a Machine Really Finish Your Sentence?", arXiv](https://arxiv.org/abs/1905.07830)
+
+---
+
+## human-in-the-loop
+
+**Definition**: system design where humans actively participate in AI decision-making or evaluation process, providing feedback, validation, or intervention at critical points
+
+**Purpose**: balances automation with human judgment and oversight; common in agent evaluation to assess quality, safety and alignment with human values
+
+**Why this belongs in `Evaluation and Benchmarks`**: human review is the ground-truth source that calibrates automated judging systems
+
+**Related Terms**: LLM-as-a-Judge, subject matter expert (SME), agent evaluation
+
+---
+
+## HumanEval
+
+**Definition**: benchmark assessing an LLM's code generation performance through functional correctness; LLMs are given programming problems and evaluated on whether generated solutions pass corresponding unit tests
+
+**Purpose**: establishes a reproducible standard for coding ability using the pass@k metric
+
+**Related Terms**: functional correctness, pass@k, MBPP, SWE-bench
+
+**Sources**:
+
+- [Chen et al., "Evaluating Large Language Models Trained on Code", arXiv](https://arxiv.org/abs/2107.03374)
+
+---
+
+## LLM-as-a-Judge
+
+**Definition**: evaluation methodology in which a LLM assesses quality of text outputs; the LLM scores or ranks responses based on criteria like accuracy, helpfulness or safety
+
+**Purpose**: enables scalable evaluation compared to human annotation alone at significantly lower cost; limitations include potential biases and consistency issues
+
+**Why this belongs in `Evaluation and Benchmarks`**: automated judging is the economic backbone of continuous, high-volume production evaluation
+
+**Related Terms**: Agent-as-a-Judge, semantic evaluation, subject matter expert (SME)
+
+**Sources**:
+
+- [IBM: "What is AI agent evaluation?"](https://www.ibm.com/think/topics/ai-agent-evaluation)
+- [Zheng et al., "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena", arXiv](https://arxiv.org/abs/2306.05685)
+
+---
+
+## LLM leaderboard
+
+**Definition**: published ranking of LLMs based on a variety of benchmarks
+
+**Purpose**: provides a way to track and compare the performance of many LLMs; each benchmark typically has its own leaderboard, though independent ones exist, such as Hugging Face's open LLM leaderboard
+
+**Why this belongs in `Evaluation and Benchmarks`**: leaderboards aggregate benchmark results into a LLM-selection decision aid, though they suffer from the ecological validity gap
+
+**Related Terms**: benchmark, Chatbot Arena, MMLU, LLM benchmark
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+- [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)
+
+---
+
+## MBPP
+
+**Definition**: acronym for _Mostly Basic Programming Problems_, also known as _Mostly Basic Python Problems_; code generation benchmark with a corpus of more than 900 coding tasks
+
+**Purpose**: assesses functional correctness based on passing a set of test cases, evaluated in few-shot and fine-tuned settings
+
+**Related Terms**: HumanEval, functional correctness, pass@k
+
+**Sources**:
+
+- [Austin et al., "Program Synthesis with Large Language Models", arXiv](https://arxiv.org/abs/2108.07732)
+
+---
+
+## MMLU
+
+**Definition**: acronym for _Massive Multitask Language Understanding_; benchmark assessing breadth of knowledge, depth of natural language understanding and problem-solving from knowledge
+
+**Purpose**: dataset of more than 15,000 multiple-choice general-knowledge questions across 57 subjects, scored by average per-subject accuracy in few-shot and zero-shot settings
+
+**Why this belongs in `Evaluation and Benchmarks`**: a flagship general reasoning benchmark that is now largely saturated by frontier LLMs, reducing its usefulness as a differentiator
+
+**Related Terms**: benchmark, LLM leaderboard, few-shot, bounded scoring
+
+**Sources**:
+
+- [Hendrycks et al., "Measuring Massive Multitask Language Understanding", arXiv](https://arxiv.org/abs/2009.03300)
+
+---
+
+## model fragility
+
+**Definition**: tendency of LLMs to degrade in performance when benchmark prompts are rephrased;
+modest rephrasing causes measurable performance degradation across leading LLMs; driver of
+production evaluation over static benchmarking
+
+**Purpose**: shows that LLMs overfit to surface patterns in test questions rather than developing
+genuine semantic understanding; a high leaderboard score cannot prevent unexpected behavior if the LLM
+is prompt-sensitive
+
+**Related Terms**: benchmark, ecological validity gap, semantic drift, overfitting
+
+**Sources**:
+
+- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## MT-Bench
+
+**Definition**: benchmark designed to test how well an LLM engages in dialogue and follows instructions;
+dataset of open-ended multi-turn questions, 10 each across coding, extraction, knowledge, math, reasoning,
+roleplay and writing
+
+**Purpose**: uses GPT-4 as an LLM judge to evaluate the responses of other LLMs; created by the
+same researchers behind Chatbot Arena
+
+**Related Terms**: Chatbot Arena, LLM-as-a-Judge
+
+**Sources**:
+
+- [arXiv: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
+
+---
+
+## overfitting
+
+**Definition**: limitation of LLM benchmarks where an LLM performs well
+on training or test data but poorly on real-world data; supports importance of
+domain-specific data over public benchmarks
+
+**Purpose**: occurs when an LLM is trained on the same dataset the benchmark uses, producing
+a score that does not reflect the LLM's actual abilities
+
+**Related Terms**: benchmark, bounded scoring, Goodhart's law
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## pass@k
+
+**Definition**: code generation evaluation metric measuring the probability that at least one of
+_k_ generated solutions passes a problem's unit tests
+
+**Purpose**: captures functional correctness across multiple generated candidates, used by
+benchmarks such as HumanEval
+
+**Related Terms**: functional correctness, HumanEval, MBPP
+
+**Sources**:
+
+- [Chen et al., "Evaluating Large Language Models Trained on Code", arXiv](https://arxiv.org/abs/2107.03374)
+
+---
+
+## perplexity
+
+**Definition**: benchmark metric measuring how good an LLM is at prediction;
+eval statistical measure of LLM quality
+
+**Purpose**: the lower an LLM's perplexity score, the better it is at comprehending a task
+
+**Related Terms**: benchmark, accuracy
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## precision
+
+**Definition**: percentage of correct predictions made by an LLM; in classification benchmarks,
+focuses on the correctness of positive predictions
+
+**Purpose**: paired with recall and combined into the F1 score
+
+**Related Terms**: accuracy, recall, F1 score
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## prompt injection vulnerability
+
+**Definition**: evaluation metric measuring the success rate of adversarial prompts that alter an agent's intended behavior
+
+**Purpose**: identifies susceptibility to manipulation or misuse, part of ethical and responsible AI and security evaluation
+
+**Why this belongs in `Evaluation and Benchmarks`**: a safety-oriented metric that must be tracked alongside functional quality for deployed agents
+
+**Related Terms**: policy adherence rate, bias and fairness score, agent evaluation
+
+**Sources**:
+
+- [IBM: "What is AI agent evaluation?"](https://www.ibm.com/think/topics/ai-agent-evaluation)
+
+---
+
+## recall
+
+**Definition**: also called sensitivity rate; evaluation metric quantifying
+correct predictions, specifically the number of true positives
+
+**Purpose**: paired with precision and combined into the F1 score
+
+**Related Terms**: precision, F1 score
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## regression testing
+
+**Definition**: running a curated benchmark dataset as a test suite every time a base LLM is swapped
+or a system prompt is updated; turns custom benchmarks into operational part of the development
+lifecycle
+
+**Purpose**: detects when a new LLM version fails a task a previous version passed; reframes benchmarking
+as an internal measure of stability rather than a global ranking tool
+
+**Related Terms**: benchmark, golden dataset, Discriminability Score
+
+**Sources**:
+
+- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## ROUGE
+
+**Definition**: acronym for _Recall-Oriented Understudy for Gisting Evaluation_; metric for
+evaluating text summarization
+
+**Purpose**: ROUGE-N performs similar n-gram calculations to BLEU for summaries; ROUGE-L
+computes the longest common subsequence between the predicted summary and the human-produced summary
+
+**Related Terms**: BLEU, exact match
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## semantic drift
+
+**Definition**: gradual degradation in the semantic quality or accuracy of a system's outputs over time;
+motivates continuous evaluation and monitoring in production beyond benchmarks
+
+**Purpose**: detectable through continuous evaluation and automated scoring of production outputs; catching semantic drift early prevents user-facing quality regression
+
+**Related Terms**: LLM evaluation, model fragility, semantic evaluation
+
+**Sources**:
+
+- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## semantic evaluation
+
+**Definition**: assessment approach based on meaning rather than structure; uses LLM-as-a-judge to score outputs for relevance, factuality and correctness where no ground truth exists
+
+**Purpose**: answers "did the agent produce a factually correct response" rather than only "did it return the right format"; contrasts with rule-based checks that verify syntax and function-call shape
+
+**Why this belongs in `Evaluation and Benchmarks`**: semantic evaluation is central to measuring quality of open-ended LLM output
+
+**Related Terms**: LLM-as-a-Judge, function calling evaluation, ground truth
+
+**Sources**:
+
+- [IBM: "What is AI agent evaluation?"](https://www.ibm.com/think/topics/ai-agent-evaluation)
+
+---
+
+## SimpleQA
+
+**Definition**: fact-seeking benchmark for measuring an LLM's ability to provide verifiable answers
+
+**Purpose**: used to track hallucination rates for attempted answers; verifiable recall metrics from such tests provide a baseline that general reasoning benchmarks often overlook
+
+**Related Terms**: hallucination, TruthfulQA
+
+**Sources**:
+
+- [OpenAI, "Introducing SimpleQA"](https://openai.com/index/introducing-simpleqa/)
+
+---
+
+## SWE-bench
+
+**Definition**: code generation benchmark focused on issue resolution; LLMs are tasked with fixing a bug or addressing a feature request in a specific code base
+
+**Purpose**: assessment metric is the percentage of resolved task instances, testing real-world software maintenance ability
+
+**Related Terms**: HumanEval, functional correctness
+
+**Sources**:
+
+- [Jimenez et al., "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?", arXiv](https://arxiv.org/abs/2310.06770)
+
+---
+
+## task completion rate
+
+**Definition**: evaluation metric measuring how effectively an AI agent or system helps users complete a task
+
+**Purpose**: used for task-specific and interaction/user-experience evaluation; closely related to success rate, the proportion of tasks or goals completed correctly
+
+**Related Terms**: error rate, agent evaluation
+
+**Sources**:
+
+- [IBM: "What is AI agent evaluation?"](https://www.ibm.com/think/topics/ai-agent-evaluation)
+
+---
+
+## TruthfulQA
+
+**Definition**: benchmark measuring an LLM's ability to generate truthful answers to questions; addresses the tendency of LLMs to hallucinate and produce inaccurate outputs
+
+**Purpose**: dataset contains more than 800 questions spanning 38 subjects; combines human evaluation with a GPT-3 LLM fine-tuned on BLEU and ROUGE to predict human assessments of informativeness and truthfulness
+
+**Related Terms**: hallucination, SimpleQA
+
+**Sources**:
+
+- [Lin et al., "TruthfulQA: Measuring How Models Mimic Human Falsehoods", arXiv](https://arxiv.org/abs/2109.07958)
+
+---
+
+## zero-shot
+
+**Definition**: prompting approach where an LLM is prompted to complete a task without having seen any examples beforehand
+
+**Purpose**: unveils an LLM's ability to comprehend new concepts and adapt to novel scenarios; one of the three common benchmark testing approaches
+
+**Related Terms**: few-shot, benchmark
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## Winogrande
+
+**Definition**: benchmark evaluating an LLM's commonsense reasoning capabilities; builds on the original Winograd Schema Challenge (WSC) with 44,000 crowdsourced problems using adversarial filtering
+
+**Purpose**: scored based on accuracy, measuring coreference resolution and commonsense reasoning
+
+**Related Terms**: HellaSwag, adversarial filtering
+
+**Sources**:
+
+- [Sakaguchi et al., "WinoGrande: An Adversarial Winograd Schema Challenge at Scale", arXiv](https://arxiv.org/abs/1907.10641)

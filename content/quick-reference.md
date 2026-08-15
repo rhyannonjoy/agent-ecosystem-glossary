@@ -1089,15 +1089,6 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
-### subject matter expert (SME)
-
-- human authority on a specific domain who validates AI outputs
-- provides the ground truth that calibrates automated evaluation systems
-- catches nuanced issues with evidence support and clarity that automated judges approve
-- human reviewers are often stricter and more conservative than LLM-as-a-judge systems
-
----
-
 ### SWE-bench
 
 - code generation benchmark focused on issue resolution
