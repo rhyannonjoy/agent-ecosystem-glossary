@@ -77,6 +77,34 @@ a:not(.explore-button):hover {
   color: var(--dark-text);
 }
 
+/* In-content links: highlight with accent so they stand out from body text */
+.markdown a {
+  color: #6b5d52;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.markdown a:hover {
+  color: #b7442a;
+  text-decoration: underline;
+}
+
+.anchor,
+h1 a.anchor,
+h2 a.anchor,
+h3 a.anchor,
+h4 a.anchor,
+h5 a.anchor,
+h6 a.anchor {
+  color: var(--dark-text) !important;
+  text-decoration: none !important;
+}
+
+.anchor:hover,
+.book-toc a.anchor {
+  color: var(--dark-text) !important;
+}
+
 /* Code blocks */
 pre,
 code {
