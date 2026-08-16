@@ -31,9 +31,7 @@ can't guess by surface plausibility
 
 **Related Terms**: benchmark, evaluation, HellaSwag, Winogrande
 
-**Source**:
-
-- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
 ---
 
@@ -49,9 +47,7 @@ to remain a useful measure
 
 **Related Terms**: benchmark, evaluation, overfitting
 
-**Source**:
-
-- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker?"](https://www.ibm.com/think/topics/llm-benchmarks)
+**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker?"](https://www.ibm.com/think/topics/llm-benchmarks)
 
 ---
 
@@ -111,9 +107,7 @@ measurable outcomes and systematic improvement
 
 **Related Terms**: benchmark, evaluation, final response evaluation, regression testing, stepwise evaluation
 
-**Source**:
-
-- [Braintrust: "What is eval-driven development: How to ship high-quality agents without guessing"](https://www.braintrust.dev/articles/eval-driven-development)
+**Source**: [Braintrust: "What is eval-driven development: How to ship high-quality agents without guessing"](https://www.braintrust.dev/articles/eval-driven-development)
 
 ---
 
@@ -127,9 +121,7 @@ common LLM benchmark testing approaches, alongside zero-shot and fine-tuning
 
 **Related Terms**: benchmark, evaluation, HellaSwag, MMLU, zero-shot
 
-**Source**:
-
-- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
 ---
 
@@ -143,9 +135,7 @@ process, intermediate steps, or failure points
 
 **Related Terms**: benchmark, evaluation, EDD, stepwise evaluation, trajectory-based evaluation
 
-**Source**:
-
-- [Arize: "How to evaluate AI agents: a production workflow"](https://arize.com/guides/ai-agent-handbook/agent-evaluation/)
+**Source**: [Arize: "How to evaluate AI agents: a production workflow"](https://arize.com/guides/ai-agent-handbook/agent-evaluation/)
 
 ---
 
@@ -153,15 +143,20 @@ process, intermediate steps, or failure points
 
 **Definition**: assessment of an agent's tool invocation behavior
 
-**Purpose**: rule-based metrics cover structural correctness - wrong function name, missing
-required parameters, wrong parameter value type, disallowed values, hallucinated parameters;
-semantic metrics, based on LLM-as-a-judge, cover parameter value grounding and unit transformation
+**Purpose**: rule-based metrics cover structural correctness of a tool call; semantic metrics,
+based on LLM-as-a-judge, cover parameter value grounding and unit transformation -
+
+| **Metric** | **Flags** |
+| --- | --- |
+| **allowed values** | value outside the set of accepted or predefined values for that parameter |
+| **hallucinated parameter** | included in the call, but not defined or supported by function requirements |
+| **missing parameters** | function call omits one or more parameters necessary for execution |
+| **wrong function** | call exists, but with an incorrect case, name, and/or spelling |
+| **wrong type** | parameter type doesn't match function requirements |
 
 **Related Terms**: functional correctness, parameter value grounding, tool use, unit transformation
 
-**Source**:
-
-- [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+**Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
 ---
 
@@ -175,9 +170,7 @@ MBPP and similar coding benchmarks
 
 **Related Terms**: benchmark, evaluation, function calling evaluation, pass@k, HumanEval, MBPP
 
-**Source**:
-
-- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
 ---
 
@@ -191,9 +184,7 @@ ground truth that calibrates automated evaluation systems
 
 **Related Terms**: benchmark, evaluation, ground truth, regression testing
 
-**Source**:
-
-- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+**Source**: [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
 
 ---
 
@@ -209,9 +200,7 @@ capabilities; critical for effective benchmark design to prevent reward hacking 
 
 **Related Terms**: benchmark, bounded scoring, evaluation, overfitting
 
-**Source**:
-
-- [Wikipedia: "Goodhart's law"](https://en.wikipedia.org/wiki/Goodhart%27s_law)
+**Source**: [Wikipedia: "Goodhart's law"](https://en.wikipedia.org/wiki/Goodhart%27s_law)
 
 ---
 
@@ -224,9 +213,7 @@ on human preferences reflecting real world usage; guides metrics and defines gol
 
 **Related Terms**: accuracy, benchmark, evaluation, exact match, golden dataset
 
-**Source**:
-
-- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
 ---
 
@@ -258,9 +245,7 @@ LLM-selection aid
 
 **Related Terms**: benchmark, Chatbot Arena, evaluation, MMLU
 
-**Source**:
-
-- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
 ---
 
@@ -314,9 +299,7 @@ verify syntax and function-call shape
 
 **Related Terms**: benchmark, evaluation, function calling evaluation, ground truth, LLM-as-a-Judge
 
-**Source**:
-
-- [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+**Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
 ---
 
@@ -361,8 +344,6 @@ scenarios; one of the three common benchmark testing approaches
 
 **Related Terms**: benchmark, evaluation, few-shot
 
-**Source**:
-
-- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
 ---

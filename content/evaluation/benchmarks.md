@@ -7,8 +7,8 @@ parent: "evaluation"
 
 # Benchmarks
 
-Named, standardized datasets and tasks used to measure and compare model and agent
-performance across capabilities such as reasoning, code, dialogue and knowledge.
+Standardized datasets and tasks used to measure and compare LLM and/or agent
+performance across capabilities. 
 
 ---
 
@@ -22,9 +22,7 @@ both an easy set and a challenge set of harder questions requiring multi-step re
 
 **Related Terms**: benchmark, evaluation, few-shot, MMLU, zero-shot
 
-**Source**:
-
-- [arXiv: "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge" by Clark et al.](https://arxiv.org/abs/1803.05457)
+**Source**: [arXiv: "Think you have Solved Question Answering? Try ARC" by Clark et al.](https://arxiv.org/abs/1803.05457)
 
 ---
 
@@ -40,9 +38,7 @@ estimate scores and create approximate LLM rankings
 
 **Related Terms**: benchmark, evaluation, LLM leaderboard, MT-Bench
 
-**Source**:
-
-- [arXiv: "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference" by Chiang et al.](https://arxiv.org/abs/2403.04132)
+**Source**: [arXiv: "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference" by Chiang et al.](https://arxiv.org/abs/2403.04132)
 
 ---
 
@@ -57,9 +53,7 @@ mathematical expressions
 
 **Related Terms**: benchmark, evaluation, few-shot, LLM leaderboard, MMLU
 
-**Source**:
-
-- [arXiv: "Training Verifiers to Solve Math Word Problems" by Cobbe et al.](https://arxiv.org/abs/2110.14168)
+**Source**: [arXiv: "Training Verifiers to Solve Math Word Problems" by Cobbe et al.](https://arxiv.org/abs/2110.14168)
 
 ---
 
@@ -73,9 +67,7 @@ created through adversarial filtering; evaluates accuracy for few-shot and zero-
 
 **Related Terms**: adversarial filtering, benchmark, evaluation, Winogrande
 
-**Source**:
-
-- [arXiv: "HellaSwag: Can a Machine Really Finish Your Sentence?" by Zellers et al.](https://arxiv.org/abs/1905.07830)
+**Source**: [arXiv: "HellaSwag: Can a Machine Really Finish Your Sentence?" by Zellers et al.](https://arxiv.org/abs/1905.07830)
 
 ---
 
@@ -88,9 +80,7 @@ LLMs are given programming problems and evaluated on whether generated solutions
 
 **Related Terms**: benchmark, evaluation, functional correctness, pass@k, MBPP, SWE-bench
 
-**Source**:
-
-- [arXiv: "Evaluating Large Language Models Trained on Code" by Chen et al.](https://arxiv.org/abs/2107.03374)
+**Source**: [arXiv: "Evaluating Large Language Models Trained on Code" by Chen et al.](https://arxiv.org/abs/2107.03374)
 
 ---
 
@@ -104,9 +94,7 @@ evaluated in few-shot and fine-tuned settings
 
 **Related Terms**: benchmark, evaluation, functional correctness, HumanEval, pass@k
 
-**Source**:
-
-- [arXiv: "Program Synthesis with Large Language Models" by Austin et al.](https://arxiv.org/abs/2108.07732)
+**Source**: [arXiv: "Program Synthesis with Large Language Models" by Austin et al.](https://arxiv.org/abs/2108.07732)
 
 ---
 
@@ -139,9 +127,7 @@ same researchers behind Chatbot Arena
 
 **Related Terms**: benchmark, Chatbot Arena, evaluation, functional correctness, LLM-as-a-Judge
 
-**Source**:
-
-- [arXiv: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
+**Source**: [arXiv: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
 
 ---
 
@@ -154,9 +140,7 @@ such tests provide a baseline that general reasoning benchmarks often overlook
 
 **Related Terms**: benchmark, evaluation, TruthfulQA
 
-**Source**:
-
-- [OpenAI: "Introducing SimpleQA" by Jason Wei et al.](https://openai.com/index/introducing-simpleqa/)
+**Source**: [OpenAI: "Introducing SimpleQA" by Jason Wei et al.](https://openai.com/index/introducing-simpleqa/)
 
 ---
 
@@ -170,9 +154,7 @@ real-world software maintenance ability
 
 **Related Terms**: benchmark, evaluation, functional correctness, HumanEval
 
-**Source**:
-
-- [arXiv: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" by Jimenez et al.](https://arxiv.org/abs/2310.06770)
+**Source**: [arXiv: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" by Jimenez et al.](https://arxiv.org/abs/2310.06770)
 
 ---
 
@@ -187,9 +169,7 @@ informativeness and truthfulness; largest models were generally least truthful
 
 **Related Terms**: benchmark, evaluation, hallucination, SimpleQA
 
-**Source**:
-
-- [arXiv: "TruthfulQA: Measuring How Models Mimic Human Falsehoods" by Lin et al.](https://arxiv.org/abs/2109.07958)
+**Source**: [arXiv: "TruthfulQA: Measuring How Models Mimic Human Falsehoods" by Lin et al.](https://arxiv.org/abs/2109.07958)
 
 ---
 
@@ -203,6 +183,4 @@ using adversarial filtering
 
 **Related Terms**: adversarial filtering, HellaSwag
 
-**Source**:
-
-- [arXiv: "WinoGrande: An Adversarial Winograd Schema Challenge at Scale" by Sakaguchi et al.](https://arxiv.org/abs/1907.10641)
+**Source**: [arXiv: "WinoGrande: An Adversarial Winograd Schema Challenge at Scale" by Sakaguchi et al.](https://arxiv.org/abs/1907.10641)

@@ -30,14 +30,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
-### allowed values
-
-- rule-based function-calling metric
-- flags when an agent uses a parameter value outside the set of accepted or predefined values for that parameter
-- indicates poor grounding in the underlying API or function specification
-
----
-
 ### ARC
 
 - acronym for _AI2 Reasoning Challenge_
@@ -373,7 +365,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 ### function calling evaluation
 
 - assessment of an agent's tool invocation behavior to APIs, databases, and/or web services
-- rule-based metrics cover structural correctness: wrong function name, missing required parameters, wrong parameter value type, disallowed values, hallucinated parameters
+- rule-based metrics cover structural correctness: allowed values, hallucinated parameter, missing required parameters, wrong function name, wrong parameter value type
 - semantic metrics, LLM-as-a-judge based - cover parameter value grounding and unit transformation
 
 ---
@@ -439,14 +431,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 ---
 
 ## H
-
----
-
-### hallucinated parameter
-
-- rule-based function-calling metric
-- flags when an agent includes a parameter in a function call that is not defined or supported by the function's specification
-- indicates the agent fabricated an argument not present in the interface contract
 
 ---
 
@@ -575,13 +559,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - enables agents to maintain context, learn from experience, and reference past actions
 - critical for multi-step reasoning and adapting behavior based on history
 - types include short-term - current task, long-term - across sessions, episodic - specific events
-
----
-
-### missing required parameters
-
-- rule-based function-calling metric
-- flags when an agent initiates a function call but omits one or more parameters necessary for the function to work
 
 ---
 
@@ -1140,18 +1117,3 @@ how files should be structured, what behavior is required vs optional
 - benchmark evaluating an LLM's commonsense reasoning capabilities
 - builds upon WSC, _Winograd Schema Challenge_ with a dataset of 44,000 crowdsourced problems
 - uses adversarial filtering to generate incorrect answers
-
----
-
-### wrong function name
-
-- rule-based function-calling metric
-- flags when an agent attempts to call a function that exists but uses an incorrect name or spelling
-- leads to failure in execution of the tool call
-
----
-
-### wrong parameter value type
-
-- rule-based function-calling metric
-- flags when an agent supplies a parameter value whose type (string, number, boolean) does not match what the function expects
