@@ -12,7 +12,6 @@ performance across capabilities such as reasoning, code, dialogue and knowledge.
 
 ---
 
-
 ## ARC
 
 **Definition**: acronym for _AI2 Reasoning Challenge_; benchmark measuring question answering and
@@ -28,7 +27,6 @@ both an easy set and a challenge set of harder questions requiring multi-step re
 - [arXiv: "Think you have Solved Question Answering? Try ARC, the AI2 Reasoning Challenge" by Clark et al.](https://arxiv.org/abs/1803.05457)
 
 ---
-
 
 ## Chatbot Arena
 

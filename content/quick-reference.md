@@ -108,6 +108,15 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
+### benchmark
+
+- standardized test or dataset used to evaluate and compare LLM and/or system performance
+- provides consistent metrics across different LLMs, agents, or approaches
+- task completion rates, accuracy scores, reasoning capabilities
+- enables objective comparison and tracks progress in the field
+
+---
+
 ### bias and fairness score
 
 - evaluation metric detecting disparities in AI decision-making across different user groups
@@ -132,48 +141,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
-### benchmark
-
-- standardized test or dataset used to evaluate and compare LLM and/or system performance
-- provides consistent metrics across different LLMs, agents, or approaches
-- task completion rates, accuracy scores, reasoning capabilities
-- enables objective comparison and tracks progress in the field
-
----
-
 ## C
-
----
-
-### Chatbot Arena
-
-- open benchmark platform that pits two anonymous chatbots against each other
-- users have random real-world conversations with both, then vote on which they prefer before identities are revealed
-- crowdsourced pairwise comparison data feeds statistical methods that estimate scores and create approximate rankings
-
----
-
-### conversational flow
-
-- interaction metric evaluating an agent's ability to maintain coherent and meaningful conversations
-- part of interaction and user experience evaluation for chatbots and virtual assistants
-
----
-
-### CSAT
-
-- abbreviation for _Customer Satisfaction score_
-- interaction metric measuring how satisfied users are with AI responses
-- typically gathered through post-interaction surveys
-
----
-
-### custom benchmark
-
-- proprietary golden dataset and scoring method built for a business domain
-- replaces public leaderboards for predicting production success
-- run as a regression suite when swapping base LLMs or updating system prompts
-- isolates edge cases and reasoning tasks that separate a good response from a bad one
 
 ---
 
@@ -182,6 +150,14 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - named after canaries used in coal mines as early warning detectors
 - unique marker string embedded in content to verify its presence in a system
 - its appearance in output confirms that specific content was loaded and/or processed
+
+---
+
+### Chatbot Arena
+
+- open benchmark platform that pits two anonymous chatbots against each other
+- users have random real-world conversations with both, then vote on which they prefer before identities are revealed
+- crowdsourced pairwise comparison data feeds statistical methods that estimate scores and create approximate rankings
 
 ---
 
@@ -244,12 +220,27 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
+### conversational flow
+
+- interaction metric evaluating an agent's ability to maintain coherent and meaningful conversations
+- part of interaction and user experience evaluation for chatbots and virtual assistants
+
+---
+
 ### cost-efficiency
 
 - evaluation metric measuring computational resources required relative to task performance
 - factors include token usage, API calls, processing time, energy consumption
 - increasingly important as agents scale to production environments
 - trade-off: higher accuracy often requires higher costs
+
+---
+
+### CSAT
+
+- abbreviation for _Customer Satisfaction score_
+- interaction metric measuring how satisfied users are with AI responses
+- typically gathered through post-interaction surveys
 
 ---
 
@@ -287,6 +278,23 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
+### edge case
+
+- critical for testing AI reliability and robustness
+- scenario or condition that occurs at _extreme operating parameters_ or _unusual circumstances_
+- falls outside normal operating conditions but within specified boundaries
+- **examples**: unusual inputs, rare combinations of factors, boundary conditions
+
+---
+
+### empirical testing
+
+- validation approach based on _observation and experimentation_ rather than theory alone
+- uses real data and measurable outcomes to evaluate hypotheses
+- applies algorithms with actual users, tasks, or environments to measure performance
+
+---
+
 ### engagement rate
 
 - interaction metric tracking how often users interact with an AI system
@@ -318,23 +326,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
-### edge case
-
-- critical for testing AI reliability and robustness
-- scenario or condition that occurs at _extreme operating parameters_ or _unusual circumstances_
-- falls outside normal operating conditions but within specified boundaries
-- **examples**: unusual inputs, rare combinations of factors, boundary conditions
-
----
-
-### empirical testing
-
-- validation approach based on _observation and experimentation_ rather than theory alone
-- uses real data and measurable outcomes to evaluate hypotheses
-- applies algorithms with actual users, tasks, or environments to measure performance
-
----
-
 ### experimental design
 
 - systematic planning of how to conduct an experiment to answer a research question
@@ -363,22 +354,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
-### function calling evaluation
-
-- assessment of an agent's tool invocation behavior to APIs, databases, and/or web services
-- rule-based metrics cover structural correctness: wrong function name, missing required parameters, wrong parameter value type, disallowed values, hallucinated parameters
-- semantic metrics, LLM-as-a-judge based - cover parameter value grounding and unit transformation
-
----
-
-### functional correctness
-
-- evaluation criterion for code generation benchmarks
-- judges solutions by whether they pass the corresponding unit tests
-
----
-
-### Final Response Evaluation
+### final response evaluation
 
 - evaluation methodology that assesses only the end result or output of an agent's execution
 - judges success based on whether final answer or outcome is correct
@@ -391,6 +367,21 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - designed to indicate how difficult a passage in English is to understand
 - score reflects the U.S. grade level needed to comprehend the text
+
+---
+
+### function calling evaluation
+
+- assessment of an agent's tool invocation behavior to APIs, databases, and/or web services
+- rule-based metrics cover structural correctness: wrong function name, missing required parameters, wrong parameter value type, disallowed values, hallucinated parameters
+- semantic metrics, LLM-as-a-judge based - cover parameter value grounding and unit transformation
+
+---
+
+### functional correctness
+
+- evaluation criterion for code generation benchmarks
+- judges solutions by whether they pass the corresponding unit tests
 
 ---
 
@@ -414,6 +405,16 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
+### Goodhart's law
+
+- originally an economics principle, now widely applied to AI and agent systems
+- _"when a measure becomes a target, it ceases to be a good measure"_
+- describes phenomenon where optimizing for a proxy metric leads to gaming the metric rather than improving underlying quality
+- critical concern: agents may learn to maximize benchmark scores without developing genuine capabilities
+- examples: reward hacking, benchmark overfitting, specification gaming
+
+---
+
 ### ground truth
 
 - reference data assumed to be objectively correct
@@ -427,16 +428,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - abbreviation for _Grade School Math 8K_
 - benchmark testing an LLM's mathematical reasoning with a corpus of 8,500 grade-school math word problems
 - solutions collected in natural language rather than mathematical expressions
-
----
-
-### Goodhart's law
-
-- originally an economics principle, now widely applied to AI and agent systems
-- _"when a measure becomes a target, it ceases to be a good measure"_
-- describes phenomenon where optimizing for a proxy metric leads to gaming the metric rather than improving underlying quality
-- critical concern: agents may learn to maximize benchmark scores without developing genuine capabilities
-- examples: reward hacking, benchmark overfitting, specification gaming
 
 ---
 
@@ -476,6 +467,14 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
+### HellaSwag
+
+- acronym for _Harder Endings, Longer contexts and Low-Shot Activities for Situations With Adversarial Generations_
+- benchmark centered on common sense reasoning and natural language inference
+- LLMs complete sentences by choosing from possible endings, including wrong answers created through adversarial filtering
+
+---
+
 ### heuristic
 
 - practical problem-solving approach that uses shortcuts or rules of thumb to find satisfactory solutions
@@ -483,14 +482,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - trades optimality for speed and feasibility when exhaustive search is impractical
 - in agent systems, guide decision-making when perfect information or unlimited computation is unavailable
 - examples: A* search, greedy algorithms, hand-crafted evaluation functions
-
----
-
-### HellaSwag
-
-- acronym for _Harder Endings, Longer contexts and Low-Shot Activities for Situations With Adversarial Generations_
-- benchmark centered on common sense reasoning and natural language inference
-- LLMs complete sentences by choosing from possible endings, including wrong answers created through adversarial filtering
 
 ---
 
@@ -541,19 +532,19 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
-### LLM leaderboard
-
-- published ranking of LLMs based on a variety of benchmarks
-- provides a way to track and compare the performance of many LLMs
-
----
-
 ### LLM-as-a-Judge
 
 - evaluation methodology where a large language model assesses quality of text outputs
 - LLM scores or ranks responses based on criteria like accuracy, helpfulness, or safety
 - enables scalable evaluation compared to human annotation alone
 - limitations include potential biases and consistency issues in LLM judgments
+
+---
+
+### LLM leaderboard
+
+- published ranking of LLMs based on a variety of benchmarks
+- provides a way to track and compare the performance of many LLMs
 
 ---
 
@@ -891,20 +882,20 @@ blocking certain categories of action entirely
 
 ---
 
+### scalar
+
+- mathematical concept, specifically from linear algebra
+- element of a field which is used to define a vector space through the operation of scalar multiplication
+- "scalar value" may refer to a single numerical quantity that has _magnitude but no direction_
+
+---
+
 ### self-reflection
 
 - agent capability to evaluate its own reasoning, actions, and outputs
 - involves identifying errors, assessing performance, and adjusting strategy
 - enables learning from mistakes and iterative improvement without external feedback
 - distinguishes more sophisticated agents from basic reactive systems
-
----
-
-### scalar
-
-- mathematical concept, specifically from linear algebra
-- element of a field which is used to define a vector space through the operation of scalar multiplication
-- "scalar value" may refer to a single numerical quantity that has _magnitude but no direction_
 
 ---
 
@@ -967,7 +958,7 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
-### Stepwise Evaluation
+### stepwise evaluation
 
 - evaluation methodology that assesses agent performance at each individual step of task execution
 - examines correctness of intermediate actions, decisions, and reasoning at granular level
@@ -1064,13 +1055,11 @@ how files should be structured, what behavior is required vs optional
 
 ---
 
-### Trajectory-Based Assessment
+### trajectory-based evaluation
 
 - evaluation methodology that analyzes the complete path or sequence of actions an agent takes
 - examines entire decision-making process from initial state to final outcome
 - considers not just correctness but efficiency, reasoning quality, and recovery from errors
-- provides holistic view of agent behavior including planning, adaptation, and tool use patterns
-- enables evaluation of process quality, not just outcome quality
 
 ---
 

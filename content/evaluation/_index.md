@@ -91,7 +91,7 @@ baselines while evaluation describes a dynamic, ongoing measurement of agent per
 **Example**: a team continuously scores a RAG pipeline's answers for relevance and factuality rather
 than running a one-off generic test
 
-**Related Terms**: benchmark, Final Response Evaluation, Stepwise Evaluation, Trajectory-Based Assessment
+**Related Terms**: benchmark, final response evaluation, stepwise evaluation, trajectory-based evaluation
 
 **Sources**:
 
@@ -109,7 +109,7 @@ evaluation guides design and iteration; structurally similar to TDD - _test-driv
 testing and metrics to inform architectural decisions throughout the development lifecycle; emphasizes
 measurable outcomes and systematic improvement
 
-**Related Terms**: benchmark, evaluation, Final Response Evaluation, regression testing, Stepwise Evaluation
+**Related Terms**: benchmark, evaluation, final response evaluation, regression testing, stepwise evaluation
 
 **Source**:
 
@@ -133,7 +133,7 @@ common LLM benchmark testing approaches, alongside zero-shot and fine-tuning
 
 ---
 
-## Final Response Evaluation
+## final response evaluation
 
 **Definition**: evaluation methodology that assesses only the end result or output of an agent's
 execution; judges success based on whether the final answer or outcome is correct
@@ -141,7 +141,7 @@ execution; judges success based on whether the final answer or outcome is correc
 **Purpose**: streamlined implementation with clear success criteria; provides no insight into the reasoning
 process, intermediate steps, or failure points
 
-**Related Terms**: benchmark, evaluation, EDD, Stepwise Evaluation, Trajectory-Based Assessment
+**Related Terms**: benchmark, evaluation, EDD, stepwise evaluation, trajectory-based evaluation
 
 **Source**:
 
@@ -320,7 +320,7 @@ verify syntax and function-call shape
 
 ---
 
-## Stepwise Evaluation
+## stepwise evaluation
 
 **Definition**: evaluation methodology that assesses agent performance at each individual step of task
 execution; examines correctness of intermediate actions, decisions, and reasoning at a granular level
@@ -329,11 +329,11 @@ execution; examines correctness of intermediate actions, decisions, and reasonin
 identifies exactly where an agent succeeds or fails in multi-step processes; more resource-intensive than
 final response evaluation but provides richer diagnostic information
 
-**Related Terms**: benchmark, EDD, evaluation, Final Response Evaluation, Trajectory-Based Assessment
+**Related Terms**: benchmark, EDD, evaluation, final response evaluation, trajectory-based evaluation
 
 ---
 
-## Trajectory-Based Assessment
+## trajectory-based evaluation
 
 **Definition**: evaluation methodology that analyzes the complete path or sequence of actions an agent
 takes; examines the entire decision-making process from initial state to final outcome
@@ -342,11 +342,12 @@ takes; examines the entire decision-making process from initial state to final o
 enables evaluation of process quality rather than only outcome quality, providing a holistic view of
 agent behavior including planning, adaptation, and tool use patterns
 
-**Related Terms**: benchmark, EDD, evaluation, Final Response Evaluation, Stepwise Evaluation
+**Related Terms**: benchmark, EDD, evaluation, final response evaluation, stepwise evaluation
 
-**Source**:
+**Sources**:
 
 - [Atlan: "How to Measure Agent Trajectory: The Path, Not the Answer" by Karthik Pasupathy](https://atlan.com/know/ai-agent/ai-agent-trajectory-evaluation/)
+- [Confident AI, Inc., DeepEval: "Trajectory-Based Evaluation"](https://deepeval.com/docs/evaluation-trajectory-based-llm-evals)
 
 ---
 
