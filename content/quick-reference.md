@@ -6,7 +6,7 @@ bookToc: true
 
 # Quick Reference
 
-Brief definitions for key terms in the Agent Ecosystem
+Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
@@ -76,7 +76,7 @@ Brief definitions for key terms in the Agent Ecosystem
 - autonomous system that perceives environment, makes decisions, and takes actions to achieve goals
 - typically LLM-based system that can use tools, maintain memory, and execute multi-step tasks
 - capabilities include reasoning, planning, tool use, memory management, and interaction
-- distinct from chatbots through autonomy and task execution abilities
+- distinct from chatbots, process automation, workflow engines through autonomy
 
 ---
 
@@ -134,7 +134,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ### benchmark
 
-- standardized test or dataset used to evaluate and compare system performance
+- standardized test or dataset used to evaluate and compare LLM and/or system performance
 - provides consistent metrics across different LLMs, agents, or approaches
 - task completion rates, accuracy scores, reasoning capabilities
 - enables objective comparison and tracks progress in the field
@@ -155,7 +155,7 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ### conversational flow
 
-- interaction metric evaluating an AI's ability to maintain coherent and meaningful conversations
+- interaction metric evaluating an agent's ability to maintain coherent and meaningful conversations
 - part of interaction and user experience evaluation for chatbots and virtual assistants
 
 ---
@@ -304,9 +304,9 @@ Brief definitions for key terms in the Agent Ecosystem
 ### eval
 
 - abbreviation of _evaluation_
-- structured assessment of an agent's outputs, decisions or actions
+- dynamic, ongoing, structured assessment of an agent's and/or LLM's outputs, decisions or actions
 - infrastructure includes benchmarks, harnesses, and metrics
-- dimensions include quality, cost and safety; trustworthiness, policy compliance, bias mitigation
+- dimensions include quality - cost and safety; trustworthiness - policy compliance, bias mitigation
 
 ---
 
@@ -365,9 +365,9 @@ Brief definitions for key terms in the Agent Ecosystem
 
 ### function calling evaluation
 
-- assessment of an agent's tool invocation behavior
+- assessment of an agent's tool invocation behavior to APIs, databases, and/or web services
 - rule-based metrics cover structural correctness: wrong function name, missing required parameters, wrong parameter value type, disallowed values, hallucinated parameters
-- semantic metrics - LLM-as-a-judge based - cover parameter value grounding and unit transformation
+- semantic metrics, LLM-as-a-judge based - cover parameter value grounding and unit transformation
 
 ---
 
@@ -538,25 +538,6 @@ Brief definitions for key terms in the Agent Ecosystem
 - LLM trained on vast amounts of text data to understand and generate human language
 - not all AI is LLM-based - such as computer vision models, recommendation systems
 - examples: GPT - _Generative Pre-trained Transformer_, Claude, and Llama
-
----
-
-### LLM benchmark
-
-- standardized framework for assessing the performance of LLMs
-- consists of sample data, a set of questions or tasks, metrics for evaluating performance and a scoring mechanism
-- tests capabilities such as coding, common sense, reasoning, translation, question answering and summarization
-- provides objective comparison of LLMs and guides fine-tuning decisions
-- limitations include bounded scoring, broad datasets, finite assessments and overfitting
-
----
-
-### LLM evaluation
-
-- dynamic, ongoing measurement of an application's outputs in context
-- assesses the entire system - retrieved context, synthesis and final presentation - alongside the underlying LLM
-- distinct from benchmarking, which is static testing against a fixed dataset for baselines
-- measures semantic quality and accuracy rather than only structural unit tests
 
 ---
 
@@ -1072,15 +1053,6 @@ how files should be structured, what behavior is required vs optional
 - affects agent behavior independently of the LLM itself
 - low temperature produces more focused, predictable responses
 - high temperature produces more varied, creative ones
-
----
-
-### tool use
-
-- also known as function calling or API calling
-- agent capability to interact with external functions, APIs, or resources to accomplish tasks
-- essential for extending agent capabilities beyond pure language generation
-- examples: executing code, querying databases, accessing web services, controlling software
 
 ---
 
