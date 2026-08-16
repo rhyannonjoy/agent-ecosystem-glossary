@@ -11,9 +11,8 @@ performance. Understand the difference between static benchmarking and dynamic e
 to choose the appropriate approach for LLM selection, regression testing, production
 monitoring, and general tuning for reliable behavior.
 
-The named standardized benchmarks are collected under [Benchmarks]({{< relref "benchmarks" >}})
-and the scoring measures under
-[Metrics & Scoring]({{< relref "metrics" >}}).
+Visit [Benchmarks]({{< relref "benchmarks" >}}) for standardized datasets and
+[Metrics & Scoring]({{< relref "metrics" >}}) for quantifying strategies.
 
 ---
 
@@ -101,6 +100,23 @@ than running a one-off generic test
 
 ---
 
+## EDD
+
+**Definition**: acronym for _Evaluation-driven Development_; software development methodology where
+evaluation guides design and iteration; structurally similar to TDD - _test-driven development_
+
+**Purpose**: incorporates continuous assessment of agent capabilities, reliability, and safety, using
+testing and metrics to inform architectural decisions throughout the development lifecycle; emphasizes
+measurable outcomes and systematic improvement
+
+**Related Terms**: benchmark, evaluation, Final Response Evaluation, regression testing, Stepwise Evaluation
+
+**Source**:
+
+- [Braintrust: "What is eval-driven development: How to ship high-quality agents without guessing"](https://www.braintrust.dev/articles/eval-driven-development)
+
+---
+
 ## few-shot
 
 **Definition**: standardized setting under which many benchmarks are evaluated; prompting approach
@@ -114,6 +130,22 @@ common LLM benchmark testing approaches, alongside zero-shot and fine-tuning
 **Source**:
 
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## Final Response Evaluation
+
+**Definition**: evaluation methodology that assesses only the end result or output of an agent's
+execution; judges success based on whether the final answer or outcome is correct
+
+**Purpose**: streamlined implementation with clear success criteria; provides no insight into the reasoning
+process, intermediate steps, or failure points
+
+**Related Terms**: benchmark, evaluation, EDD, Stepwise Evaluation, Trajectory-Based Assessment
+
+**Source**:
+
+- [Arize: "How to evaluate AI agents: a production workflow"](https://arize.com/guides/ai-agent-handbook/agent-evaluation/)
 
 ---
 
@@ -253,23 +285,6 @@ a standard internal meeting transcript
 
 ---
 
-## prompt injection vulnerability
-
-**Definition**: measures the success rate of adversarial prompts that alter
-an agent's intended behavior; safety-oriented metric tracked alongside functional quality,
-bias-fairness score, and/or policy adherence rate
-
-**Purpose**: identifies susceptibility to manipulation or misuse, part of ethical and
-responsible AI and security evaluation
-
-**Related Terms**: benchmark, evaluation, functional correctness, functional call evaluation
-
-**Source**:
-
-- [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
-
----
-
 ## regression testing
 
 **Definition**: running a curated benchmark dataset as a test suite every time a base LLM is swapped
@@ -302,6 +317,36 @@ verify syntax and function-call shape
 **Source**:
 
 - [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+
+---
+
+## Stepwise Evaluation
+
+**Definition**: evaluation methodology that assesses agent performance at each individual step of task
+execution; examines correctness of intermediate actions, decisions, and reasoning at a granular level
+
+**Purpose**: enables debugging and improvement of specific reasoning or action-taking capabilities and
+identifies exactly where an agent succeeds or fails in multi-step processes; more resource-intensive than
+final response evaluation but provides richer diagnostic information
+
+**Related Terms**: benchmark, EDD, evaluation, Final Response Evaluation, Trajectory-Based Assessment
+
+---
+
+## Trajectory-Based Assessment
+
+**Definition**: evaluation methodology that analyzes the complete path or sequence of actions an agent
+takes; examines the entire decision-making process from initial state to final outcome
+
+**Purpose**: considers not just correctness but efficiency, reasoning quality, and recovery from errors;
+enables evaluation of process quality rather than only outcome quality, providing a holistic view of
+agent behavior including planning, adaptation, and tool use patterns
+
+**Related Terms**: benchmark, EDD, evaluation, Final Response Evaluation, Stepwise Evaluation
+
+**Source**:
+
+- [Atlan: "How to Measure Agent Trajectory: The Path, Not the Answer" by Karthik Pasupathy](https://atlan.com/know/ai-agent/ai-agent-trajectory-evaluation/)
 
 ---
 
