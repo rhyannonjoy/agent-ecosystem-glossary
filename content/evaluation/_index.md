@@ -87,7 +87,8 @@ baselines while evaluation describes a dynamic, ongoing measurement of agent per
 **Example**: a team continuously scores a RAG pipeline's answers for relevance and factuality rather
 than running a one-off generic test
 
-**Related Terms**: benchmark, final response evaluation, stepwise evaluation, trajectory-based evaluation
+**Related Terms**: benchmark, final response evaluation, SAP Labs agent eval taxonomy, stepwise evaluation,
+trajectory-based evaluation
 
 **Sources**:
 
@@ -285,6 +286,50 @@ as an internal measure of stability rather than a global ranking tool
 
 - [Agent Engineering: "Regression Testing for Agents"](https://agentengineering.org/articles/regression-testing-for-agents/)
 - [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## SAP Labs agent eval taxonomy
+
+**Definition**: two-axis framework for organizing LLM agent evaluation, proposed by SAP Labs; splits
+evaluation into Evaluation Objectives - what is measured - and Evaluation Process - how it is measured
+
+**Purpose**: provides a shared vocabulary for scoping an evaluation effort - which objective(s) to
+target, what interaction mode and data to use, how metrics get computed, what tooling and environment
+run the tests - before selecting specific metrics or benchmarks
+
+**Evaluation Objectives**:
+
+| Dimension | Description | Examples |
+|---|---|---|
+| Agent Behavior | outcome oriented; did the agent produce the correct, efficient, affordable result? | task completion, interaction quality, latency & cost |
+| Agent Capabilities | process oriented; did the agent follow the right reasoning process? | planning & reasoning, memory & context, tool use, multi-agent behavior |
+| Reliability | consistency across time and input variations | robustness, hallucinations, error handling |
+| Safety & Alignment | is the agent compliant, safe, and non-harmful? | fairness, harm/toxicity/bias, compliance & policy adherence |
+
+**Evaluation Process**:
+
+| Dimension | Description | Subcategories |
+|---|---|---|
+| Interaction Mode | how evaluation data is provided to the system | static/offline vs. dynamic/online |
+| Evaluation Data | what data is used to evaluate the system | human-annotated, synthetic, interaction-generated |
+| Metrics Computation Methods | what method computes the evaluation metrics | code based, LLM-as-a-Judge, human-as-a-judge |
+| Evaluation Tooling | pre-existing tooling supporting evaluation | testing, observability, debugging, monitoring |
+| Evaluation Contexts | environment the agent is tested in | mocked APIs, simulators, live |
+
+**Notable Benchmarks by Objective**:
+
+| Objective | Benchmarks |
+|---|---|
+| Tool Use | ToolBench, API-Bank |
+| Planning | TaskBench, ScienceAgentBench |
+| Safety | AgentHarm, CoSafe, AgentDojo |
+| Long-Term Memory | LongEval, SocialBench |
+| Web Interaction | WebArena, BrowserGym |
+
+**Related Terms**: benchmark, evaluation, function calling evaluation, LLM-as-a-Judge, task completion rate
+
+**Source**: [SAP: "Evaluation and Benchmarking of LLM Agents: A Survey" by Mahmoud Mohammadi, Yipeng Li, Jane Lo, Wendy Yip (KDD 2025 Tutorial)](https://sap-samples.github.io/llm-agents-eval-tutorial/2025_KDD_Evaluation_and_Benchmarking_of_LLM_Agents.pdf)
 
 ---
 

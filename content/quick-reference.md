@@ -859,6 +859,14 @@ blocking certain categories of action entirely
 
 ---
 
+### SAP Labs agent eval taxonomy
+
+- two-axis framework for organizing LLM agent evaluation, proposed by SAP Labs
+- Evaluation Objectives - what is measured: Agent Behavior, Agent Capabilities, Reliability, Safety & Alignment
+- Evaluation Process - how it is measured: Interaction Mode, Evaluation Data, Metrics Computation Methods, Evaluation Tooling, Evaluation Contexts
+
+---
+
 ### scalar
 
 - mathematical concept, specifically from linear algebra
