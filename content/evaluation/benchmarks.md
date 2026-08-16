@@ -20,7 +20,7 @@ reasoning through more than 7,000 grade-school natural science questions
 **Purpose**: evaluates an LLM's ability to reason over grade-school science knowledge, including
 both an easy set and a challenge set of harder questions requiring multi-step reasoning
 
-**Related Terms**: benchmark, evaluation, few-shot, MMLU, zero-shot
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [few-shot]({{< relref "/evaluation" >}}#few-shot), [MMLU]({{< relref "/evaluation/benchmarks" >}}#mmlu), [zero-shot]({{< relref "/evaluation" >}}#zero-shot)
 
 **Source**: [arXiv: "Think you have Solved Question Answering? Try ARC" by Clark et al.](https://arxiv.org/abs/1803.05457)
 
@@ -36,7 +36,7 @@ estimate scores and create approximate LLM rankings
 
 **Example**: user preference votes across matchups generate an Elo-style ranking of anonymous LLMs
 
-**Related Terms**: benchmark, evaluation, LLM leaderboard, MT-Bench
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard), [MT-Bench]({{< relref "/evaluation/benchmarks" >}}#mt-bench)
 
 **Source**: [arXiv: "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference" by Chiang et al.](https://arxiv.org/abs/2403.04132)
 
@@ -51,7 +51,7 @@ used on public LLM leaderboards
 **Purpose**: measures math reasoning where solutions are collected in natural language rather than
 mathematical expressions
 
-**Related Terms**: benchmark, evaluation, few-shot, LLM leaderboard, MMLU
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [few-shot]({{< relref "/evaluation" >}}#few-shot), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard), [MMLU]({{< relref "/evaluation/benchmarks" >}}#mmlu)
 
 **Source**: [arXiv: "Training Verifiers to Solve Math Word Problems" by Cobbe et al.](https://arxiv.org/abs/2110.14168)
 
@@ -65,7 +65,7 @@ benchmark centered on common sense reasoning and natural language inference
 **Purpose**: tasks LLMs with completing sentences by choosing among endings, including wrong answers
 created through adversarial filtering; evaluates accuracy for few-shot and zero-shot categories
 
-**Related Terms**: adversarial filtering, benchmark, evaluation, Winogrande
+**Related Terms**: [adversarial filtering]({{< relref "/evaluation" >}}#adversarial-filtering), [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Winogrande]({{< relref "/evaluation/benchmarks" >}}#winogrande)
 
 **Source**: [arXiv: "HellaSwag: Can a Machine Really Finish Your Sentence?" by Zellers et al.](https://arxiv.org/abs/1905.07830)
 
@@ -78,7 +78,7 @@ LLMs are given programming problems and evaluated on whether generated solutions
 
 **Purpose**: establishes a reproducible standard for coding ability using the pass@k metric
 
-**Related Terms**: benchmark, evaluation, functional correctness, pass@k, MBPP, SWE-bench
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [pass@k]({{< relref "/evaluation/metrics" >}}#passk), [MBPP]({{< relref "/evaluation/benchmarks" >}}#mbpp), [SWE-bench]({{< relref "/evaluation/benchmarks" >}}#swe-bench)
 
 **Source**: [arXiv: "Evaluating Large Language Models Trained on Code" by Chen et al.](https://arxiv.org/abs/2107.03374)
 
@@ -92,7 +92,7 @@ _Mostly Basic Python Problems_; code generation benchmark with a corpus of more 
 **Purpose**: assesses functional correctness based on passing a set of test cases,
 evaluated in few-shot and fine-tuned settings
 
-**Related Terms**: benchmark, evaluation, functional correctness, HumanEval, pass@k
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [HumanEval]({{< relref "/evaluation/benchmarks" >}}#humaneval), [pass@k]({{< relref "/evaluation/metrics" >}}#passk)
 
 **Source**: [arXiv: "Program Synthesis with Large Language Models" by Austin et al.](https://arxiv.org/abs/2108.07732)
 
@@ -107,7 +107,7 @@ largely saturated by frontier LLMs, reducing its usefullness as a differentiator
 **Purpose**: dataset of more than 15,000 multiple-choice general-knowledge questions across 57
 subjects, scored by average per-subject accuracy in few-shot and zero-shot settings
 
-**Related Terms**: benchmark, bounded scoring, evaluation, few-shot, LLM leaderboard
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [bounded scoring]({{< relref "/evaluation" >}}#bounded-scoring), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [few-shot]({{< relref "/evaluation" >}}#few-shot), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
 
 **Sources**:
 
@@ -125,7 +125,7 @@ roleplay and writing
 **Purpose**: uses `GPT-4` as a judge to evaluate the responses of other LLMs; created by the
 same researchers behind Chatbot Arena
 
-**Related Terms**: benchmark, Chatbot Arena, evaluation, functional correctness, LLM-as-a-Judge
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [Chatbot Arena]({{< relref "/evaluation/benchmarks" >}}#chatbot-arena), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge)
 
 **Source**: [arXiv: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
 
@@ -138,7 +138,7 @@ same researchers behind Chatbot Arena
 **Purpose**: used to track hallucination rates for attempted answers; verifiable recall metrics from
 such tests provide a baseline that general reasoning benchmarks often overlook
 
-**Related Terms**: benchmark, evaluation, TruthfulQA
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [TruthfulQA]({{< relref "/evaluation/benchmarks" >}}#truthfulqa)
 
 **Source**: [OpenAI: "Introducing SimpleQA" by Jason Wei et al.](https://openai.com/index/introducing-simpleqa/)
 
@@ -152,7 +152,7 @@ fixing a bug or addressing a feature request in a specific code base
 **Purpose**: assessment metric is the percentage of resolved task instances, testing
 real-world software maintenance ability
 
-**Related Terms**: benchmark, evaluation, functional correctness, HumanEval
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [HumanEval]({{< relref "/evaluation/benchmarks" >}}#humaneval)
 
 **Source**: [arXiv: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?" by Jimenez et al.](https://arxiv.org/abs/2310.06770)
 
@@ -167,7 +167,7 @@ addresses the tendency of LLMs to hallucinate and produce inaccurate outputs
 combines human evaluation with `GPT`s LLM fine-tuned on BLEU and ROUGE to predict human assessments of
 informativeness and truthfulness; largest models were generally least truthful
 
-**Related Terms**: benchmark, evaluation, hallucination, SimpleQA
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [hallucination]({{< relref "/core-concepts" >}}#hallucination), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
 
 **Source**: [arXiv: "TruthfulQA: Measuring How Models Mimic Human Falsehoods" by Lin et al.](https://arxiv.org/abs/2109.07958)
 
@@ -181,6 +181,6 @@ using adversarial filtering
 
 **Purpose**: scored based on accuracy, measuring coreference resolution and common sense reasoning
 
-**Related Terms**: adversarial filtering, HellaSwag
+**Related Terms**: [adversarial filtering]({{< relref "/evaluation" >}}#adversarial-filtering), [HellaSwag]({{< relref "/evaluation/benchmarks" >}}#hellaswag)
 
 **Source**: [arXiv: "WinoGrande: An Adversarial Winograd Schema Challenge at Scale" by Sakaguchi et al.](https://arxiv.org/abs/1907.10641)
