@@ -336,7 +336,7 @@ structured, and what behavior is required versus optional
 **Definition**: tendency in LLMs to agree with, validate, or comply with user input rather than
 reasoning independently; known limitation of RLHF-trained LLMs and an active area of research
 
-**Purpose**: amplified by detailed or specific prompts, which push the LLM into "execution mode";
+**Purpose**: amplified by detailed or specific prompts, which push the LLM into _"execution mode"_;
 understanding sycophancy helps distinguish an agent's genuine reasoning from compliance bias
 
 **Related Terms**: [hallucination]({{< relref "core-concepts" >}}#hallucination), [RLHF]({{< relref "core-concepts" >}}#rlhf), [self-reflection]({{< relref "core-concepts" >}}#self-reflection)

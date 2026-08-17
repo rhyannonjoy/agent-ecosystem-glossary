@@ -160,7 +160,7 @@ false, and often degraded into a "significant" `(P ≤ 0.05)` vs "insignificant"
 **Definition**: mathematical concept, specifically from linear algebra; element of a field which
 is used to define a vector space through the operation of scalar multiplication
 
-**Purpose**: a "scalar value" refers to a single numerical quantity that has _magnitude but no
+**Purpose**: a _"scalar value"_ refers to a single numerical quantity that has _magnitude but no
 direction_, distinguishing it from vector-valued quantities
 
 **Related Terms**: [statistical model]({{< relref "/research/quantitative" >}}#statistical-model)

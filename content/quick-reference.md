@@ -916,8 +916,7 @@ translation and a human-produced translation
 ### SAP Labs agent eval taxonomy
 
 - two-axis framework for organizing LLM agent evaluation, proposed by SAP Labs
-- Evaluation Objectives - what is measured: Agent Behavior, Agent Capabilities, Reliability, Safety & Alignment
-- Evaluation Process - how it is measured: Interaction Mode, Evaluation Data, Metrics Computation Methods, Evaluation Tooling, Evaluation Contexts
+- measures behavior, capabilities, reliability, safety in various modes
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#sap-labs-agent-eval-taxonomy)
 
@@ -927,7 +926,6 @@ translation and a human-produced translation
 
 - mathematical concept, specifically from linear algebra
 - element of a field which is used to define a vector space through the operation of scalar multiplication
-- "scalar value" may refer to a single numerical quantity that has _magnitude but no direction_
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#scalar)
 
@@ -937,8 +935,6 @@ translation and a human-produced translation
 
 - agent capability to evaluate its own reasoning, actions, and outputs
 - involves identifying errors, assessing performance, and adjusting strategy
-- enables learning from mistakes and iterative improvement without external feedback
-- distinguishes more sophisticated agents from basic reactive systems
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#self-reflection)
 
@@ -965,7 +961,6 @@ translation and a human-produced translation
 ### `/SKILL`
 
 - bundle of instructions and reference material that gives an agent just-in-time context for a specific domain or task
-- distinct from hooks and slash commands in that skills work through LLM interpretation rather than deterministic execution
 - subject to the same context window attention dynamics as other injected content
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#skill)
@@ -976,8 +971,6 @@ translation and a human-produced translation
 
 - direct command typed into a chat interface, `/compact`, `/init`
 - triggers specific agent behavior without going through the LLM's interpretation loop
-- more predictable and consistent than natural language prompts for actions that need to happen reliably
-- contrasts with prompts, which the LLM interprets and may execute differently across runs
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#slash-command)
 
@@ -987,8 +980,6 @@ translation and a human-produced translation
 
 - abbreviation for _specification_
 - implementation guide
-- informs everyone building on a format exactly what to expect: which fields exist, what values are valid,
-how files should be structured, what behavior is required vs optional
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#spec)
 
@@ -996,10 +987,8 @@ how files should be structured, what behavior is required vs optional
 
 ### statistical inference
 
-- foundational methodology for evaluating whether observed results are meaningful or due to chance 
+- foundational methodology for evaluating whether observed results are meaningful or due to chance
 - process of drawing conclusions about populations or processes from sample data
-- includes hypothesis testing, confidence interval estimation, and parameter estimation
-- accounts for uncertainty and random variation when making generalizations
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#statistical-inference)
 
@@ -1009,9 +998,6 @@ how files should be structured, what behavior is required vs optional
 
 - mathematical representation of data variability and all assumptions used to compute statistics
 - includes assumptions about - data collection, randomization, treatment allocation, analysis choices
-- embodies full web of assumptions beyond just equations with parameters
-- violation of any assumption, not just test hypothesis, can produce misleading P values
-- often presented in compressed form, with many assumptions unstated or unrecognized
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#statistical-model)
 
@@ -1021,9 +1007,6 @@ how files should be structured, what behavior is required vs optional
 
 - evaluation methodology that assesses agent performance at each individual step of task execution
 - examines correctness of intermediate actions, decisions, and reasoning at granular level
-- enables debugging and improvement of specific reasoning or action-taking capabilities
-- more resource-intensive than final response evaluation but provides richer diagnostic information
-- advantages: identifies exactly where agent succeeds or fails in multi-step processes
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#stepwise-evaluation)
 
@@ -1031,8 +1014,8 @@ how files should be structured, what behavior is required vs optional
 
 ### stochastic
 
-- commonly used in mathematics, science, and information theory
 - random probability distribution or pattern that may be analyzed statistically, but may not be predicted precisely
+- commonly used in mathematics, science, and information theory
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#stochastic)
 
@@ -1042,8 +1025,6 @@ how files should be structured, what behavior is required vs optional
 
 - test type conducted in a controlled environment, since the AI typically doesn't exist outside the study
 - AI tailored to a research question: rule-based algorithms, historical data replication, or reinforcement learning
-- advantages: tight control over algorithm features, feasible and replicable, broad scope
-- disadvantages: lower naturalness compared to real-world AI systems
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#stylized-ai-experiment)
 
@@ -1053,7 +1034,6 @@ how files should be structured, what behavior is required vs optional
 
 - code generation evaluation framework focused on issue resolution
 - LLMs tasked with fixing a bug or addressing a feature request in a specific code base
-- assessment metric is the percentage of resolved task instances
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#swe-bench)
 
@@ -1061,9 +1041,8 @@ how files should be structured, what behavior is required vs optional
 
 ### sycophancy
 
-- known limitation of RLHF-trained LLMs, active area of research
 - tendency in LLMs to agree with, validate, or comply with user input rather than reasoning independently
-- amplified by detailed or specific prompts, which push the LLM into "execution mode"
+- amplified by detailed or specific prompts, which push the LLM into _"execution mode"_
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#sycophancy)
 
@@ -1071,7 +1050,6 @@ how files should be structured, what behavior is required vs optional
 
 ### synthesis
 
-- critical step between data collection and decision-making
 - process of combining multiple research findings or data points into coherent insights
 - transforms raw observations into patterns, themes, and actionable conclusions
 
@@ -1083,7 +1061,6 @@ how files should be structured, what behavior is required vs optional
 
 - set of instructions provided to the LLM by the platform before any user interaction begins
 - sits at the beginning of the context window, giving it strong positional attention weight
-- typically not visible to the user, but profoundly shapes the agent's personality, default behaviors, and constraints
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#system-prompt)
 
