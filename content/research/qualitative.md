@@ -5,10 +5,10 @@ bookToc: true
 parent: "research"
 ---
 
-# Qualitative Research & Analysis
+# Qualitative Analysis
 
-Methods for collecting and making sense of non-numerical data - interviews, observations, open-ended
-text - to understand meaning, experience, and context behind AI and agent behavior.
+Methods for collecting and making sense of non-numerical data including interviews, observations,
+and open-ended text - to understand meaning, experience, and context behind agent behavior.
 
 ---
 

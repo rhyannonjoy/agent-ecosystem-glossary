@@ -5,10 +5,10 @@ bookToc: true
 parent: "research"
 ---
 
-# Statistics & Quantitative Methods
+# Quantitative Methods
 
-The statistical toolkit used to model data, test hypotheses, and quantify uncertainty when
-evaluating AI and agent systems.
+Statistical tools used to model data, test hypotheses, and quantify uncertainty when
+evaluating agent systems.
 
 ---
 

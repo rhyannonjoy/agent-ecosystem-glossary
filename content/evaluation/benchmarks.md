@@ -17,8 +17,8 @@ performance across capabilities.
 **Definition**: acronym for _AI2 Reasoning Challenge_; benchmark measuring question answering and
 reasoning through more than 7,000 grade-school natural science questions
 
-**Purpose**: evaluates an LLM's ability to reason over grade-school science knowledge, including
-both an easy set and a challenge set of harder questions requiring multi-step reasoning
+**Purpose**: evaluates an LLM's ability to reason over knowledge, includes an easy set and a
+challenge set of harder questions requiring multi-step reasoning
 
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [few-shot]({{< relref "/evaluation" >}}#few-shot), [MMLU]({{< relref "/evaluation/benchmarks" >}}#mmlu), [zero-shot]({{< relref "/evaluation" >}}#zero-shot)
 

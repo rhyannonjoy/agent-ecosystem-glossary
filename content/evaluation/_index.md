@@ -40,7 +40,7 @@ can't guess by surface plausibility
 **Definition**: evaluation methodology where an agent assesses the performance of other agents;
 examines outputs, behaviors, or decision-making processes
 
-**Purpose**: related to LLM-as-a-Judge, but focuses on agent-level evaluation rather than just
+**Purpose**: related to LLM-as-a-Judge, but focuses on agentic system evaluation rather than just
 text outputs
 
 **Related Terms**: [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
