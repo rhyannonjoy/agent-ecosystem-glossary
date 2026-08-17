@@ -463,7 +463,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - critical concern: agents may learn to maximize benchmark scores without developing genuine capabilities
 - examples: reward hacking, benchmark overfitting, specification gaming
 
-**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#goodhart-s-law)
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#goodharts-law)
 
 ---
 
