@@ -152,6 +152,21 @@ scope; trades off lower naturalness compared to real-world AI systems
 
 ---
 
+## taxonomy
+
+**Definition**: classification system that organizes concepts, objects, or phenomena into
+hierarchical categories; defines relationships between categories and provides structure to a
+domain
+
+**Purpose**: helps unify fragmented literature and reveal underexplored questions; in AI research,
+provides frameworks for organizing types of experiments, algorithms, or agent behaviors
+
+**Example**: the SAP Labs agent eval taxonomy organizes evaluation along Objectives and Process axes
+
+**Related Terms**: [experimental design]({{< relref "/research" >}}#experimental-design), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy)
+
+---
+
 ## vignette study
 
 **Definition**: research method presenting hypothetical scenarios to elicit preferences or

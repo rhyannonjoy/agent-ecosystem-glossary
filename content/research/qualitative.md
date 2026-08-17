@@ -1,5 +1,5 @@
 ---
-title: "Qualitative Research & Analysis"
+title: "Qualitative"
 weight: 4
 bookToc: true
 parent: "research"
@@ -32,19 +32,7 @@ consistently; defines categories, codes, and rules for applying them to text or 
 
 **Purpose**: ensures systematic analysis across multiple researchers or datasets
 
-**Related Terms**: [Cohen's kappa coefficient]({{< relref "/research/qualitative" >}}#cohens-kappa-coefficient), [qualitative research]({{< relref "/research/qualitative" >}}#qualitative-research), [synthesis]({{< relref "/research/qualitative" >}}#synthesis)
-
----
-
-## Cohen's kappa coefficient
-
-**Definition**: statistical measure of inter-rater agreement for categorical items; quantifies the
-level of agreement between two raters while accounting for chance agreement
-
-**Purpose**: verifies that a codebook is applied consistently across raters, supporting the
-reliability of qualitative coding
-
-**Related Terms**: [codebook]({{< relref "/research/qualitative" >}}#codebook), [qualitative research]({{< relref "/research/qualitative" >}}#qualitative-research)
+**Related Terms**: [Cohen's kappa coefficient]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient), [qualitative research]({{< relref "/research/qualitative" >}}#qualitative-research), [synthesis]({{< relref "/research/qualitative" >}}#synthesis)
 
 ---
 
@@ -70,7 +58,7 @@ non-numerical data; produces insights about _"why"_ and _"how"_ rather than _"ho
 **Purpose**: collects data through interviews, observations, open-ended surveys, and document
 analysis to surface context that numerical data alone can't capture
 
-**Related Terms**: [affinity mapping]({{< relref "/research/qualitative" >}}#affinity-mapping), [codebook]({{< relref "/research/qualitative" >}}#codebook), [Cohen's kappa coefficient]({{< relref "/research/qualitative" >}}#cohens-kappa-coefficient), [synthesis]({{< relref "/research/qualitative" >}}#synthesis)
+**Related Terms**: [affinity mapping]({{< relref "/research/qualitative" >}}#affinity-mapping), [codebook]({{< relref "/research/qualitative" >}}#codebook), [Cohen's kappa coefficient]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient), [synthesis]({{< relref "/research/qualitative" >}}#synthesis)
 
 ---
 

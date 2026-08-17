@@ -35,6 +35,18 @@ can't guess by surface plausibility
 
 ---
 
+## Agent-as-a-Judge
+
+**Definition**: evaluation methodology where an agent assesses the performance of other agents;
+examines outputs, behaviors, or decision-making processes
+
+**Purpose**: related to LLM-as-a-Judge, but focuses on agent-level evaluation rather than just
+text outputs
+
+**Related Terms**: [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
+
+---
+
 ## bounded scoring
 
 **Definition**: limitation of LLM benchmarks in which an LLM reaches the highest possible score;
@@ -70,6 +82,18 @@ include a golden dataset and scoring built for a specific domain
 
 - [HumanSignal, "Building custom golden datasets for regression testing"](https://humansignal.com/ai-benchmarks/)
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## canary phrase
+
+**Definition**: unique marker string embedded in content to verify its presence in a system;
+named after canaries used in coal mines as early warning detectors
+
+**Purpose**: its appearance in output confirms that specific content was loaded and/or processed,
+verifying whether a prompt, document, or instruction actually reached the LLM
+
+**Related Terms**: [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
 
 ---
 
@@ -218,6 +242,18 @@ on human preferences reflecting real world usage; guides metrics and defines gol
 
 ---
 
+## human-in-the-loop
+
+**Definition**: system design where humans actively participate in AI decision-making or
+evaluation process; human provides feedback, validation, or intervention at critical points
+
+**Purpose**: balances automation with human judgment and oversight; common in agent evaluation to
+assess quality, safety, and alignment with human values
+
+**Related Terms**: [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
+
+---
+
 ## LLM-as-a-Judge
 
 **Definition**: automated evaluation methodology in which a LLM assesses quality of text outputs;
@@ -286,6 +322,20 @@ as an internal measure of stability rather than a global ranking tool
 
 - [Agent Engineering: "Regression Testing for Agents"](https://agentengineering.org/articles/regression-testing-for-agents/)
 - [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## robustness
+
+**Definition**: system's ability to maintain performance under varying or adverse conditions; in
+agent context, handling unexpected inputs, recovering from errors, and adapting to environment
+changes
+
+**Purpose**: critical for deployment in real-world, unpredictable environments; evaluated through
+stress testing, edge cases, and challenging scenarios; named as a Reliability dimension in the SAP
+Labs agent eval taxonomy alongside hallucinations and error handling
+
+**Related Terms**: [edge case]({{< relref "/research" >}}#edge-case), [error rate]({{< relref "/evaluation/metrics" >}}#error-rate), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy)
 
 ---
 

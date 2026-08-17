@@ -135,6 +135,21 @@ strategy, and temperature settings
 
 ---
 
+## heuristic
+
+**Definition**: practical problem-solving approach that uses shortcuts or rules of thumb to find
+satisfactory solutions; differs from algorithms that guarantee optimal solutions
+
+**Purpose**: trades optimality for speed and feasibility when exhaustive search is impractical; in
+agent systems, guides decision-making when perfect information or unlimited computation is
+unavailable
+
+**Example**: A* search, greedy algorithms, hand-crafted evaluation functions
+
+**Related Terms**: [planning]({{< relref "core-concepts" >}}#planning), [self-reflection]({{< relref "core-concepts" >}}#self-reflection)
+
+---
+
 ## hook
 
 **Definition**: script or callback that runs automatically in response to a specific event in
@@ -146,6 +161,20 @@ contrasts with gates, which block progression on a condition, and with rules, wh
 applies at its own discretion
 
 **Related Terms**: [`/SKILL`]({{< relref "core-concepts" >}}#skill), [gate]({{< relref "core-concepts" >}}#gate), [rule]({{< relref "core-concepts" >}}#rule), [slash command]({{< relref "core-concepts" >}}#slash-command)
+
+---
+
+## LLM
+
+**Definition**: abbreviation for _Large Language Model_; model trained on vast amounts of text
+data to understand and generate human language; also known as "the agent's brain"
+
+**Purpose**: not all AI is LLM-based - computer vision models and recommendation systems are
+common non-LLM examples; the LLM is the reasoning component an agent's harness wraps around
+
+**Example**: `GPT` - _Generative Pre-trained Transformer_, Claude, and Llama
+
+**Related Terms**: [agent]({{< relref "core-concepts" >}}#agent), [harness]({{< relref "core-concepts" >}}#harness), [temperature]({{< relref "core-concepts" >}}#temperature)
 
 ---
 
@@ -226,6 +255,19 @@ traditional search queries; related to the system prompt
 
 ---
 
+## RLHF
+
+**Definition**: acronym for _reinforcement learning from human feedback_; training methodology in
+which human evaluators rate LLM outputs and the ratings fine-tune the LLM toward preferred
+behaviors
+
+**Purpose**: creates a strong instruction-following bias; LLMs trained with RLHF tend to
+prioritize explicit user instructions, sometimes at the expense of broader context
+
+**Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [sycophancy]({{< relref "core-concepts" >}}#sycophancy), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
+
+---
+
 ## rule
 
 **Definition**: prompt instruction an LLM interprets and applies at its own discretion; has an
@@ -289,6 +331,18 @@ structured, and what behavior is required versus optional
 
 ---
 
+## sycophancy
+
+**Definition**: tendency in LLMs to agree with, validate, or comply with user input rather than
+reasoning independently; known limitation of RLHF-trained LLMs and an active area of research
+
+**Purpose**: amplified by detailed or specific prompts, which push the LLM into "execution mode";
+understanding sycophancy helps distinguish an agent's genuine reasoning from compliance bias
+
+**Related Terms**: [hallucination]({{< relref "core-concepts" >}}#hallucination), [RLHF]({{< relref "core-concepts" >}}#rlhf), [self-reflection]({{< relref "core-concepts" >}}#self-reflection)
+
+---
+
 ## system prompt
 
 **Definition**: set of instructions provided to the LLM by the platform before any user
@@ -311,6 +365,17 @@ platform and sometimes adjustable by the user
 more focused, predictable responses; high temperature produces more varied, creative ones
 
 **Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [harness]({{< relref "core-concepts" >}}#harness), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
+
+---
+
+## training data
+
+**Definition**: dataset used to teach an LLM patterns, relationships, and knowledge; the LLM
+learns by processing examples and adjusting internal parameters
+
+**Purpose**: quality and composition of training data directly affects LLM capabilities and biases
+
+**Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [LLM]({{< relref "core-concepts" >}}#llm)
 
 ---
 

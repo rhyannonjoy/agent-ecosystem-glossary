@@ -20,7 +20,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - percentage of correct predictions made by an LLM
 - primary metric in classification and reasoning benchmarks
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#accuracy)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#accuracy)
 
 ---
 
@@ -39,7 +39,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - acronym for _AI2 Reasoning Challenge_
 - benchmark measuring question answering and reasoning through more than 7,000 grade-school natural science questions
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#arc)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#arc)
 
 ---
 
@@ -61,6 +61,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - experimental method that compares two versions of something to determine which performs better
 - randomly assigns participants to treatment or control groups
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#ab-test)
+
 ---
 
 ### affinity mapping
@@ -68,6 +70,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - commonly used in UX research and design thinking to synthesize findings
 - qualitative research method for organizing and grouping related ideas or observations
 - participants sort data points - notes, quotes, themes - into clusters based on natural relationships
+
+**Glossary Term Entry Location**: [Research, Qualitative]({{< relref "/research/qualitative" >}}#affinity-mapping)
 
 ---
 
@@ -87,6 +91,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - evaluation methodology where an agent assesses the performance of other agents
 - examines outputs, behaviors, or decision-making processes
 - related to LLM-as-a-Judge, but focuses on agent-level evaluation rather than just text outputs
+
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#agent-as-a-judge)
 
 ---
 
@@ -131,7 +137,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - part of ethical and responsible AI evaluation
 - used to identify and mitigate systematic favoritism or discrimination in agent outputs
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#bias-and-fairness-score)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#bias-and-fairness-score)
 
 ---
 
@@ -142,7 +148,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - lower-cost alternative to ground-truth-based evaluation
 - complements human evaluation of coherence, relevance and semantic meaning
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#bleu)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#bleu)
 
 ---
 
@@ -165,6 +171,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - unique marker string embedded in content to verify its presence in a system
 - its appearance in output confirms that specific content was loaded and/or processed
 
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#canary-phrase)
+
 ---
 
 ### Chatbot Arena
@@ -173,7 +181,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - users have random real-world conversations with both, then vote on which they prefer before identities are revealed
 - crowdsourced pairwise comparison data feeds statistical methods that estimate scores and create approximate rankings
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#chatbot-arena)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#chatbot-arena)
 
 ---
 
@@ -183,12 +191,16 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - defines categories, codes, and rules for applying them to text or observations
 - ensures systematic analysis across multiple researchers or datasets
 
+**Glossary Term Entry Location**: [Research, Qualitative]({{< relref "/research/qualitative" >}}#codebook)
+
 ---
 
 ### Cohen's kappa coefficient
 
 - statistical measure of inter-rater agreement for categorical items
 - measures the level of agreement between two raters while accounting for chance agreement
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient)
 
 ---
 
@@ -199,6 +211,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - advantages: high feasibility, easy to scale and replicate, can study impractical or impossible scenarios
 - disadvantages: lower naturalness since subjects don't interact with actual AI
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#conceptual-ai-experiment)
+
 ---
 
 ### confidence interval
@@ -207,6 +221,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - commonly reported as _95% confidence interval_ - if computed repeatedly under valid conditions, 95% will contain the true value
 - width indicates precision of estimate; narrower intervals mean more precise estimates
 - not to be confused with "95% probability the true value is in this range" for any single interval
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#confidence-interval)
 
 ---
 
@@ -238,6 +254,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - controlled: experiments conducted in artificial settings - labs, online platforms - where researchers manipulate variables
 - natural: experiments conducted in real-world settings where AI is actually used - workplaces, platforms, markets
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#controlled-vs-natural)
+
 ---
 
 ### conversational flow
@@ -245,7 +263,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - interaction metric evaluating an agent's ability to maintain coherent and meaningful conversations
 - part of interaction and user experience evaluation for chatbots and virtual assistants
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#conversational-flow)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#conversational-flow)
 
 ---
 
@@ -256,7 +274,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - increasingly important as agents scale to production environments
 - trade-off: higher accuracy often requires higher costs
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#cost-efficiency)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#cost-efficiency)
 
 ---
 
@@ -266,7 +284,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - interaction metric measuring how satisfied users are with AI responses
 - typically gathered through post-interaction surveys
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#csat)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#csat)
 
 ---
 
@@ -279,7 +297,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - metric used to filter benchmark datasets by identifying tasks that separate a good response from a bad one
 - intends to create a tighter, faster regression suite by removing redundant questions
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#discriminability-score)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#discriminability-score)
 
 ---
 
@@ -289,6 +307,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - ensures knowledge can advance the field, change practice and policy, or inform future research
 - requires planning for audience, timing, and appropriate communication channels
 - methods include journal publications, conference presentations, social media, press releases, websites
+
+**Glossary Term Entry Location**: [Research, Qualitative]({{< relref "/research/qualitative" >}}#dissemination)
 
 ---
 
@@ -315,6 +335,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - falls outside normal operating conditions but within specified boundaries
 - **examples**: unusual inputs, rare combinations of factors, boundary conditions
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#edge-case)
+
 ---
 
 ### empirical testing
@@ -323,6 +345,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - uses real data and measurable outcomes to evaluate hypotheses
 - applies algorithms with actual users, tasks, or environments to measure performance
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#empirical-testing)
+
 ---
 
 ### engagement rate
@@ -330,7 +354,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - interaction metric tracking how often users interact with an AI system
 - part of interaction and user experience evaluation
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#engagement-rate)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#engagement-rate)
 
 ---
 
@@ -339,16 +363,18 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - evaluation metric measuring the percentage of incorrect outputs or failed operations
 - inverse counterpart of success rate or task completion
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#error-rate)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#error-rate)
 
 ---
 
-### eval
+### evaluation
 
-- abbreviation of _evaluation_
+- also abbreviated _eval_
 - dynamic, ongoing, structured assessment of an agent's and/or LLM's outputs, decisions or actions
 - infrastructure includes benchmarks, harnesses, and metrics
 - dimensions include quality - cost and safety; trustworthiness - policy compliance, bias mitigation
+
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#evaluation-1)
 
 ---
 
@@ -358,7 +384,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - valuable criterion for translation and question-answering benchmarks
 - stricter than semantic similarity metrics
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#exact-match)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#exact-match)
 
 ---
 
@@ -368,6 +394,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - goal is to isolate causal effects while minimizing confounding factors
 - defines variables, treatments, control conditions, randomization, and measurement approach
 - includes decisions about sample size, data collection methods, and analysis approach
+
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#experimental-design)
 
 ---
 
@@ -381,7 +409,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - treats precision and recall as equally weighted to balance false positives and false negatives
 - ranges from 0 to 1, with 1 signifying excellent recall and precision
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#f1-score)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#f1-score)
 
 ---
 
@@ -409,6 +437,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - designed to indicate how difficult a passage in English is to understand
 - score reflects the U.S. grade level needed to comprehend the text
+
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#fleschkincaid-readability-tests)
 
 ---
 
@@ -483,7 +513,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - benchmark testing an LLM's mathematical reasoning with a corpus of 8,500 grade-school math word problems
 - solutions collected in natural language rather than mathematical expressions
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#gsm8k)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#gsm8k)
 
 ---
 
@@ -491,6 +521,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - readability test that estimates the years of formal education needed to understand text on first reading
 - score of 12 indicates high school senior level
+
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#gunning-fog-index)
 
 ---
 
@@ -503,6 +535,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - critical quality control concern in AI systems
 - type of AI output that's false, fabricated, or unsupported information
 - appears plausible, but isn't grounded in training data or provided context
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#hallucination)
 
 ---
 
@@ -523,7 +557,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - benchmark centered on common sense reasoning and natural language inference
 - LLMs complete sentences by choosing from possible endings, including wrong answers created through adversarial filtering
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#hellaswag)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#hellaswag)
 
 ---
 
@@ -534,6 +568,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - trades optimality for speed and feasibility when exhaustive search is impractical
 - in agent systems, guide decision-making when perfect information or unlimited computation is unavailable
 - examples: A* search, greedy algorithms, hand-crafted evaluation functions
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#heuristic)
 
 ---
 
@@ -554,6 +590,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - balances automation with human judgment and oversight
 - common in agent evaluation to assess quality, safety, and alignment with human values
 
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#human-in-the-loop)
+
 ---
 
 ### HumanEval
@@ -562,7 +600,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - LLMs given programming problems and evaluated on whether generated solutions pass corresponding unit tests
 - uses pass@k metric: probability that at least one of k generated solutions passes a problem's unit tests
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#humaneval)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#humaneval)
 
 ---
 
@@ -576,7 +614,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - important resource-efficiency concern alongside cost
 - critical when AI must deliver real-time, contextually accurate responses
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#latency)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#latency)
 
 ---
 
@@ -587,6 +625,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - LLM trained on vast amounts of text data to understand and generate human language
 - not all AI is LLM-based - such as computer vision models, recommendation systems
 - examples: `GPT` - _Generative Pre-trained Transformer_, Claude, and Llama
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#llm)
 
 ---
 
@@ -620,7 +660,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - code generation benchmark with a corpus of more than 900 coding tasks
 - assesses functional correctness based on passing a set of test cases
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#mbpp)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#mbpp)
 
 ---
 
@@ -652,7 +692,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - benchmark assessing breadth of knowledge, depth of natural language understanding and ability to solve problems from knowledge
 - now largely saturated by frontier LLMs, reducing its usefulness as a differentiator
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#mmlu)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#mmlu)
 
 ---
 
@@ -663,6 +703,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - identifies violations that could invalidate statistical inferences
 - itself relies on further assumptions that become part of the full model
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#model-checking)
+
 ---
 
 ### MT-Bench
@@ -671,7 +713,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - includes open-ended multi-turn questions in coding, humanities, reasoning, roleplay, STEM, writing
 - created by the same researchers behind Chatbot Arena
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#mt-bench)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#mt-bench)
 
 ---
 
@@ -686,6 +728,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - advantages: highest naturalness, directly applicable findings
 - disadvantages: low feasibility, hard to replicate, narrow scope, limited control
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#natural-ai-experiment)
+
 ---
 
 ### non-parametric methods
@@ -695,6 +739,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - don't assume data follows specific distribution, such as normal distribution
 - still require assumptions such as random sampling or randomization
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#non-parametric-methods)
+
 ---
 
 ### null hypothesis
@@ -703,6 +749,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - tested to determine if observed data are _unusual enough_ to reject the hypothesis
 - random chance vs true effect - failure to reject doesn't prove the null is true, _only that data are compatible with it_
 - example: treatment makes no difference in average outcome compared to control
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#null-hypothesis)
 
 ---
 
@@ -727,6 +775,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - finds the best-fitting line through data points
 - used in AI testing to build simple prediction models based on historical data
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#ols-regression)
+
 ---
 
 ### one-sided hypothesis
@@ -735,6 +785,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - test premise about whether an effect is _greater than or less than a specific value_
 - differs from two-sided tests that check if effect differs in either direction
 - example: testing whether new treatment is at least as good as standard treatment
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#one-sided-hypothesis)
 
 ---
 
@@ -757,7 +809,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - verifies that every parameter value is directly derived from the user's text, the context history, or API specification defaults
 - detects fabricated or unsupported argument values
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#parameter-value-grounding)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#parameter-value-grounding)
 
 ---
 
@@ -766,7 +818,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 - code generation evaluation metric measuring the probability that at least one of _k_ generated solutions passes a problem's unit tests
 - captures functional correctness across multiple generated candidates
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#passk)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#passk)
 
 ---
 
@@ -787,16 +839,7 @@ blocking certain categories of action entirely
 - measures how good an LLM is at prediction
 - the lower an LLM's perplexity score, the better it is at comprehending a task
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#perplexity)
-
----
-
-### PII
-
-- abbreviation for _Personally Identifiable Information_
-- any data that could identify a specific individual
-- requires special handling for privacy and security compliance
-- examples: Social Security numbers, addresses, dates of birth, biometric data
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#perplexity)
 
 ---
 
@@ -817,7 +860,7 @@ blocking certain categories of action entirely
 - part of ethical and responsible AI evaluation
 - used to verify agents respect enterprise guardrails and compliance requirements
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#policy-adherence-rate)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#policy-adherence-rate)
 
 ---
 
@@ -829,6 +872,8 @@ blocking certain categories of action entirely
 - doesn't measure compatibility of alternative hypothesis with observed data
 - shouldn't be used to interpret results after data collection
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#power)
+
 ---
 
 ### prediction model
@@ -838,6 +883,8 @@ blocking certain categories of action entirely
 - ranges from basic regression models to complex neural networks
 - accuracy depends on data quality, feature selection, and algorithm sophistication
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#prediction-model)
+
 ---
 
 ### probability
@@ -846,6 +893,8 @@ blocking certain categories of action entirely
 - often confused with hypothesis probability, leading to common statistical misinterpretations
 - doesn't refer to probability of hypotheses being true or false
 - measured over many repetitions of same procedure under identical conditions
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#probability)
 
 ---
 
@@ -865,7 +914,7 @@ blocking certain categories of action entirely
 - ethical and security evaluation metric measuring the success rate of adversarial prompts that alter an agent's intended behavior
 - identifies susceptibility to manipulation or misuse
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#prompt-injection-vulnerability)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#prompt-injection-vulnerability)
 
 ---
 
@@ -876,6 +925,8 @@ blocking certain categories of action entirely
 - trade-off: easier to apply but may occasionally misclassify
 - example: using "developed exclusively for research" as a proxy for AI sophistication
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#proxy-test)
+
 ---
 
 ### P value
@@ -885,6 +936,8 @@ blocking certain categories of action entirely
 - measures fit between data and entire statistical model, not just the hypothesis being tested
 - commonly misinterpreted; doesn't indicate probability that hypothesis is true or false
 - often degraded into "significant" `(P ≤ 0.05)` vs "insignificant" dichotomy
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#p-value)
 
 ---
 
@@ -898,6 +951,8 @@ blocking certain categories of action entirely
 - method focused on understanding meaning, experiences, and context through _non-numerical_ data
 - collects data through interviews, observations, open-ended surveys, and document analysis
 
+**Glossary Term Entry Location**: [Research, Qualitative]({{< relref "/research/qualitative" >}}#qualitative-research)
+
 ---
 
 ### quasinatural AI experiment
@@ -906,6 +961,8 @@ blocking certain categories of action entirely
 - advantages: naturalistic AI, broad research scope, easier data collection than natural experiments
 - disadvantages: researchers give up some control over algorithm construction
 - examples: testing commercial chatbots in controlled studies, pilot experiments before product launch
+
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#quasinatural-ai-experiment)
 
 ---
 
@@ -919,7 +976,7 @@ blocking certain categories of action entirely
 - evaluation metric quantifying the number of true positives
 - paired with precision and combined into the F1 score
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#recall)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#recall)
 
 ---
 
@@ -940,6 +997,8 @@ blocking certain categories of action entirely
 - LLMs trained with RLHF tend to prioritize explicit user instructions, sometimes at the expense of broader context
 - related terms: compliance, sycophancy
 
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#rlhf)
+
 ---
 
 ### robustness
@@ -949,6 +1008,8 @@ blocking certain categories of action entirely
 - evaluated through stress testing, edge cases, and challenging scenarios
 - in agent context - handling unexpected inputs, recovering from errors, adapting to environment changes
 
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#robustness)
+
 ---
 
 ### ROUGE
@@ -956,7 +1017,7 @@ blocking certain categories of action entirely
 - abbreviation for _Recall-Oriented Understudy for Gisting Evaluation_
 - metric for evaluating text summarization
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#rouge)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#rouge)
 
 ---
 
@@ -991,6 +1052,8 @@ blocking certain categories of action entirely
 - element of a field which is used to define a vector space through the operation of scalar multiplication
 - "scalar value" may refer to a single numerical quantity that has _magnitude but no direction_
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#scalar)
+
 ---
 
 ### self-reflection
@@ -1018,7 +1081,7 @@ blocking certain categories of action entirely
 - OpenAI fact-seeking benchmark for measuring an LLM's ability to provide verifiable answers
 - used to track hallucination rates for attempted answers
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#simpleqa)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#simpleqa)
 
 ---
 
@@ -1061,6 +1124,8 @@ how files should be structured, what behavior is required vs optional
 - includes hypothesis testing, confidence interval estimation, and parameter estimation
 - accounts for uncertainty and random variation when making generalizations
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#statistical-inference)
+
 ---
 
 ### statistical model
@@ -1070,6 +1135,8 @@ how files should be structured, what behavior is required vs optional
 - embodies full web of assumptions beyond just equations with parameters
 - violation of any assumption, not just test hypothesis, can produce misleading P values
 - often presented in compressed form, with many assumptions unstated or unrecognized
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#statistical-model)
 
 ---
 
@@ -1090,6 +1157,8 @@ how files should be structured, what behavior is required vs optional
 - commonly used in mathematics, science, and information theory
 - random probability distribution or pattern that may be analyzed statistically, but may not be predicted precisely
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#stochastic)
+
 ---
 
 ### stylized AI experiment
@@ -1099,6 +1168,8 @@ how files should be structured, what behavior is required vs optional
 - advantages: tight control over algorithm features, feasible and replicable, broad scope
 - disadvantages: lower naturalness compared to real-world AI systems
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#stylized-ai-experiment)
+
 ---
 
 ### SWE-bench
@@ -1107,7 +1178,7 @@ how files should be structured, what behavior is required vs optional
 - LLMs tasked with fixing a bug or addressing a feature request in a specific code base
 - assessment metric is the percentage of resolved task instances
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#swe-bench)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#swe-bench)
 
 ---
 
@@ -1117,6 +1188,8 @@ how files should be structured, what behavior is required vs optional
 - tendency in LLMs to agree with, validate, or comply with user input rather than reasoning independently
 - amplified by detailed or specific prompts, which push the LLM into "execution mode"
 
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#sycophancy)
+
 ---
 
 ### synthesis
@@ -1124,6 +1197,8 @@ how files should be structured, what behavior is required vs optional
 - critical step between data collection and decision-making
 - process of combining multiple research findings or data points into coherent insights
 - transforms raw observations into patterns, themes, and actionable conclusions
+
+**Glossary Term Entry Location**: [Research, Qualitative]({{< relref "/research/qualitative" >}}#synthesis)
 
 ---
 
@@ -1147,7 +1222,7 @@ how files should be structured, what behavior is required vs optional
 - used for task-specific and interaction/user-experience evaluation
 - closely related to success rate, the proportion of tasks or goals completed correctly
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#task-completion-rate)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#task-completion-rate)
 
 ---
 
@@ -1157,6 +1232,8 @@ how files should be structured, what behavior is required vs optional
 - defines relationships between categories and provides structure to a domain
 - helps unify fragmented literature and reveal underexplored questions
 - in AI research - frameworks for organizing types of experiments, algorithms, or agent behaviors
+
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#taxonomy)
 
 ---
 
@@ -1178,6 +1255,8 @@ how files should be structured, what behavior is required vs optional
 - LLM learns by processing examples and adjusting internal parameters
 - quality and composition of training data directly affects LLM capabilities and biases
 
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#training-data)
+
 ---
 
 ### trajectory-based evaluation
@@ -1196,7 +1275,7 @@ how files should be structured, what behavior is required vs optional
 - addresses the tendency of LLMs to hallucinate and produce inaccurate outputs
 - combines human evaluation with `GPT`s
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#truthfulqa)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#truthfulqa)
 
 ---
 
@@ -1222,6 +1301,8 @@ how files should be structured, what behavior is required vs optional
 - critical for safe deployment in high-stakes domains like healthcare, autonomous systems, and decision support
 - common methods - Bayesian inference, ensemble approaches, and Monte Carlo techniques
 
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#uncertainty-quantification)
+
 ---
 
 ### unit transformation
@@ -1230,7 +1311,7 @@ how files should be structured, what behavior is required vs optional
 - verifies unit or format conversions between values in the context and parameter values in the tool call
 - detects incorrect conversions such as wrong currency, temperature scale, or measurement unit
 
-**Glossary Term Entry Location**: [Metrics]({{< relref "evaluation/metrics" >}}#unit-transformation)
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#unit-transformation)
 
 ---
 
@@ -1256,6 +1337,8 @@ how files should be structured, what behavior is required vs optional
 - advantages: can model any situation without implementation constraints, easy to scale
 - disadvantages: responses may not reflect actual behavior, lower external validity
 
+**Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#vignette-study)
+
 ---
 
 ### VOC
@@ -1263,6 +1346,8 @@ how files should be structured, what behavior is required vs optional
 - abbreviation for _voice of the client_
 - invaluable for service and produce improvement
 - data where people often share problems they're encountering, provide feedback, and seek further help
+
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#voc)
 
 ---
 
@@ -1276,4 +1361,4 @@ how files should be structured, what behavior is required vs optional
 - builds upon WSC, _Winograd Schema Challenge_ with a dataset of 44,000 crowdsourced problems
 - uses adversarial filtering to generate incorrect answers
 
-**Glossary Term Entry Location**: [Benchmarks]({{< relref "evaluation/benchmarks" >}}#winogrande)
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#winogrande)

@@ -173,6 +173,30 @@ useful when both false positives and false negatives matter
 
 ---
 
+## Flesch–Kincaid readability tests
+
+**Definition**: metric designed to indicate how difficult a passage in English is to understand;
+score reflects the U.S. grade level needed to comprehend the text
+
+**Purpose**: quantifies output readability for user-facing text, complementing metrics that measure
+factual or semantic quality
+
+**Related Terms**: [Gunning fog index]({{< relref "/evaluation/metrics" >}}#gunning-fog-index)
+
+---
+
+## Gunning fog index
+
+**Definition**: readability test that estimates the years of formal education needed to understand
+text on first reading
+
+**Purpose**: a score of 12 indicates high school senior level, giving teams a plain-language
+benchmark for output complexity
+
+**Related Terms**: [Flesch–Kincaid readability tests]({{< relref "/evaluation/metrics" >}}#fleschkincaid-readability-tests)
+
+---
+
 ## latency
 
 **Definition**: evaluation metric measuring the time taken for an AI agent or system to process and
@@ -310,3 +334,15 @@ unit, ensuring the agent transforms values correctly when invoking tools
 **Related Terms**: [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [parameter value grounding]({{< relref "/evaluation/metrics" >}}#parameter-value-grounding), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+
+---
+
+## VOC
+
+**Definition**: abbreviation for _voice of the client_; data where people share problems they're
+encountering, provide feedback, and seek further help
+
+**Purpose**: invaluable for service and product improvement, surfacing real user pain points
+alongside structured metrics like CSAT
+
+**Related Terms**: [CSAT]({{< relref "/evaluation/metrics" >}}#csat), [engagement rate]({{< relref "/evaluation/metrics" >}}#engagement-rate)

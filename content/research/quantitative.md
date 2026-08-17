@@ -1,5 +1,5 @@
 ---
-title: "Statistics & Quantitative Methods"
+title: "Quantitative"
 weight: 5
 bookToc: true
 parent: "research"
@@ -9,6 +9,18 @@ parent: "research"
 
 The statistical toolkit used to model data, test hypotheses, and quantify uncertainty when
 evaluating AI and agent systems.
+
+---
+
+## Cohen's kappa coefficient
+
+**Definition**: statistical measure of inter-rater agreement for categorical items; quantifies the
+level of agreement between two raters while accounting for chance agreement
+
+**Purpose**: verifies that a codebook is applied consistently across raters, supporting the
+reliability of qualitative coding
+
+**Related Terms**: [codebook]({{< relref "/research/qualitative" >}}#codebook), [qualitative research]({{< relref "/research/qualitative" >}}#qualitative-research)
 
 ---
 
@@ -140,6 +152,18 @@ hypothesis being tested; commonly misinterpreted as the probability that the hyp
 false, and often degraded into a "significant" `(P ≤ 0.05)` vs "insignificant" dichotomy
 
 **Related Terms**: [confidence interval]({{< relref "/research/quantitative" >}}#confidence-interval), [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [probability]({{< relref "/research/quantitative" >}}#probability), [statistical model]({{< relref "/research/quantitative" >}}#statistical-model)
+
+---
+
+## scalar
+
+**Definition**: mathematical concept, specifically from linear algebra; element of a field which
+is used to define a vector space through the operation of scalar multiplication
+
+**Purpose**: a "scalar value" refers to a single numerical quantity that has _magnitude but no
+direction_, distinguishing it from vector-valued quantities
+
+**Related Terms**: [statistical model]({{< relref "/research/quantitative" >}}#statistical-model)
 
 ---
 
