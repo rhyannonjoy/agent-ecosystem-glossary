@@ -7,7 +7,7 @@ parent: "research"
 
 # Qualitative Analysis
 
-Methods for collecting and making sense of non-numerical data including interviews, observations,
+Methods for collecting and processing non-numerical data including interviews, observations,
 and open-ended text - to understand meaning, experience, and context behind agent behavior.
 
 ---

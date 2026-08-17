@@ -6,13 +6,13 @@ bookToc: true
 
 # Research
 
-Foundational concepts and methodology for designing, conducting, and interpreting research on AI
-and agent systems. Understand how experiments are classified along the controlled-to-natural
+Foundational concepts and methodology for designing, conducting, and interpreting research on
+agentic systems. Understand how experiments are classified along the controlled-to-natural
 spectrum to choose an appropriate design, then apply qualitative or quantitative analysis to draw
 conclusions from the resulting data.
 
-Visit [Qualitative Research & Analysis]({{< relref "qualitative" >}}) for methods that make sense
-of non-numerical data and [Statistics & Quantitative Methods]({{< relref "quantitative" >}}) for
+Visit [Qualitative Analysis]({{< relref "qualitative" >}}) for methods that make sense
+of non-numerical data and [Quantitative Methods]({{< relref "quantitative" >}}) for
 the statistical toolkit used to test and quantify claims.
 
 ---

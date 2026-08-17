@@ -8,7 +8,7 @@ parent: "research"
 # Quantitative Methods
 
 Statistical tools used to model data, test hypotheses, and quantify uncertainty when
-evaluating agent systems.
+evaluating agentic systems.
 
 ---
 
