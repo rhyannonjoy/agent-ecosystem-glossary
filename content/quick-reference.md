@@ -287,9 +287,6 @@ translation and a human-produced translation
 
 - acronym for _Evaluation-driven Development_
 - software development methodology where evaluation guides design and iteration
-- incorporates continuous assessment of agent capabilities, reliability, and safety
-- testing and metrics inform architectural decisions throughout development lifecycle
-- emphasizes measurable outcomes and systematic improvement
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#edd)
 
@@ -297,10 +294,8 @@ translation and a human-produced translation
 
 ### edge case
 
-- critical for testing AI reliability and robustness
 - scenario or condition that occurs at _extreme operating parameters_ or _unusual circumstances_
 - falls outside normal operating conditions but within specified boundaries
-- **examples**: unusual inputs, rare combinations of factors, boundary conditions
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#edge-case)
 
@@ -310,7 +305,6 @@ translation and a human-produced translation
 
 - validation approach based on _observation and experimentation_ rather than theory alone
 - uses real data and measurable outcomes to evaluate hypotheses
-- applies algorithms with actual users, tasks, or environments to measure performance
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#empirical-testing)
 
@@ -336,10 +330,8 @@ translation and a human-produced translation
 
 ### evaluation
 
-- also abbreviated _eval_
-- dynamic, ongoing, structured assessment of an agent's and/or LLM's outputs, decisions or actions
+- dynamic, ongoing, structured assessment of an agent and/or LLM performance
 - infrastructure includes benchmarks, harnesses, and metrics
-- dimensions include quality - cost and safety; trustworthiness - policy compliance, bias mitigation
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#evaluation-1)
 
@@ -349,7 +341,6 @@ translation and a human-produced translation
 
 - proportion of an LLM's predictions that match the expected answer exactly
 - valuable criterion for translation and question-answering benchmarks
-- stricter than semantic similarity metrics
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#exact-match)
 
@@ -359,8 +350,6 @@ translation and a human-produced translation
 
 - systematic planning of how to conduct an experiment to answer a research question
 - goal is to isolate causal effects while minimizing confounding factors
-- defines variables, treatments, control conditions, randomization, and measurement approach
-- includes decisions about sample size, data collection methods, and analysis approach
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#experimental-design)
 
@@ -372,9 +361,8 @@ translation and a human-produced translation
 
 ### F1 score
 
-- evaluation metric blending accuracy and recall into a single measure
+- metric blending accuracy and recall into a single measure
 - treats precision and recall as equally weighted to balance false positives and false negatives
-- ranges from 0 to 1, with 1 signifying excellent recall and precision
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#f1-score)
 
@@ -382,7 +370,7 @@ translation and a human-produced translation
 
 ### few-shot
 
-- prompting approach that supplies an LLM with a small number of examples showing how to fulfill a task before prompting
+- approach that supplies LLMs examples of how to complete a task before prompting
 - demonstrates an LLM's ability to learn from scarce data
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#few-shot)
@@ -393,8 +381,6 @@ translation and a human-produced translation
 
 - evaluation methodology that assesses only the end result or output of an agent's execution
 - judges success based on whether final answer or outcome is correct
-- **advantages**: simple to implement, clear success criteria
-- **limitations**: provides no insight into reasoning process, intermediate steps, or failure points
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#final-response-evaluation)
 
@@ -411,9 +397,8 @@ translation and a human-produced translation
 
 ### function calling evaluation
 
-- assessment of an agent's tool invocation behavior to APIs, databases, and/or web services
-- rule-based metrics cover structural correctness: allowed values, hallucinated parameter, missing required parameters, wrong function name, wrong parameter value type
-- semantic metrics, LLM-as-a-judge based - cover parameter value grounding and unit transformation
+- assessment of an agent's tool invocation behavior
+- rule-based metrics cover structural correctness while semantic metrics cover grounding
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#function-calling-evaluation)
 
@@ -436,8 +421,6 @@ translation and a human-produced translation
 
 - prompt condition that must be satisfied before work sequence continues
 - provides objectively evaluable agentic checkpoints: thing happens → condition → then proceed
-- different than _hooks_, which are triggered by events in the harness
-- contrasts with _rules_, in which LLMs can interpret, bypass, rationalize around
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#gate)
 
@@ -454,11 +437,8 @@ translation and a human-produced translation
 
 ### Goodhart's law
 
-- originally an economics principle, now widely applied to AI and agent systems
+- originally an economics principle, now widely applied to AI and/or agent systems
 - _"when a measure becomes a target, it ceases to be a good measure"_
-- describes phenomenon where optimizing for a proxy metric leads to gaming the metric rather than improving underlying quality
-- critical concern: agents may learn to maximize benchmark scores without developing genuine capabilities
-- examples: reward hacking, benchmark overfitting, specification gaming
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#goodharts-law)
 
@@ -467,8 +447,7 @@ translation and a human-produced translation
 ### ground truth
 
 - reference data assumed to be objectively correct
-- annotated data that AI agents and LLMs are tested against
-- benchmarks categorize metrics by whether they rely on ground truth and/or human preferences
+- annotated data that agents and/or LLMs are tested against
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#ground-truth)
 
@@ -477,8 +456,7 @@ translation and a human-produced translation
 ### GSM8K
 
 - abbreviation for _Grade School Math 8K_
-- benchmark testing an LLM's mathematical reasoning with a corpus of 8,500 grade-school math word problems
-- solutions collected in natural language rather than mathematical expressions
+- benchmark testing an LLM's mathematical reasoning with math word problems
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#gsm8k)
 
@@ -499,8 +477,7 @@ translation and a human-produced translation
 
 ### hallucination
 
-- critical quality control concern in AI systems
-- type of AI output that's false, fabricated, or unsupported information
+- type of LLM and/or agent output that's false, fabricated, or unsupported information
 - appears plausible, but isn't grounded in training data or provided context
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#hallucination)
@@ -511,8 +488,6 @@ translation and a human-produced translation
 
 - platform layer that wraps around an LLM
 - provides configuration, permission settings, system prompts, tools
-- may include code search, file operations, shell execution, web access, content management strategy, and temperature settings
-- agents using the same underlying LLM can behave very differently depending on their harness
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#harness)
 
@@ -522,7 +497,6 @@ translation and a human-produced translation
 
 - acronym for _Harder Endings, Longer contexts and Low-Shot Activities for Situations With Adversarial Generations_
 - benchmark centered on common sense reasoning and natural language inference
-- LLMs complete sentences by choosing from possible endings, including wrong answers created through adversarial filtering
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#hellaswag)
 
@@ -532,9 +506,6 @@ translation and a human-produced translation
 
 - practical problem-solving approach that uses shortcuts or rules of thumb to find satisfactory solutions
 - differs from algorithms that guarantee optimal solutions
-- trades optimality for speed and feasibility when exhaustive search is impractical
-- in agent systems, guide decision-making when perfect information or unlimited computation is unavailable
-- examples: A* search, greedy algorithms, hand-crafted evaluation functions
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#heuristic)
 
@@ -544,20 +515,8 @@ translation and a human-produced translation
 
 - script or callback that runs automatically in response to a specific event in the agent's environment
 - fires deterministically based on triggers, such as a file being edited, without going through the LLM's interpretation loop
-- useful for enforcing constraints reliably without relying on the agent to remember to do them
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#hook)
-
----
-
-### human-in-the-loop
-
-- system design where humans actively participate in AI decision-making or evaluation process
-- human provides feedback, validation, or intervention at critical points
-- balances automation with human judgment and oversight
-- common in agent evaluation to assess quality, safety, and alignment with human values
-
-**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#human-in-the-loop)
 
 ---
 
@@ -565,9 +524,17 @@ translation and a human-produced translation
 
 - benchmark assessing an LLM's code generation performance through functional correctness
 - LLMs given programming problems and evaluated on whether generated solutions pass corresponding unit tests
-- uses pass@k metric: probability that at least one of k generated solutions passes a problem's unit tests
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#humaneval)
+
+---
+
+### human-in-the-loop
+
+- system design where humans actively participate in AI decision-making or evaluation process
+- human provides feedback, validation, or intervention at critical points
+
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#human-in-the-loop)
 
 ---
 

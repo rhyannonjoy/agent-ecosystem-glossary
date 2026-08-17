@@ -166,7 +166,7 @@ process, intermediate steps, or failure points
 
 ## function calling evaluation
 
-**Definition**: assessment of an agent's tool invocation behavior
+**Definition**: assessment of an agent's tool invocation behavior to APIs, databases, and/or web services
 
 **Purpose**: rule-based metrics cover structural correctness of a tool call; semantic metrics,
 based on LLM-as-a-judge, cover parameter value grounding and unit transformation -
