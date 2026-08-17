@@ -544,9 +544,8 @@ translation and a human-produced translation
 
 ### latency
 
-- evaluation metric measuring the time taken for an AI agent or system to process and return results
+- evaluation metric measuring the time taken for an agent or system to process and return results
 - important resource-efficiency concern alongside cost
-- critical when AI must deliver real-time, contextually accurate responses
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#latency)
 
@@ -555,10 +554,8 @@ translation and a human-produced translation
 ### LLM
 
 - abbreviation for _Large Language Model_
-- also known as "the agent's brain"
+- also known as _"the agent's brain"_
 - LLM trained on vast amounts of text data to understand and generate human language
-- not all AI is LLM-based - such as computer vision models, recommendation systems
-- examples: `GPT` - _Generative Pre-trained Transformer_, Claude, and Llama
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#llm)
 
@@ -568,8 +565,6 @@ translation and a human-produced translation
 
 - evaluation methodology where a large language model assesses quality of text outputs
 - LLM scores or ranks responses based on criteria like accuracy, helpfulness, or safety
-- enables scalable evaluation compared to human annotation alone
-- limitations include potential biases and consistency issues in LLM judgments
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#llm-as-a-judge)
 
@@ -591,8 +586,7 @@ translation and a human-produced translation
 ### MBPP
 
 - abbreviation for _Mostly Basic Programming Problems_, also known as _Mostly Basic Python Problems_
-- code generation benchmark with a corpus of more than 900 coding tasks
-- assesses functional correctness based on passing a set of test cases
+- code generation benchmark, assesses functional correctness
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#mbpp)
 
@@ -602,8 +596,6 @@ translation and a human-produced translation
 
 - acronym for _Model Context Protocol_ server
 - external server that exposes capabilities to an agent - tools, resources, and/or prompts
-- allows agents to interact with databases, APIs, cloud services, or any custom system the server is built to access
-- facilitates portable behavior across agent platforms because implementation is stored in the server rather than the harness
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#mcp-server)
 
@@ -611,10 +603,8 @@ translation and a human-produced translation
 
 ### memory
 
-- in agent context - ability to store and retrieve information across interactions and tasks
+- stores and retrieve information across interactions and tasks
 - enables agents to maintain context, learn from experience, and reference past actions
-- critical for multi-step reasoning and adapting behavior based on history
-- types include short-term - current task, long-term - across sessions, episodic - specific events
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#memory)
 
@@ -624,7 +614,6 @@ translation and a human-produced translation
 
 - abbreviation for _Massive Multitask Language Understanding_
 - benchmark assessing breadth of knowledge, depth of natural language understanding and ability to solve problems from knowledge
-- now largely saturated by frontier LLMs, reducing its usefulness as a differentiator
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#mmlu)
 
@@ -634,8 +623,6 @@ translation and a human-produced translation
 
 - process of evaluating whether statistical model assumptions are satisfied by the data
 - includes diagnostic tests for fit, examining residuals, and testing additional model terms
-- identifies violations that could invalidate statistical inferences
-- itself relies on further assumptions that become part of the full model
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#model-checking)
 
@@ -645,7 +632,6 @@ translation and a human-produced translation
 
 - benchmark designed to test how well an LLM engages in dialogue and follows instructions
 - includes open-ended multi-turn questions in coding, humanities, reasoning, roleplay, STEM, writing
-- created by the same researchers behind Chatbot Arena
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#mt-bench)
 
@@ -659,8 +645,6 @@ translation and a human-produced translation
 
 - test type that features AI in environments where it is actually used - platforms, workplaces, real services
 - often A/B tests run by organizations to improve products or operations
-- advantages: highest naturalness, directly applicable findings
-- disadvantages: low feasibility, hard to replicate, narrow scope, limited control
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#natural-ai-experiment)
 
@@ -670,8 +654,6 @@ translation and a human-produced translation
 
 - statistical techniques that make fewer assumptions about data distribution than parametric methods
 - somewhat misleading - these methods are not assumption-free
-- don't assume data follows specific distribution, such as normal distribution
-- still require assumptions such as random sampling or randomization
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#non-parametric-methods)
 
@@ -681,8 +663,6 @@ translation and a human-produced translation
 
 - serves as a baseline for testing - premise proposing zero effect or no relationship between variables
 - tested to determine if observed data are _unusual enough_ to reject the hypothesis
-- random chance vs true effect - failure to reject doesn't prove the null is true, _only that data are compatible with it_
-- example: treatment makes no difference in average outcome compared to control
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#null-hypothesis)
 
@@ -694,8 +674,7 @@ translation and a human-produced translation
 
 ### observability
 
-- formal framework within which agent evaluation is conducted
-- involves tracking, logging and monitoring an agent's behavior, decisions and intermediate actions
+- tracking, logging and monitoring an agent's behavior, decisions and intermediate actions
 - enables inspection of function calls, API responses and retrieval steps to diagnose failures
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#observability)
@@ -706,8 +685,6 @@ translation and a human-produced translation
 
 - abbreviation for _Ordinary Least Squares_ regression
 - statistical method that estimates relationships between variables by minimizing squared differences
-- finds the best-fitting line through data points
-- used in AI testing to build simple prediction models based on historical data
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#ols-regression)
 
@@ -717,8 +694,6 @@ translation and a human-produced translation
 
 - also known as dividing hypothesis
 - test premise about whether an effect is _greater than or less than a specific value_
-- differs from two-sided tests that check if effect differs in either direction
-- example: testing whether new treatment is at least as good as standard treatment
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#one-sided-hypothesis)
 
@@ -726,7 +701,7 @@ translation and a human-produced translation
 
 ### overfitting
 
-- limitation of LLM benchmarks and model training where an LLM performs well on training or test data but poorly on real-world data
+- limitation of LLM benchmarks - an LLM performs well on training or test data, but poorly on real-world data
 - risk when an LLM is trained on the same dataset the benchmark uses
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#overfitting)
@@ -741,7 +716,6 @@ translation and a human-produced translation
 
 - semantic function-calling metric based on LLM-as-a-judge
 - verifies that every parameter value is directly derived from the user's text, the context history, or API specification defaults
-- detects fabricated or unsupported argument values
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#parameter-value-grounding)
 
@@ -749,7 +723,7 @@ translation and a human-produced translation
 
 ### pass@k
 
-- code generation evaluation metric measuring the probability that at least one of _k_ generated solutions passes a problem's unit tests
+- code generation evaluation metric measuring at least one of _k_ generated solutions passes unit tests
 - captures functional correctness across multiple generated candidates
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#passk)
@@ -760,9 +734,6 @@ translation and a human-produced translation
 
 - platform-level rules that define what actions an agent is allowed to take
 - conceptual authorization and/or guardrails
-- shape agent behavior independently of the underlying LLM
-- examples: requiring confirmation before running shell commands, restricting file access to specific directories,
-blocking certain categories of action entirely
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#permission-and-safety-systems)
 
@@ -781,8 +752,6 @@ blocking certain categories of action entirely
 
 - fundamental building block for autonomous task execution
 - agent capability to decompose complex goals into sequences of executable actions
-- involves reasoning about future states, choosing strategies, and organizing steps
-- ranges from basic linear plans to complex multi-step reasoning with contingencies
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#planning)
 
@@ -791,7 +760,6 @@ blocking certain categories of action entirely
 ### policy adherence rate
 
 - evaluation metric measuring the percentage of responses that comply with predefined organizational or ethical policies
-- part of ethical and responsible AI evaluation
 - used to verify agents respect enterprise guardrails and compliance requirements
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#policy-adherence-rate)
@@ -802,9 +770,6 @@ blocking certain categories of action entirely
 
 - probability that a statistical test will reject the test hypothesis when a specific alternative is correct
 - calculated before study to determine adequate sample size
-- typically designed for 80% power: test will detect true effect 80% of the time
-- doesn't measure compatibility of alternative hypothesis with observed data
-- shouldn't be used to interpret results after data collection
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#power)
 
@@ -814,8 +779,6 @@ blocking certain categories of action entirely
 
 - algorithm or statistical model that forecasts outcomes based on input data
 - learns patterns from training data to make predictions about new cases
-- ranges from basic regression models to complex neural networks
-- accuracy depends on data quality, feature selection, and algorithm sophistication
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#prediction-model)
 
@@ -823,9 +786,7 @@ blocking certain categories of action entirely
 
 ### probability
 
-- in frequentist statistics: refers to hypothetical frequencies of data patterns under assumed model
-- often confused with hypothesis probability, leading to common statistical misinterpretations
-- doesn't refer to probability of hypotheses being true or false
+- in frequentist statistics, refers to hypothetical frequencies of data patterns under assumed model
 - measured over many repetitions of same procedure under identical conditions
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#probability)
@@ -834,10 +795,8 @@ blocking certain categories of action entirely
 
 ### prompt
 
-- input text or instructions given to an LLM to guide its response
+- input text or instructions given to an LLM and/or agent to guide its response
 - quality and specificity of prompts significantly affect output quality
-- distinct from traditional search queries or commands
-- related term: system prompt
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#prompt)
 
@@ -854,10 +813,8 @@ blocking certain categories of action entirely
 
 ### proxy test
 
-- indirect measure used to evaluate something _difficult to assess directly_
+- indirect measure used to evaluate something difficult to assess directly
 - substitutes an observable indicator for an unmeasurable or impractical characteristic
-- trade-off: easier to apply but may occasionally misclassify
-- example: using "developed exclusively for research" as a proxy for AI sophistication
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#proxy-test)
 
@@ -866,10 +823,7 @@ blocking certain categories of action entirely
 ### P value
 
 - probability that observed data, or more extreme, would occur if all model assumptions including test hypothesis were correct
-- ranges from 0 - complete incompatibility, to 1 - perfect compatibility
 - measures fit between data and entire statistical model, not just the hypothesis being tested
-- commonly misinterpreted; doesn't indicate probability that hypothesis is true or false
-- often degraded into "significant" `(P ≤ 0.05)` vs "insignificant" dichotomy
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#p-value)
 
@@ -883,7 +837,6 @@ blocking certain categories of action entirely
 
 - produces insights about _"why"_ and _"how"_ rather than _"how many"_
 - method focused on understanding meaning, experiences, and context through _non-numerical_ data
-- collects data through interviews, observations, open-ended surveys, and document analysis
 
 **Glossary Term Entry Location**: [Research, Qualitative]({{< relref "/research/qualitative" >}}#qualitative-research)
 
@@ -891,10 +844,8 @@ blocking certain categories of action entirely
 
 ### quasinatural AI experiment
 
-- test type that combines naturalness of real AI systems with feasibility of lab experiments
-- advantages: naturalistic AI, broad research scope, easier data collection than natural experiments
-- disadvantages: researchers give up some control over algorithm construction
-- examples: testing commercial chatbots in controlled studies, pilot experiments before product launch
+- test type that combines naturalness of real agentic systems with feasibility of lab experiments
+- testing commercial chatbots in controlled studies, pilot experiments before product launch
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#quasinatural-ai-experiment)
 
@@ -908,7 +859,6 @@ blocking certain categories of action entirely
 
 - also called the sensitivity rate
 - evaluation metric quantifying the number of true positives
-- paired with precision and combined into the F1 score
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#recall)
 
@@ -927,9 +877,6 @@ blocking certain categories of action entirely
 
 - acronym for _reinforcement learning from human feedback_
 - training methodology in which human evaluators rate LLM outputs and ratings fine-tune the LLM toward preferred behaviors
-- creates a strong instruction-following bias
-- LLMs trained with RLHF tend to prioritize explicit user instructions, sometimes at the expense of broader context
-- related terms: compliance, sycophancy
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#rlhf)
 
@@ -938,9 +885,7 @@ blocking certain categories of action entirely
 ### robustness
 
 - system's ability to maintain performance under varying or adverse conditions
-- critical for deployment in real-world, unpredictable environments
 - evaluated through stress testing, edge cases, and challenging scenarios
-- in agent context - handling unexpected inputs, recovering from errors, adapting to environment changes
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#robustness)
 
@@ -959,8 +904,6 @@ blocking certain categories of action entirely
 
 - prompt instruction an LLM interprets and applies at its own discretion
 - has implicit opt-out path; LLM can rationalize skipping
-- constrasts with _gates_, which block progression until a condition is met
-- different than _hooks_, which fire deterministically from harness regardless of LLM interpretation
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#rule)
 

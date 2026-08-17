@@ -118,7 +118,7 @@ substitutes an observable indicator for an unmeasurable or impractical character
 **Purpose**: easier to apply than a direct measure, at the cost of occasionally misclassifying
 cases where the indicator and the underlying characteristic diverge
 
-**Example**: using "developed exclusively for research" as a proxy for AI sophistication
+**Example**: using _"developed exclusively for research"_ as a proxy for AI sophistication
 
 **Related Terms**: [edge case]({{< relref "/research" >}}#edge-case), [empirical testing]({{< relref "/research" >}}#empirical-testing)
 

@@ -167,7 +167,7 @@ applies at its own discretion
 ## LLM
 
 **Definition**: abbreviation for _Large Language Model_; model trained on vast amounts of text
-data to understand and generate human language; also known as "the agent's brain"
+data to understand and generate human language; also known as _"the agent's brain"_
 
 **Purpose**: not all AI is LLM-based - computer vision models and recommendation systems are
 common non-LLM examples; the LLM is the reasoning component an agent's harness wraps around
@@ -181,7 +181,7 @@ common non-LLM examples; the LLM is the reasoning component an agent's harness w
 ## MCP server
 
 **Definition**: acronym for _Model Context Protocol_ server; external server that exposes
-capabilities to an agent — tools, resources, and/or prompts
+capabilities to an agent - tools, resources, and/or prompts
 
 **Purpose**: lets agents interact with databases, APIs, cloud services, or custom systems the
 server is built to access; facilitates portable behavior across agent platforms because
@@ -198,7 +198,7 @@ interactions and tasks; enables agents to maintain context, learn from experienc
 reference past actions
 
 **Purpose**: critical for multi-step reasoning and adapting behavior based on history; types
-include short-term (current task), long-term (across sessions), and episodic (specific events)
+include short-term - current task, long-term - across sessions, and episodic - specific events
 
 **Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [context window management]({{< relref "core-concepts" >}}#context-window-management), [planning]({{< relref "core-concepts" >}}#planning), [self-reflection]({{< relref "core-concepts" >}}#self-reflection)
 
