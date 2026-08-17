@@ -361,7 +361,7 @@ default behaviors, and constraints
 **Definition**: parameter that controls the degree of randomness in an LLM's outputs; set by the
 platform and sometimes adjustable by the user
 
-**Purpose**: affects agent behavior independently of the LLM itself — low temperature produces
+**Purpose**: affects agent behavior independently of the LLM itself - low temperature produces
 more focused, predictable responses; high temperature produces more varied, creative ones
 
 **Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [harness]({{< relref "core-concepts" >}}#harness), [system prompt]({{< relref "core-concepts" >}}#system-prompt)

@@ -1074,7 +1074,6 @@ translation and a human-produced translation
 
 - evaluation metric measuring how effectively an agent or system helps users complete a task
 - used for task-specific and interaction/user-experience evaluation
-- closely related to success rate, the proportion of tasks or goals completed correctly
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#task-completion-rate)
 
@@ -1084,8 +1083,6 @@ translation and a human-produced translation
 
 - classification system that organizes concepts, objects, or phenomena into hierarchical categories
 - defines relationships between categories and provides structure to a domain
-- helps unify fragmented literature and reveal underexplored questions
-- in AI research - frameworks for organizing types of experiments, algorithms, or agent behaviors
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#taxonomy)
 
@@ -1095,9 +1092,6 @@ translation and a human-produced translation
 
 - parameter that controls the degree of randomness in an LLM's outputs
 - set by the platform and sometimes adjustable by the user
-- affects agent behavior independently of the LLM itself
-- low temperature produces more focused, predictable responses
-- high temperature produces more varied, creative ones
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#temperature)
 
@@ -1107,7 +1101,6 @@ translation and a human-produced translation
 
 - dataset used to teach an LLM patterns, relationships, and knowledge
 - LLM learns by processing examples and adjusting internal parameters
-- quality and composition of training data directly affects LLM capabilities and biases
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#training-data)
 
@@ -1117,7 +1110,6 @@ translation and a human-produced translation
 
 - evaluation methodology that analyzes the complete path or sequence of actions an agent takes
 - examines entire decision-making process from initial state to final outcome
-- considers not just correctness but efficiency, reasoning quality, and recovery from errors
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#trajectory-based-evaluation)
 
@@ -1127,7 +1119,6 @@ translation and a human-produced translation
 
 - benchmark measuring an LLM's ability to generate truthful answers to questions
 - addresses the tendency of LLMs to hallucinate and produce inaccurate outputs
-- combines human evaluation with `GPT`s
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#truthfulqa)
 
@@ -1137,7 +1128,6 @@ translation and a human-produced translation
 
 - single exchange in a conversation: one user message and one assistant message
 - agent considers the full turn history when generating a response
-- related terms: user message, assistant message
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#turn)
 
@@ -1151,9 +1141,6 @@ translation and a human-produced translation
 
 - process of measuring and characterizing uncertainty in predictions, decisions, or model outputs
 - distinguishes between aleatoric uncertainty - inherent randomness, and epistemic uncertainty - lack of knowledge
-- enables AI systems to express confidence levels and identify when additional data or validation is needed
-- critical for safe deployment in high-stakes domains like healthcare, autonomous systems, and decision support
-- common methods - Bayesian inference, ensemble approaches, and Monte Carlo techniques
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#uncertainty-quantification)
 
@@ -1163,7 +1150,6 @@ translation and a human-produced translation
 
 - semantic function-calling metric based on LLM-as-a-judge
 - verifies unit or format conversions between values in the context and parameter values in the tool call
-- detects incorrect conversions such as wrong currency, temperature scale, or measurement unit
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#unit-transformation)
 
@@ -1173,7 +1159,6 @@ translation and a human-produced translation
 
 - input sent by a human or automated system to an agent during a conversational turn
 - interpreted by the LLM rather than executed as a direct command
-- receives strong positional attention as the most recent content in the context window
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#user-message)
 
@@ -1187,9 +1172,6 @@ translation and a human-produced translation
 
 - research method presenting hypothetical scenarios to elicit preferences or judgments
 - participants read descriptions of situations and state what they would do
-- common in conceptual AI experiments studying ethical dilemmas or preference patterns
-- advantages: can model any situation without implementation constraints, easy to scale
-- disadvantages: responses may not reflect actual behavior, lower external validity
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#vignette-study)
 
@@ -1198,7 +1180,6 @@ translation and a human-produced translation
 ### VOC
 
 - abbreviation for _voice of the client_
-- invaluable for service and produce improvement
 - data where people often share problems they're encountering, provide feedback, and seek further help
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#voc)
@@ -1212,7 +1193,6 @@ translation and a human-produced translation
 ### Winogrande
 
 - benchmark evaluating an LLM's commonsense reasoning capabilities
-- builds upon WSC, _Winograd Schema Challenge_ with a dataset of 44,000 crowdsourced problems
-- uses adversarial filtering to generate incorrect answers
+- builds upon WSC, _Winograd Schema Challenge_ with crowdsourced problems
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#winogrande)

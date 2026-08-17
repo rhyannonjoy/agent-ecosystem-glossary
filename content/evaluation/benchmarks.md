@@ -164,7 +164,7 @@ real-world software maintenance ability
 addresses the tendency of LLMs to hallucinate and produce inaccurate outputs
 
 **Purpose**: dataset contains 817 questions spanning 38 subjects including health, law, finance, and politics;
-combines human evaluation with `GPT`s LLM fine-tuned on BLEU and ROUGE to predict human assessments of
+combines human evaluation with `GPT`s, fine-tuned on BLEU and ROUGE to predict human assessments of
 informativeness and truthfulness; largest models were generally least truthful
 
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [hallucination]({{< relref "/core-concepts" >}}#hallucination), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
