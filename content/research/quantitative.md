@@ -31,7 +31,7 @@ model's assumptions; commonly reported as a _95% confidence interval_ - if compu
 under valid conditions, 95% of such intervals will contain the true value
 
 **Purpose**: width indicates the precision of an estimate, with narrower intervals signaling more
-precise estimates; not to be confused with a "95% probability the true value is in this range" for
+precise estimates; not to be confused with a _"95% probability the true value is in this range"_ for
 any single interval
 
 **Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [P value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)

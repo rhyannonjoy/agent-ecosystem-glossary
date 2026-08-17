@@ -110,9 +110,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ### benchmark
 
-- standardized test or dataset used to evaluate and compare LLM and/or system performance
-- provides consistent metrics across different LLMs, agents, or approaches
-- task completion rates, accuracy scores, reasoning capabilities
+- standardized test or dataset used to evaluate and compare LLM and/or agentic performance
 - enables objective comparison and tracks progress in the field
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#benchmark)
@@ -121,9 +119,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ### bias and fairness score
 
-- evaluation metric detecting disparities in AI decision-making across different user groups
-- part of ethical and responsible AI evaluation
-- used to identify and mitigate systematic favoritism or discrimination in agent outputs
+- evaluation metric detecting disparities in decision-making across different user groups
+- used to identify and mitigate agent systematic favoritism or discrimination
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#bias-and-fairness-score)
 
@@ -132,9 +129,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 ### BLEU
 
 - abbreviation for _Bilingual Evaluation Understudy_
-- metric that evaluates machine translation by computing matching n-grams - sequences of n adjacent text symbols - between an LLM's predicted translation and a human-produced translation
-- lower-cost alternative to ground-truth-based evaluation
-- complements human evaluation of coherence, relevance and semantic meaning
+- evaluates machine translation by computing matching n-grams between an LLM's predicted
+translation and a human-produced translation
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#bleu)
 
@@ -142,8 +138,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ### bounded scoring
 
-- limitation of LLM benchmarks when an LLM reaches the highest possible score
-- once saturated, the benchmark must be updated with more difficult tasks to remain a useful measure
+- benchmark limitation - when an agent and/or LLM reaches the highest possible score
+- influences continuous evaluation and benchmark maintenance
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#bounded-scoring)
 
@@ -155,9 +151,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ### canary phrase
 
-- named after canaries used in coal mines as early warning detectors
 - unique marker string embedded in content to verify its presence in a system
-- its appearance in output confirms that specific content was loaded and/or processed
+- named after canaries used in coal mines as early warning detectors
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#canary-phrase)
 
@@ -165,9 +160,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ### Chatbot Arena
 
-- open benchmark platform that pits two anonymous chatbots against each other
+- benchmark platform that pits two anonymous chatbots against each other
 - users have random real-world conversations with both, then vote on which they prefer before identities are revealed
-- crowdsourced pairwise comparison data feeds statistical methods that estimate scores and create approximate rankings
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#chatbot-arena)
 
@@ -177,7 +171,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - structured guide used in qualitative research to categorize and tag data consistently
 - defines categories, codes, and rules for applying them to text or observations
-- ensures systematic analysis across multiple researchers or datasets
 
 **Glossary Term Entry Location**: [Research, Qualitative]({{< relref "/research/qualitative" >}}#codebook)
 
@@ -196,8 +189,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - test type in which AI exists as a label or framing device, but _no AI is actually implemented_
 - typically uses vignettes or scenarios to model operational principles or consequences of AI
-- advantages: high feasibility, easy to scale and replicate, can study impractical or impossible scenarios
-- disadvantages: lower naturalness since subjects don't interact with actual AI
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#conceptual-ai-experiment)
 
@@ -207,8 +198,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - range of values likely to contain the true effect size, given the statistical model assumptions
 - commonly reported as _95% confidence interval_ - if computed repeatedly under valid conditions, 95% will contain the true value
-- width indicates precision of estimate; narrower intervals mean more precise estimates
-- not to be confused with "95% probability the true value is in this range" for any single interval
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#confidence-interval)
 
@@ -218,7 +207,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - total amount of text, measured in tokens, an LLM can process at once
 - includes system prompt, conversation history, and any injected context
-- information outside the context window isn't directly available to the LLM during a given interaction
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#context-window)
 
@@ -228,8 +216,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - agent platform strategies to handle conversations that approach or exceed the context window limit
 - determine what gets retained, compressed, or dropped as conversations grow long
-- common approaches include summarization and/or selective truncation of earlier messages
-- quality of strategy affects whether an agent may "forget" earlier instructions
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#context-window-management)
 
@@ -239,8 +225,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - experimental design distinction based on environment
 - trade-off between control/replicability and external validity/generalizability
-- controlled: experiments conducted in artificial settings - labs, online platforms - where researchers manipulate variables
-- natural: experiments conducted in real-world settings where AI is actually used - workplaces, platforms, markets
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#controlled-vs-natural)
 
@@ -248,8 +232,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ### conversational flow
 
-- interaction metric evaluating an agent's ability to maintain coherent and meaningful conversations
-- part of interaction and user experience evaluation for chatbots and virtual assistants
+- metric evaluating an agent's ability to maintain coherent and meaningful conversations
+- interaction and user experience evaluation for chatbots and virtual assistants
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#conversational-flow)
 
@@ -259,8 +243,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - evaluation metric measuring computational resources required relative to task performance
 - factors include token usage, API calls, processing time, energy consumption
-- increasingly important as agents scale to production environments
-- trade-off: higher accuracy often requires higher costs
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#cost-efficiency)
 
@@ -270,7 +252,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - abbreviation for _Customer Satisfaction score_
 - interaction metric measuring how satisfied users are with AI responses
-- typically gathered through post-interaction surveys
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#csat)
 
@@ -282,8 +263,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ### Discriminability Score
 
-- metric used to filter benchmark datasets by identifying tasks that separate a good response from a bad one
-- intends to create a tighter, faster regression suite by removing redundant questions
+- metric used to filter benchmarks by identifying tasks that separate a good response from a bad one
+- intends to create faster regression suites by removing redundant questions
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#discriminability-score)
 
@@ -293,8 +274,6 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 - systematic sharing of research findings with target audiences beyond the research team
 - ensures knowledge can advance the field, change practice and policy, or inform future research
-- requires planning for audience, timing, and appropriate communication channels
-- methods include journal publications, conference presentations, social media, press releases, websites
 
 **Glossary Term Entry Location**: [Research, Qualitative]({{< relref "/research/qualitative" >}}#dissemination)
 
