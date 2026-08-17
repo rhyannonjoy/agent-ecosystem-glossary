@@ -23,7 +23,7 @@ for comparing how often an LLM produces a correct answer
 
 **Example**: a benchmark with 100 questions where an LLM answers 93 correctly yields 93% accuracy
 
-**Related Terms**: benchmark, evaluation, exact match, F1 score, precision, recall
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score), [recall]({{< relref "/evaluation/metrics" >}}#recall)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -37,7 +37,7 @@ part of ethical and responsible AI evaluation
 **Purpose**: used to identify and mitigate systematic favoritism or discrimination in agent outputs,
 ensuring decisions do not disadvantage particular groups
 
-**Related Terms**: accuracy, benchmark, evaluation, policy adherence rate, prompt injection vulnerability
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [policy adherence rate]({{< relref "/evaluation/metrics" >}}#policy-adherence-rate), [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -53,7 +53,7 @@ text symbols - between an LLM's predicted translation and a human-produced trans
 **Purpose**: provides a lower-cost alternative to ground-truth-based evaluation; complements
 human evaluation of coherence, relevance and semantic meaning
 
-**Related Terms**: benchmark, evaluation, exact match, ground truth, ROUGE
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -67,7 +67,7 @@ conversations; part of interaction and user experience evaluation for chatbots a
 **Purpose**: assesses whether an agent sustains natural, on-topic dialogue across turns, informing
 how well it serves conversational-interface use cases
 
-**Related Terms**: benchmark, engagement rate, evaluation, task completion rate
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [engagement rate]({{< relref "/evaluation/metrics" >}}#engagement-rate), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -81,7 +81,7 @@ performance; factors include token usage, API calls, processing time and energy 
 **Purpose**: increasingly important as agents scale to production, helping teams balance performance
 against cost; highlights the trade-off that higher accuracy often requires higher costs
 
-**Related Terms**: benchmark, evaluation, latency, task completion rate
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [latency]({{< relref "/evaluation/metrics" >}}#latency), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 ---
 
@@ -93,7 +93,7 @@ satisfied users are with a product and/or agent responses
 **Purpose**: typically gathered through post-interaction surveys, giving direct feedback on whether
 responses meet user expectations
 
-**Related Terms**: conversational flow, engagement rate, evaluation, task completion rate
+**Related Terms**: [conversational flow]({{< relref "/evaluation/metrics" >}}#conversational-flow), [engagement rate]({{< relref "/evaluation/metrics" >}}#engagement-rate), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [IBM: "What is CSAT and how to calculate it?"](https://www.ibm.com/think/topics/csat-customer-satisfaction-score)
 
@@ -111,7 +111,7 @@ a tighter, faster regression suite by removing redundant questions
 **Example**: a team prunes hundreds of redundant questions down to the edge cases and
 reasoning tasks that actually differentiate its application
 
-**Related Terms**: benchmark, evaluation, golden dataset, regression testing
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [golden dataset]({{< relref "/evaluation" >}}#golden-dataset), [regression testing]({{< relref "/evaluation" >}}#regression-testing)
 
 **Source**: [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
 
@@ -125,7 +125,7 @@ part of interaction and user experience evaluation
 **Purpose**: signals how frequently and consistently users engage with a product and/or system,
 helping assess whether it retains interest and delivers value over time
 
-**Related Terms**: conversational flow, CSAT, evaluation, task completion rate
+**Related Terms**: [conversational flow]({{< relref "/evaluation/metrics" >}}#conversational-flow), [CSAT]({{< relref "/evaluation/metrics" >}}#csat), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [Leanware: "Agent Evaluation Frameworks: Methods, Metrics & Best Practices"](https://leanware.co/insights/agent-evaluation-frameworks-methods-metrics-best-practices)
 
@@ -138,7 +138,7 @@ tracked alongside success and task completion rates
 
 **Purpose**: provides an inverse view of success, helping teams quantify failures and failed operations
 
-**Related Terms**: benchmark, evaluation, function calling evaluation, task completion rate
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker and Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -152,7 +152,7 @@ proportion of an LLM's predictions that match the expected answer exactly
 **Purpose**: valuable criterion for translation and question-answering benchmarks;
 stricter than semantic similarity metrics
 
-**Related Terms**: accuracy, benchmark, BLEU, evaluation, ground truth, ROUGE
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -167,9 +167,33 @@ to balance false positives and false negatives
 **Purpose**: provides a single 0-1 score where 1 signifies excellent recall and precision,
 useful when both false positives and false negatives matter
 
-**Related Terms**: accuracy, benchmark, evaluation, precision, recall
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [recall]({{< relref "/evaluation/metrics" >}}#recall)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## Flesch–Kincaid readability tests
+
+**Definition**: metric designed to indicate how difficult a passage in English is to understand;
+score reflects the U.S. grade level needed to comprehend the text
+
+**Purpose**: quantifies output readability for user-facing text, complementing metrics that measure
+factual or semantic quality
+
+**Related Terms**: [Gunning fog index]({{< relref "/evaluation/metrics" >}}#gunning-fog-index)
+
+---
+
+## Gunning fog index
+
+**Definition**: readability test that estimates the years of formal education needed to understand
+text on first reading
+
+**Purpose**: a score of 12 indicates high school senior level, giving teams a plain-language
+benchmark for output complexity
+
+**Related Terms**: [Flesch–Kincaid readability tests]({{< relref "/evaluation/metrics" >}}#fleschkincaid-readability-tests)
 
 ---
 
@@ -181,7 +205,7 @@ return results; an important resource-efficiency concern alongside cost
 **Purpose**: critical when AI must deliver real-time, contextually accurate responses, since slow
 response times undermine interactive and production use cases
 
-**Related Terms**: cost-efficiency, evaluation, task completion rate
+**Related Terms**: [cost-efficiency]({{< relref "/evaluation/metrics" >}}#cost-efficiency), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [Leanware: "Agent Evaluation Frameworks: Methods, Metrics & Best Practices"](https://leanware.co/insights/agent-evaluation-frameworks-methods-metrics-best-practices)
 
@@ -195,7 +219,7 @@ value is directly derived from the user's text, the context history, or API spec
 **Purpose**: detects fabricated or unsupported argument values, checking that the agent's parameter
 choices are grounded in available context rather than invented
 
-**Related Terms**: function calling evaluation, LLM-as-a-Judge, semantic evaluation, unit transformation
+**Related Terms**: [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation), [unit transformation]({{< relref "/evaluation/metrics" >}}#unit-transformation)
 
 ---
 
@@ -207,7 +231,7 @@ _k_ generated solutions passes a problem's unit tests
 **Purpose**: captures functional correctness across multiple generated candidates, used by
 benchmarks such as HumanEval
 
-**Related Terms**: benchmark, evaluation, functional correctness, HumanEval, MBPP
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [HumanEval]({{< relref "/evaluation/benchmarks" >}}#humaneval), [MBPP]({{< relref "/evaluation/benchmarks" >}}#mbpp)
 
 **Source**: [arXiv: "Evaluating Large Language Models Trained on Code" by Chen et al.](https://arxiv.org/abs/2107.03374)
 
@@ -219,7 +243,7 @@ benchmarks such as HumanEval
 
 **Purpose**: the lower an LLM's perplexity score, the better it is at comprehending a task
 
-**Related Terms**: accuracy, benchmark, BLEU, evaluation, exact match, F1 score, ROUGE
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -233,7 +257,7 @@ organizational or ethical policies; part of ethical and responsible AI evaluatio
 **Purpose**: verifies agents respect enterprise guardrails and compliance requirements, flagging
 behaviors that deviate from documented policy
 
-**Related Terms**: benchmark, bias and fairness score, evaluation, prompt injection vulnerability
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [bias and fairness score]({{< relref "/evaluation/metrics" >}}#bias-and-fairness-score), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -248,7 +272,7 @@ quality, bias and fairness score, and/or policy adherence rate
 **Purpose**: identifies susceptibility to manipulation or misuse, forming part of ethical, responsible
 AI, and security evaluation
 
-**Related Terms**: bias and fairness score, evaluation, functional correctness, policy adherence rate
+**Related Terms**: [bias and fairness score]({{< relref "/evaluation/metrics" >}}#bias-and-fairness-score), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [policy adherence rate]({{< relref "/evaluation/metrics" >}}#policy-adherence-rate)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -261,7 +285,7 @@ correct predictions, specifically the number of true positives
 
 **Purpose**: paired with precision and combined into the F1 score
 
-**Related Terms**: accuracy, benchmark, evaluation, precision, F1 score
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -276,7 +300,7 @@ similarity between automatically produced summary and the human-produced referen
 **Purpose**: `ROUGE-N` performs similar `n-gram` calculations to BLEU for summaries; `ROUGE-L`
 computes the longest common subsequence between the predicted summary and the human-produced summary
 
-**Related Terms**: accuracy, BLEU, exact match, F1 score, recall, perplexity
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score), [recall]({{< relref "/evaluation/metrics" >}}#recall), [perplexity]({{< relref "/evaluation/metrics" >}}#perplexity)
 
 **Sources**:
 
@@ -293,7 +317,7 @@ helps users complete a task
 **Purpose**: used for task-specific and interaction/user-experience evaluation;
 closely related to success rate, the proportion of tasks or goals completed correctly
 
-**Related Terms**: benchmark, error rate, evaluation, functional correctness, function calling evaluation
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [error rate]({{< relref "/evaluation/metrics" >}}#error-rate), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -307,6 +331,18 @@ conversions between values in the context and parameter values in the tool call
 **Purpose**: detects incorrect conversions such as wrong currency, temperature scale, or measurement
 unit, ensuring the agent transforms values correctly when invoking tools
 
-**Related Terms**: function calling evaluation, LLM-as-a-Judge, parameter value grounding, semantic evaluation
+**Related Terms**: [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [parameter value grounding]({{< relref "/evaluation/metrics" >}}#parameter-value-grounding), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+
+---
+
+## VOC
+
+**Definition**: abbreviation for _voice of the client_; data where people share problems they're
+encountering, provide feedback, and seek further help
+
+**Purpose**: invaluable for service and product improvement, surfacing real user pain points
+alongside structured metrics like CSAT
+
+**Related Terms**: [CSAT]({{< relref "/evaluation/metrics" >}}#csat), [engagement rate]({{< relref "/evaluation/metrics" >}}#engagement-rate)

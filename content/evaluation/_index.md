@@ -1,6 +1,6 @@
 ---
 title: "Evaluation"
-weight: 2
+weight: 3
 bookToc: true
 ---
 
@@ -29,9 +29,21 @@ LLMs from gaming simple patterns
 **Example**: HellaSwag generates story endings that are realistic, but incorrect, so LLMs
 can't guess by surface plausibility
 
-**Related Terms**: benchmark, evaluation, HellaSwag, Winogrande
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [HellaSwag]({{< relref "/evaluation/benchmarks" >}}#hellaswag), [Winogrande]({{< relref "/evaluation/benchmarks" >}}#winogrande)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## Agent-as-a-Judge
+
+**Definition**: evaluation methodology where an agent assesses the performance of other agents;
+examines outputs, behaviors, or decision-making processes
+
+**Purpose**: related to LLM-as-a-Judge, but focuses on agentic system evaluation rather than just
+text outputs
+
+**Related Terms**: [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
 
 ---
 
@@ -45,7 +57,7 @@ to remain a useful measure
 
 **Example**: once every major LLM scores near 100% on MMLU, that score no longer separates models
 
-**Related Terms**: benchmark, evaluation, overfitting
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [overfitting]({{< relref "/evaluation" >}}#overfitting)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker?"](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -64,12 +76,24 @@ scoring mechanism
 **Example**: tests coding, common sense, reasoning, translation capabilities; custom benchmarks
 include a golden dataset and scoring built for a specific domain
 
-**Related Terms**: evaluation, functional correctness, LLM leaderboard
+**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
 
 **Sources**:
 
 - [HumanSignal, "Building custom golden datasets for regression testing"](https://humansignal.com/ai-benchmarks/)
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## canary phrase
+
+**Definition**: unique marker string embedded in content to verify its presence in a system;
+named after canaries used in coal mines as early warning detectors
+
+**Purpose**: its appearance in output confirms that specific content was loaded and/or processed,
+verifying whether a prompt, document, or instruction actually reached the LLM
+
+**Related Terms**: [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
 
 ---
 
@@ -87,7 +111,8 @@ baselines while evaluation describes a dynamic, ongoing measurement of agent per
 **Example**: a team continuously scores a RAG pipeline's answers for relevance and factuality rather
 than running a one-off generic test
 
-**Related Terms**: benchmark, final response evaluation, stepwise evaluation, trajectory-based evaluation
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation)
+trajectory-based evaluation
 
 **Sources**:
 
@@ -105,7 +130,7 @@ evaluation guides design and iteration; structurally similar to TDD - _test-driv
 testing and metrics to inform architectural decisions throughout the development lifecycle; emphasizes
 measurable outcomes and systematic improvement
 
-**Related Terms**: benchmark, evaluation, final response evaluation, regression testing, stepwise evaluation
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [regression testing]({{< relref "/evaluation" >}}#regression-testing), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation)
 
 **Source**: [Braintrust: "What is eval-driven development: How to ship high-quality agents without guessing"](https://www.braintrust.dev/articles/eval-driven-development)
 
@@ -119,7 +144,7 @@ that supplies an LLM with a small number of examples showing how to fulfill a ta
 **Purpose**: demonstrates an LLM's ability to learn from scarce data; one of the three
 common LLM benchmark testing approaches, alongside zero-shot and fine-tuning
 
-**Related Terms**: benchmark, evaluation, HellaSwag, MMLU, zero-shot
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [HellaSwag]({{< relref "/evaluation/benchmarks" >}}#hellaswag), [MMLU]({{< relref "/evaluation/benchmarks" >}}#mmlu), [zero-shot]({{< relref "/evaluation" >}}#zero-shot)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -133,7 +158,7 @@ execution; judges success based on whether the final answer or outcome is correc
 **Purpose**: streamlined implementation with clear success criteria; provides no insight into the reasoning
 process, intermediate steps, or failure points
 
-**Related Terms**: benchmark, evaluation, EDD, stepwise evaluation, trajectory-based evaluation
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [EDD]({{< relref "/evaluation" >}}#edd), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
 
 **Source**: [Arize: "How to evaluate AI agents: a production workflow"](https://arize.com/guides/ai-agent-handbook/agent-evaluation/)
 
@@ -141,7 +166,7 @@ process, intermediate steps, or failure points
 
 ## function calling evaluation
 
-**Definition**: assessment of an agent's tool invocation behavior
+**Definition**: assessment of an agent's tool invocation behavior to APIs, databases, and/or web services
 
 **Purpose**: rule-based metrics cover structural correctness of a tool call; semantic metrics,
 based on LLM-as-a-judge, cover parameter value grounding and unit transformation -
@@ -154,7 +179,7 @@ based on LLM-as-a-judge, cover parameter value grounding and unit transformation
 | **wrong function** | call exists, but with an incorrect case, name, and/or spelling |
 | **wrong type** | parameter type doesn't match function requirements |
 
-**Related Terms**: functional correctness, parameter value grounding, tool use, unit transformation
+**Related Terms**: [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [parameter value grounding]({{< relref "/evaluation/metrics" >}}#parameter-value-grounding), [unit transformation]({{< relref "/evaluation/metrics" >}}#unit-transformation)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -168,7 +193,7 @@ by whether LLMs pass the corresponding unit tests
 **Purpose**: provides an objective, executable measure of code quality used by HumanEval,
 MBPP and similar coding benchmarks
 
-**Related Terms**: benchmark, evaluation, function calling evaluation, pass@k, HumanEval, MBPP
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [pass@k]({{< relref "/evaluation/metrics" >}}#passk), [HumanEval]({{< relref "/evaluation/benchmarks" >}}#humaneval), [MBPP]({{< relref "/evaluation/benchmarks" >}}#mbpp)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -182,7 +207,7 @@ replaces public leaderboards to predict production success for an application
 **Purpose**: serves as the basis for custom benchmarks and regression testing;
 ground truth that calibrates automated evaluation systems
 
-**Related Terms**: benchmark, evaluation, ground truth, regression testing
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [regression testing]({{< relref "/evaluation" >}}#regression-testing)
 
 **Source**: [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
 
@@ -198,7 +223,7 @@ capabilities; critical for effective benchmark design to prevent reward hacking 
 
 **Example**: training an LLM on benchmark data so it scores well on the test but fails on real-world data
 
-**Related Terms**: benchmark, bounded scoring, evaluation, overfitting
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [bounded scoring]({{< relref "/evaluation" >}}#bounded-scoring), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [overfitting]({{< relref "/evaluation" >}}#overfitting)
 
 **Source**: [Wikipedia: "Goodhart's law"](https://en.wikipedia.org/wiki/Goodhart%27s_law)
 
@@ -211,9 +236,21 @@ capabilities; critical for effective benchmark design to prevent reward hacking 
 **Purpose**: benchmarks categorize assessment criteria by whether they rely on ground truth or
 on human preferences reflecting real world usage; guides metrics and defines golden datasets
 
-**Related Terms**: accuracy, benchmark, evaluation, exact match, golden dataset
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [golden dataset]({{< relref "/evaluation" >}}#golden-dataset)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+
+---
+
+## human-in-the-loop
+
+**Definition**: system design where humans actively participate in AI decision-making or
+evaluation process; human provides feedback, validation, or intervention at critical points
+
+**Purpose**: balances automation with human judgment and oversight; common in agent evaluation to
+assess quality, safety, and alignment with human values
+
+**Related Terms**: [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
 
 ---
 
@@ -225,7 +262,7 @@ the LLM scores or ranks responses based on criteria like accuracy, helpfulness o
 **Purpose**: enables scalable evaluation compared to human annotation alone at significantly
 lower cost; limitations include potential biases and consistency issues
 
-**Related Terms**: Agent-as-a-Judge, benchmark, evaluation, semantic evaluation
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
 
 **Sources**:
 
@@ -243,7 +280,7 @@ LLM-selection aid
 
 **Example**: [Hugging Face Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard)
 
-**Related Terms**: benchmark, Chatbot Arena, evaluation, MMLU
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [Chatbot Arena]({{< relref "/evaluation/benchmarks" >}}#chatbot-arena), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [MMLU]({{< relref "/evaluation/benchmarks" >}}#mmlu)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
@@ -261,7 +298,7 @@ a score that does not reflect the LLM's actual abilities
 **Example**: a LLM that handles physics questions on a leaderboard may fail to summarize
 a standard internal meeting transcript
 
-**Related Terms**: benchmark, bounded scoring, evaluation, Goodhart's law
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [bounded scoring]({{< relref "/evaluation" >}}#bounded-scoring), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Goodhart's law]({{< relref "/evaluation" >}}#goodharts-law)
 
 **Sources**:
 
@@ -279,12 +316,70 @@ lifecycle
 **Purpose**: detects when a new LLM version fails a task a previous version passed; reframes benchmarking
 as an internal measure of stability rather than a global ranking tool
 
-**Related Terms**: benchmark, evaluation, golden dataset, Discriminability Score
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [golden dataset]({{< relref "/evaluation" >}}#golden-dataset), [Discriminability Score]({{< relref "/evaluation/metrics" >}}#discriminability-score)
 
 **Sources**:
 
 - [Agent Engineering: "Regression Testing for Agents"](https://agentengineering.org/articles/regression-testing-for-agents/)
 - [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+
+---
+
+## robustness
+
+**Definition**: system's ability to maintain performance under varying or adverse conditions; in
+agent context, handling unexpected inputs, recovering from errors, and adapting to environment
+changes
+
+**Purpose**: critical for deployment in real-world, unpredictable environments; evaluated through
+stress testing, edge cases, and challenging scenarios; named as a Reliability dimension in the SAP
+Labs agent eval taxonomy alongside hallucinations and error handling
+
+**Related Terms**: [edge case]({{< relref "/research" >}}#edge-case), [error rate]({{< relref "/evaluation/metrics" >}}#error-rate), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy)
+
+---
+
+## SAP Labs agent eval taxonomy
+
+**Definition**: two-axis framework for organizing LLM agent evaluation, proposed by SAP Labs; splits
+evaluation into Evaluation Objectives - what is measured - and Evaluation Process - how it is measured
+
+**Purpose**: provides a shared vocabulary for scoping an evaluation effort - which objective(s) to
+target, what interaction mode and data to use, how metrics get computed, what tooling and environment
+run the tests - before selecting specific metrics or benchmarks
+
+**Evaluation Objectives**:
+
+| Dimension | Description | Examples |
+|---|---|---|
+| Agent Behavior | outcome oriented; did the agent produce the correct, efficient, affordable result? | task completion, interaction quality, latency & cost |
+| Agent Capabilities | process oriented; did the agent follow the right reasoning process? | planning & reasoning, memory & context, tool use, multi-agent behavior |
+| Reliability | consistency across time and input variations | robustness, hallucinations, error handling |
+| Safety & Alignment | is the agent compliant, safe, and non-harmful? | fairness, harm/toxicity/bias, compliance & policy adherence |
+
+**Evaluation Process**:
+
+| Dimension | Description | Subcategories |
+|---|---|---|
+| Interaction Mode | how evaluation data is provided to the system | static/offline vs. dynamic/online |
+| Evaluation Data | what data is used to evaluate the system | human-annotated, synthetic, interaction-generated |
+| Metrics Computation Methods | what method computes the evaluation metrics | code based, LLM-as-a-Judge, human-as-a-judge |
+| Evaluation Tooling | pre-existing tooling supporting evaluation | testing, observability, debugging, monitoring |
+| Evaluation Contexts | environment the agent is tested in | mocked APIs, simulators, live |
+
+**Notable Benchmarks by Objective**:
+
+| Objective | Benchmarks |
+|---|---|
+| Tool Use | ToolBench, API-Bank |
+| Planning | TaskBench, ScienceAgentBench |
+| Safety | AgentHarm, CoSafe, AgentDojo |
+| Long-Term Memory | LongEval, SocialBench |
+| Web Interaction | WebArena, BrowserGym |
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
+
+**Source**: [SAP: "Evaluation and Benchmarking of LLM Agents: A Survey" by Mahmoud Mohammadi, Yipeng Li, Jane Lo, Wendy Yip (KDD 2025 Tutorial)](https://sap-samples.github.io/llm-agents-eval-tutorial/2025_KDD_Evaluation_and_Benchmarking_of_LLM_Agents.pdf)
 
 ---
 
@@ -297,7 +392,7 @@ to score outputs for relevance, factuality and correctness where no ground truth
 _"did the agent return the right format?"_; contrasts with rule-based checks that
 verify syntax and function-call shape
 
-**Related Terms**: benchmark, evaluation, function calling evaluation, ground truth, LLM-as-a-Judge
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
@@ -312,7 +407,7 @@ execution; examines correctness of intermediate actions, decisions, and reasonin
 identifies exactly where an agent succeeds or fails in multi-step processes; more resource-intensive than
 final response evaluation but provides richer diagnostic information
 
-**Related Terms**: benchmark, EDD, evaluation, final response evaluation, trajectory-based evaluation
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [EDD]({{< relref "/evaluation" >}}#edd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
 
 ---
 
@@ -325,7 +420,7 @@ takes; examines the entire decision-making process from initial state to final o
 enables evaluation of process quality rather than only outcome quality, providing a holistic view of
 agent behavior including planning, adaptation, and tool use patterns
 
-**Related Terms**: benchmark, EDD, evaluation, final response evaluation, stepwise evaluation
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [EDD]({{< relref "/evaluation" >}}#edd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation)
 
 **Sources**:
 
@@ -342,7 +437,7 @@ without having seen any examples beforehand
 **Purpose**: unveils an LLM's ability to comprehend new concepts and adapt to novel
 scenarios; one of the three common benchmark testing approaches
 
-**Related Terms**: benchmark, evaluation, few-shot
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [few-shot]({{< relref "/evaluation" >}}#few-shot)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 
