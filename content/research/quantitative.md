@@ -131,13 +131,19 @@ data quality, feature selection, and algorithm sophistication
 
 **Definition**: in frequentist statistics, refers to hypothetical frequencies of data patterns
 under an assumed model, measured over many repetitions of the same procedure under identical
-conditions
+conditions; in Bayesian statistics, represents the degree of belief in a hypothesis given
+observed data
 
 **Purpose**: often confused with the probability of a hypothesis being true or false, leading to
-common statistical misinterpretations; doesn't refer to the probability of hypotheses being true
-or false
+common statistical misinterpretations; Bayesian interpretation distinguishes between prior and
+posterior probability, enabling more intuitive statements about hypothesis likelihood -
 
-**Related Terms**: [P value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+| **Concept** | **Description** |
+| --- | --- |
+| **Prior Probability** | Initial belief about a hypothesis before observing any data |
+| **Posterior Probability** | Updated belief after incorporating observed data using [Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) |
+
+**Related Terms**: [Bayesian experiment]({{< relref "/research" >}}#bayesian-experiment), [P value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
 
 ---
 

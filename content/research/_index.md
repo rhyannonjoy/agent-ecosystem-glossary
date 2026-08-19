@@ -17,6 +17,26 @@ the statistical toolkit used to test and quantify claims.
 
 ---
 
+## ablation study
+
+**Definition**: experimental method that systematically removes or disables components of a
+model to measure their individual contribution to overall performance; derived from ablative
+brain surgery in neuroscience where tissue removal revealed functional regions
+
+**Purpose**: isolates the causal influence of specific model components; low-effort way to
+understand which modules matter and how much they contribute; commonly used to justify
+architectural choices in neural networks and complex systems
+
+**Example**: in an object detection system with localization, feature extraction, and
+classification modules, an ablation study might train variants that keep two modules fixed
+while varying the third to measure each component's impact on detection accuracy
+
+**Related Terms**: [edge case]({{< relref "/research" >}}#edge-case), [empirical testing]({{< relref "/research" >}}#empirical-testing), [experimental design]({{< relref "/research" >}}#experimental-design)
+
+**Source**: [Baeldung: "Machine Learning: What Is Ablation Study?" by Panagiotis Antoniadis](https://www.baeldung.com/cs/ml-ablation-study)
+
+---
+
 ## A/B test
 
 **Definition**: also known as split testing and/or randomized controlled trial; experimental method
@@ -27,6 +47,31 @@ something and determine which performs better
 the effect of a single change by holding all other conditions constant across groups
 
 **Related Terms**: [controlled vs natural]({{< relref "/research" >}}#controlled-vs-natural), [experimental design]({{< relref "/research" >}}#experimental-design), [natural AI experiment]({{< relref "/research" >}}#natural-ai-experiment)
+
+---
+
+## Bayesian experiment
+
+**Definition**: experimental approach using Bayesian statistics to incorporate prior knowledge
+and update beliefs with new data; contrasts with frequentist A/B testing by assigning
+probabilities to hypotheses rather than data
+
+**Purpose**: particularly valuable when sample sizes are small, prior information is available,
+or continuous monitoring is needed; allows sequential analysis where results can be evaluated
+as data accumulates without inflating error rates; quantifies expected loss to support
+risk-aware decision-making
+
+**Example**: after running a Bayesian A/B test on a new checkout flow, the analysis might
+conclude _"there is a 92% probability the new flow increases conversion rate"_ rather than
+reporting a p-value; this directly answers the business question _"should we ship the
+feature?"_ with a probabilistic statement about the hypothesis
+
+**Related Terms**: [A/B test]({{< relref "/research" >}}#ab-test), [experimental design]({{< relref "/research" >}}#experimental-design), [probability]({{< relref "/research/quantitative" >}}#probability), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+
+**Sources**:
+
+- [Statsig: "When to use Bayesian experiments: A beginner's guide" by Ryan Musser](https://www.statsig.com/blog/bayesian-experiments-beginners-guide)
+- [Wikipedia: "Bayesian experimental design"](https://en.wikipedia.org/wiki/Bayesian_experimental_design)
 
 ---
 
