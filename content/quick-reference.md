@@ -111,7 +111,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 ### benchmark
 
 - standardized test or dataset used to evaluate and compare LLM and/or agentic performance
-- enables objective comparison and tracks progress in the field
+- enables objective, but not neutral, comparison that tracks progress in the field
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#benchmark)
 

@@ -75,6 +75,9 @@ except proper nouns/acronyms, no trailing period
 
 ## 3. Add the quick-reference stub
 
+This step applies only when adding a **new** full entry. If you're instead
+editing an *existing* entry, leave `content/quick-reference.md` untouched.
+
 In `content/quick-reference.md`, insert a `### term name` heading under the
 correct `## X` first-letter section, alphabetical within that section.
 Format:
