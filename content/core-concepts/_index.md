@@ -101,12 +101,20 @@ grow long
 strategy affects whether an agent may "forget" earlier instructions
 
 **Example**: summarizing earlier turns or selectively truncating old messages to keep the
-conversation within bounds
+conversation within bounds, additional challenges include -
+
+| **Challenge** | **Description** |
+| --- | --- |
+| **Compaction** | LLM summarization / rewriting history, server-side opaque compression |
+| **Context Rot** | Performance degradation as length increases ~30k+ tokens |
+| **Lost in the Middle** | LLMs use info at context beginning, end more than middle |
 
 **Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [memory]({{< relref "core-concepts" >}}#memory), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
 
-**Source**:
+**Sources**:
 
+- [Anthropic: "Effective Context Engineering for AI Agents"](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [Chroma: "Context Rot Report"](https://research.trychroma.com/context-rot)
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
