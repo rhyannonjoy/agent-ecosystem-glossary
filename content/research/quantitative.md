@@ -135,15 +135,24 @@ conditions; in Bayesian statistics, represents the degree of belief in a hypothe
 observed data
 
 **Purpose**: often confused with the probability of a hypothesis being true or false, leading to
-common statistical misinterpretations; Bayesian interpretation distinguishes between prior and
-posterior probability, enabling more intuitive statements about hypothesis likelihood -
+common statistical misinterpretations; essential for distinguishing between deterministic and
+probabilistic approaches in testing and evaluation
 
 | **Concept** | **Description** |
 | --- | --- |
+| **Deterministic** | Same input always produces same output; no randomness |
+| **Probabilistic** | Output may vary across runs due to randomness or sampling |
 | **Prior Probability** | Initial belief about a hypothesis before observing any data |
 | **Posterior Probability** | Updated belief after incorporating observed data using [Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) |
 
-**Related Terms**: [Bayesian experiment]({{< relref "/research" >}}#bayesian-experiment), [_p_-value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+**Example**: LLM inference is probabilistic due to temperature, sampling introduce variability -
+while executing a compiled program is deterministic - same binary + same input = same output;
+deterministic test execution ensures reproducibility, while probabilistic evaluation, such as
+LLM-as-a-judge, introduces variability across runs
+
+**Related Terms**: [Bayesian experiment]({{< relref "/research" >}}#bayesian-experiment),
+[LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge),
+[_p_-value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
 
 ---
 
@@ -170,7 +179,8 @@ probability that the hypothesis is true or false_
 only 1 out of 100 tests if the true lift were zero; this rarity provides evidence against the
 claim of no effect
 
-**Related Terms**: [confidence interval]({{< relref "/research/quantitative" >}}#confidence-interval), [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [probability]({{< relref "/research/quantitative" >}}#probability), [statistical model]({{< relref "/research/quantitative" >}}#statistical-model)
+**Related Terms**: [confidence interval]({{< relref "/research/quantitative" >}}#confidence-interval), [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [probability]({{< relref "/research/quantitative" >}}#probability),
+[statistical model]({{< relref "/research/quantitative" >}}#statistical-model)
 
 **Source**: [Analytics Toolkit: "P-values and Confidence Intervals Explained" by Georgi Georgiev](https://blog.analytics-toolkit.com/2022/p-values-and-confidence-intervals-explained/)
 

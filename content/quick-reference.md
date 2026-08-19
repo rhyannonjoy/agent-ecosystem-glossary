@@ -80,7 +80,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 ### Agent-as-a-Judge
 
 - evaluation methodology where an agent assesses the performance of other agents
-- related to LLM-as-a-Judge, but focuses on agentic system evaluation rather than just outputs
+- related to LLM-as-judge, but focuses on agentic system evaluation rather than just outputs
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#agent-as-a-judge)
 
@@ -236,15 +236,6 @@ translation and a human-produced translation
 - includes system prompt, conversation history, and any injected context
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#context-window)
-
----
-
-### context window management
-
-- agent platform strategies to handle conversations that approach or exceed the context window limit
-- determine what gets retained, compressed, or dropped as conversations grow long
-
-**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#context-window-management)
 
 ---
 
@@ -606,12 +597,12 @@ translation and a human-produced translation
 
 ---
 
-### LLM-as-a-Judge
+### LLM-as-judge
 
 - evaluation methodology where a large language model assesses quality of text outputs
 - LLM scores or ranks responses based on criteria like accuracy, helpfulness, or safety
 
-**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#llm-as-a-judge)
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#llm-as-judge)
 
 ---
 
