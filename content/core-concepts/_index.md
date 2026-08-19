@@ -197,7 +197,7 @@ applies at its own discretion
 
 ## LLM
 
-**Definition**: abbreviation for _Large Language Model_; model trained on vast amounts of text
+**Definition**: acronym for _Large Language Model_; model trained on vast amounts of text
 data to understand and generate human language; also known as _"the agent's brain"_
 
 **Purpose**: not all AI is LLM-based - computer vision models and recommendation systems are
