@@ -84,14 +84,15 @@ system prompt, conversation history, and any injected context
 content outside the window is not directly accessible
 
 **Example**: agent platforms handle conversations approaching the limit through
-summarization, selective truncation, or compression; quality of the strategy determines whether
-agents retain earlier instructions or _"forget"_ context in a few ways:
+summarization, selective truncation, or compression; quality of context window management
+strategy determines whether agents retain earlier instructions or _"forget"_ context
+in a few ways:
 
 | **Challenge** | **Description** |
 | --- | --- |
-| **Compaction** | LLM summarization rewriting history, or server-side opaque compression |
-| **Context rot** | Performance degradation as length increases, meaningful above ~30k tokens |
-| **Lost in the Middle** | LLMs use information at context beginning and end more reliably than middle |
+| **Compaction** | LLM summarization / rewriting, or server-side opaque compression |
+| **Context Rot** | Performance degradation as length increases ~30k+ tokens |
+| **Lost in the Middle** | LLMs use info at context beginning, end more than middle |
 
 **Related Terms**: [memory]({{< relref "core-concepts" >}}#memory), [`/SKILL`]({{< relref "core-concepts" >}}#skill), [system prompt]({{< relref "core-concepts" >}}#system-prompt), [temperature]({{< relref "core-concepts" >}}#temperature)
 
