@@ -291,16 +291,31 @@ traditional search queries; related to the system prompt
 
 **Definition**: acronym for _reinforcement learning from human feedback_; training methodology in
 which human evaluators rate LLM outputs and the ratings fine-tune the LLM toward preferred
-behaviors
+behaviors; uses reward models to quantify preferences and reinforcement learning to optimize
+the model
 
 **Purpose**: creates a strong instruction-following bias; LLMs trained with RLHF tend to
-prioritize explicit user instructions, sometimes at the expense of broader context
+prioritize explicit user instructions, sometimes at the expense of broader context; aligns
+models with human values and reduces harmful outputs
+
+**Process**: reward model trained on human preference data → RL algorithm updates LLM to
+maximize reward → iterative refinement until desired alignment achieved
+
+| **Component** | **Description** |
+| --- | --- |
+| **Reward Model** | Neural network trained to predict human preferences; outputs scalar reward values |
+| **PPO** | Proximal Policy Optimization; stable RL algorithm using clipped objective function |
+| **DPO** | Direct Preference Optimization; eliminates separate reward model by using preference data directly |
+| **KTO** | Kahneman-Tversky Optimization; utility-based approach using binary feedback instead of paired preferences |
+| **RLAIF** | RL from AI Feedback; uses LLM instead of human annotators for preference labels |
+| **KL Divergence** | Measures difference between original and updated model distributions; prevents reward hacking |
 
 **Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [sycophancy]({{< relref "core-concepts" >}}#sycophancy), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
 
-**Source**:
+**Sources**:
 
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+- [Ionio: "A Comprehensive Guide to fine-tuning LLMs using RLHF"](https://www.ionio.ai/blog/a-comprehensive-guide-to-fine-tuning-llms-using-rlhf-part-1)
 
 ---
 
