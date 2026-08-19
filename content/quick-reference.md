@@ -23,6 +23,15 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
+### ablation study
+
+- experimental method that systematically removes model components to measure their contribution
+- derived from ablative brain surgery in neuroscience
+
+**Glossary Term Entry Location**: [Research]({{< relref "research" >}}#ablation-study)
+
+---
+
 ### A/B test
 
 - also known as split testing and/or randomized controlled trial

@@ -17,6 +17,26 @@ the statistical toolkit used to test and quantify claims.
 
 ---
 
+## ablation study
+
+**Definition**: experimental method that systematically removes or disables components of a
+model to measure their individual contribution to overall performance; derived from ablative
+brain surgery in neuroscience where tissue removal revealed functional regions
+
+**Purpose**: isolates the causal influence of specific model components; low-effort way to
+understand which modules matter and how much they contribute; commonly used to justify
+architectural choices in neural networks and complex systems
+
+**Example**: in an object detection system with localization, feature extraction, and
+classification modules, an ablation study might train variants that keep two modules fixed
+while varying the third to measure each component's impact on detection accuracy
+
+**Related Terms**: [edge case]({{< relref "/research" >}}#edge-case), [empirical testing]({{< relref "/research" >}}#empirical-testing), [experimental design]({{< relref "/research" >}}#experimental-design)
+
+**Source**: [Baeldung: "Machine Learning: What Is Ablation Study?" by Panagiotis Antoniadis](https://www.baeldung.com/cs/ml-ablation-study)
+
+---
+
 ## A/B test
 
 **Definition**: also known as split testing and/or randomized controlled trial; experimental method
