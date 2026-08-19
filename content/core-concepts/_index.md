@@ -298,24 +298,40 @@ the model
 prioritize explicit user instructions, sometimes at the expense of broader context; aligns
 models with human values and reduces harmful outputs
 
-**Process**: reward model trained on human preference data → RL algorithm updates LLM to
-maximize reward → iterative refinement until desired alignment achieved
+**Process**: SFT (supervised fine-tuning) on instruction-response pairs → reward model trained
+on human preference data → RL algorithm updates LLM to maximize reward → iterative refinement
 
 | **Component** | **Description** |
 | --- | --- |
+| **SFT** | Supervised fine-tuning; initial step using high-quality instruction-response pairs |
 | **Reward Model** | Neural network trained to predict human preferences; outputs scalar reward values |
 | **PPO** | Proximal Policy Optimization; stable RL algorithm using clipped objective function |
 | **DPO** | Direct Preference Optimization; eliminates separate reward model by using preference data directly |
 | **KTO** | Kahneman-Tversky Optimization; utility-based approach using binary feedback instead of paired preferences |
 | **RLAIF** | RL from AI Feedback; uses LLM instead of human annotators for preference labels |
 | **KL Divergence** | Measures difference between original and updated model distributions; prevents reward hacking |
+| **Reward Hacking** | Model manipulates reward system to get high scores without solving the actual problem |
+| **OOD Generalization** | Out-of-distribution performance; ability to handle scenarios not seen in training |
 
-**Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [sycophancy]({{< relref "core-concepts" >}}#sycophancy), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
+| **Aspect** | **PPO** | **DPO** | **KTO** |
+| --- | --- | --- | --- |
+| **Objective** | Maximize reward score from reward model | Align policy with human preferences directly | Maximize utility based on prospect theory |
+| **Input** | Prompt + reward signal | Prompt + preference pairs (preferred/dispreferred) | Prompt + binary feedback (good/bad) |
+| **Output** | Updated policy weights | Updated policy weights | Updated policy weights |
+| **Learning Mechanism** | Reinforcement learning with clipped objective | Single-stage optimization using preference data | Utility-based optimization |
+| **Network Components** | Policy network + value network + reward model | Single policy network | Single policy network |
+| **Feedback Mechanism** | Scalar reward values from reward model | Paired comparisons (winner/loser) | Binary feedback (approved/rejected) |
+| **Stability** | High (clipping prevents large updates) | High (no RL sampling instability) | High (simple loss function) |
+| **Complexity** | High (RL loop + multiple networks) | Medium (removes reward model step) | Low (simplified data requirements) |
+| **Applicability** | General-purpose RL alignment | When preference pairs are available | When only binary feedback is feasible |
+
+**Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [sycophancy]({{< relref "core-concepts" >}}#sycophancy),
+[system prompt]({{< relref "core-concepts" >}}#system-prompt)
 
 **Sources**:
 
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
-- [Ionio: "A Comprehensive Guide to fine-tuning LLMs using RLHF"](https://www.ionio.ai/blog/a-comprehensive-guide-to-fine-tuning-llms-using-rlhf-part-1)
+- [Ionio: "A Comprehensive Guide to fine-tuning LLMs using RLHF" by Pranav Patel, Garima Saroj](https://www.ionio.ai/blog/a-comprehensive-guide-to-fine-tuning-llms-using-rlhf-part-1)
 
 ---
 
