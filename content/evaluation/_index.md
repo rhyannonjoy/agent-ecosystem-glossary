@@ -71,17 +71,27 @@ capabilities - across different LLMs, agents or approaches
 
 **Purpose**: enables objective comparison across LLMs and tracks progress in the field;
 typically supplies sample data, a set of questions or tasks, metrics for evaluation and a
-scoring mechanism
+scoring mechanism; _no benchmark is a neutral instrument_ - each embodies a theory of what the
+task actually requires, so picking the wrong one for a use case points evaluation at the wrong
+agent
 
 **Example**: tests coding, common sense, reasoning, translation capabilities; custom benchmarks
-include a golden dataset and scoring built for a specific domain
+include a golden dataset and scoring built for a specific domain, but not directly comparable
+across releases or vendors for a few reasons -
 
-**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
+| **Change Mechanism** | **Effect** |
+| --- | --- |
+| **Budget** | small budgets favor token-frugal models while maximizing completion favors token-heavy ones; scores shift with allocated compute |
+| **Harness** | vendors revise evaluation methodology after release; Anthropic retroactively updated `Claude Opus 4.7`'s `OSWorld-Verified` score once harness changed |
+| **Judge** | human, automated, vendor-built judges score identical behavior differently |
+
+**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [harness]({{< relref "/core-concepts" >}}#harness), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
 
 **Sources**:
 
 - [HumanSignal, "Building custom golden datasets for regression testing"](https://humansignal.com/ai-benchmarks/)
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 
 ---
 
@@ -231,14 +241,26 @@ capabilities; critical for effective benchmark design to prevent reward hacking 
 
 ## ground truth
 
-**Definition**: reference data and/or information assumed to be objectively correct
+**Definition**: reference data and/or information assumed to be objectively correct; distinct
+from a benchmark's human baseline - the measured human completion rate used to gauge whether
+a model has surpassed human performance
 
 **Purpose**: benchmarks categorize assessment criteria by whether they rely on ground truth or
-on human preferences reflecting real world usage; guides metrics and defines golden datasets
+on human preferences reflecting real world usage; guides metrics and defines golden datasets;
+human baseline shifts per benchmark and signals saturation once frontier models exceed it
 
-**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [golden dataset]({{< relref "/evaluation" >}}#golden-dataset)
+**Example**: `OSWorld-Verified`'s human baseline was ~72% task completion; frontier models now
+exceed it
 
-**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark),
+[bounded scoring]({{< relref "/evaluation" >}}#bounded-scoring), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [golden dataset]({{< relref "/evaluation" >}}#golden-dataset),
+[OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld)
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 
 ---
 
@@ -440,5 +462,3 @@ scenarios; one of the three common benchmark testing approaches
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [few-shot]({{< relref "/evaluation" >}}#few-shot)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
-
----

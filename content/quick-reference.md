@@ -111,7 +111,7 @@ Brief definitions for key terms in the Agent Ecosystem domain
 ### benchmark
 
 - standardized test or dataset used to evaluate and compare LLM and/or agentic performance
-- enables objective comparison and tracks progress in the field
+- enables objective, but not neutral, comparison that tracks progress in the field
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#benchmark)
 
@@ -417,6 +417,15 @@ translation and a human-produced translation
 
 ---
 
+### GAIA2
+
+- successor to GAIA - _General AI Assistants_
+- evaluates assistant agency inside agents research environments using asynchronous dynamic events and capability splits
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#gaia2)
+
+---
+
 ### gate
 
 - prompt condition that must be satisfied before work sequence continues
@@ -696,6 +705,24 @@ translation and a human-produced translation
 - test premise about whether an effect is _greater than or less than a specific value_
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#one-sided-hypothesis)
+
+---
+
+### Online-Mind2Web
+
+- benchmark for evaluating web agents on live, dynamic websites
+- tasks cover finance, government, shopping, travel, and other consumer workflows
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#online-mind2web)
+
+---
+
+### OSWorld
+
+- benchmark evaluating whether an AI can operate a desktop environment
+- includes `OSWorld-Verified` and `OSWorld 2.0` which includes long-horizon professional workflows
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#osworld)
 
 ---
 
@@ -1073,9 +1100,18 @@ translation and a human-produced translation
 ### task completion rate
 
 - evaluation metric measuring how effectively an agent or system helps users complete a task
-- used for task-specific and interaction/user-experience evaluation
+- often split into short-horizon vs. long-horizon rates with cost per completed task
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#task-completion-rate)
+
+---
+
+### tau-bench
+
+- also known as `τ`-bench and/or _Tool-Agent-User Interaction Benchmark_
+- benchmark measuring tool-use reliability in conversational customer-service settings
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#tau-bench)
 
 ---
 
@@ -1094,6 +1130,15 @@ translation and a human-produced translation
 - set by the platform and sometimes adjustable by the user
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#temperature)
+
+---
+
+### Terminal-Bench
+
+- benchmark measuring agentic performance in the command line
+- evaluates agent output in which the environment is text-native, deterministic, and verifiable
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#terminal-bench)
 
 ---
 
@@ -1187,6 +1232,24 @@ translation and a human-produced translation
 ---
 
 ## W
+
+---
+
+### WebArena
+
+- benchmark for evaluating web agents against a simulated web environment of realistic sites
+- measures reproducible web task completion in an offline setting
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#webarena)
+
+---
+
+### WebVoyager
+
+- benchmark evaluating a web agent's ability to complete tasks on live websites
+- sanity check rather than differentiator due to high scores and saturation
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#webvoyager)
 
 ---
 

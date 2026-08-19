@@ -25,6 +25,10 @@ often necessary for diagnosing unexpected behavior
 
 **Related Terms**: [agent]({{< relref "core-concepts" >}}#agent), [automation]({{< relref "core-concepts" >}}#automation), [harness]({{< relref "core-concepts" >}}#harness), [spec]({{< relref "core-concepts" >}}#spec)
 
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
 ---
 
 ## agent
@@ -53,6 +57,10 @@ conversation history that informs subsequent responses
 
 **Related Terms**: [turn]({{< relref "core-concepts" >}}#turn), [user message]({{< relref "core-concepts" >}}#user-message)
 
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
 ---
 
 ## automation
@@ -77,6 +85,10 @@ content outside the window is not directly accessible
 
 **Related Terms**: [`/SKILL`]({{< relref "core-concepts" >}}#skill), [context window management]({{< relref "core-concepts" >}}#context-window-management), [memory]({{< relref "core-concepts" >}}#memory), [system prompt]({{< relref "core-concepts" >}}#system-prompt), [temperature]({{< relref "core-concepts" >}}#temperature)
 
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
 ---
 
 ## context window management
@@ -92,6 +104,10 @@ strategy affects whether an agent may "forget" earlier instructions
 conversation within bounds
 
 **Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [memory]({{< relref "core-concepts" >}}#memory), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
+
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -126,12 +142,23 @@ diagnose failures and informs evaluation of truthfulness and robustness
 settings, system prompts, and tools
 
 **Purpose**: shapes agent behavior independently of the underlying LLM; agents sharing the same
-LLM can behave very differently depending on their harness configuration
+LLM can behave very differently depending on their harness configuration; in computer-use agents,
+forms the middle tier of a three-layer stack that includes an LLM below for perception and decision-making
+and infrastructure above for managed environments; the same harness can run different LLMs
+or infrastructure
 
 **Example**: code search, file operations, shell execution, web access, content management
-strategy, and temperature settings
+strategy, and temperature settings; Browser Use, Agent S, GTA1, and CoACT are harnesses distinct
+from the LLMs and infrastructure they run on
 
-**Related Terms**: [abstraction]({{< relref "core-concepts" >}}#abstraction), [automation]({{< relref "core-concepts" >}}#automation), [gate]({{< relref "core-concepts" >}}#gate), [hook]({{< relref "core-concepts" >}}#hook), [MCP server]({{< relref "core-concepts" >}}#mcp-server), [permission and safety systems]({{< relref "core-concepts" >}}#permission-and-safety-systems), [temperature]({{< relref "core-concepts" >}}#temperature)
+**Related Terms**: [abstraction]({{< relref "core-concepts" >}}#abstraction), [automation]({{< relref "core-concepts" >}}#automation),
+[gate]({{< relref "core-concepts" >}}#gate), [hook]({{< relref "core-concepts" >}}#hook), [MCP server]({{< relref "core-concepts" >}}#mcp-server),
+[permission and safety systems]({{< relref "core-concepts" >}}#permission-and-safety-systems), [temperature]({{< relref "core-concepts" >}}#temperature)
+
+**Sources**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 
 ---
 
@@ -162,6 +189,10 @@ applies at its own discretion
 
 **Related Terms**: [`/SKILL`]({{< relref "core-concepts" >}}#skill), [gate]({{< relref "core-concepts" >}}#gate), [rule]({{< relref "core-concepts" >}}#rule), [slash command]({{< relref "core-concepts" >}}#slash-command)
 
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
 ---
 
 ## LLM
@@ -188,6 +219,10 @@ server is built to access; facilitates portable behavior across agent platforms 
 implementation lives in the server rather than the harness
 
 **Related Terms**: [harness]({{< relref "core-concepts" >}}#harness)
+
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -216,6 +251,10 @@ boundaries on what an agent may execute
 specific directories, or blocking certain categories of action entirely
 
 **Related Terms**: [harness]({{< relref "core-concepts" >}}#harness), [observability]({{< relref "core-concepts" >}}#observability), [rule]({{< relref "core-concepts" >}}#rule)
+
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -266,6 +305,10 @@ prioritize explicit user instructions, sometimes at the expense of broader conte
 
 **Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [sycophancy]({{< relref "core-concepts" >}}#sycophancy), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
 
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
 ---
 
 ## rule
@@ -304,6 +347,10 @@ hooks and slash commands
 
 **Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [hook]({{< relref "core-concepts" >}}#hook), [prompt]({{< relref "core-concepts" >}}#prompt), [slash command]({{< relref "core-concepts" >}}#slash-command), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
 
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
 ---
 
 ## slash command
@@ -316,6 +363,10 @@ prompts; contrasts with prompts, which the LLM interprets and may execute differ
 runs
 
 **Related Terms**: [`/SKILL`]({{< relref "core-concepts" >}}#skill), [hook]({{< relref "core-concepts" >}}#hook), [prompt]({{< relref "core-concepts" >}}#prompt)
+
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -339,7 +390,12 @@ reasoning independently; known limitation of RLHF-trained LLMs and an active are
 **Purpose**: amplified by detailed or specific prompts, which push the LLM into _"execution mode"_;
 understanding sycophancy helps distinguish an agent's genuine reasoning from compliance bias
 
-**Related Terms**: [hallucination]({{< relref "core-concepts" >}}#hallucination), [RLHF]({{< relref "core-concepts" >}}#rlhf), [self-reflection]({{< relref "core-concepts" >}}#self-reflection)
+**Related Terms**: [hallucination]({{< relref "core-concepts" >}}#hallucination), [RLHF]({{< relref "core-concepts" >}}#rlhf),
+[self-reflection]({{< relref "core-concepts" >}}#self-reflection)
+
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -354,6 +410,10 @@ default behaviors, and constraints
 
 **Related Terms**: [`/SKILL`]({{< relref "core-concepts" >}}#skill), [context window]({{< relref "core-concepts" >}}#context-window), [prompt]({{< relref "core-concepts" >}}#prompt), [temperature]({{< relref "core-concepts" >}}#temperature)
 
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
 ---
 
 ## temperature
@@ -365,6 +425,10 @@ platform and sometimes adjustable by the user
 more focused, predictable responses; high temperature produces more varied, creative ones
 
 **Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [harness]({{< relref "core-concepts" >}}#harness), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
+
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -389,6 +453,10 @@ context
 
 **Related Terms**: [assistant message]({{< relref "core-concepts" >}}#assistant-message), [context window]({{< relref "core-concepts" >}}#context-window), [user message]({{< relref "core-concepts" >}}#user-message)
 
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
 ---
 
 ## user message
@@ -400,3 +468,7 @@ turn; interpreted by the LLM rather than executed as a direct command
 window, heavily influencing the agent's response
 
 **Related Terms**: [assistant message]({{< relref "core-concepts" >}}#assistant-message), [prompt]({{< relref "core-concepts" >}}#prompt), [turn]({{< relref "core-concepts" >}}#turn)
+
+**Source**:
+
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
