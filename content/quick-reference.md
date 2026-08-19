@@ -117,6 +117,15 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ---
 
+### BERTScore
+
+- automatic evaluation metric for text summary quality
+- computes semantic similarity rather than exact _n_-gram matching
+
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#bertscore)
+
+---
+
 ### bias and fairness score
 
 - evaluation metric detecting disparities in decision-making across different user groups
@@ -128,8 +137,8 @@ Brief definitions for key terms in the Agent Ecosystem domain
 
 ### BLEU
 
-- abbreviation for _Bilingual Evaluation Understudy_
-- evaluates machine translation by computing matching n-grams between an LLM's predicted
+- acronym for _Bilingual Evaluation Understudy_
+- evaluates machine translation by computing matching _n_-grams between an LLM's predicted
 translation and a human-produced translation
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#bleu)
@@ -502,6 +511,15 @@ translation and a human-produced translation
 
 ---
 
+### harmonic mean
+
+- mathematical average calculated by dividing the number of items by the sum of their reciprocals
+- used in metrics like F1 score to combine precision and recall
+
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#harmonic-mean)
+
+---
+
 ### HellaSwag
 
 - acronym for _Harder Endings, Longer contexts and Low-Shot Activities for Situations With Adversarial Generations_
@@ -619,6 +637,15 @@ translation and a human-produced translation
 
 ---
 
+### METEOR
+
+- acronym for _Metric for Evaluation of Translation with Explicit ORdering_
+- automatic metric for evaluating machine translation output
+
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#meteor)
+
+---
+
 ### MMLU
 
 - abbreviation for _Massive Multitask Language Understanding_
@@ -659,6 +686,15 @@ translation and a human-produced translation
 
 ---
 
+### _n_-gram
+
+- fundamental building block for metrics like BLEU and ROUGE
+- contiguous sequence of `n` items from a given sample of text
+
+**Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#n-gram)
+
+---
+
 ### non-parametric methods
 
 - statistical techniques that make fewer assumptions about data distribution than parametric methods
@@ -692,7 +728,7 @@ translation and a human-produced translation
 
 ### OLS regression
 
-- abbreviation for _Ordinary Least Squares_ regression
+- acronym for _Ordinary Least Squares_ regression
 - statistical method that estimates relationships between variables by minimizing squared differences
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#ols-regression)
@@ -920,7 +956,7 @@ translation and a human-produced translation
 
 ### ROUGE
 
-- abbreviation for _Recall-Oriented Understudy for Gisting Evaluation_
+- acronym for _Recall-Oriented Understudy for Gisting Evaluation_
 - metric for evaluating text summarization
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#rouge)
@@ -1224,7 +1260,7 @@ translation and a human-produced translation
 
 ### VOC
 
-- abbreviation for _voice of the client_
+- acronym for _voice of the client_
 - data where people often share problems they're encountering, provide feedback, and seek further help
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#voc)

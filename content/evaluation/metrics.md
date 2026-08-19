@@ -43,19 +43,51 @@ ensuring decisions do not disadvantage particular groups
 
 ---
 
+## BERTScore
+
+**Definition**: automatic evaluation metric for text generation quality; computes token-level
+similarity using contextual embeddings from BERT, the sum of cosine similarities; evaluates
+semantic similarity rather than exact _n_-gram matching between candidate and reference sentences
+
+**Purpose**: provides better correlation with human judgments than traditional metrics like
+BLEU and ROUGE by capturing semantic meaning; robust to adversarial examples and paraphrasing -
+performant against intentionally deceptive text
+
+**Example**: with reference text _"people like Western cuisine,"_ _n_-gram metrics would score
+_"people like global flavors"_ higher than _"consumers prefer imported spices"_ despite the
+latter being semantically closer
+
+**Related Terms**: [BERT]({{< relref "/core-concepts" >}}#bert), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
+
+**Sources**:
+
+- [arXiv: "BERTScore: Evaluating Text Generation with BERT" by Zhang et al.](https://arxiv.org/abs/1904.09675)
+- ["BERTScore Explained in 5 minutes" by Abonia Sojasingarayar](https://medium.com/@abonia/bertscore-explained-in-5-minutes-0b98553bfb71)
+
+---
+
 ## BLEU
 
 **Definition**: acronym for _Bilingual Evaluation Understudy_; one of the canonical
 automated metrics used to score LLM output on translation-style semantic meaning;
-evaluates machine translation by computing matching `n-grams` - sequences of `n` adjacent
-text symbols - between an LLM's predicted translation and a human-produced translation
+evaluates machine translation by computing matching _n_-grams - sequences of _n_ adjacent
+text symbols - between an LLM's predicted translation and a human-produced translation;
+common Python implementation includes [the NLTK, _Natural Language Toolkit_](https://www.nltk.org/)
 
 **Purpose**: provides a lower-cost alternative to ground-truth-based evaluation; complements
 human evaluation of coherence, relevance and semantic meaning
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge)
+**Example**: for reference _"The cat is on the mat"_ and output _"The cat on the mat"_,
+BLEU computes modified _n_-gram precision, clipped to prevent overcounting, and applies
+a brevity penalty for shorter outputs; with 1-gram precision 1.0, 2-gram precision 0.75,
+and brevity penalty 0.8187, the resulting BLEU score is approximately 0.709
 
-**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [_n_-gram]({{< relref "/evaluation/metrics" >}}#n-gram), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge)
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+- [Machine Learning Mastery: "Statistical Methods for Evaluating LLM Performance" by Cornellius Yuda Wijaya](https://machinelearningmastery.com/statistical-methods-for-evaluating-llm-performance/)
 
 ---
 
@@ -94,7 +126,7 @@ long-horizon work, `Claude Opus 4.8` averages ~$29.60 per completed task versus 
 
 ## CSAT
 
-**Definition**: abbreviation for _Customer Satisfaction score_; interaction metric measuring how
+**Definition**: acronym for _Customer Satisfaction score_; interaction metric measuring how
 satisfied users are with a product and/or agent responses
 
 **Purpose**: typically gathered through post-interaction surveys, giving direct feedback on whether
@@ -204,6 +236,31 @@ benchmark for output complexity
 
 ---
 
+## harmonic mean
+
+**Definition**: mathematical average of two numbers calculated by dividing the number of items
+by the sum of their reciprocals; used in metrics like F1 score to combine precision and recall
+
+**Purpose**: provides a balanced average that penalizes extreme values more than arithmetic mean;
+ideal for combining metrics where both components matter, such as precision and recall in
+classification evaluation
+
+**Example**: F1 score is the harmonic mean of precision and recall; if precision is `0.8` and recall
+is `0.6` then -
+
+```bash
+F1 = 2 × (0.8 × 0.6) / (0.8 + 0.6) ≈ 0.686
+```
+
+**Related Terms**: [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score), [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [recall]({{< relref "/evaluation/metrics" >}}#recall)
+
+**Sources**:
+
+- [Machine Learning Mastery: "Statistical Methods for Evaluating LLM Performance" by Cornellius Yuda Wijaya](https://machinelearningmastery.com/statistical-methods-for-evaluating-llm-performance/)
+- [Wikipedia: "Harmonic mean"](https://en.wikipedia.org/wiki/Harmonic_mean)
+
+---
+
 ## latency
 
 **Definition**: evaluation metric measuring the time taken for an AI agent or system to process and
@@ -215,6 +272,52 @@ response times undermine interactive and production use cases
 **Related Terms**: [cost-efficiency]({{< relref "/evaluation/metrics" >}}#cost-efficiency), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [Leanware: "Agent Evaluation Frameworks: Methods, Metrics & Best Practices"](https://leanware.co/insights/agent-evaluation-frameworks-methods-metrics-best-practices)
+
+---
+
+## METEOR
+
+**Definition**: acronym for _Metric for Evaluation of Translation with Explicit ORdering_;
+automatic metric for evaluating machine translation output; computes score based on the
+harmonic mean of unigram precision and recall with recall weighted higher than precision;
+includes stemming, synonymy, and paraphrase matching beyond exact word matching
+
+**Purpose**: addresses BLEU's limitations by incorporating linguistic factors like stemming and
+synonymy; designed to achieve better correlation with human judgment at the sentence level
+
+**Example**: for reference _"the cat sat on the mat"_ and hypothesis _"the cat was sat on the mat"_,
+METEOR computes precision and recall, applies a fragmentation penalty for non-adjacent word
+matches, yielding a final score reflecting both word-level and sequence-level similarity
+
+**Related Terms**: [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge), [harmonic mean]({{< relref "/evaluation/metrics" >}}#harmonic-mean), [_n_-gram]({{< relref "/evaluation/metrics" >}}#n-gram)
+
+**Sources**:
+
+- [Machine Learning Mastery: "Statistical Methods for Evaluating LLM Performance" by Cornellius Yuda Wijaya](https://machinelearningmastery.com/statistical-methods-for-evaluating-llm-performance/)
+- [Wikipedia: "METEOR"](https://en.wikipedia.org/wiki/METEOR)
+
+---
+
+## _n_-gram
+
+**Definition**: sequence used in computational linguistics and natural language processing to
+analyze text patterns; contiguous sequence of `n` items from a given sample of text;
+unigrams (n=1), bigrams (n=2), trigrams (n=3) are common
+
+**Purpose**: capture local word order and co-occurence patterns; fundamental building block for
+metrics like BLEU and ROUGE that evaluate translation and summarization quality by comparing
+_n_-gram overlap between machine-generated and human-produced text
+
+**Example**: in the phrase _"the cat sat on the mat"_, the bigrams, all possible contiguous two-word
+sequences, are _"the cat"_, _"cat sat"_, _"sat on"_, _"on the"_, _"the mat"_; each bigram consists of
+two adjacent words, moving one word at a time through the phrase
+
+**Related Terms**: [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match)
+
+**Sources**:
+
+- [Machine Learning Mastery: "Statistical Methods for Evaluating LLM Performance" by Cornellius Yuda Wijaya](https://machinelearningmastery.com/statistical-methods-for-evaluating-llm-performance/)
+- [Wikipedia: "_n_-gram"](https://en.wikipedia.org/wiki/N-gram)
 
 ---
 
@@ -311,14 +414,27 @@ correct predictions, specifically the number of true positives
 evaluating text summarization; ranges between 0 - 1, with higher scores indicating higher
 similarity between automatically produced summary and the human-produced reference
 
-**Purpose**: `ROUGE-N` performs similar `n-gram` calculations to BLEU for summaries; `ROUGE-L`
-computes the longest common subsequence between the predicted summary and the human-produced summary
+**Purpose**: evaluates recall-oriented overlap between generated text and reference; particularly
+effective for summarization where capturing all critical information matters; variants address
+different aspects of text similarity -
 
-**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score), [recall]({{< relref "/evaluation/metrics" >}}#recall), [perplexity]({{< relref "/evaluation/metrics" >}}#perplexity)
+| **Variant** | **Description** | **Use Case** |
+| --- | --- | --- |
+| **ROUGE-N** | Computes _n_-gram overlap, ROUGE-1 for unigrams, ROUGE-2 for bigrams | Measures content coverage, word overlap |
+| **ROUGE-L** | Uses LCS, _longest common subsequence_, measures sentence similarity | Evaluates fluency, grammatical coherence |
+| **ROUGE-W** | Weighted LCS giving higher scores to consecutive matches | Rewards longer consecutive word sequences |
+| **ROUGE-S** | Skip-bigram matching allowing non-adjacent word pairs | Captures semantic similarity with flexible word order |
+
+**Example**: for reference _"The cat is on the mat"_ and candidate _"The cat on the mat"_,
+ROUGE-1 recall is 0.833, 5/6 unigrams matched, ROUGE-2 recall is 0.6, 3/5 bigrams matched,
+and ROUGE-L F1 is 0.909 based on the longest common subsequence
+
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score), [_n_-gram]({{< relref "/evaluation/metrics" >}}#_n_-gram), [recall]({{< relref "/evaluation/metrics" >}}#recall), [perplexity]({{< relref "/evaluation/metrics" >}}#perplexity)
 
 **Sources**:
 
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+- [Machine Learning Mastery: "Statistical Methods for Evaluating LLM Performance" by Cornellius Yuda Wijaya](https://machinelearningmastery.com/statistical-methods-for-evaluating-llm-performance/)
 - [Wikipedia: "ROUGE (metric)"](https://en.wikipedia.org/wiki/ROUGE_(metric))
 
 ---
@@ -367,7 +483,7 @@ unit, ensuring the agent transforms values correctly when invoking tools
 
 ## VOC
 
-**Definition**: abbreviation for _voice of the client_; data where people share problems they're
+**Definition**: acronym for _voice of the client_; data where people share problems they're
 encountering, provide feedback, and seek further help
 
 **Purpose**: invaluable for service and product improvement, surfacing real user pain points
