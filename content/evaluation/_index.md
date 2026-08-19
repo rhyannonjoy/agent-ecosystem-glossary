@@ -79,11 +79,11 @@ agent
 include a golden dataset and scoring built for a specific domain, but not directly comparable
 across releases or vendors for a few reasons -
 
-| **Mechanism** | **Effect** |
+| **Change Mechanism** | **Effect** |
 | --- | --- |
-| **Harness Change** | vendors revise evaluation methodology after release; Anthropic retroactively updated `Claude Opus 4.7`'s `OSWorld-Verified` score once harness changed |
-| **Judge Change** | human, automated, vendor-built judges score identical behavior differently |
-| **Token Budget** | small budgets favor token-frugal models while maximizing completion favors token-heavy ones; scores shift with allocated compute |
+| **Budget** | small budgets favor token-frugal models while maximizing completion favors token-heavy ones; scores shift with allocated compute |
+| **Harness** | vendors revise evaluation methodology after release; Anthropic retroactively updated `Claude Opus 4.7`'s `OSWorld-Verified` score once harness changed |
+| **Judge** | human, automated, vendor-built judges score identical behavior differently |
 
 **Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [harness]({{< relref "/core-concepts" >}}#harness), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
 
