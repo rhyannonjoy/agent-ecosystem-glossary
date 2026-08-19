@@ -901,7 +901,7 @@ translation and a human-produced translation
 
 ---
 
-### P value
+### _p_-value
 
 - probability that observed data, or more extreme, would occur if all model assumptions including test hypothesis were correct
 - measures fit between data and entire statistical model, not just the hypothesis being tested

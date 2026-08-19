@@ -34,7 +34,7 @@ under valid conditions, 95% of such intervals will contain the true value
 precise estimates; not to be confused with a _"95% probability the true value is in this range"_ for
 any single interval
 
-**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [P value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [_p_-value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
 
 ---
 
@@ -73,7 +73,7 @@ failure to reject doesn't prove the null is true, only that the data are compati
 
 **Example**: a treatment makes no difference in average outcome compared to control
 
-**Related Terms**: [confidence interval]({{< relref "/research/quantitative" >}}#confidence-interval), [one-sided hypothesis]({{< relref "/research/quantitative" >}}#one-sided-hypothesis), [P value]({{< relref "/research/quantitative" >}}#p-value), [power]({{< relref "/research/quantitative" >}}#power)
+**Related Terms**: [confidence interval]({{< relref "/research/quantitative" >}}#confidence-interval), [one-sided hypothesis]({{< relref "/research/quantitative" >}}#one-sided-hypothesis), [_p_-value]({{< relref "/research/quantitative" >}}#p-value), [power]({{< relref "/research/quantitative" >}}#power)
 
 ---
 
@@ -98,7 +98,7 @@ greater than or less than a specific value
 
 **Example**: testing whether a new treatment is at least as good as the standard treatment
 
-**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [P value]({{< relref "/research/quantitative" >}}#p-value)
+**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [_p_-value]({{< relref "/research/quantitative" >}}#p-value)
 
 ---
 
@@ -111,7 +111,7 @@ alternative is correct; calculated before a study to determine adequate sample s
 effect 80% of the time; doesn't measure compatibility of the alternative hypothesis with observed
 data and shouldn't be used to interpret results after data collection
 
-**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [P value]({{< relref "/research/quantitative" >}}#p-value)
+**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [_p_-value]({{< relref "/research/quantitative" >}}#p-value)
 
 ---
 
@@ -143,21 +143,36 @@ posterior probability, enabling more intuitive statements about hypothesis likel
 | **Prior Probability** | Initial belief about a hypothesis before observing any data |
 | **Posterior Probability** | Updated belief after incorporating observed data using [Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) |
 
-**Related Terms**: [Bayesian experiment]({{< relref "/research" >}}#bayesian-experiment), [P value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+**Related Terms**: [Bayesian experiment]({{< relref "/research" >}}#bayesian-experiment), [_p_-value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
 
 ---
 
-## P value
+## _p_-value
 
 **Definition**: probability that observed data, or more extreme, would occur if all model
 assumptions - including the test hypothesis - were correct; ranges from 0, complete
 incompatibility, to 1, perfect compatibility
 
-**Purpose**: measures fit between the data and the entire statistical model, not just the
-hypothesis being tested; commonly misinterpreted as the probability that the hypothesis is true or
-false, and often degraded into a "significant" `(P ≤ 0.05)` vs "insignificant" dichotomy
+**Purpose**: used to determine whether an observed effect is likely due to chance;
+measures the evidence the outcome provides against a given claim while accounting
+for variability; a low _p_-value indicates the test procedure had little probability of producing
+an outcome as large as the observed, were the claim true; _commonly misinterpreted as the
+probability that the hypothesis is true or false_
+
+| **Concept** | **Description** |
+| --- | --- |
+| **evidence against claim** | _p_-value quantifies how surprising the outcome is assuming the claim holds |
+| **null hypothesis** | the default assumption that there is no effect or difference; the claim being tested |
+| **point estimate** | the observed effect, which is the best guess of the true effect given the sample |
+| **variability** | random variation in outcomes due to user differences and sampling |
+
+**Example**: in an A/B test observing 10% lift with _p_-value 0.01, outcomes ≥10% would occur in
+only 1 out of 100 tests if the true lift were zero; this rarity provides evidence against the
+claim of no effect
 
 **Related Terms**: [confidence interval]({{< relref "/research/quantitative" >}}#confidence-interval), [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [probability]({{< relref "/research/quantitative" >}}#probability), [statistical model]({{< relref "/research/quantitative" >}}#statistical-model)
+
+**Source**: [Analytics Toolkit: "P-values and Confidence Intervals Explained" by Georgi Georgiev](https://blog.analytics-toolkit.com/2022/p-values-and-confidence-intervals-explained/)
 
 ---
 
@@ -194,7 +209,7 @@ including data collection, randomization, treatment allocation, and analysis cho
 **Purpose**: violation of any assumption, not just the test hypothesis, can produce misleading P
 values; often presented in compressed form, with many assumptions left unstated or unrecognized
 
-**Related Terms**: [model checking]({{< relref "/research/quantitative" >}}#model-checking), [non-parametric methods]({{< relref "/research/quantitative" >}}#non-parametric-methods), [P value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+**Related Terms**: [model checking]({{< relref "/research/quantitative" >}}#model-checking), [non-parametric methods]({{< relref "/research/quantitative" >}}#non-parametric-methods), [_p_-value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
 
 ---
 

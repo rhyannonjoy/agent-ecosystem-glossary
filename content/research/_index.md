@@ -63,7 +63,7 @@ risk-aware decision-making
 
 **Example**: after running a Bayesian A/B test on a new checkout flow, the analysis might
 conclude _"there is a 92% probability the new flow increases conversion rate"_ rather than
-reporting a p-value; this directly answers the business question _"should we ship the
+reporting a _p_-value; this directly answers the business question _"should we ship the
 feature?"_ with a probabilistic statement about the hypothesis
 
 **Related Terms**: [A/B test]({{< relref "/research" >}}#ab-test), [experimental design]({{< relref "/research" >}}#experimental-design), [probability]({{< relref "/research/quantitative" >}}#probability), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
