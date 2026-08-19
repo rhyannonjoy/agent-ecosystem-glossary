@@ -30,6 +30,31 @@ the effect of a single change by holding all other conditions constant across gr
 
 ---
 
+## Bayesian experiment
+
+**Definition**: experimental approach using Bayesian statistics to incorporate prior knowledge
+and update beliefs with new data; contrasts with frequentist A/B testing by assigning
+probabilities to hypotheses rather than data
+
+**Purpose**: particularly valuable when sample sizes are small, prior information is available,
+or continuous monitoring is needed; allows sequential analysis where results can be evaluated
+as data accumulates without inflating error rates; quantifies expected loss to support
+risk-aware decision-making
+
+**Example**: after running a Bayesian A/B test on a new checkout flow, the analysis might
+conclude _"there is a 92% probability the new flow increases conversion rate"_ rather than
+reporting a p-value; this directly answers the business question _"should we ship the
+feature?"_ with a probabilistic statement about the hypothesis
+
+**Related Terms**: [A/B test]({{< relref "/research" >}}#ab-test), [experimental design]({{< relref "/research" >}}#experimental-design), [probability]({{< relref "/research/quantitative" >}}#probability), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+
+**Sources**:
+
+- [Statsig: "When to use Bayesian experiments: A beginner's guide" by Ryan Musser](https://www.statsig.com/blog/bayesian-experiments-beginners-guide)
+- [Wikipedia: "Bayesian experimental design"](https://en.wikipedia.org/wiki/Bayesian_experimental_design)
+
+---
+
 ## conceptual AI experiment
 
 **Definition**: test type in which AI exists as a label or framing device, but no AI is actually
