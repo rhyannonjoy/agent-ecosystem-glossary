@@ -42,6 +42,29 @@ estimate scores and create approximate LLM rankings
 
 ---
 
+## GAIA2
+
+**Definition**: successor to GAIA, _General AI Assistants_, addressing general assistant-style agency;
+suite of 800 scenarios run inside Meta's Agents Research Environments with asynchronous dynamic events,
+continuous time, and capability-differentiated scoring
+
+**Purpose**: measures how a system handles assistant workloads by default, including changing conditions -
+scenarios evolve while the agent works - rather than a frozen question set; introduced `capability splits`
+that report separate scores for execution, search, adaptability, temporal reasoning, and ambiguity handling
+instead of a single success rate
+
+**Example**: dataset evaluates seven core capabilites - execution, search, adaptability, time,
+ambiguity, Agent2Agent, and noise
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld)
+
+**Sources**:
+
+- [Hugging Face: "Datasets: meta-agents-research-environments/gaia2"](https://huggingface.co/datasets/meta-agents-research-environments/gaia2)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
+
+---
+
 ## GSM8K
 
 **Definition**: acronym for _Grade School Math 8K_; benchmark testing an LLM's mathematical reasoning
@@ -131,6 +154,42 @@ same researchers behind Chatbot Arena
 
 ---
 
+## Online-Mind2Web
+
+**Definition**: live-web benchmark for evaluating web agents on real, dynamic websites rather than cached snapshots; 300 tasks across 136 real sites, difficulty-tiered from Easy - 1-5 steps - through Hard - 11+ steps
+
+**Purpose**: tests agents against real popups, layout changes, and anti-bot friction that static web datasets omit; replaced the older Mind2Web standard for live-web evaluation because agents face genuine environment variability
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [WebArena]({{< relref "/evaluation/benchmarks" >}}#webarena), [WebVoyager]({{< relref "/evaluation/benchmarks" >}}#webvoyager)
+
+**Source**: [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
+
+---
+
+## OSWorld
+
+**Definition**: benchmark evaluating whether an AI can operate a desktop environment - files, browsers, office
+applications, system settings - through screen observation and virtual mouse and keyboard control;
+`OSWorld-Verified` fixed flawed tasks to enable reproducible scoring while `OSWorld 2.0` includes
+108 long-horizon professional workflows
+
+**Purpose**: measures agentic computer use on real operating systems rather than simulated web pages;
+`Verified` is the standard citation for desktop control while `2.0` resets a saturated benchmark
+with task counts averaging hundreds of tool calls and median human completion times near 1.6 hours
+
+**Example**: public task types include _"How do I change my Mac desktop background?"_ and
+_"Update the bookkeeping sheet with my recent transactions over the past few days in the provided folder."_
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [GAIA2]({{< relref "/evaluation/benchmarks" >}}#gaia2), [WebArena]({{< relref "/evaluation/benchmarks" >}}#webarena)
+
+**Sources**:
+
+- [arXiv: "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments" by Tianbao Xie et al.](https://arxiv.org/abs/2404.07972)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
+- ["OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments"](http://osworld-v1.xlang.ai/)
+
+---
+
 ## SimpleQA
 
 **Definition**: fact-seeking benchmark for measuring an LLM's ability to provide verifiable answers
@@ -158,6 +217,48 @@ real-world software maintenance ability
 
 ---
 
+## tau-bench
+
+**Definition**: also known as `τ`-bench and/or _Tool-Agent-User- interaction Benchmark_;
+benchmark measuring tool-use reliability in conversational customer-service settings; agents must correctly invoke tools while holding a natural back-and-forth dialogue with a user
+
+**Purpose**: evaluates the combination of tool calling and dialogue handling rather than isolated function calls, reflecting how agents handle cases that mix conversation with API actions
+
+**Example**: public task types include conversation with interruptions, accents, and
+background noise, retrieving-reasoning over a knowledge base
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
+
+**Sources**:
+
+- [arXiv: "`τ` -bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains" by Shunyu Yao et al.](https://arxiv.org/abs/2406.12045)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
+- [Sierra AI: `τ`-bench](http://taubench.com/)
+
+---
+
+## Terminal-Bench
+
+**Definition**: collection of [harbor-native](https://www.tbench.ai/) benchmarks that
+measure agentic performance in the command line - builds, scripts, and system administration;
+evaluates whether agents correctly operate a terminal environment where output is text-native,
+deterministic, and verifiable
+
+**Purpose**: targets the one computer-use surface where deterministic verification is straightforward,
+yielding agent scores that track ahead of GUI long-horizon results; became a shared citation across
+model cards for terminal and infrastructure work
+
+**Example**: public task types range from _"Write and execute small programs and CLI commands"_ to _"Build an entire codebase from scratch"_
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld)
+
+**Source**:
+
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
+- [terminal-bench: benchmarks for ai agents in terminal environments](https://www.tbench.ai/)
+
+---
+
 ## TruthfulQA
 
 **Definition**: benchmark measuring an LLM's ability to generate truthful answers to questions;
@@ -170,6 +271,50 @@ informativeness and truthfulness; largest models were generally least truthful
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [hallucination]({{< relref "/core-concepts" >}}#hallucination), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
 
 **Source**: [arXiv: "TruthfulQA: Measuring How Models Mimic Human Falsehoods" by Lin et al.](https://arxiv.org/abs/2109.07958)
+
+---
+
+## WebArena
+
+**Definition**: benchmark for evaluating browser agents on reproducible, self-hosted simulated
+websites rather than live web traffic; 812 tasks across e-commerce, forum discussion,
+collaborative software development, content management, maps, and reference lookup
+
+**Purpose**: provides controlled, repeatable web-agent experiments with functional success
+criteria rather than production website variability; scores saturate faster than live-web
+benchmarks because fixed environments reward memorization over adaptability
+
+**Example**: public tasks include _"What is the top-1 best-selling product in 2022?"_ and
+_"Tell me the full address of all international airports that are within a driving distance of 50 km to Carnegie Mellon University."_
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Online-Mind2Web]({{< relref "/evaluation/benchmarks" >}}#online-mind2web), [OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld), [WebVoyager]({{< relref "/evaluation/benchmarks" >}}#webvoyager)
+
+**Sources**:
+
+- [arXiv: "A Real-World Web Environment for Building Autonomous Agents" by Zhou et al.](https://arxiv.org/abs/2307.13854)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
+- [Steel.dev: WebArena Leaderboard](https://leaderboard.steel.dev/leaderboards/webarena/)
+
+---
+
+## WebVoyager
+
+**Definition**: benchmark evaluating a web agent's ability to complete tasks on live
+websites through natural-language instructions and browser interaction
+
+**Purpose**: measures end-to-end web task completion in a realistic environment;
+interpreted as solved given saturation near the top of scores, making it a
+sanity check rather than a differentiator
+
+**Example**: public tasks include _"Provide a recipe for vegetarian lasagna with more than 100 reviews and a rating of at least 4.5 stars suitable for 6 people"_ and _"Search an Xbox Wireless controller with green color and rated above 4 stars."_
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Online-Mind2Web]({{< relref "/evaluation/benchmarks" >}}#online-mind2web), [WebArena]({{< relref "/evaluation/benchmarks" >}}#webarena)
+
+**Sources**:
+
+- [arXiv: "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models" by Hongliang He et al.](https://arxiv.org/abs/2307.13854)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
+- [Steel.dev: WebVoyager Leaderboard](https://leaderboard.steel.dev/leaderboards/webvoyager/)
 
 ---
 
