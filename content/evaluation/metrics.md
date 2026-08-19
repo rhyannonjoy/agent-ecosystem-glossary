@@ -81,7 +81,14 @@ performance; factors include token usage, API calls, processing time and energy 
 **Purpose**: increasingly important as agents scale to production, helping teams balance performance
 against cost; highlights the trade-off that higher accuracy often requires higher costs
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [latency]({{< relref "/evaluation/metrics" >}}#latency), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
+**Example**: _cost per completed task_ divides attempt cost by completion rate; on OSWorld 2.0
+long-horizon work, `Claude Opus 4.8` averages ~$29.60 per completed task versus `GPT-5.5`'s ~$8.70
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[latency]({{< relref "/evaluation/metrics" >}}#latency), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate),
+[OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld)
+
+**Source**: [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 
 ---
 
@@ -272,9 +279,16 @@ quality, bias and fairness score, and/or policy adherence rate
 **Purpose**: identifies susceptibility to manipulation or misuse, forming part of ethical, responsible
 AI, and security evaluation
 
-**Related Terms**: [bias and fairness score]({{< relref "/evaluation/metrics" >}}#bias-and-fairness-score), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [policy adherence rate]({{< relref "/evaluation/metrics" >}}#policy-adherence-rate)
+**Example**: agentic browsers raise the stakes of this vulnerability - instructions hidden in a web
+page, PDF, email, or filename that the agent perceives while browsing can redirect it to act with
+the user's own authenticated identity and session rather than the user's actual intent
 
-**Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+**Related Terms**: [bias and fairness score]({{< relref "/evaluation/metrics" >}}#bias-and-fairness-score), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [policy adherence rate]({{< relref "/evaluation/metrics" >}}#policy-adherence-rate)
+
+**Sources**:
+
+- [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 
 ---
 
@@ -312,14 +326,28 @@ computes the longest common subsequence between the predicted summary and the hu
 ## task completion rate
 
 **Definition**: evaluation metric measuring how effectively an agent or system
-helps users complete a task
+helps users complete a task; _cost per completed task_ divides attempt cost by
+completion rate
 
 **Purpose**: used for task-specific and interaction/user-experience evaluation;
-closely related to success rate, the proportion of tasks or goals completed correctly
+closely related to success rate, the proportion of tasks or goals completed correctly;
+computer-use benchmarks report it by task horizon - short, minutes-scale, vs long -
+hour-scale, cross-application - since frontier models solve 85%+ of short-horizon
+work but only ~20% of long-horizon work
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [error rate]({{< relref "/evaluation/metrics" >}}#error-rate), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation)
+**Example**: `OSWorld 2.0`'s 108 long-horizon professional workflows, with a median
+1.6-hour human completion time, remain largely unsolved even as short-horizon tasks saturate
 
-**Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [cost-efficiency]({{< relref "/evaluation/metrics" >}}#cost-efficiency),
+[error rate]({{< relref "/evaluation/metrics" >}}#error-rate), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[functional correctness]({{< relref "/evaluation" >}}#functional-correctness),
+[function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation),
+[OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld)
+
+**Sources**:
+
+- [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+- [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 
 ---
 

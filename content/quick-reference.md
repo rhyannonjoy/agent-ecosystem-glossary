@@ -1100,7 +1100,7 @@ translation and a human-produced translation
 ### task completion rate
 
 - evaluation metric measuring how effectively an agent or system helps users complete a task
-- used for task-specific and interaction/user-experience evaluation
+- often split into short-horizon vs. long-horizon rates with cost per completed task
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#task-completion-rate)
 
