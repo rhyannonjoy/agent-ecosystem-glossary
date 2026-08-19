@@ -83,33 +83,17 @@ system prompt, conversation history, and any injected context
 **Purpose**: bounds what information is directly available to the LLM during a given interaction;
 content outside the window is not directly accessible
 
-**Related Terms**: [`/SKILL`]({{< relref "core-concepts" >}}#skill), [context window management]({{< relref "core-concepts" >}}#context-window-management), [memory]({{< relref "core-concepts" >}}#memory), [system prompt]({{< relref "core-concepts" >}}#system-prompt), [temperature]({{< relref "core-concepts" >}}#temperature)
-
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
-
----
-
-## context window management
-
-**Definition**: agent platform strategies to handle conversations that approach or exceed the
-context window limit; determine what gets retained, compressed, or dropped as conversations
-grow long
-
-**Purpose**: avoids failures and quality loss from extended interactions; the quality of the
-strategy affects whether an agent may "forget" earlier instructions
-
-**Example**: summarizing earlier turns or selectively truncating old messages to keep the
-conversation within bounds, additional challenges include -
+**Example**: agent platforms handle conversations approaching the limit through
+summarization, selective truncation, or compression; quality of the strategy determines whether
+agents retain earlier instructions or _"forget"_ context in a few ways:
 
 | **Challenge** | **Description** |
 | --- | --- |
-| **Compaction** | LLM summarization / rewriting history, server-side opaque compression |
-| **Context Rot** | Performance degradation as length increases ~30k+ tokens |
-| **Lost in the Middle** | LLMs use info at context beginning, end more than middle |
+| **Compaction** | LLM summarization rewriting history, or server-side opaque compression |
+| **Context rot** | Performance degradation as length increases, meaningful above ~30k tokens |
+| **Lost in the Middle** | LLMs use information at context beginning and end more reliably than middle |
 
-**Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [memory]({{< relref "core-concepts" >}}#memory), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
+**Related Terms**: [memory]({{< relref "core-concepts" >}}#memory), [`/SKILL`]({{< relref "core-concepts" >}}#skill), [system prompt]({{< relref "core-concepts" >}}#system-prompt), [temperature]({{< relref "core-concepts" >}}#temperature)
 
 **Sources**:
 
@@ -243,7 +227,7 @@ reference past actions
 **Purpose**: critical for multi-step reasoning and adapting behavior based on history; types
 include short-term - current task, long-term - across sessions, and episodic - specific events
 
-**Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [context window management]({{< relref "core-concepts" >}}#context-window-management), [planning]({{< relref "core-concepts" >}}#planning), [self-reflection]({{< relref "core-concepts" >}}#self-reflection)
+**Related Terms**: [context window]({{< relref "core-concepts" >}}#context-window), [planning]({{< relref "core-concepts" >}}#planning), [self-reflection]({{< relref "core-concepts" >}}#self-reflection)
 
 ---
 

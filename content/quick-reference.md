@@ -239,15 +239,6 @@ translation and a human-produced translation
 
 ---
 
-### context window management
-
-- agent platform strategies to handle conversations that approach or exceed the context window limit
-- determine what gets retained, compressed, or dropped as conversations grow long
-
-**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#context-window-management)
-
----
-
 ### controlled vs natural
 
 - experimental design distinction based on environment
