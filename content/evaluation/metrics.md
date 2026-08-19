@@ -70,15 +70,24 @@ latter being semantically closer
 
 **Definition**: acronym for _Bilingual Evaluation Understudy_; one of the canonical
 automated metrics used to score LLM output on translation-style semantic meaning;
-evaluates machine translation by computing matching `n-grams` - sequences of `n` adjacent
-text symbols - between an LLM's predicted translation and a human-produced translation
+evaluates machine translation by computing matching _n_-grams - sequences of _n_ adjacent
+text symbols - between an LLM's predicted translation and a human-produced translation;
+common Python implementation includes [the NLTK, _Natural Language Toolkit_](https://www.nltk.org/)
 
 **Purpose**: provides a lower-cost alternative to ground-truth-based evaluation; complements
 human evaluation of coherence, relevance and semantic meaning
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [n-gram]({{< relref "/evaluation/metrics" >}}#n-gram), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge)
+**Example**: for reference _"The cat is on the mat"_ and output _"The cat on the mat"_,
+BLEU computes modified _n_-gram precision, clipped to prevent overcounting, and applies
+a brevity penalty for shorter outputs; with 1-gram precision 1.0, 2-gram precision 0.75,
+and brevity penalty 0.8187, the resulting BLEU score is approximately 0.709
 
-**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [_n_-gram]({{< relref "/evaluation/metrics" >}}#n-gram), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge)
+
+**Sources**:
+
+- [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+- [Machine Learning Mastery: "Statistical Methods for Evaluating LLM Performance" by Cornellius Yuda Wijaya](https://machinelearningmastery.com/statistical-methods-for-evaluating-llm-performance/)
 
 ---
 
@@ -280,7 +289,7 @@ synonymy; designed to achieve better correlation with human judgment at the sent
 METEOR computes precision and recall, applies a fragmentation penalty for non-adjacent word
 matches, yielding a final score reflecting both word-level and sequence-level similarity
 
-**Related Terms**: [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge), [harmonic mean]({{< relref "/evaluation/metrics" >}}#harmonic-mean), [n-gram]({{< relref "/evaluation/metrics" >}}#n-gram)
+**Related Terms**: [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge), [harmonic mean]({{< relref "/evaluation/metrics" >}}#harmonic-mean), [_n_-gram]({{< relref "/evaluation/metrics" >}}#n-gram)
 
 **Sources**:
 
@@ -308,7 +317,7 @@ two adjacent words, moving one word at a time through the phrase
 **Sources**:
 
 - [Machine Learning Mastery: "Statistical Methods for Evaluating LLM Performance" by Cornellius Yuda Wijaya](https://machinelearningmastery.com/statistical-methods-for-evaluating-llm-performance/)
-- [Wikipedia: "n-gram"](https://en.wikipedia.org/wiki/N-gram)
+- [Wikipedia: "_n_-gram"](https://en.wikipedia.org/wiki/N-gram)
 
 ---
 
@@ -405,14 +414,27 @@ correct predictions, specifically the number of true positives
 evaluating text summarization; ranges between 0 - 1, with higher scores indicating higher
 similarity between automatically produced summary and the human-produced reference
 
-**Purpose**: `ROUGE-N` performs similar `n-gram` calculations to BLEU for summaries; `ROUGE-L`
-computes the longest common subsequence between the predicted summary and the human-produced summary
+**Purpose**: evaluates recall-oriented overlap between generated text and reference; particularly
+effective for summarization where capturing all critical information matters; variants address
+different aspects of text similarity -
 
-**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score), [n-gram]({{< relref "/evaluation/metrics" >}}#n-gram), [recall]({{< relref "/evaluation/metrics" >}}#recall), [perplexity]({{< relref "/evaluation/metrics" >}}#perplexity)
+| **Variant** | **Description** | **Use Case** |
+| --- | --- | --- |
+| **ROUGE-N** | Computes _n_-gram overlap, ROUGE-1 for unigrams, ROUGE-2 for bigrams | Measures content coverage, word overlap |
+| **ROUGE-L** | Uses LCS, _longest common subsequence_, measures sentence similarity | Evaluates fluency, grammatical coherence |
+| **ROUGE-W** | Weighted LCS giving higher scores to consecutive matches | Rewards longer consecutive word sequences |
+| **ROUGE-S** | Skip-bigram matching allowing non-adjacent word pairs | Captures semantic similarity with flexible word order |
+
+**Example**: for reference _"The cat is on the mat"_ and candidate _"The cat on the mat"_,
+ROUGE-1 recall is 0.833, 5/6 unigrams matched, ROUGE-2 recall is 0.6, 3/5 bigrams matched,
+and ROUGE-L F1 is 0.909 based on the longest common subsequence
+
+**Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [F1 score]({{< relref "/evaluation/metrics" >}}#f1-score), [_n_-gram]({{< relref "/evaluation/metrics" >}}#_n_-gram), [recall]({{< relref "/evaluation/metrics" >}}#recall), [perplexity]({{< relref "/evaluation/metrics" >}}#perplexity)
 
 **Sources**:
 
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+- [Machine Learning Mastery: "Statistical Methods for Evaluating LLM Performance" by Cornellius Yuda Wijaya](https://machinelearningmastery.com/statistical-methods-for-evaluating-llm-performance/)
 - [Wikipedia: "ROUGE (metric)"](https://en.wikipedia.org/wiki/ROUGE_(metric))
 
 ---
