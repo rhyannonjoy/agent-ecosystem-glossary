@@ -40,10 +40,10 @@ can't guess by surface plausibility
 **Definition**: evaluation methodology where an agent assesses the performance of other agents;
 examines outputs, behaviors, or decision-making processes
 
-**Purpose**: related to LLM-as-a-Judge, but focuses on agentic system evaluation rather than just
+**Purpose**: related to LLM-as-judge, but focuses on agentic system evaluation rather than just
 text outputs
 
-**Related Terms**: [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
+**Related Terms**: [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
 
 ---
 
@@ -85,7 +85,7 @@ across releases or vendors for a few reasons -
 | **Harness** | vendors revise evaluation methodology after release; Anthropic retroactively updated `Claude Opus 4.7`'s `OSWorld-Verified` score once harness changed |
 | **Judge** | human, automated, vendor-built judges score identical behavior differently |
 
-**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [harness]({{< relref "/core-concepts" >}}#harness), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
+**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [harness]({{< relref "/core-concepts" >}}#harness), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
 
 **Sources**:
 
@@ -272,11 +272,11 @@ evaluation process; human provides feedback, validation, or intervention at crit
 **Purpose**: balances automation with human judgment and oversight; common in agent evaluation to
 assess quality, safety, and alignment with human values
 
-**Related Terms**: [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
+**Related Terms**: [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
 
 ---
 
-## LLM-as-a-Judge
+## LLM-as-judge
 
 **Definition**: automated evaluation methodology in which a LLM assesses quality of text outputs;
 the LLM scores or ranks responses based on criteria like accuracy, helpfulness or safety
@@ -284,11 +284,12 @@ the LLM scores or ranks responses based on criteria like accuracy, helpfulness o
 **Purpose**: enables scalable evaluation compared to human annotation alone at significantly
 lower cost; limitations include potential biases and consistency issues
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[probability]({{< relref "/research/quantitative" >}}#probability), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
 
 **Sources**:
 
-- [arXiv:  "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
+- [arXiv: "Judging LLM-as-judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
 - [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
 ---
@@ -385,7 +386,7 @@ run the tests - before selecting specific metrics or benchmarks
 |---|---|---|
 | Interaction Mode | how evaluation data is provided to the system | static/offline vs. dynamic/online |
 | Evaluation Data | what data is used to evaluate the system | human-annotated, synthetic, interaction-generated |
-| Metrics Computation Methods | what method computes the evaluation metrics | code based, LLM-as-a-Judge, human-as-a-judge |
+| Metrics Computation Methods | what method computes the evaluation metrics | code based, LLM-as-judge, human-as-a-judge |
 | Evaluation Tooling | pre-existing tooling supporting evaluation | testing, observability, debugging, monitoring |
 | Evaluation Contexts | environment the agent is tested in | mocked APIs, simulators, live |
 
@@ -399,7 +400,7 @@ run the tests - before selecting specific metrics or benchmarks
 | Long-Term Memory | LongEval, SocialBench |
 | Web Interaction | WebArena, BrowserGym |
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [SAP: "Evaluation and Benchmarking of LLM Agents: A Survey" by Mahmoud Mohammadi, Yipeng Li, Jane Lo, Wendy Yip (KDD 2025 Tutorial)](https://sap-samples.github.io/llm-agents-eval-tutorial/2025_KDD_Evaluation_and_Benchmarking_of_LLM_Agents.pdf)
 
@@ -414,7 +415,7 @@ to score outputs for relevance, factuality and correctness where no ground truth
 _"did the agent return the right format?"_; contrasts with rule-based checks that
 verify syntax and function-call shape
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 

@@ -329,7 +329,7 @@ value is directly derived from the user's text, the context history, or API spec
 **Purpose**: detects fabricated or unsupported argument values, checking that the agent's parameter
 choices are grounded in available context rather than invented
 
-**Related Terms**: [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation), [unit transformation]({{< relref "/evaluation/metrics" >}}#unit-transformation)
+**Related Terms**: [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation), [unit transformation]({{< relref "/evaluation/metrics" >}}#unit-transformation)
 
 ---
 
@@ -475,7 +475,7 @@ conversions between values in the context and parameter values in the tool call
 **Purpose**: detects incorrect conversions such as wrong currency, temperature scale, or measurement
 unit, ensuring the agent transforms values correctly when invoking tools
 
-**Related Terms**: [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge), [parameter value grounding]({{< relref "/evaluation/metrics" >}}#parameter-value-grounding), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
+**Related Terms**: [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [parameter value grounding]({{< relref "/evaluation/metrics" >}}#parameter-value-grounding), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 

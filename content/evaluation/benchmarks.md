@@ -148,9 +148,9 @@ roleplay and writing
 **Purpose**: uses `GPT-4` as a judge to evaluate the responses of other LLMs; created by the
 same researchers behind Chatbot Arena
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [Chatbot Arena]({{< relref "/evaluation/benchmarks" >}}#chatbot-arena), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [LLM-as-a-Judge]({{< relref "/evaluation" >}}#llm-as-a-judge)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [Chatbot Arena]({{< relref "/evaluation/benchmarks" >}}#chatbot-arena), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge)
 
-**Source**: [arXiv: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
+**Source**: [arXiv: "Judging LLM-as-judge with MT-Bench and Chatbot Arena" by Zheng et al.](https://arxiv.org/abs/2306.05685)
 
 ---
 
