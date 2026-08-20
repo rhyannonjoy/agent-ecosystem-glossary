@@ -110,6 +110,37 @@ traditional search queries; related to the system prompt
 
 ---
 
+## Promptions
+
+**Definition**: _"Prompt" + "options"_; a lightweight middleware framework that dynamically
+generates ephemeral UI elements — radio buttons, checkboxes, toggles — to help users steer
+AI responses without manual prompt engineering
+
+**Purpose**: lowers the barrier to effective prompting by replacing free-form text refinement
+with structured, parameterized choices; users select options and the AI response updates
+in real time
+
+**Example**: a user asks an AI to explain a Python function; Promptions generates context-specific
+controls like "Experience Level" (Beginner/Intermediate/Advanced), "Learning Objective"
+(Training & Eval/Model Building/Data Processing), and "Response Format" (Step-by-step/Summary/Detailed);
+the user adjusts these without retyping the prompt
+
+| Concept | Description |
+| --- | --- |
+| **Dynamic Prompt Refinement Control** | UI controls generated contextually from the user's actual prompt input; adapts to what the user is asking about rather than offering generic options |
+| **Static Prompt Refinement Control** | Fixed, generic set of controls (length, tone, format) offered regardless of prompt content; predictable but not tailored |
+| **Ephemeral UI** | Interfaces generated on-the-fly by AI systems that exist just long enough to serve a specific purpose; not permanently stored |
+| **Prompt Middleware** | Software layer between user and LLM that assists with prompt construction; the general category Promptions belongs to |
+
+**Related Terms**: [prompt]({{< relref "interaction" >}}#prompt), [system prompt]({{< relref "interaction" >}}#system-prompt), [harness]({{< relref "/anatomy" >}}#harness)
+
+**Source**:
+
+- [Microsoft Research: "Dynamic Prompt Middleware: Contextual Prompt Refinement Controls for Comprehension Tasks"](https://aka.ms/promptionspaper)
+- [Microsoft Research: Promptions Repository](https://www.microsoft.com/en-us/research/project/tools-for-thought/promptions-repository/)
+
+---
+
 ## rule
 
 **Definition**: prompt instruction an LLM interprets and applies at its own discretion; has an

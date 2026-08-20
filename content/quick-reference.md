@@ -918,6 +918,15 @@ translation and a human-produced translation
 
 ---
 
+### Promptions
+
+- _"Prompt" + "options"_; middleware framework that generates ephemeral UI elements to steer AI responses
+- replaces manual prompt engineering with structured, parameterized choices
+
+**Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#promptions)
+
+---
+
 ### proxy test
 
 - indirect measure used to evaluate something difficult to assess directly
