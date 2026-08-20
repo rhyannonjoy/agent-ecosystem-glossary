@@ -6,7 +6,7 @@ bookToc: true
 
 # Interaction
 
-What an agent *does*: communication, commands, behavior, and the mechanisms that govern how agents act and respond.
+_What agents do_: behavior, commands, communication, and the mechanisms that govern responses.
 
 ---
 
@@ -18,7 +18,8 @@ user messages to form the back-and-forth history the agent uses as context
 **Purpose**: represents the agent's side of an exchange and contributes to the accumulated
 conversation history that informs subsequent responses
 
-**Related Terms**: [turn]({{< relref "interaction" >}}#turn), [user message]({{< relref "interaction" >}}#user-message)
+**Related Terms**: [turn]({{< relref "interaction" >}}#turn),
+[user message]({{< relref "interaction" >}}#user-message)
 
 **Source**:
 
@@ -49,7 +50,8 @@ edited, without going through the LLM's interpretation loop
 contrasts with gates, which block progression on a condition, and with rules, which an LLM
 applies at its own discretion
 
-**Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [gate]({{< relref "interaction" >}}#gate), [rule]({{< relref "interaction" >}}#rule), [slash command]({{< relref "interaction" >}}#slash-command)
+**Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [gate]({{< relref "interaction" >}}#gate),
+[rule]({{< relref "interaction" >}}#rule), [slash command]({{< relref "interaction" >}}#slash-command)
 
 **Source**:
 
@@ -82,7 +84,8 @@ logging, and monitoring an agent's behavior, decisions, and intermediate actions
 **Purpose**: enables inspection of function calls, API responses, and retrieval steps to
 diagnose failures and understand what the agent actually did
 
-**Related Terms**: [permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems), [self-reflection]({{< relref "interaction" >}}#self-reflection)
+**Related Terms**: [permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems),
+[self-reflection]({{< relref "interaction" >}}#self-reflection)
 
 ---
 
@@ -94,7 +97,8 @@ actions; fundamental building block for autonomous task execution
 **Purpose**: involves reasoning about future states, choosing strategies, and organizing steps;
 ranges from basic linear plans to complex multi-step reasoning with contingencies
 
-**Related Terms**: [agent]({{< relref "/anatomy" >}}#agent), [memory]({{< relref "/anatomy" >}}#memory), [self-reflection]({{< relref "interaction" >}}#self-reflection)
+**Related Terms**: [agent]({{< relref "/anatomy" >}}#agent), [memory]({{< relref "/anatomy" >}}#memory),
+[self-reflection]({{< relref "interaction" >}}#self-reflection)
 
 ---
 
@@ -106,7 +110,8 @@ specificity of prompts significantly affect output quality
 **Purpose**: is interpreted by the LLM (unlike direct commands) and is distinct from
 traditional search queries; related to the system prompt
 
-**Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [system prompt]({{< relref "interaction" >}}#system-prompt), [user message]({{< relref "interaction" >}}#user-message)
+**Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [system prompt]({{< relref "interaction" >}}#system-prompt),
+[user message]({{< relref "interaction" >}}#user-message)
 
 ---
 
@@ -153,7 +158,8 @@ implicit opt-out path through which the LLM can rationalize skipping it
 block progression until a condition is met, and with hooks, which fire deterministically from
 the harness regardless of LLM interpretation
 
-**Related Terms**: [gate]({{< relref "interaction" >}}#gate), [hook]({{< relref "interaction" >}}#hook), [permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems)
+**Related Terms**: [gate]({{< relref "interaction" >}}#gate), [hook]({{< relref "interaction" >}}#hook),
+[permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems)
 
 ---
 
@@ -165,7 +171,8 @@ identifying errors, assessing performance, and adjusting strategy
 **Purpose**: enables learning from mistakes and iterative improvement without external feedback;
 distinguishes more sophisticated agents from basic reactive systems
 
-**Related Terms**: [agent]({{< relref "/anatomy" >}}#agent), [memory]({{< relref "/anatomy" >}}#memory), [planning]({{< relref "interaction" >}}#planning)
+**Related Terms**: [agent]({{< relref "/anatomy" >}}#agent), [memory]({{< relref "/anatomy" >}}#memory),
+[planning]({{< relref "interaction" >}}#planning)
 
 ---
 
@@ -178,7 +185,9 @@ context for a specific domain or task
 subject to the same context window attention dynamics as other injected content; distinct from
 hooks and slash commands
 
-**Related Terms**: [context window]({{< relref "/anatomy" >}}#context-window), [hook]({{< relref "interaction" >}}#hook), [prompt]({{< relref "interaction" >}}#prompt), [slash command]({{< relref "interaction" >}}#slash-command), [system prompt]({{< relref "interaction" >}}#system-prompt)
+**Related Terms**: [context window]({{< relref "/anatomy" >}}#context-window), [hook]({{< relref "interaction" >}}#hook),
+[prompt]({{< relref "interaction" >}}#prompt), [slash command]({{< relref "interaction" >}}#slash-command),
+[system prompt]({{< relref "interaction" >}}#system-prompt)
 
 **Source**:
 
@@ -195,7 +204,8 @@ triggers specific agent behavior without going through the LLM's interpretation 
 prompts; contrasts with prompts, which the LLM interprets and may execute differently across
 runs
 
-**Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [hook]({{< relref "interaction" >}}#hook), [prompt]({{< relref "interaction" >}}#prompt)
+**Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [hook]({{< relref "interaction" >}}#hook),
+[prompt]({{< relref "interaction" >}}#prompt)
 
 **Source**:
 
@@ -212,7 +222,8 @@ attention weight
 **Purpose**: typically not visible to the user, yet profoundly shapes the agent's personality,
 default behaviors, and constraints
 
-**Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [context window]({{< relref "/anatomy" >}}#context-window), [prompt]({{< relref "interaction" >}}#prompt), [temperature]({{< relref "/anatomy" >}}#temperature)
+**Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [context window]({{< relref "/anatomy" >}}#context-window),
+[prompt]({{< relref "interaction" >}}#prompt), [temperature]({{< relref "/anatomy" >}}#temperature)
 
 **Source**:
 
@@ -228,7 +239,8 @@ the agent considers the full turn history when generating a response
 **Purpose**: provides the unit structure of a conversation that the agent references for
 context
 
-**Related Terms**: [assistant message]({{< relref "interaction" >}}#assistant-message), [context window]({{< relref "/anatomy" >}}#context-window), [user message]({{< relref "interaction" >}}#user-message)
+**Related Terms**: [assistant message]({{< relref "interaction" >}}#assistant-message),
+[context window]({{< relref "/anatomy" >}}#context-window), [user message]({{< relref "interaction" >}}#user-message)
 
 **Source**:
 
@@ -244,7 +256,8 @@ turn; interpreted by the LLM rather than executed as a direct command
 **Purpose**: receives strong positional attention as the most recent content in the context
 window, heavily influencing the agent's response
 
-**Related Terms**: [assistant message]({{< relref "interaction" >}}#assistant-message), [prompt]({{< relref "interaction" >}}#prompt), [turn]({{< relref "interaction" >}}#turn)
+**Related Terms**: [assistant message]({{< relref "interaction" >}}#assistant-message),
+[prompt]({{< relref "interaction" >}}#prompt), [turn]({{< relref "interaction" >}}#turn)
 
 **Source**:
 
