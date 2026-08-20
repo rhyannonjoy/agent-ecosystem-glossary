@@ -291,16 +291,48 @@ traditional search queries; related to the system prompt
 
 **Definition**: acronym for _reinforcement learning from human feedback_; training methodology in
 which human evaluators rate LLM outputs and the ratings fine-tune the LLM toward preferred
-behaviors
+behaviors; uses reward models to quantify preferences and reinforcement learning to optimize
+the model; not immune to selection and human evaluation bias
 
 **Purpose**: creates a strong instruction-following bias; LLMs trained with RLHF tend to
-prioritize explicit user instructions, sometimes at the expense of broader context
+prioritize explicit user instructions, sometimes at the expense of broader context; aligns
+models with human values and reduces harmful outputs
 
-**Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [sycophancy]({{< relref "core-concepts" >}}#sycophancy), [system prompt]({{< relref "core-concepts" >}}#system-prompt)
+**Process**: SFT on instruction-response pairs → reward model trained
+on human preference data → RL algorithm updates LLM to maximize reward → iterative refinement
 
-**Source**:
+| **Component** | **Description** |
+| --- | --- |
+| **DPO** | _Direct Preference Optimization_; eliminates separate reward model by using preference data directly |
+| **KL Divergence** | Measures difference between original and updated model distributions; prevents reward hacking |
+| **KTO** | _Kahneman-Tversky Optimization_; utility-based approach using binary feedback instead of paired preferences |
+| **OOD Generalization** | _Out-of-distribution performance_; ability to handle scenarios not seen in training |
+| **PPO** | _Proximal Policy Optimization_; stable RL algorithm using clipped objective function |
+| **Reward Hacking** | Model manipulates reward system to get high scores without solving the actual problem |
+| **Reward Model** | Neural network trained to predict human preferences; outputs scalar reward values |
+| **RLAIF** | _Reinforced Learning from AI Feedback_; uses LLM instead of human annotators for preference labels |
+| **SFT** | _Supervised fine-tuning_; initial step using high-quality instruction-response pairs |
+
+| **Aspect** | **PPO** | **DPO** | **KTO** |
+| --- | --- | --- | --- |
+| **Objective** | Maximize reward, prevent large policy updates | Optimize policy based on human preferences using binary classification | Model alignment, maximize utility based on prospect theory |
+| **Input** | Prompt and reward signal | Prompt and human preference pairs | Prompt and binary feedback |
+| **Output** | Actions taken in environment | Actions taken in environment aligned with human preferences | LLM outputs with binary labels |
+| **Learning Mechanism** | Policy gradients, clipped objective | Binary cross-entropy optimization on human preference data | Based on LLM alignment without complex preference models |
+| **Network Components** | Separate policy and value networks | Single policy network | LLM framework, adapted to KTO methodology |
+| **Feedback Mechanism** | Rewards from environment | Human preference data | Binary feedback on LLM outputs |
+| **Stability** | Maintained by clipping mechanism | Preferences with dynamic per-example weighting | Focus on utility maximization |
+| **Complexity** | Dual network, maximization with policy update stability | Bypasses explicit reward modeling, human preference optimizes policy | Reduces complexity for binary utility optimization |
+| **Applicability** | General-purpose RL alignment | When human preference alignment crucial | When rapid alignment with human feedback desired |
+
+**Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [permission and safety systems]({{< relref "core-concepts" >}}#permission-and-safety-systems),
+[sycophancy]({{< relref "core-concepts" >}}#sycophancy), [system prompt]({{< relref "core-concepts" >}}#system-prompt),
+[training data]({{< relref "core-concepts" >}}#training-data)
+
+**Sources**:
 
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+- [Ionio: "A Comprehensive Guide to fine-tuning LLMs using RLHF" by Pranav Patel, Garima Saroj](https://www.ionio.ai/blog/a-comprehensive-guide-to-fine-tuning-llms-using-rlhf-part-1)
 
 ---
 

@@ -948,7 +948,7 @@ translation and a human-produced translation
 ### RLHF
 
 - acronym for _reinforcement learning from human feedback_
-- training methodology in which human evaluators rate LLM outputs and ratings fine-tune the LLM toward preferred behaviors
+- training methodology in which human evaluators rate LLM outputs and ratings to fine-tune LLM behavior
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#rlhf)
 
