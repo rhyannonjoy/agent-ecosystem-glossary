@@ -6,7 +6,7 @@ bookToc: true
 
 # Anatomy
 
-What an agent *is*: structural components, composition, training, and the internal properties that define its capabilities and limitations.
+_What agents are_: structural components and training that define their abilities and limitations.
 
 ---
 
@@ -21,7 +21,8 @@ often necessary for diagnosing unexpected behavior
 
 **Example**: "agent" is an abstraction for a collection of distinct parts
 
-**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [automation]({{< relref "anatomy" >}}#automation), [harness]({{< relref "anatomy" >}}#harness), [spec]({{< relref "anatomy" >}}#spec)
+**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [automation]({{< relref "anatomy" >}}#automation)
+ [harness]({{< relref "anatomy" >}}#harness), [spec]({{< relref "anatomy" >}}#spec)
 
 **Source**:
 
@@ -41,7 +42,9 @@ distinct from chatbots, process automation, and workflow engines through autonom
 **Example**: an agent that retrieves a file, edits it, and runs a command to complete a
 request without step-by-step human instruction
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation), [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning), [self-reflection]({{< relref "/interaction" >}}#self-reflection)
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation),
+[memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning),
+[self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
 ---
 
@@ -53,7 +56,8 @@ from basic rule-based systems to complex machine learning models
 **Purpose**: in an AI context, delegates decision-making or execution to algorithms, robots,
 or automated agents to reduce manual effort and increase consistency
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [agent]({{< relref "anatomy" >}}#agent), [harness]({{< relref "anatomy" >}}#harness)
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [agent]({{< relref "anatomy" >}}#agent),
+[harness]({{< relref "anatomy" >}}#harness)
 
 ---
 
@@ -76,7 +80,8 @@ in a few ways:
 | **Context Rot** | Performance degradation as length increases ~30k+ tokens |
 | **Lost in the Middle** | LLMs use info at context beginning, end more than middle |
 
-**Related Terms**: [memory]({{< relref "anatomy" >}}#memory), [`/SKILL`]({{< relref "/interaction" >}}#skill), [system prompt]({{< relref "/interaction" >}}#system-prompt), [temperature]({{< relref "anatomy" >}}#temperature)
+**Related Terms**: [memory]({{< relref "anatomy" >}}#memory), [`/SKILL`]({{< relref "/interaction" >}}#skill),
+[system prompt]({{< relref "/interaction" >}}#system-prompt), [temperature]({{< relref "anatomy" >}}#temperature)
 
 **Sources**:
 
@@ -94,7 +99,9 @@ plausible but isn't grounded in training data or provided context
 **Purpose**: a critical quality-control concern in AI systems; understanding hallucination helps
 diagnose failures and informs evaluation of truthfulness and robustness
 
-**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [memory]({{< relref "anatomy" >}}#memory), [observability]({{< relref "/interaction" >}}#observability), [self-reflection]({{< relref "/interaction" >}}#self-reflection), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
+**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[memory]({{< relref "anatomy" >}}#memory), [observability]({{< relref "/interaction" >}}#observability),
+[self-reflection]({{< relref "/interaction" >}}#self-reflection), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
 
 ---
 
@@ -114,8 +121,10 @@ strategy, and temperature settings; Browser Use, Agent S, GTA1, and CoACT are ha
 from the LLMs and infrastructure they run on
 
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation),
-[gate]({{< relref "/interaction" >}}#gate), [hook]({{< relref "/interaction" >}}#hook), [MCP server]({{< relref "/interaction" >}}#mcp-server),
-[permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems), [temperature]({{< relref "anatomy" >}}#temperature)
+[gate]({{< relref "/interaction" >}}#gate), [hook]({{< relref "/interaction" >}}#hook),
+[MCP server]({{< relref "/interaction" >}}#mcp-server),
+[permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems),
+[temperature]({{< relref "anatomy" >}}#temperature)
 
 **Sources**:
 
@@ -129,8 +138,8 @@ from the LLMs and infrastructure they run on
 **Definition**: practical problem-solving approach that uses shortcuts or rules of thumb to find
 satisfactory solutions; differs from algorithms that guarantee optimal solutions
 
-**Purpose**: trades optimality for speed and feasibility when exhaustive search is impractical; in
-agent systems, guides decision-making when perfect information or unlimited computation is
+**Purpose**: trades optimality for speed and feasibility when exhaustive search is impractical;
+in agent systems, guides decision-making when perfect information or unlimited computation is
 unavailable
 
 **Example**: A* search, greedy algorithms, hand-crafted evaluation functions
@@ -149,7 +158,8 @@ common non-LLM examples; the LLM is the reasoning component an agent's harness w
 
 **Example**: `GPT` - _Generative Pre-trained Transformer_, Claude, and Llama
 
-**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [harness]({{< relref "anatomy" >}}#harness), [temperature]({{< relref "anatomy" >}}#temperature)
+**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [harness]({{< relref "anatomy" >}}#harness),
+[temperature]({{< relref "anatomy" >}}#temperature)
 
 ---
 
@@ -162,7 +172,8 @@ reference past actions
 **Purpose**: critical for multi-step reasoning and adapting behavior based on history; types
 include short-term - current task, long-term - across sessions, and episodic - specific events
 
-**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [planning]({{< relref "/interaction" >}}#planning), [self-reflection]({{< relref "/interaction" >}}#self-reflection)
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [planning]({{< relref "/interaction" >}}#planning),
+[self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
 ---
 
@@ -177,7 +188,8 @@ boundaries on what an agent may execute
 **Example**: requiring confirmation before running shell commands, restricting file access to
 specific directories, or blocking certain categories of action entirely
 
-**Related Terms**: [harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability), [rule]({{< relref "/interaction" >}}#rule)
+**Related Terms**: [harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability),
+[rule]({{< relref "/interaction" >}}#rule)
 
 **Source**:
 
@@ -242,7 +254,8 @@ building on a format exactly what to expect
 **Purpose**: documents which fields exist, what values are valid, how files should be
 structured, and what behavior is required versus optional
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [harness]({{< relref "anatomy" >}}#harness), [MCP server]({{< relref "/interaction" >}}#mcp-server)
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [harness]({{< relref "anatomy" >}}#harness),
+[MCP server]({{< relref "/interaction" >}}#mcp-server)
 
 ---
 
@@ -271,7 +284,8 @@ platform and sometimes adjustable by the user
 **Purpose**: affects agent behavior independently of the LLM itself - low temperature produces
 more focused, predictable responses; high temperature produces more varied, creative ones
 
-**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [harness]({{< relref "anatomy" >}}#harness), [system prompt]({{< relref "/interaction" >}}#system-prompt)
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [harness]({{< relref "anatomy" >}}#harness),
+[system prompt]({{< relref "/interaction" >}}#system-prompt)
 
 **Source**:
 
