@@ -920,7 +920,8 @@ translation and a human-produced translation
 
 ### Promptions
 
-- _"Prompt" + "options"_; middleware framework that generates ephemeral UI elements to steer AI responses
+- portmanteau of _"prompt"_ and _"options"_
+- Microsoft middleware framework that generates ephemeral UI elements to steer generative AI responses
 - replaces manual prompt engineering with structured, parameterized choices
 
 **Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#promptions)
