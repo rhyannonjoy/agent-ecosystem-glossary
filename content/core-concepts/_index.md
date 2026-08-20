@@ -292,41 +292,42 @@ traditional search queries; related to the system prompt
 **Definition**: acronym for _reinforcement learning from human feedback_; training methodology in
 which human evaluators rate LLM outputs and the ratings fine-tune the LLM toward preferred
 behaviors; uses reward models to quantify preferences and reinforcement learning to optimize
-the model
+the model; not immune to selection and human evaluation bias
 
 **Purpose**: creates a strong instruction-following bias; LLMs trained with RLHF tend to
 prioritize explicit user instructions, sometimes at the expense of broader context; aligns
 models with human values and reduces harmful outputs
 
-**Process**: SFT (supervised fine-tuning) on instruction-response pairs → reward model trained
+**Process**: SFT on instruction-response pairs → reward model trained
 on human preference data → RL algorithm updates LLM to maximize reward → iterative refinement
 
 | **Component** | **Description** |
 | --- | --- |
-| **SFT** | Supervised fine-tuning; initial step using high-quality instruction-response pairs |
-| **Reward Model** | Neural network trained to predict human preferences; outputs scalar reward values |
-| **PPO** | Proximal Policy Optimization; stable RL algorithm using clipped objective function |
-| **DPO** | Direct Preference Optimization; eliminates separate reward model by using preference data directly |
-| **KTO** | Kahneman-Tversky Optimization; utility-based approach using binary feedback instead of paired preferences |
-| **RLAIF** | RL from AI Feedback; uses LLM instead of human annotators for preference labels |
+| **DPO** | _Direct Preference Optimization_; eliminates separate reward model by using preference data directly |
 | **KL Divergence** | Measures difference between original and updated model distributions; prevents reward hacking |
+| **KTO** | _Kahneman-Tversky Optimization_; utility-based approach using binary feedback instead of paired preferences |
+| **OOD Generalization** | _Out-of-distribution performance_; ability to handle scenarios not seen in training |
+| **PPO** | _Proximal Policy Optimization_; stable RL algorithm using clipped objective function |
 | **Reward Hacking** | Model manipulates reward system to get high scores without solving the actual problem |
-| **OOD Generalization** | Out-of-distribution performance; ability to handle scenarios not seen in training |
+| **Reward Model** | Neural network trained to predict human preferences; outputs scalar reward values |
+| **RLAIF** | _Reinforced Learning from AI Feedback_; uses LLM instead of human annotators for preference labels |
+| **SFT** | _Supervised fine-tuning_; initial step using high-quality instruction-response pairs |
 
 | **Aspect** | **PPO** | **DPO** | **KTO** |
 | --- | --- | --- | --- |
-| **Objective** | Maximize reward score from reward model | Align policy with human preferences directly | Maximize utility based on prospect theory |
-| **Input** | Prompt + reward signal | Prompt + preference pairs (preferred/dispreferred) | Prompt + binary feedback (good/bad) |
-| **Output** | Updated policy weights | Updated policy weights | Updated policy weights |
-| **Learning Mechanism** | Reinforcement learning with clipped objective | Single-stage optimization using preference data | Utility-based optimization |
-| **Network Components** | Policy network + value network + reward model | Single policy network | Single policy network |
-| **Feedback Mechanism** | Scalar reward values from reward model | Paired comparisons (winner/loser) | Binary feedback (approved/rejected) |
-| **Stability** | High (clipping prevents large updates) | High (no RL sampling instability) | High (simple loss function) |
-| **Complexity** | High (RL loop + multiple networks) | Medium (removes reward model step) | Low (simplified data requirements) |
-| **Applicability** | General-purpose RL alignment | When preference pairs are available | When only binary feedback is feasible |
+| **Objective** | Maximize reward, prevent large policy updates | Optimize policy based on human preferences using binary classification | Model alignment, maximize utility based on prospect theory |
+| **Input** | Prompt and reward signal | Prompt and human preference pairs | Prompt and binary feedback |
+| **Output** | Actions taken in environment | Actions taken in environment aligned with human preferences | LLM outputs with binary labels |
+| **Learning Mechanism** | Policy gradients, clipped objective | Binary cross-entropy optimization on human preference data | Based on LLM alignment without complex preference models |
+| **Network Components** | Separate policy and value networks | Single policy network | LLM framework, adapted to KTO methodology |
+| **Feedback Mechanism** | Rewards from environment | Human preference data | Binary feedback on LLM outputs |
+| **Stability** | Maintained by clipping mechanism | Preferences with dynamic per-example weighting | Focus on utility maximization |
+| **Complexity** | Dual network, maximization with policy update stability | Bypasses explicit reward modeling, human preference optimizes policy | Reduces complexity for binary utility optimization |
+| **Applicability** | General-purpose RL alignment | When human preference alignment crucial | When rapid alignment with human feedback desired |
 
-**Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [sycophancy]({{< relref "core-concepts" >}}#sycophancy),
-[system prompt]({{< relref "core-concepts" >}}#system-prompt)
+**Related Terms**: [LLM]({{< relref "core-concepts" >}}#llm), [permission and safety systems]({{< relref "core-concepts" >}}#permission-and-safety-systems),
+[sycophancy]({{< relref "core-concepts" >}}#sycophancy), [system prompt]({{< relref "core-concepts" >}}#system-prompt),
+[training data]({{< relref "core-concepts" >}}#training-data)
 
 **Sources**:
 
