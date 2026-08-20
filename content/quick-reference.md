@@ -279,6 +279,15 @@ translation and a human-produced translation
 
 ---
 
+### data-licensing
+
+- commercial agreements where publishers grant AI companies structured API access to their content
+- shapes the pipeline through which AI models access publisher content for training or search
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#data-licensing)
+
+---
+
 ### Discriminability Score
 
 - metric used to filter benchmarks by identifying tasks that separate a good response from a bad one
@@ -450,6 +459,15 @@ translation and a human-produced translation
 - provides objectively evaluable agentic checkpoints: thing happens → condition → then proceed
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#gate)
+
+---
+
+### GEO
+
+- abbreviation for _Generative Engine Optimization_
+- practice of optimizing content to be cited in AI-generated answers rather than ranked in search results
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#geo)
 
 ---
 
@@ -923,6 +941,15 @@ translation and a human-produced translation
 
 ---
 
+### query fan-out
+
+- retrieval technique where an AI search platform breaks one query into multiple sub-queries
+- fetches results for each sub-query then synthesizes an answer from combined results
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#query-fan-out)
+
+---
+
 ## R
 
 ---
@@ -978,6 +1005,24 @@ translation and a human-produced translation
 - has implicit opt-out path; LLM can rationalize skipping
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#rule)
+
+---
+
+### retrieval pool
+
+- set of documents and pages an AI search engine draws from when synthesizing an answer
+- populated by sub-queries generated through query fan-out
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#retrieval-pool)
+
+---
+
+### robots.txt
+
+- web standard file placed at a site's root that instructs web crawlers which paths they may or may not access
+- a single Disallow directive can block an entire domain from crawling
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#robotstxt)
 
 ---
 
@@ -1251,6 +1296,15 @@ translation and a human-produced translation
 - interpreted by the LLM rather than executed as a direct command
 
 **Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#user-message)
+
+---
+
+### user-generated content
+
+- content created by end users rather than brands, publishers, or organizations
+- historically a major citation source for AI search engines due to breadth and conversational tone
+
+**Glossary Term Entry Location**: [Core Concepts]({{< relref "core-concepts" >}}#user-generated-content)
 
 ---
 
