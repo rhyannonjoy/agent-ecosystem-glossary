@@ -1,6 +1,6 @@
 ---
 title: "Anatomy"
-weight: 1
+weight: 3
 bookToc: true
 ---
 
@@ -41,7 +41,7 @@ distinct from chatbots, process automation, and workflow engines through autonom
 **Example**: an agent that retrieves a file, edits it, and runs a command to complete a
 request without step-by-step human instruction
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation), [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/core-concepts/interaction" >}}#planning), [self-reflection]({{< relref "/core-concepts/interaction" >}}#self-reflection)
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation), [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning), [self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
 ---
 
@@ -76,7 +76,7 @@ in a few ways:
 | **Context Rot** | Performance degradation as length increases ~30k+ tokens |
 | **Lost in the Middle** | LLMs use info at context beginning, end more than middle |
 
-**Related Terms**: [memory]({{< relref "anatomy" >}}#memory), [`/SKILL`]({{< relref "/core-concepts/interaction" >}}#skill), [system prompt]({{< relref "/core-concepts/interaction" >}}#system-prompt), [temperature]({{< relref "anatomy" >}}#temperature)
+**Related Terms**: [memory]({{< relref "anatomy" >}}#memory), [`/SKILL`]({{< relref "/interaction" >}}#skill), [system prompt]({{< relref "/interaction" >}}#system-prompt), [temperature]({{< relref "anatomy" >}}#temperature)
 
 **Sources**:
 
@@ -94,7 +94,7 @@ plausible but isn't grounded in training data or provided context
 **Purpose**: a critical quality-control concern in AI systems; understanding hallucination helps
 diagnose failures and informs evaluation of truthfulness and robustness
 
-**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [memory]({{< relref "anatomy" >}}#memory), [observability]({{< relref "/core-concepts/interaction" >}}#observability), [self-reflection]({{< relref "/core-concepts/interaction" >}}#self-reflection), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
+**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [memory]({{< relref "anatomy" >}}#memory), [observability]({{< relref "/interaction" >}}#observability), [self-reflection]({{< relref "/interaction" >}}#self-reflection), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
 
 ---
 
@@ -114,7 +114,7 @@ strategy, and temperature settings; Browser Use, Agent S, GTA1, and CoACT are ha
 from the LLMs and infrastructure they run on
 
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation),
-[gate]({{< relref "/core-concepts/interaction" >}}#gate), [hook]({{< relref "/core-concepts/interaction" >}}#hook), [MCP server]({{< relref "/core-concepts/interaction" >}}#mcp-server),
+[gate]({{< relref "/interaction" >}}#gate), [hook]({{< relref "/interaction" >}}#hook), [MCP server]({{< relref "/interaction" >}}#mcp-server),
 [permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems), [temperature]({{< relref "anatomy" >}}#temperature)
 
 **Sources**:
@@ -135,7 +135,7 @@ unavailable
 
 **Example**: A* search, greedy algorithms, hand-crafted evaluation functions
 
-**Related Terms**: [planning]({{< relref "/core-concepts/interaction" >}}#planning), [self-reflection]({{< relref "/core-concepts/interaction" >}}#self-reflection)
+**Related Terms**: [planning]({{< relref "/interaction" >}}#planning), [self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
 ---
 
@@ -162,7 +162,7 @@ reference past actions
 **Purpose**: critical for multi-step reasoning and adapting behavior based on history; types
 include short-term - current task, long-term - across sessions, and episodic - specific events
 
-**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [planning]({{< relref "/core-concepts/interaction" >}}#planning), [self-reflection]({{< relref "/core-concepts/interaction" >}}#self-reflection)
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [planning]({{< relref "/interaction" >}}#planning), [self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
 ---
 
@@ -177,7 +177,7 @@ boundaries on what an agent may execute
 **Example**: requiring confirmation before running shell commands, restricting file access to
 specific directories, or blocking certain categories of action entirely
 
-**Related Terms**: [harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/core-concepts/interaction" >}}#observability), [rule]({{< relref "/core-concepts/interaction" >}}#rule)
+**Related Terms**: [harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability), [rule]({{< relref "/interaction" >}}#rule)
 
 **Source**:
 
@@ -224,7 +224,7 @@ on human preference data → RL algorithm updates LLM to maximize reward → ite
 | **Applicability** | General-purpose RL alignment | When human preference alignment crucial | When rapid alignment with human feedback desired |
 
 **Related Terms**: [LLM]({{< relref "anatomy" >}}#llm), [permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems),
-[sycophancy]({{< relref "anatomy" >}}#sycophancy), [system prompt]({{< relref "/core-concepts/interaction" >}}#system-prompt),
+[sycophancy]({{< relref "anatomy" >}}#sycophancy), [system prompt]({{< relref "/interaction" >}}#system-prompt),
 [training data]({{< relref "anatomy" >}}#training-data)
 
 **Sources**:
@@ -242,7 +242,7 @@ building on a format exactly what to expect
 **Purpose**: documents which fields exist, what values are valid, how files should be
 structured, and what behavior is required versus optional
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [harness]({{< relref "anatomy" >}}#harness), [MCP server]({{< relref "/core-concepts/interaction" >}}#mcp-server)
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [harness]({{< relref "anatomy" >}}#harness), [MCP server]({{< relref "/interaction" >}}#mcp-server)
 
 ---
 
@@ -255,7 +255,7 @@ reasoning independently; known limitation of RLHF-trained LLMs and an active are
 understanding sycophancy helps distinguish an agent's genuine reasoning from compliance bias
 
 **Related Terms**: [hallucination]({{< relref "anatomy" >}}#hallucination), [RLHF]({{< relref "anatomy" >}}#rlhf),
-[self-reflection]({{< relref "/core-concepts/interaction" >}}#self-reflection)
+[self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
 **Source**:
 
@@ -271,7 +271,7 @@ platform and sometimes adjustable by the user
 **Purpose**: affects agent behavior independently of the LLM itself - low temperature produces
 more focused, predictable responses; high temperature produces more varied, creative ones
 
-**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [harness]({{< relref "anatomy" >}}#harness), [system prompt]({{< relref "/core-concepts/interaction" >}}#system-prompt)
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [harness]({{< relref "anatomy" >}}#harness), [system prompt]({{< relref "/interaction" >}}#system-prompt)
 
 **Source**:
 

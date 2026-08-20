@@ -1,6 +1,6 @@
 ---
 title: "Search"
-weight: 3
+weight: 5
 bookToc: true
 ---
 
@@ -41,7 +41,7 @@ Reddit cut off ChatGPT's access despite an existing data-licensing partnership
 **Example**: the May 2024 OpenAI-Reddit data-licensing partnership that gave OpenAI structured
 API access for training and product use, separate from ordinary web crawling
 
-**Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [robots.txt]({{< relref "search" >}}#robotstxt), [training data]({{< relref "/core-concepts/anatomy" >}}#training-data)
+**Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [robots.txt]({{< relref "search" >}}#robotstxt), [training data]({{< relref "/anatomy" >}}#training-data)
 
 **Source**:
 
@@ -62,7 +62,7 @@ increasingly replace traditional search
 **Example**: optimizing a help center article so it gets cited by ChatGPT when users ask
 questions about a product, rather than trying to rank on Google's first page
 
-**Related Terms**: [context window]({{< relref "/core-concepts/anatomy" >}}#context-window), [LLM]({{< relref "/core-concepts/anatomy" >}}#llm), [planning]({{< relref "/core-concepts/interaction" >}}#planning), [query fan-out]({{< relref "search" >}}#query-fan-out)
+**Related Terms**: [context window]({{< relref "/anatomy" >}}#context-window), [LLM]({{< relref "/anatomy" >}}#llm), [planning]({{< relref "/interaction" >}}#planning), [query fan-out]({{< relref "search" >}}#query-fan-out)
 
 **Source**:
 
@@ -84,7 +84,7 @@ GEO because changes to fan-out behavior can dramatically alter which domains and
 like "best project management software 2026," "small team project management reviews," and
 "affordable project management tools" — each retrieving different sources
 
-**Related Terms**: [context window]({{< relref "/core-concepts/anatomy" >}}#context-window), [GEO]({{< relref "search" >}}#geo), [LLM]({{< relref "/core-concepts/anatomy" >}}#llm), [prompt]({{< relref "/core-concepts/interaction" >}}#prompt)
+**Related Terms**: [context window]({{< relref "/anatomy" >}}#context-window), [GEO]({{< relref "search" >}}#geo), [LLM]({{< relref "/anatomy" >}}#llm), [prompt]({{< relref "/interaction" >}}#prompt)
 
 **Source**:
 

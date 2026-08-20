@@ -268,7 +268,7 @@ addresses the tendency of LLMs to hallucinate and produce inaccurate outputs
 combines human evaluation with `GPT`s, fine-tuned on BLEU and ROUGE to predict human assessments of
 informativeness and truthfulness; largest models were generally least truthful
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [hallucination]({{< relref "/core-concepts" >}}#hallucination), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [hallucination]({{< relref "/anatomy" >}}#hallucination), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
 
 **Source**: [arXiv: "TruthfulQA: Measuring How Models Mimic Human Falsehoods" by Lin et al.](https://arxiv.org/abs/2109.07958)
 
