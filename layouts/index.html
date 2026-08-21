@@ -1,3 +1,11 @@
+<!--
+  This file must stay at layouts/index.html (or layouts/home.html).
+  Hugo only routes here for the site's homepage from this exact path.
+  Moving it to layouts/<section>/list.html (e.g. layouts/docs/list.html)
+  silently detaches it: Hugo falls back to the hugo-book theme's default
+  homepage template instead, which renders the book nav panel/ToC and
+  drops this hero layout with no build error or warning.
+-->
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}" dir="ltr">
 <head>
