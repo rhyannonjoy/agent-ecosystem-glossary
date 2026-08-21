@@ -1,6 +1,6 @@
 ---
 title: "Evaluation"
-weight: 3
+weight: 6
 bookToc: true
 ---
 
@@ -85,7 +85,7 @@ across releases or vendors for a few reasons -
 | **Harness** | vendors revise evaluation methodology after release; Anthropic retroactively updated `Claude Opus 4.7`'s `OSWorld-Verified` score once harness changed |
 | **Judge** | human, automated, vendor-built judges score identical behavior differently |
 
-**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [harness]({{< relref "/core-concepts" >}}#harness), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
+**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [harness]({{< relref "/anatomy" >}}#harness), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
 
 **Sources**:
 

@@ -57,7 +57,7 @@ performant against intentionally deceptive text
 _"people like global flavors"_ higher than _"consumers prefer imported spices"_ despite the
 latter being semantically closer
 
-**Related Terms**: [BERT]({{< relref "/core-concepts" >}}#bert), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
+**Related Terms**: [BERT]({{< relref "/evaluation/metrics" >}}#bert), [BLEU]({{< relref "/evaluation/metrics" >}}#bleu), [ROUGE]({{< relref "/evaluation/metrics" >}}#rouge), [semantic evaluation]({{< relref "/evaluation" >}}#semantic-evaluation)
 
 **Sources**:
 
