@@ -1046,8 +1046,8 @@ translation and a human-produced translation
 
 ### robots.txt
 
-- web standard file placed at a site's root that instructs web crawlers which paths they may or may not access
-- a single Disallow directive can block an entire domain from crawling
+- Robots Exclusion Protocol - web standard file placed at a site's root
+- instructs web crawlers which paths they may or may not access
 
 **Glossary Term Entry Location**: [Search]({{< relref "search" >}}#robotstxt)
 
