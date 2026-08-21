@@ -130,7 +130,7 @@ largely saturated by frontier LLMs, reducing its usefullness as a differentiator
 **Purpose**: dataset of more than 15,000 multiple-choice general-knowledge questions across 57
 subjects, scored by average per-subject accuracy in few-shot and zero-shot settings
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [bounded scoring]({{< relref "/evaluation" >}}#bounded-scoring), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [few-shot]({{< relref "/evaluation" >}}#few-shot), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [few-shot]({{< relref "/evaluation" >}}#few-shot), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
 
 **Sources**:
 

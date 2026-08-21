@@ -138,6 +138,7 @@ Brief definitions and complete entry locations, organized by the following secti
 
 - standardized test or dataset used to evaluate and compare LLM and/or agentic performance
 - enables objective, but not neutral, comparison that tracks progress in the field
+- limited by bounded scoring, broad dataset, finite assessment, and overfitting
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#benchmark)
 
@@ -168,15 +169,6 @@ Brief definitions and complete entry locations, organized by the following secti
 translation and a human-produced translation
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#bleu)
-
----
-
-### bounded scoring
-
-- benchmark limitation - when an agent and/or LLM reaches the highest possible score
-- influences continuous evaluation and benchmark maintenance
-
-**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#bounded-scoring)
 
 ---
 
@@ -808,8 +800,9 @@ translation and a human-produced translation
 
 ### overfitting
 
-- limitation of LLM benchmarks - an LLM performs well on training or test data, but poorly on real-world data
-- risk when an LLM is trained on the same dataset the benchmark uses
+- mathematical modeling concept used in machine learning, agent evaluation
+- model learns training data so close, that it fails to generalize to new inputs
+- for LLM and/or agent benchmarking, performing well on test data, but poorly on real-world data
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#overfitting)
 

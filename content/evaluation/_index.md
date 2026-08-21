@@ -47,22 +47,6 @@ text outputs
 
 ---
 
-## bounded scoring
-
-**Definition**: limitation of LLM benchmarks in which an LLM reaches the highest possible score;
-contributes to ineffectiveness of public benchmarks and motivates more custom eval pipelines
-
-**Purpose**: highlights when a benchmark saturates and must be updated with more difficult tasks
-to remain a useful measure
-
-**Example**: once every major LLM scores near 100% on MMLU, that score no longer separates models
-
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [overfitting]({{< relref "/evaluation" >}}#overfitting)
-
-**Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker?"](https://www.ibm.com/think/topics/llm-benchmarks)
-
----
-
 ## benchmark
 
 **Definition**: standardized test or dataset used to evaluate and compare system performance;
@@ -77,7 +61,8 @@ agent
 
 **Example**: tests coding, common sense, reasoning, translation capabilities; custom benchmarks
 include a golden dataset and scoring built for a specific domain, but not directly comparable
-across releases or vendors for a few reasons -
+across releases or vendors due to various type of changes and also carry structural limits on
+what they can measure -
 
 | **Change Mechanism** | **Effect** |
 | --- | --- |
@@ -85,7 +70,14 @@ across releases or vendors for a few reasons -
 | **Harness** | vendors revise evaluation methodology after release; Anthropic retroactively updated `Claude Opus 4.7`'s `OSWorld-Verified` score once harness changed |
 | **Judge** | human, automated, vendor-built judges score identical behavior differently |
 
-**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [harness]({{< relref "/anatomy" >}}#harness), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard)
+| **Limitation** | **Description** |
+| --- | --- |
+| **Bounded Scoring** | once an LLM reaches the highest possible score, the benchmark has saturated and must be replaced with harder tasks to keep separating models |
+| **Broad Dataset** | sample data spans a wide range of subjects and tasks, which may not represent edge cases, specialized domains, or a specific use case |
+| **Finite Assessment** | only evaluates a model's capabilities as they exist at one point in time; new benchmarks are needed as LLMs develop new abilities |
+| **Overfitting** | training an LLM on the same dataset the benchmark uses inflates its score without improving real-world performance |
+
+**Related Terms**: [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [harness]({{< relref "/anatomy" >}}#harness), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [LLM leaderboard]({{< relref "/evaluation" >}}#llm-leaderboard), [overfitting]({{< relref "/evaluation" >}}#overfitting)
 
 **Sources**:
 
@@ -233,7 +225,7 @@ capabilities; critical for effective benchmark design to prevent reward hacking 
 
 **Example**: training an LLM on benchmark data so it scores well on the test but fails on real-world data
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [bounded scoring]({{< relref "/evaluation" >}}#bounded-scoring), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [overfitting]({{< relref "/evaluation" >}}#overfitting)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [overfitting]({{< relref "/evaluation" >}}#overfitting)
 
 **Source**: [Wikipedia: "Goodhart's law"](https://en.wikipedia.org/wiki/Goodhart%27s_law)
 
@@ -253,7 +245,7 @@ human baseline shifts per benchmark and signals saturation once frontier models 
 exceed it
 
 **Related Terms**: [accuracy]({{< relref "/evaluation/metrics" >}}#accuracy), [benchmark]({{< relref "/evaluation" >}}#benchmark),
-[bounded scoring]({{< relref "/evaluation" >}}#bounded-scoring), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1),
 [exact match]({{< relref "/evaluation/metrics" >}}#exact-match), [golden dataset]({{< relref "/evaluation" >}}#golden-dataset),
 [OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld)
 
@@ -311,22 +303,31 @@ LLM-selection aid
 
 ## overfitting
 
-**Definition**: limitation of LLM benchmarks where an LLM performs well
-on training or test data but poorly on real-world data; supports importance of
-domain-specific data over public benchmarks to close validity gaps
+**Definition**: mathematical modeling concept used in machine learning, LLM and/or agent evaluation;
+model learns training data, including noise and quirks closely enough that it performs well on that
+data but fails to generalize to new, unseen inputs; in LLM and/or agent benchmarking this describes
+successful performance on test data, but poorly on real-world data
 
-**Purpose**: occurs when an LLM is trained on the same dataset the benchmark uses, producing
-a score that does not reflect the LLM's actual abilities
+**Purpose**: supports the importance of domain-specific data over public benchmarks to close validity
+gaps; in Machine Learning, guards against models that memorize rather than learn underlying
+patterns; in an LLM benchmark context, occurs when an LLM is trained on the same dataset the benchmark
+uses, producing a score that does not reflect the LLM's actual abilities
+
+**Overfitting vs Underfitting**: overfitting learns the training data too closely, while underfitting
+is a model too simple to capture the underlying pattern in the first place, performing poorly on training
+and real-world data alike
 
 **Example**: a LLM that handles physics questions on a leaderboard may fail to summarize
 a standard internal meeting transcript
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [bounded scoring]({{< relref "/evaluation" >}}#bounded-scoring), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Goodhart's law]({{< relref "/evaluation" >}}#goodharts-law)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[Goodhart's law]({{< relref "/evaluation" >}}#goodharts-law)
 
 **Sources**:
 
 - [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
+- [Wikipedia: "Overfitting"](https://en.wikipedia.org/wiki/Overfitting)
 
 ---
 
