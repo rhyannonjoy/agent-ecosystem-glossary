@@ -299,7 +299,7 @@ translation and a human-produced translation
 ### data-licensing
 
 - commercial agreements where publishers grant AI companies structured API access to their content
-- shapes the pipeline through which AI models access publisher content for training or search
+- shapes the pipeline through which AI models access publisher content for search or training
 
 **Glossary Term Entry Location**: [Search]({{< relref "search" >}}#data-licensing)
 
@@ -1317,21 +1317,21 @@ translation and a human-produced translation
 
 ---
 
+### user-generated content
+
+- also known as _UGC_
+- content created by end users rather than brands, publishers, or organizations
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#user-generated-content)
+
+---
+
 ### user message
 
 - input sent by a human or automated system to an agent during a conversational turn
 - interpreted by the LLM rather than executed as a direct command
 
 **Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#user-message)
-
----
-
-### user-generated content
-
-- content created by end users rather than brands, publishers, or organizations
-- historically a major citation source for AI search engines due to breadth and conversational tone
-
-**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#user-generated-content)
 
 ---
 
