@@ -50,7 +50,10 @@ except proper nouns/acronyms, no trailing period
 ---
 ```
 
-- Do **not** add a `**Source**:` field unless explicitly asked
+- Do **not** add a `**Source**` or `**Sources**` field unless explicitly asked.
+  When a source field is present: use `**Source**:` (singular) for a single source
+  with the link on the same line as the label (no newline or whitespace before the link);
+  use `**Sources**:` (plural) for multiple sources, each on its own line as a list item.
 - Add 2-4 Related Terms, preferring terms that already exist as full entries.
   Cross-link both directions where it's a genuine pairing (e.g. `RLHF` ↔
   `sycophancy`), not just outward.

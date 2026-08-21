@@ -94,6 +94,24 @@ Brief definitions and complete entry locations, organized by the following secti
 
 ---
 
+### Agent-Friendly Documentation Spec
+
+- defines 23 checks across 7 categories for agent-accessible documentation
+- evaluates authentication, content structure, discoverability, markdown availability, observability, page size, and URL stability
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#agent-friendly-documentation-spec)
+
+---
+
+### Agent Reading Test
+
+- benchmark measuring whether an agent's web fetch pipeline delivers page content
+- uses canary tokens and task-based retrieval to evaluate what the agent can access
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#agent-reading-test)
+
+---
+
 ### ARC
 
 - acronym for _AI2 Reasoning Challenge_

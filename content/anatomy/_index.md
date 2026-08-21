@@ -19,14 +19,12 @@ or capabilities; streamlines communication by hiding implementation details
 level without tracking every internal part; understanding what an abstraction hides is
 often necessary for diagnosing unexpected behavior
 
-**Example**: "agent" is an abstraction for a collection of distinct parts
+**Example**: _"agent"_ is an abstraction for a system of distinct parts
 
 **Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [automation]({{< relref "anatomy" >}}#automation)
  [harness]({{< relref "anatomy" >}}#harness), [spec]({{< relref "anatomy" >}}#spec)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -42,7 +40,8 @@ distinct from chatbots, process automation, and workflow engines through autonom
 **Example**: an agent that retrieves a file, edits it, and runs a command to complete a
 request without step-by-step human instruction
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation),
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
+[automation]({{< relref "anatomy" >}}#automation),
 [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning),
 [self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
@@ -56,7 +55,7 @@ from basic rule-based systems to complex machine learning models
 **Purpose**: in an AI context, delegates decision-making or execution to algorithms, robots,
 or automated agents to reduce manual effort and increase consistency
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [agent]({{< relref "anatomy" >}}#agent),
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [agent]({{< relref "anatomy" >}}#agent),after
 [harness]({{< relref "anatomy" >}}#harness)
 
 ---
@@ -99,9 +98,18 @@ plausible but isn't grounded in training data or provided context
 **Purpose**: a critical quality-control concern in AI systems; understanding hallucination helps
 diagnose failures and informs evaluation of truthfulness and robustness
 
-**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
-[memory]({{< relref "anatomy" >}}#memory), [observability]({{< relref "/interaction" >}}#observability),
-[self-reflection]({{< relref "/interaction" >}}#self-reflection), [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
+**Example**: in the [Agent Reading Test](https://agentreadingtest.com/), GitHub Copilot reported
+_"25 canary tokens found"_ in its summary, but its own JSON report listed only 16, with only 23
+canaries total across all pages; agent hallucinated a count of its own reported data, inflating
+a number it had just generated
+
+**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
+[agent]({{< relref "anatomy" >}}#agent), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [memory]({{< relref "anatomy" >}}#memory),
+[observability]({{< relref "/interaction" >}}#observability), [self-reflection]({{< relref "/interaction" >}}#self-reflection),
+[SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
+
+**Source**: [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
 
 ---
 
@@ -191,9 +199,7 @@ specific directories, or blocking certain categories of action entirely
 **Related Terms**: [harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability),
 [rule]({{< relref "/interaction" >}}#rule)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -254,25 +260,39 @@ building on a format exactly what to expect
 **Purpose**: documents which fields exist, what values are valid, how files should be
 structured, and what behavior is required versus optional
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [harness]({{< relref "anatomy" >}}#harness),
-[MCP server]({{< relref "/interaction" >}}#mcp-server)
+**Example**: the [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec)
+defines 23 checks across 7 categories - content discoverability, markdown availability, page
+size, content structure, URL stability, observability, and authentication - that evaluate how
+well a documentation site serves coding agents
+
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction),
+[harness]({{< relref "anatomy" >}}#harness), [MCP server]({{< relref "/interaction" >}}#mcp-server)
 
 ---
 
 ## sycophancy
 
-**Definition**: tendency in LLMs to agree with, validate, or comply with user input rather than
-reasoning independently; known limitation of RLHF-trained LLMs and an active area of research
+**Definition**: LLM tendency to agree, comply, or validate user input rather than reason independently;
+pattern of producing a favorable answer they've been primed to produce, not the accurate one; known
+limitation of RLHF-trained LLMs and an active area of research
 
 **Purpose**: amplified by detailed or specific prompts, which push the LLM into _"execution mode"_;
 understanding sycophancy helps distinguish an agent's genuine reasoning from compliance bias
 
-**Related Terms**: [hallucination]({{< relref "anatomy" >}}#hallucination), [RLHF]({{< relref "anatomy" >}}#rlhf),
+**Example**: in the [Agent Reading Test](https://agentreadingtest.com/), agents consistently claimed
+higher scores than they actually achieved; Claude Code claimed 17/18 points but actually scored 15,
+inflating scores by manually following redirects and fetching JavaScript files that their pipeline
+could not handle natively, then reporting these workarounds as pipeline capabilities; GitHub Copilot
+claimed _"25 canary tokens found"_ in its summary while its own JSON report listed only 16
+
+**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
+[hallucination]({{< relref "anatomy" >}}#hallucination), [RLHF]({{< relref "anatomy" >}}#rlhf),
 [self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
-**Source**:
+**Sources**:
 
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
 
 ---
 
@@ -287,9 +307,7 @@ more focused, predictable responses; high temperature produces more varied, crea
 **Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [harness]({{< relref "anatomy" >}}#harness),
 [system prompt]({{< relref "/interaction" >}}#system-prompt)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 

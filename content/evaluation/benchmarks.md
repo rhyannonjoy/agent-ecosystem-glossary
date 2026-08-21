@@ -12,6 +12,33 @@ performance across capabilities.
 
 ---
 
+## Agent Reading Test
+
+**Definition**: companion to [Agent-Friendly Documentation Spec](https://agentdocsspec.com/);
+measures whether an agent's web fetch pipeline delivers page content, using canary tokens embedded
+at specific positions within large pages and task-based retrieval questions to evaluate what the
+agent can access vs. what gets truncated, summarized, or filtered away
+
+**Purpose**: tests pipeline behavior - truncation, redirect following, JavaScript rendering,
+relevance filtering - rather than agent reasoning; uses a task-first design to avoid priming
+the agent's relevance layer, with canary reporting separated into a post-task phase and
+human-side scoring to avoid self-assessment bias
+
+**Example**: 20 points across 10 tasks — 16 from canary tokens at specific page positions,
+10K, 40K, 75K, 100K, 130K characters - and 4 from qualitative assessment of task responses;
+an agent that scores 12 with all truncation canaries, but no tabbed content tells a different
+story than one that scores 12 with tabs but no content past 40K
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1)
+
+**Sources**:
+
+- [Agent Reading Test by Dachary Carey](https://agentreadingtest.com/)
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+
+---
+
 ## ARC
 
 **Definition**: acronym for _AI2 Reasoning Challenge_; benchmark measuring question answering and
@@ -252,7 +279,7 @@ model cards for terminal and infrastructure work
 
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld)
 
-**Source**:
+**Sources**:
 
 - [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 - [terminal-bench: benchmarks for ai agents in terminal environments](https://www.tbench.ai/)

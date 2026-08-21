@@ -43,7 +43,7 @@ examines outputs, behaviors, or decision-making processes
 **Purpose**: related to LLM-as-judge, but focuses on agentic system evaluation rather than just
 text outputs
 
-**Related Terms**: [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
+**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
 
 ---
 
@@ -90,12 +90,24 @@ what they can measure -
 ## canary phrase
 
 **Definition**: unique marker string embedded in content to verify its presence in a system;
-named after canaries used in coal mines as early warning detectors
+named after canaries used in coal mines as early warning detectors;
+[canary deployments](https://dev.to/semaphore/what-is-canary-deployment-the-pros-and-the-cons-5953),
+describe the practice of releasing a small subset of production traffic to a new software version
+to detect failures before a full rollout
 
 **Purpose**: its appearance in output confirms that specific content was loaded and/or processed,
 verifying whether a prompt, document, or instruction actually reached the LLM
 
-**Related Terms**: [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
+**Example**: in the [Agent Reading Test](https://agentreadingtest.com/), canary tokens like
+`CANARY-TRUNC-75K-summit` are placed at specific positions within large pages -
+at 10K, 40K, 75K, 100K, and 130K characters - to measure whether an agent's web fetch pipeline
+delivered content at each depth, or whether filtering, truncation, summarization, or dropped
+content before the agent could read it
+
+**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
+[benchmark]({{< relref "/evaluation" >}}#benchmark), [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
+
+**Source**: [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
 
 ---
 

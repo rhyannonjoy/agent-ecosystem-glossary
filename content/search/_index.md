@@ -10,6 +10,31 @@ _How agents find content_: access control, retrieval mechanics, visibility, and 
 
 ---
 
+## Agent-Friendly Documentation Spec
+
+**Definition**: specification defining 23 checks across 7 categories that evaluate how well a
+documentation site serves coding agents; grounded in empirical observation of real agent workflows
+
+**Purpose**: provides a shared standard for documentation teams, tool builders, and platform
+providers to measure and improve how effectively agents can discover, retrieve, and consume
+documentation content; categories cover content discoverability, markdown availability, page
+size and truncation risk, content structure, URL stability, observability, and authentication
+
+**Example**: [`afdocs`](https://afdocs.dev/) is a companion CLI tool and Node.js library that
+implements the spec; running `npx afdocs check https://docs.example.com --format scorecard`
+produces a scorecard with category breakdowns, system-level diagnostics, and per-check results
+with fix suggestions, and includes a vitest helper for CI integration to catch regressions
+
+**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
+[robots.txt]({{< relref "search" >}}#robotstxt), [spec]({{< relref "/anatomy" >}}#spec)
+
+**Sources**:
+
+- [AFDocs by Dachary Carey](https://afdocs.dev/)
+- [Agent-Friendly Documentation Spec by Dachary Carey](https://agentdocsspec.com/)
+
+---
+
 ## citation share
 
 **Definition**: percentage of AI-generated answers, in a defined prompt cluster, that link to or name a specific
