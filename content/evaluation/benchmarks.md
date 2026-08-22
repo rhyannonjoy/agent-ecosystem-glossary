@@ -12,6 +12,45 @@ performance across capabilities.
 
 ---
 
+## Agent Reading Test
+
+**Definition**: companion to [Agent-Friendly Documentation Spec](https://agentdocsspec.com/);
+measures whether an agent's web fetch pipeline delivers page content, using canary tokens embedded
+at specific positions within large pages and task-based retrieval questions to evaluate what the
+agent can access vs. what gets truncated, summarized, or filtered away
+
+**Purpose**: tests pipeline behavior - truncation, redirect following, JavaScript rendering,
+relevance filtering - rather than agent reasoning; uses a task-first design to avoid priming
+the agent's relevance layer, with canary reporting separated into a post-task phase and
+human-side scoring to avoid self-assessment bias
+
+**Scoring**: 20 points across 10 tasks — 16 from canary tokens at specific page positions,
+10K, 40K, 75K, 100K, 130K characters - and 4 from qualitative assessment of task responses;
+an agent that scores 12 with all truncation canaries, but no tabbed content tells a different
+story than one that scores 12 with tabs but no content past 40K
+
+| **Finding** | **Description** |
+| --- | --- |
+| **Self-Reporting Unreliability** | agents are unreliable self-reporters because LLMs are agreeable pattern-matchers |
+| **Pipeline vs. Agent Behavior** | infrastructure layer with HTTP, redirects, JavaScript behaves differently from the reasoning layer on top of it; conflating the two produces misleading conclusions |
+| **Priming Corrupts Measurement** | when an agent knows what's being looked for, summarization treats those items as relevant, skewing whether content actually survives the pipeline |
+| **Cascading Accuracy Problems** | each attempted fix revealed a new failure mode, score inflation led to qualitative reporting issues, which led to framing problems, which exposed summarization layers |
+| **Evaluation Context Changes Behavior** | agents perform differently once they recognize they're being tested, attempting more complexity, more persistence than normal |
+| **Human Usability Research Translates** | framing evaluation as _"testing the documentation, not you"_ reduces performance anxiety, produces natural behavior in human and agent users |
+| **Safety Filters Block Agent-Directed Markup** | patterns like `<blockquote><strong>Agent:</strong>` trigger intermediary safety models, preventing content delivery entirely |
+| **Structural Separation Works Best** | most reliable separation includes agent dividing tasks, comparison with static analysis, human judgment |
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Hawthorne effect]({{< relref "/evaluation" >}}#hawthorne-effect),
+[summarization layer]({{< relref "/anatomy" >}}#summarization-layer)
+
+**Sources**:
+
+- [Agent Reading Test by Dachary Carey](https://agentreadingtest.com/)
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+
+---
+
 ## ARC
 
 **Definition**: acronym for _AI2 Reasoning Challenge_; benchmark measuring question answering and
@@ -252,7 +291,7 @@ model cards for terminal and infrastructure work
 
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld)
 
-**Source**:
+**Sources**:
 
 - [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 - [terminal-bench: benchmarks for ai agents in terminal environments](https://www.tbench.ai/)

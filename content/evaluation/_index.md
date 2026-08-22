@@ -43,7 +43,7 @@ examines outputs, behaviors, or decision-making processes
 **Purpose**: related to LLM-as-judge, but focuses on agentic system evaluation rather than just
 text outputs
 
-**Related Terms**: [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
+**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
 
 ---
 
@@ -90,12 +90,24 @@ what they can measure -
 ## canary phrase
 
 **Definition**: unique marker string embedded in content to verify its presence in a system;
-named after canaries used in coal mines as early warning detectors
+named after canaries used in coal mines as early warning detectors;
+[canary deployments](https://dev.to/semaphore/what-is-canary-deployment-the-pros-and-the-cons-5953),
+describe the practice of releasing a small subset of production traffic to a new software version
+to detect failures before a full rollout
 
 **Purpose**: its appearance in output confirms that specific content was loaded and/or processed,
 verifying whether a prompt, document, or instruction actually reached the LLM
 
-**Related Terms**: [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
+**Example**: in the [Agent Reading Test](https://agentreadingtest.com/), canary tokens like
+`CANARY-TRUNC-75K-summit` are placed at specific positions within large pages -
+at 10K, 40K, 75K, 100K, and 130K characters - to measure whether an agent's web fetch pipeline
+delivered content at each depth, or whether filtering, truncation, summarization, or dropped
+content before the agent could read it
+
+**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
+[benchmark]({{< relref "/evaluation" >}}#benchmark), [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
+
+**Source**: [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
 
 ---
 
@@ -110,16 +122,37 @@ function in terms of quality and cost vs non-functional and/or safety
 **Evaluation vs Benchmarking**: benchmarking is static testing against a fixed dataset to establish
 baselines while evaluation describes a dynamic, ongoing measurement of agent performance
 
-**Example**: a team continuously scores a RAG pipeline's answers for relevance and factuality rather
-than running a one-off generic test
+**Evaluating Platform-Written Specs**: platform-published specs for agent-friendly practices needs
+their own scrutiny before adoption as business incentives shape what the spec measures and what it
+leaves out; using [Vercel's agent-readiness guidance](https://vercel.com/kb/guide/agent-readability-spec)
+as a case study -
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation)
-trajectory-based evaluation
+| **Check** | **Question** |
+| --- | --- |
+| **Audience Definition** | _Does the spec distinguish user types?_ Vercel's spec conflates coding agents with training crawlers, which behave and need fundamentally differently |
+| **Empirical Grounding** | _Does the spec cite data, or are claims presented as fact?_ Vercel's _"sites optimized for agent readability get cited more often"_ is an unsupported hypothesis, not a finding |
+| **Omission Analysis** | _Do the gaps align with the publisher's business constraints?_ Vercel's spec never measures content-start-position, which would expose problems inherent to `Next.js` |
+| **Self-Consistency** | _Would the publisher's own properties pass its own checks?_ Vercel's `llms.txt` exceeds the size threshold its spec recommends |
+
+| **Recommendation** | **Description** |
+| --- | --- |
+| **Evaluate, Don't Dismiss** | Don't reject platform guidance outright, but assess each recommendation on its own merits |
+| **Examine Incentive Alignment** | Be skeptical when a recommendation conveniently omits the publisher's own limitations |
+| **Prioritize Empirical Specs** | Favor guidance grounded in observed agent behavior with measured thresholds |
+| **Test Directly** | Validate with agents rather than relying solely published recommendations |
+
+**Related Terms**: [agent-friendliness]({{< relref "/search" >}}#agent-friendliness),
+[Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
+[benchmark]({{< relref "/evaluation" >}}#benchmark), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation),
+[`llms.txt`]({{< relref "/search" >}}#llmstxt), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy),
+[stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation),
+[truncation budget]({{< relref "/search" >}}#truncation-budget)
 
 **Sources**:
 
 - [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
 - [IBM: "What is AI agent evaluation?" by Cole Stryker and Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+- [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
 
 ---
 
@@ -253,6 +286,35 @@ exceed it
 
 - [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
 - [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
+
+---
+
+## Hawthorne effect
+
+**Definition**: type of behavioral reactivity in which individuals modify an aspect of their behavior
+in response to their awareness of being observed; observed in agent behavior in which the
+agent changes its behavior when it recognizes it is being evaluated; the agent becomes a more motivated,
+persistent reader than it would be during normal use, alignment faking, retrying failed fetches, trying
+fallback approaches, and scanning more carefully
+
+**Purpose**: different from score inflation or unreliable narration, which are reporting problems;
+the broader concept describes an LLM's ability to recognize when it is being tested, estimated at roughly
+80% for frontier models, is the underlying mechanism that triggers this behavioral shift
+
+**Example**: running the [Agent Reading Test](https://agentreadingtest.com/) with Claude in a conversational
+client, the agent recognized the evaluation context - _"Got the instructions. This is a
+well-designed diagnostic."_ - then retried failed fetches, tried fallback approaches, and scanned
+for canary tokens more carefully than it would during normal documentation lookup
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[Goodhart's law]({{< relref "/evaluation" >}}#goodharts-law), [sycophancy]({{< relref "/anatomy" >}}#sycophancy)
+
+**Sources**:
+
+- [arXiv: "The Hawthorne Effect in Reasoning Models: Evaluating and Steering Test Awareness" by Sahar Abdelnabi, Ahmed Salem](https://arxiv.org/abs/2505.14617)
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+- [IAPS: "Evaluation Awareness: Why Frontier AI Models Are Getting Harder To Test" by Sambhav Maheshwari](https://www.iaps.ai/research/evaluation-awareness-why-frontier-ai-models-are-getting-harder-to-test)
+- [Wikipedia: "Hawthorne effect"](https://en.wikipedia.org/wiki/Hawthorne_effect)
 
 ---
 
@@ -404,6 +466,35 @@ run the tests - before selecting specific metrics or benchmarks
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [SAP: "Evaluation and Benchmarking of LLM Agents: A Survey" by Mahmoud Mohammadi, Yipeng Li, Jane Lo, Wendy Yip (KDD 2025 Tutorial)](https://sap-samples.github.io/llm-agents-eval-tutorial/2025_KDD_Evaluation_and_Benchmarking_of_LLM_Agents.pdf)
+
+---
+
+## separation of concerns
+
+**Definition**: software design principle holding that a complex problem should be divided into
+distinct aspects and/or issues that can be analyzed, addressed, or managed individually,
+even when they belong to the same system; achieved through techniques such as temporal sequencing,
+quality separation, view-based separation, and modularity
+
+**Purpose**: reduces cognitive load by letting each concern be studied in isolation, improves
+maintainability, and enables self-contained parts to be developed and tested independently before
+integration; in agent evaluation, this means each participant - agent, scoring system, human - does
+what it is structurally good at
+
+**Example**: the [Agent Reading Test](https://agentreadingtest.com/) splits its design across three
+participants - the agent reads pages and answers questions, a static scoring form compares reported
+values against a known answer key by string comparison, and a human judges whether the agent's
+summary actually matches the reference material; _"No single participant is asked to do something
+it's structurally bad at"_ - the agent never sees the scoring rubric that would bias its answers,
+and nuanced comparison is reserved for human judgment rather than forced onto the agent
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[human-in-the-loop]({{< relref "/evaluation" >}}#human-in-the-loop), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge)
+
+**Sources**:
+
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+- [Wikipedia: "Separation of concerns"](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
 ---
 

@@ -94,6 +94,42 @@ Brief definitions and complete entry locations, organized by the following secti
 
 ---
 
+### agent-friendliness
+
+- contested property describing whether a site's content and infrastructure work for agents
+- measurement includes content accessibility and protocol adoption
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#agent-friendliness)
+
+---
+
+### Agent-Friendly Documentation Spec
+
+- defines 23 checks across 7 categories for agent-accessible documentation
+- evaluates authentication, content structure, discoverability, markdown availability, observability, page size, and URL stability
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#agent-friendly-documentation-spec)
+
+---
+
+### Agent Reading Test
+
+- benchmark measuring whether an agent's web fetch pipeline delivers page content
+- uses canary tokens and task-based retrieval to evaluate what the agent can access
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#agent-reading-test)
+
+---
+
+### `AGENTS.md`
+
+- Markdown file at a repository's root giving coding agents build/test/contribution instructions
+- jointly developed by OpenAI, Google, Sourcegraph, Cursor, and Factory; now stewarded by the Linux Foundation
+
+**Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#agentsmd)
+
+---
+
 ### ARC
 
 - acronym for _AI2 Reasoning Challenge_
@@ -556,6 +592,15 @@ translation and a human-produced translation
 
 ---
 
+### Hawthorne effect
+
+- type of behavioral reactivity in which individuals modify an aspect of their behavior in response to their awareness of being observed
+- observed in agent evaluation in which the agent becomes a more motivated, persistent reader than during normal use
+
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#hawthorne-effect)
+
+---
+
 ### HellaSwag
 
 - acronym for _Harder Endings, Longer contexts and Low-Shot Activities for Situations With Adversarial Generations_
@@ -639,6 +684,15 @@ translation and a human-produced translation
 - provides a way to track and compare the performance of many LLMs
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#llm-leaderboard)
+
+---
+
+### `llms.txt`
+
+- Markdown file at a site's root, giving agents a structured content index
+- functions like `robots.txt` and XML sitemaps, but curates content rather than gating access
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#llmstxt)
 
 ---
 
@@ -1037,7 +1091,7 @@ translation and a human-produced translation
 
 ---
 
-### robots.txt
+### `robots.txt`
 
 - Robots Exclusion Protocol - web standard file placed at a site's root
 - instructs web crawlers which paths they may or may not access
@@ -1083,6 +1137,15 @@ translation and a human-produced translation
 - uses LLM-as-a-judge to score outputs for relevance, factuality and correctness where no ground truth exists
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#semantic-evaluation)
+
+---
+
+### separation of concerns
+
+- evaluation design principle in which a complex problem is divided into distinct aspects or issues
+- aspects addressed and/or managed individually, even when they belong to the same system 
+
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#separation-of-concerns)
 
 ---
 
@@ -1164,6 +1227,16 @@ translation and a human-produced translation
 - AI tailored to a research question: rule-based algorithms, historical data replication, or reinforcement learning
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#stylized-ai-experiment)
+
+---
+
+### summarization layer
+
+- context management mechanism that condenses conversation history, tool outputs, and/or
+retrieved content as an agent's context nears its window limit
+- operates continuously as part of general context engineering
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#summarization-layer)
 
 ---
 
@@ -1267,6 +1340,15 @@ translation and a human-produced translation
 - examines entire decision-making process from initial state to final outcome
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#trajectory-based-evaluation)
+
+---
+
+### truncation budget
+
+- platform-specific character/byte limit an agent's fetch pipeline reads before cutting off
+- independent of the LLM's own context window; varies widely by tool and fetch method
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#truncation-budget)
 
 ---
 

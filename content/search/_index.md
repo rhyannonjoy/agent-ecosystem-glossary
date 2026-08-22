@@ -10,6 +10,69 @@ _How agents find content_: access control, retrieval mechanics, visibility, and 
 
 ---
 
+## agent-friendliness
+
+**Definition**: contested property describing whether a website or service's content and
+infrastructure can be discovered, retrieved, and used by autonomous coding agents;
+no single consensus definition or unified scoring standard exists yet
+
+**Purpose**: names the gap between content merely existing and an agent actually being able to
+retrieve and act on it; a page can rank well in GEO and still fail an agent's fetch pipeline;
+agent-friendliness matters for any team whose APIs, documentation, or product needs
+to be usable by the growing share of traffic that comes from agents
+
+**Example**: [Fern's Agent Score](https://buildwithfern.com/agent-score) measures content
+accessibility with [`afdocs`](https://afdocs.dev/) and the [Agent-Friendly Documentation Spec](https://agentdocsspec.com/) -
+Markdown availability, `llms.txt` structure, truncation risk; [Cloudflare's `isitagentready.com`](https://isitagentready.com/)
+measures protocol adoption - MCP Server Cards, Web Bot Auth, `.well-known` endpoints; prioritize
+the following -
+
+| **Tier** | **Focus** | **Guidance** |
+| --- | --- | --- |
+| **Content Discoverability** | _Can an agent find what's visible?_ | Add `llms.txt`, fix stale links, ship Markdown availability |
+| **Content Visibility** | _Can an agent see your content at all?_ | Fix SPA rendering, extreme truncation, and content buried under chrome |
+| **Protocol Layer Adoption** | _Content already visible and discoverable?_ | Markdown content negotiation has the best return; don't implement a standard just to score points |
+| **Real World Testing** | _Does this hold up against a real agent?_ | Point Claude at docs and watch what happens |
+
+**Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [GEO]({{< relref "search" >}}#geo),
+[`llms.txt`]({{< relref "search" >}}#llmstxt), [MCP server]({{< relref "/interaction" >}}#mcp-server),
+[`robots.txt`]({{< relref "search" >}}#robotstxt), [truncation budget]({{< relref "search" >}}#truncation-budget)
+
+**Source**: [Dachary Carey: "What Agent Score Can Tell You"](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/)
+
+---
+
+## Agent-Friendly Documentation Spec
+
+**Definition**: specification defining 23 checks across 7 categories that evaluate how well a
+documentation site serves coding agents; grounded in empirical observation of real agent workflows
+
+**Purpose**: provides a shared standard for documentation teams, tool builders, and platform
+providers to measure and improve how effectively agents can discover, retrieve, and consume
+documentation content; categories cover content discoverability, markdown availability, page
+size and truncation risk, content structure, URL stability, observability, and authentication
+
+**Example**: [`afdocs`](https://afdocs.dev/) is a companion CLI tool and Node.js library that
+implements the spec; running `npx afdocs check https://docs.example.com --format scorecard`
+produces a scorecard with category breakdowns, system-level diagnostics, and per-check results
+with fix suggestions, and includes a vitest helper for CI integration to catch regressions;
+[Fern's Agent Score](https://buildwithfern.com/agent-score) ships the same 22 checks as a single
+number
+
+**Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
+[Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [`robots.txt`]({{< relref "search" >}}#robotstxt),
+[spec]({{< relref "/anatomy" >}}#spec)
+
+**Sources**:
+
+- [AFDocs by Dachary Carey](https://afdocs.dev/)
+- [Agent-Friendly Documentation Spec by Dachary Carey](https://agentdocsspec.com/)
+- [Dachary Carey: "What Agent Score Can Tell You"](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/)
+
+---
+
 ## citation share
 
 **Definition**: percentage of AI-generated answers, in a defined prompt cluster, that link to or name a specific
@@ -43,7 +106,7 @@ Reddit cut off `ChatGPT`'s access despite an existing partnership
 **Example**: the May 2024 OpenAI-Reddit data-licensing partnership that gave OpenAI structured
 API access for training and product use, separate from ordinary web crawling
 
-**Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [robots.txt]({{< relref "search" >}}#robotstxt),
+**Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [`robots.txt`]({{< relref "search" >}}#robotstxt),
 [training data]({{< relref "/anatomy" >}}#training-data)
 
 **Source**:
@@ -70,6 +133,32 @@ questions about a product, rather than trying to rank on Google's first page
 **Source**:
 
 - [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
+
+---
+
+## `llms.txt`
+
+**Definition**: Markdown file published at a site's root path (`/llms.txt`) that gives LLMs and
+agents a curated, structured index of a site's content, distinct from the raw HTML a browser
+renders; a companion `/llms-full.txt` inlines the complete content in one file
+
+**Purpose**: reduces the cost of parsing full HTML pages for content discovery by giving agents a
+direct, structured entry point; functions like `robots.txt` and XML sitemaps, but curates content
+for consumption rather than gating access to it
+
+**Example**: only one section is required, an `H1` heading naming the project or site; documentation
+sites keep `/llms.txt` under 50,000 characters using a progressive disclosure pattern, linking out
+to full pages for large doc sets rather than inlining everything
+
+**Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
+[Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
+[`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[`robots.txt`]({{< relref "search" >}}#robotstxt), [truncation budget]({{< relref "search" >}}#truncation-budget)
+
+**Sources**:
+
+- [llms.txt: The /llms.txt file by Jeremy Howard](https://llmstxt.org/)
+- [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
 
 ---
 
@@ -118,25 +207,50 @@ disproportionately excluded Reddit thread-style content
 
 ---
 
-## robots.txt
+## `robots.txt`
 
 **Definition**: Robots Exclusion Protocol; web standard file placed at a site's root that
 instructs web crawlers which paths they may or may not access
 
 **Purpose**: the lowest-level access control layer for web content; a publisher can cut off an
-AI search engine's citation pipeline unilaterally with a one-line change, making robots.txt a
+AI search engine's citation pipeline unilaterally with a one-line change, making `robots.txt` a
 critical dependency for any GEO strategy that relies on live crawled content
 
 **Example**: Reddit adding a blanket `Disallow: /` to its `robots.txt` in August 2026, which
 caused `ChatGPT`'s citation share from Reddit to collapse from 3.83% to 0.52% in one day
 
-**Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [GEO]({{< relref "search" >}}#geo),
+**Related Terms**: [agent]({{< relref "/anatomy" >}}#agent), [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
+[`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [citation share]({{< relref "search" >}}#citation-share),
+[GEO]({{< relref "search" >}}#geo), [`llms.txt`]({{< relref "search" >}}#llmstxt),
 [retrieval pool]({{< relref "search" >}}#retrieval-pool)
 
 **Source**:
 
 - [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
 - [Wikipedia: "robots.txt"](https://en.wikipedia.org/wiki/Robots.txt)
+
+---
+
+## truncation budget
+
+**Definition**: platform-specific character or byte limit an agent's fetch pipeline reads from a
+page before cutting the response off, independent of the LLM's own context window
+
+**Purpose**: cost efficiency mechanism behind how identical page content reaches different agents in
+different amounts; budgets vary widely by tool and fetch method
+
+**Example**: a documentation page where actual content doesn't begin until 87% through the HTTP
+response, after markup and navigation elements consume most of the truncation budget, leaves an
+agent with only the page's last few paragraphs even though the full page loaded successfully
+
+**Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
+[context window]({{< relref "/anatomy" >}}#context-window), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[`llms.txt`]({{< relref "search" >}}#llmstxt), [summarization layer]({{< relref "/anatomy" >}}#summarization-layer)
+
+**Sources**:
+
+- [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
+- [Agent-Friendly Documentation Spec: "Agent platform comparisons" by Dachary Carey, Rhyannon Rodriguez](https://agentdocsspec.com/platforms/)
 
 ---
 
