@@ -24,10 +24,21 @@ relevance filtering - rather than agent reasoning; uses a task-first design to a
 the agent's relevance layer, with canary reporting separated into a post-task phase and
 human-side scoring to avoid self-assessment bias
 
-**Example**: 20 points across 10 tasks — 16 from canary tokens at specific page positions,
+**Scoring**: 20 points across 10 tasks — 16 from canary tokens at specific page positions,
 10K, 40K, 75K, 100K, 130K characters - and 4 from qualitative assessment of task responses;
 an agent that scores 12 with all truncation canaries, but no tabbed content tells a different
 story than one that scores 12 with tabs but no content past 40K
+
+| **Finding** | **Description** |
+| --- | --- |
+| **Self-Reporting Unreliability** | agents are unreliable self-reporters because LLMs are agreeable pattern-matchers |
+| **Pipeline vs. Agent Behavior** | infrastructure layer with HTTP, redirects, JavaScript behaves differently from the reasoning layer on top of it; conflating the two produces misleading conclusions |
+| **Priming Corrupts Measurement** | when an agent knows what's being looked for, summarization treats those items as relevant, skewing whether content actually survives the pipeline |
+| **Cascading Accuracy Problems** | each attempted fix revealed a new failure mode, score inflation led to qualitative reporting issues, which led to framing problems, which exposed summarization layers |
+| **Evaluation Context Changes Behavior** | agents perform differently once they recognize they're being tested, attempting more complexity, more persistence than normal |
+| **Human Usability Research Translates** | framing evaluation as _"testing the documentation, not you"_ reduces performance anxiety, produces natural behavior in human and agent users |
+| **Safety Filters Block Agent-Directed Markup** | patterns like `<blockquote><strong>Agent:</strong>` trigger intermediary safety models, preventing content delivery entirely |
+| **Structural Separation Works Best** | most reliable separation includes agent dividing tasks, comparison with static analysis, human judgment |
 
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
 [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Hawthorne effect]({{< relref "/evaluation" >}}#hawthorne-effect),
