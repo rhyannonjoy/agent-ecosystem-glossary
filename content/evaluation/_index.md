@@ -122,16 +122,36 @@ function in terms of quality and cost vs non-functional and/or safety
 **Evaluation vs Benchmarking**: benchmarking is static testing against a fixed dataset to establish
 baselines while evaluation describes a dynamic, ongoing measurement of agent performance
 
-**Example**: a team continuously scores a RAG pipeline's answers for relevance and factuality rather
-than running a one-off generic test
+**Evaluating Platform-Written Specs**: platform-published specs for agent-friendly practices needs
+their own scrutiny before adoption as business incentives shape what the spec measures and what it
+leaves out; using [Vercel's agent-readiness guidance](https://vercel.com/kb/guide/agent-readability-spec)
+as a case study -
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation)
-trajectory-based evaluation
+| **Check** | **Question** |
+| --- | --- |
+| **Audience Definition** | _Does the spec distinguish user types?_ Vercel's spec conflates coding agents with training crawlers, which behave and need fundamentally differently |
+| **Empirical Grounding** | _Does the spec cite data, or are claims presented as fact?_ Vercel's _"sites optimized for agent readability get cited more often"_ is an unsupported hypothesis, not a finding |
+| **Omission Analysis** | _Do the gaps align with the publisher's business constraints?_ Vercel's spec never measures content-start-position, which would expose problems inherent to `Next.js` |
+| **Self-Consistency** | _Would the publisher's own properties pass its own checks?_ Vercel's `llms.txt` exceeds the size threshold its spec recommends |
+
+| **Recommendation** | **Description** |
+| --- | --- |
+| **Evaluate, Don't Dismiss** | Don't reject platform guidance outright, but assess each recommendation on its own merits |
+| **Examine Incentive Alignment** | Be skeptical when a recommendation conveniently omits the publisher's own limitations |
+| **Prioritize Empirical Specs** | Favor guidance grounded in observed agent behavior with measured thresholds |
+| **Test Directly** | Validate with agents rather than relying solely published recommendations |
+
+**Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
+[benchmark]({{< relref "/evaluation" >}}#benchmark), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation),
+[`llms.txt`]({{< relref "/search" >}}#llmstxt), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy),
+[stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation),
+[truncation budget]({{< relref "/search" >}}#truncation-budget)
 
 **Sources**:
 
 - [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
 - [IBM: "What is AI agent evaluation?" by Cole Stryker and Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+- [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
 
 ---
 

@@ -26,7 +26,8 @@ produces a scorecard with category breakdowns, system-level diagnostics, and per
 with fix suggestions, and includes a vitest helper for CI integration to catch regressions
 
 **Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
-[`robots.txt`]({{< relref "search" >}}#robotstxt), [spec]({{< relref "/anatomy" >}}#spec)
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [`robots.txt`]({{< relref "search" >}}#robotstxt),
+[spec]({{< relref "/anatomy" >}}#spec)
 
 **Sources**:
 
@@ -113,8 +114,8 @@ sites keep `/llms.txt` under 50,000 characters using a progressive disclosure pa
 to full pages for large doc sets rather than inlining everything
 
 **Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
-[`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [`robots.txt`]({{< relref "search" >}}#robotstxt),
-[truncation budget]({{< relref "search" >}}#truncation-budget)
+[`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[`robots.txt`]({{< relref "search" >}}#robotstxt), [truncation budget]({{< relref "search" >}}#truncation-budget)
 
 **Sources**:
 
@@ -204,7 +205,8 @@ response, after markup and navigation elements consume most of the truncation bu
 agent with only the page's last few paragraphs even though the full page loaded successfully
 
 **Related Terms**: [canary phrase]({{< relref "/evaluation" >}}#canary-phrase), [context window]({{< relref "/anatomy" >}}#context-window),
-[`llms.txt`]({{< relref "search" >}}#llmstxt), [summarization layer]({{< relref "/anatomy" >}}#summarization-layer)
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [`llms.txt`]({{< relref "search" >}}#llmstxt),
+[summarization layer]({{< relref "/anatomy" >}}#summarization-layer)
 
 **Sources**:
 
