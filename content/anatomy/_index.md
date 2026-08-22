@@ -40,10 +40,19 @@ distinct from chatbots, process automation, and workflow engines through autonom
 **Example**: an agent that retrieves a file, edits it, and runs a command to complete a
 request without step-by-step human instruction
 
+**Coding Agent vs Training Crawler**: coding agents such as Claude Code, Cursor, GitHub Copilot, make
+real time HTTP requests during a task using generic HTTP client signatures like `axios/1.8.4`,
+while training crawlers like `GPTBot`, `ClaudeBot`, `CCBot` scrape the web for LLM training data
+and self-identify via distinct user-agent strings that respect `robots.txt`; most agent-detection
+mechanisms such as user-agent sniffing, the `RFC 9421` `Signature-Agent` header, bot-management JS
+challenges - catch training crawlers and answer-engine bots, not coding agents, which remain
+effectively invisible to them
+
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
-[automation]({{< relref "anatomy" >}}#automation),
-[memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning),
-[self-reflection]({{< relref "/interaction" >}}#self-reflection)
+[automation]({{< relref "anatomy" >}}#automation), [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning),
+[`robots.txt`]({{< relref "/search" >}}#robotstxt), [self-reflection]({{< relref "/interaction" >}}#self-reflection)
+
+**Source**: [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
 
 ---
 

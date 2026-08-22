@@ -112,6 +112,15 @@ Brief definitions and complete entry locations, organized by the following secti
 
 ---
 
+### `AGENTS.md`
+
+- Markdown file at a repository's root giving coding agents build/test/contribution instructions
+- jointly developed by OpenAI, Google, Sourcegraph, Cursor, and Factory; now stewarded by the Linux Foundation
+
+**Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#agentsmd)
+
+---
+
 ### ARC
 
 - acronym for _AI2 Reasoning Challenge_
@@ -669,6 +678,15 @@ translation and a human-produced translation
 
 ---
 
+### `llms.txt`
+
+- Markdown file at a site's root, giving agents a structured content index
+- functions like `robots.txt` and XML sitemaps, but curates content rather than gating access
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#llmstxt)
+
+---
+
 ## M
 
 ---
@@ -1064,7 +1082,7 @@ translation and a human-produced translation
 
 ---
 
-### robots.txt
+### `robots.txt`
 
 - Robots Exclusion Protocol - web standard file placed at a site's root
 - instructs web crawlers which paths they may or may not access
@@ -1313,6 +1331,15 @@ retrieved content as an agent's context nears its window limit
 - examines entire decision-making process from initial state to final outcome
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#trajectory-based-evaluation)
+
+---
+
+### truncation budget
+
+- platform-specific character/byte limit an agent's fetch pipeline reads before cutting off
+- independent of the LLM's own context window; varies widely by tool and fetch method
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#truncation-budget)
 
 ---
 
