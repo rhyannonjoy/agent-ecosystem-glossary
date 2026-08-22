@@ -437,7 +437,7 @@ run the tests - before selecting specific metrics or benchmarks
 **Evaluation Objectives**:
 
 | Dimension | Description | Examples |
-|---|---|---|
+| --- | --- | --- |
 | Agent Behavior | outcome oriented; did the agent produce the correct, efficient, affordable result? | task completion, interaction quality, latency & cost |
 | Agent Capabilities | process oriented; did the agent follow the right reasoning process? | planning & reasoning, memory & context, tool use, multi-agent behavior |
 | Reliability | consistency across time and input variations | robustness, hallucinations, error handling |
@@ -446,7 +446,7 @@ run the tests - before selecting specific metrics or benchmarks
 **Evaluation Process**:
 
 | Dimension | Description | Subcategories |
-|---|---|---|
+| --- | --- | --- |
 | Interaction Mode | how evaluation data is provided to the system | static/offline vs. dynamic/online |
 | Evaluation Data | what data is used to evaluate the system | human-annotated, synthetic, interaction-generated |
 | Metrics Computation Methods | what method computes the evaluation metrics | code based, LLM-as-judge, human-as-a-judge |
@@ -456,7 +456,7 @@ run the tests - before selecting specific metrics or benchmarks
 **Notable Benchmarks by Objective**:
 
 | Objective | Benchmarks |
-|---|---|
+| --- | --- |
 | Tool Use | ToolBench, API-Bank |
 | Planning | TaskBench, ScienceAgentBench |
 | Safety | AgentHarm, CoSafe, AgentDojo |

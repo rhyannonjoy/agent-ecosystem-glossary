@@ -155,8 +155,8 @@ to full pages for large doc sets rather than inlining everything
 
 **Sources**:
 
-- [llms.txt: The /llms.txt file by Jeremy Howard](https://llmstxt.org/)
 - [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
+- [llms.txt: The /llms.txt file, v2 by Jeremy Howard](https://llmstxt.org/)
 
 ---
 
@@ -177,9 +177,7 @@ _"affordable project management tools"_, while each retrieves different sources
 **Related Terms**: [context window]({{< relref "/anatomy" >}}#context-window), [GEO]({{< relref "search" >}}#geo),
 [LLM]({{< relref "/anatomy" >}}#llm), [prompt]({{< relref "/interaction" >}}#prompt)
 
-**Source**:
-
-- [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
+**Source**: [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
 
 ---
 
@@ -199,9 +197,7 @@ disproportionately excluded Reddit thread-style content
 **Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [GEO]({{< relref "search" >}}#geo),
 [query fan-out]({{< relref "search" >}}#query-fan-out)
 
-**Source**:
-
-- [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
+**Source**: [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
 
 ---
 
@@ -222,7 +218,7 @@ caused `ChatGPT`'s citation share from Reddit to collapse from 3.83% to 0.52% in
 [GEO]({{< relref "search" >}}#geo), [`llms.txt`]({{< relref "search" >}}#llmstxt),
 [retrieval pool]({{< relref "search" >}}#retrieval-pool)
 
-**Source**:
+**Sources**:
 
 - [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
 - [Wikipedia: "robots.txt"](https://en.wikipedia.org/wiki/Robots.txt)
@@ -267,6 +263,4 @@ commanded significant citation share in `ChatGPT` but declined sharply after Aug
 **Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [GEO]({{< relref "search" >}}#geo),
 [retrieval pool]({{< relref "search" >}}#retrieval-pool)
 
-**Source**:
-
-- [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
+**Source**: [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)

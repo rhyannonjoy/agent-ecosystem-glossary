@@ -163,8 +163,8 @@ the prompt
 **Sources**:
 
 - [GitHub: Promptions - Ephemeral UI for prompting](https://www.microsoft.com/en-us/research/project/tools-for-thought/promptions-repository/)
-- [Microsoft Research: "Dynamic Prompt Middleware: Contextual Prompt Refinement Controls for Comprehension Tasks" by Drosos et al.](https://aka.ms/promptionspaper)
 - [Microsoft: "Tools for Thought - Better Thinking Through AI"](https://www.microsoft.com/en-us/research/project/tools-for-thought/)
+- [Microsoft Research: "Dynamic Prompt Middleware: Contextual Prompt Refinement Controls for Comprehension Tasks" by Drosos et al.](https://aka.ms/promptionspaper)
 
 ---
 
