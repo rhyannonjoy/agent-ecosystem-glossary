@@ -94,6 +94,15 @@ Brief definitions and complete entry locations, organized by the following secti
 
 ---
 
+### agent-friendliness
+
+- contested property describing whether a site's content and infrastructure work for agents
+- measurement includes content accessibility and protocol adoption
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#agent-friendliness)
+
+---
+
 ### Agent-Friendly Documentation Spec
 
 - defines 23 checks across 7 categories for agent-accessible documentation

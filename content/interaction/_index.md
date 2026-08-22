@@ -46,9 +46,7 @@ conversation history that informs subsequent responses
 **Related Terms**: [turn]({{< relref "interaction" >}}#turn),
 [user message]({{< relref "interaction" >}}#user-message)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -78,9 +76,7 @@ applies at its own discretion
 **Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [gate]({{< relref "interaction" >}}#gate),
 [rule]({{< relref "interaction" >}}#rule), [slash command]({{< relref "interaction" >}}#slash-command)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -93,11 +89,9 @@ capabilities to an agent - tools, resources, and/or prompts
 server is built to access; facilitates portable behavior across agent platforms because
 implementation lives in the server rather than the harness
 
-**Related Terms**: [harness]({{< relref "/anatomy" >}}#harness)
+**Related Terms**: [agent-friendliness]({{< relref "/search" >}}#agent-friendliness), [harness]({{< relref "/anatomy" >}}#harness)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -214,9 +208,7 @@ hooks and slash commands
 [prompt]({{< relref "interaction" >}}#prompt), [slash command]({{< relref "interaction" >}}#slash-command),
 [system prompt]({{< relref "interaction" >}}#system-prompt)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -232,9 +224,7 @@ runs
 **Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [hook]({{< relref "interaction" >}}#hook),
 [prompt]({{< relref "interaction" >}}#prompt)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -250,9 +240,7 @@ default behaviors, and constraints
 **Related Terms**: [`/SKILL`]({{< relref "interaction" >}}#skill), [context window]({{< relref "/anatomy" >}}#context-window),
 [prompt]({{< relref "interaction" >}}#prompt), [temperature]({{< relref "/anatomy" >}}#temperature)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -267,9 +255,7 @@ context
 **Related Terms**: [assistant message]({{< relref "interaction" >}}#assistant-message),
 [context window]({{< relref "/anatomy" >}}#context-window), [user message]({{< relref "interaction" >}}#user-message)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
@@ -284,6 +270,4 @@ window, heavily influencing the agent's response
 **Related Terms**: [assistant message]({{< relref "interaction" >}}#assistant-message),
 [prompt]({{< relref "interaction" >}}#prompt), [turn]({{< relref "interaction" >}}#turn)
 
-**Source**:
-
-- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)

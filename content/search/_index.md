@@ -10,6 +10,30 @@ _How agents find content_: access control, retrieval mechanics, visibility, and 
 
 ---
 
+## agent-friendliness
+
+**Definition**: contested property describing whether a website or service's content and
+infrastructure can be discovered, retrieved, and used by autonomous coding agents;
+no single consensus definition or unified scoring standard exists yet
+
+**Purpose**: names the gap between content merely existing and an agent actually being able to
+retrieve and act on it; a page can rank well in GEO and still fail an agent's fetch pipeline;
+agent-friendliness matters for any team whose APIs, documentation, or product needs
+to be usable by the growing share of traffic that comes from agents
+
+**Example**: [Fern's Agent Score](https://buildwithfern.com/agent-score) measures content
+accessibility with [`afdocs`](https://afdocs.dev/) and the [Agent-Friendly Documentation Spec](https://agentdocsspec.com/) -
+Markdown availability, `llms.txt` structure, truncation risk; [Cloudflare's `isitagentready.com`](https://isitagentready.com/)
+measures protocol adoption - MCP Server Cards, Web Bot Auth, `.well-known` endpoints
+
+**Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
+[GEO]({{< relref "search" >}}#geo), [`llms.txt`]({{< relref "search" >}}#llmstxt), [MCP server]({{< relref "/interaction" >}}#mcp-server),
+[`robots.txt`]({{< relref "search" >}}#robotstxt), [truncation budget]({{< relref "search" >}}#truncation-budget)
+
+**Source**: [Dachary Carey: "What Agent Score Can Tell You"](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/)
+
+---
+
 ## Agent-Friendly Documentation Spec
 
 **Definition**: specification defining 23 checks across 7 categories that evaluate how well a
@@ -23,9 +47,12 @@ size and truncation risk, content structure, URL stability, observability, and a
 **Example**: [`afdocs`](https://afdocs.dev/) is a companion CLI tool and Node.js library that
 implements the spec; running `npx afdocs check https://docs.example.com --format scorecard`
 produces a scorecard with category breakdowns, system-level diagnostics, and per-check results
-with fix suggestions, and includes a vitest helper for CI integration to catch regressions
+with fix suggestions, and includes a vitest helper for CI integration to catch regressions; Fern
+ships the same 22 checks to end users as a single number under the name **Agent Score**, trading
+the raw scorecard for a consumer-facing score
 
-**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
+**Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
+[Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
 [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [`robots.txt`]({{< relref "search" >}}#robotstxt),
 [spec]({{< relref "/anatomy" >}}#spec)
 
@@ -33,6 +60,7 @@ with fix suggestions, and includes a vitest helper for CI integration to catch r
 
 - [AFDocs by Dachary Carey](https://afdocs.dev/)
 - [Agent-Friendly Documentation Spec by Dachary Carey](https://agentdocsspec.com/)
+- [Dachary Carey: "What Agent Score Can Tell You"](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/)
 
 ---
 
@@ -113,7 +141,8 @@ for consumption rather than gating access to it
 sites keep `/llms.txt` under 50,000 characters using a progressive disclosure pattern, linking out
 to full pages for large doc sets rather than inlining everything
 
-**Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
+**Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
+[Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
 [`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
 [`robots.txt`]({{< relref "search" >}}#robotstxt), [truncation budget]({{< relref "search" >}}#truncation-budget)
 
@@ -181,9 +210,10 @@ critical dependency for any GEO strategy that relies on live crawled content
 **Example**: Reddit adding a blanket `Disallow: /` to its `robots.txt` in August 2026, which
 caused `ChatGPT`'s citation share from Reddit to collapse from 3.83% to 0.52% in one day
 
-**Related Terms**: [agent]({{< relref "/anatomy" >}}#agent), [`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd),
-[citation share]({{< relref "search" >}}#citation-share), [GEO]({{< relref "search" >}}#geo),
-[`llms.txt`]({{< relref "search" >}}#llmstxt), [retrieval pool]({{< relref "search" >}}#retrieval-pool)
+**Related Terms**: [agent]({{< relref "/anatomy" >}}#agent), [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
+[`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [citation share]({{< relref "search" >}}#citation-share),
+[GEO]({{< relref "search" >}}#geo), [`llms.txt`]({{< relref "search" >}}#llmstxt),
+[retrieval pool]({{< relref "search" >}}#retrieval-pool)
 
 **Source**:
 
@@ -204,9 +234,9 @@ different amounts; budgets vary widely by tool and fetch method
 response, after markup and navigation elements consume most of the truncation budget, leaves an
 agent with only the page's last few paragraphs even though the full page loaded successfully
 
-**Related Terms**: [canary phrase]({{< relref "/evaluation" >}}#canary-phrase), [context window]({{< relref "/anatomy" >}}#context-window),
-[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [`llms.txt`]({{< relref "search" >}}#llmstxt),
-[summarization layer]({{< relref "/anatomy" >}}#summarization-layer)
+**Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
+[context window]({{< relref "/anatomy" >}}#context-window), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[`llms.txt`]({{< relref "search" >}}#llmstxt), [summarization layer]({{< relref "/anatomy" >}}#summarization-layer)
 
 **Sources**:
 
