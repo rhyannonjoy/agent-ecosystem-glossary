@@ -219,10 +219,18 @@ based on LLM-as-a-judge, cover parameter value grounding and unit transformation
 ## functional correctness
 
 **Definition**: evaluation criterion for code generation benchmarks; judges solutions
-by whether LLMs pass the corresponding unit tests
-
-**Purpose**: provides an objective, executable measure of code quality used by HumanEval,
+by whether LLMs pass the corresponding unit tests; used by HumanEval,
 MBPP and similar coding benchmarks
+
+**Purpose**: provides an objective, executable measure of code quality; distinguishes code that
+works successfully from code that looks plausible; text-similarity metrics like BLEU or exact match
+can score a solution highly for reading like correct code, since they compare surface tokens rather
+than execute anything, while functional correctness only credits a solution once it runs and passes
+
+**Example**: a generated solution to _"write a function that returns the average of a list of
+numbers"_ might read fluently and closely match a reference implementation's wording, but divide
+by zero on an empty list; a unit test exercising that edge case fails the solution outright, while
+a token-overlap metric would still score it well for resembling the reference code
 
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [pass@k]({{< relref "/evaluation/metrics" >}}#passk), [HumanEval]({{< relref "/evaluation/benchmarks" >}}#humaneval), [MBPP]({{< relref "/evaluation/benchmarks" >}}#mbpp)
 
