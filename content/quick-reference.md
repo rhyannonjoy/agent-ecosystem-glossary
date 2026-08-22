@@ -449,15 +449,6 @@ translation and a human-produced translation
 
 ---
 
-### final response evaluation
-
-- evaluation methodology that assesses only the end result or output of an agent's execution
-- judges success based on whether final answer or outcome is correct
-
-**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#final-response-evaluation)
-
----
-
 ### Flesch–Kincaid readability tests
 
 - designed to indicate how difficult a passage in English is to understand
@@ -1203,15 +1194,6 @@ translation and a human-produced translation
 
 ---
 
-### stepwise evaluation
-
-- evaluation methodology that assesses agent performance at each individual step of task execution
-- examines correctness of intermediate actions, decisions, and reasoning at granular level
-
-**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#stepwise-evaluation)
-
----
-
 ### stochastic
 
 - random probability distribution or pattern that may be analyzed statistically, but may not be predicted precisely
@@ -1331,15 +1313,6 @@ retrieved content as an agent's context nears its window limit
 - LLM learns by processing examples and adjusting internal parameters
 
 **Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#training-data)
-
----
-
-### trajectory-based evaluation
-
-- evaluation methodology that analyzes the complete path or sequence of actions an agent takes
-- examines entire decision-making process from initial state to final outcome
-
-**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#trajectory-based-evaluation)
 
 ---
 

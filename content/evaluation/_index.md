@@ -43,7 +43,7 @@ examines outputs, behaviors, or decision-making processes
 **Purpose**: related to LLM-as-judge, but focuses on agentic system evaluation rather than just
 text outputs
 
-**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
+**Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge)
 
 ---
 
@@ -120,7 +120,14 @@ decision-making and interacting with users
 function in terms of quality and cost vs non-functional and/or safety
 
 **Evaluation vs Benchmarking**: benchmarking is static testing against a fixed dataset to establish
-baselines while evaluation describes a dynamic, ongoing measurement of agent performance
+baselines while evaluation describes a dynamic, ongoing measurement of agent performance;
+methodologies also differ by how much of an agent's execution they examine -
+
+| **Granularity** | **Description** |
+| --- | --- |
+| **Final Response** | Judges only end result; fast, with clear success criteria, but no insight into reasoning, intermediate steps, or failure points |
+| **Step-Level** | Scores each intermediate action, decision, or reasoning step; more resource-intensive, but pinpoints exactly where a multi-step process succeeds or fails |
+| **Trajectory-Based** | Analyzes the complete path from initial state to outcome - efficiency, failure recovery, reasoning quality, for a holistic view beyond correctness alone |
 
 **Evaluating Platform-Written Specs**: platform-published specs for agent-friendly practices needs
 their own scrutiny before adoption as business incentives shape what the spec measures and what it
@@ -143,16 +150,19 @@ as a case study -
 
 **Related Terms**: [agent-friendliness]({{< relref "/search" >}}#agent-friendliness),
 [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
-[benchmark]({{< relref "/evaluation" >}}#benchmark), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation),
+[benchmark]({{< relref "/evaluation" >}}#benchmark),
 [`llms.txt`]({{< relref "/search" >}}#llmstxt), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy),
-[stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation),
 [truncation budget]({{< relref "/search" >}}#truncation-budget)
 
 **Sources**:
 
-- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
-- [IBM: "What is AI agent evaluation?" by Cole Stryker and Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
+- [Arize: "How to evaluate AI agents: a production workflow"](https://arize.com/guides/ai-agent-handbook/agent-evaluation/)
+- [Atlan: "How to Measure Agent Trajectory: The Path, Not the Answer" by Karthik Pasupathy](https://atlan.com/know/ai-agent/ai-agent-trajectory-evaluation/)
+- [Confident AI, Inc., DeepEval: "Trajectory-Based Evaluation"](https://deepeval.com/docs/evaluation-trajectory-based-llm-evals)
 - [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
+- [HumanSignal, Label Studio: "LLM Evaluation vs. LLM Benchmarking"](https://labelstud.io/learningcenter/llm-evaluation-vs-llm-benchmarking/)
+- [HumanSignal, Label Studio: "Step-level vs. outcome-level evaluation: What's the difference?"](https://labelstud.io/learningcenter/step-level-vs-outcome-level-evaluation/)
+- [IBM: "What is AI agent evaluation?" by Cole Stryker and Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
 
 ---
 
@@ -165,7 +175,7 @@ evaluation guides design and iteration; structurally similar to TDD - _test-driv
 testing and metrics to inform architectural decisions throughout the development lifecycle; emphasizes
 measurable outcomes and systematic improvement
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [regression testing]({{< relref "/evaluation" >}}#regression-testing), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [regression testing]({{< relref "/evaluation" >}}#regression-testing)
 
 **Source**: [Braintrust: "What is eval-driven development: How to ship high-quality agents without guessing"](https://www.braintrust.dev/articles/eval-driven-development)
 
@@ -182,20 +192,6 @@ common LLM benchmark testing approaches, alongside zero-shot and fine-tuning
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [HellaSwag]({{< relref "/evaluation/benchmarks" >}}#hellaswag), [MMLU]({{< relref "/evaluation/benchmarks" >}}#mmlu), [zero-shot]({{< relref "/evaluation" >}}#zero-shot)
 
 **Source**: [IBM: "What Are LLM Benchmarks?" by Rina Diane Caballar, Cole Stryker](https://www.ibm.com/think/topics/llm-benchmarks)
-
----
-
-## final response evaluation
-
-**Definition**: evaluation methodology that assesses only the end result or output of an agent's
-execution; judges success based on whether the final answer or outcome is correct
-
-**Purpose**: streamlined implementation with clear success criteria; provides no insight into the reasoning
-process, intermediate steps, or failure points
-
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [EDD]({{< relref "/evaluation" >}}#edd), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
-
-**Source**: [Arize: "How to evaluate AI agents: a production workflow"](https://arize.com/guides/ai-agent-handbook/agent-evaluation/)
 
 ---
 
@@ -510,37 +506,6 @@ verify syntax and function-call shape
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [ground truth]({{< relref "/evaluation" >}}#ground-truth), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge)
 
 **Source**: [IBM: "What is AI agent evaluation?" by Cole Stryker, Michal Schmueli-Scheuer](https://www.ibm.com/think/topics/ai-agent-evaluation)
-
----
-
-## stepwise evaluation
-
-**Definition**: evaluation methodology that assesses agent performance at each individual step of task
-execution; examines correctness of intermediate actions, decisions, and reasoning at a granular level
-
-**Purpose**: enables debugging and improvement of specific reasoning or action-taking capabilities and
-identifies exactly where an agent succeeds or fails in multi-step processes; more resource-intensive than
-final response evaluation but provides richer diagnostic information
-
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [EDD]({{< relref "/evaluation" >}}#edd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation)
-
----
-
-## trajectory-based evaluation
-
-**Definition**: evaluation methodology that analyzes the complete path or sequence of actions an agent
-takes; examines the entire decision-making process from initial state to final outcome
-
-**Purpose**: considers not just correctness but efficiency, reasoning quality, and recovery from errors;
-enables evaluation of process quality rather than only outcome quality, providing a holistic view of
-agent behavior including planning, adaptation, and tool use patterns
-
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [EDD]({{< relref "/evaluation" >}}#edd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation), [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation)
-
-**Sources**:
-
-- [Atlan: "How to Measure Agent Trajectory: The Path, Not the Answer" by Karthik Pasupathy](https://atlan.com/know/ai-agent/ai-agent-trajectory-evaluation/)
-- [Confident AI, Inc., DeepEval: "Trajectory-Based Evaluation"](https://deepeval.com/docs/evaluation-trajectory-based-llm-evals)
 
 ---
 
