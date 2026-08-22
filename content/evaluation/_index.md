@@ -141,7 +141,8 @@ as a case study -
 | **Prioritize Empirical Specs** | Favor guidance grounded in observed agent behavior with measured thresholds |
 | **Test Directly** | Validate with agents rather than relying solely published recommendations |
 
-**Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
+**Related Terms**: [agent-friendliness]({{< relref "/search" >}}#agent-friendliness),
+[Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
 [benchmark]({{< relref "/evaluation" >}}#benchmark), [final response evaluation]({{< relref "/evaluation" >}}#final-response-evaluation),
 [`llms.txt`]({{< relref "/search" >}}#llmstxt), [SAP Labs agent eval taxonomy]({{< relref "/evaluation" >}}#sap-labs-agent-eval-taxonomy),
 [stepwise evaluation]({{< relref "/evaluation" >}}#stepwise-evaluation), [trajectory-based evaluation]({{< relref "/evaluation" >}}#trajectory-based-evaluation),

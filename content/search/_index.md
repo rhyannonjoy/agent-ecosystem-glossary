@@ -24,10 +24,19 @@ to be usable by the growing share of traffic that comes from agents
 **Example**: [Fern's Agent Score](https://buildwithfern.com/agent-score) measures content
 accessibility with [`afdocs`](https://afdocs.dev/) and the [Agent-Friendly Documentation Spec](https://agentdocsspec.com/) -
 Markdown availability, `llms.txt` structure, truncation risk; [Cloudflare's `isitagentready.com`](https://isitagentready.com/)
-measures protocol adoption - MCP Server Cards, Web Bot Auth, `.well-known` endpoints
+measures protocol adoption - MCP Server Cards, Web Bot Auth, `.well-known` endpoints; prioritize
+the following -
+
+| **Tier** | **Focus** | **Guidance** |
+| --- | --- | --- |
+| **Content Discoverability** | _Can an agent find what's visible?_ | Add `llms.txt`, fix stale links, ship Markdown availability |
+| **Content Visibility** | _Can an agent see your content at all?_ | Fix SPA rendering, extreme truncation, and content buried under chrome |
+| **Protocol Layer Adoption** | _Content already visible and discoverable?_ | Markdown content negotiation has the best return; don't implement a standard just to score points |
+| **Real World Testing** | _Does this hold up against a real agent?_ | Point Claude at docs and watch what happens |
 
 **Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
-[GEO]({{< relref "search" >}}#geo), [`llms.txt`]({{< relref "search" >}}#llmstxt), [MCP server]({{< relref "/interaction" >}}#mcp-server),
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [GEO]({{< relref "search" >}}#geo),
+[`llms.txt`]({{< relref "search" >}}#llmstxt), [MCP server]({{< relref "/interaction" >}}#mcp-server),
 [`robots.txt`]({{< relref "search" >}}#robotstxt), [truncation budget]({{< relref "search" >}}#truncation-budget)
 
 **Source**: [Dachary Carey: "What Agent Score Can Tell You"](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/)
@@ -47,9 +56,9 @@ size and truncation risk, content structure, URL stability, observability, and a
 **Example**: [`afdocs`](https://afdocs.dev/) is a companion CLI tool and Node.js library that
 implements the spec; running `npx afdocs check https://docs.example.com --format scorecard`
 produces a scorecard with category breakdowns, system-level diagnostics, and per-check results
-with fix suggestions, and includes a vitest helper for CI integration to catch regressions; Fern
-ships the same 22 checks to end users as a single number under the name **Agent Score**, trading
-the raw scorecard for a consumer-facing score
+with fix suggestions, and includes a vitest helper for CI integration to catch regressions;
+[Fern's Agent Score](https://buildwithfern.com/agent-score) ships the same 22 checks as a single
+number
 
 **Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
 [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
