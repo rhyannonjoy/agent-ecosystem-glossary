@@ -13,8 +13,8 @@ _How agents find content_: access control, retrieval mechanics, visibility, and 
 ## agent-friendliness
 
 **Definition**: contested property describing whether a website or service's content and
-infrastructure can be discovered, retrieved, and used by autonomous coding agents;
-no single consensus definition or unified scoring standard exists yet
+infrastructure can be discovered, retrieved, and used by agents; no single consensus definition
+or unified scoring standard exists yet
 
 **Purpose**: names the gap between content merely existing and an agent actually being able to
 retrieve and act on it; a page can rank well in GEO and still fail an agent's fetch pipeline;
@@ -24,8 +24,7 @@ to be usable by the growing share of traffic that comes from agents
 **Example**: [Fern's Agent Score](https://buildwithfern.com/agent-score) measures content
 accessibility with [`afdocs`](https://afdocs.dev/) and the [Agent-Friendly Documentation Spec](https://agentdocsspec.com/) -
 Markdown availability, `llms.txt` structure, truncation risk; [Cloudflare's `isitagentready.com`](https://isitagentready.com/)
-measures protocol adoption - MCP Server Cards, Web Bot Auth, `.well-known` endpoints; prioritize
-the following -
+measures bot access control, protocol adoption; prioritize the following -
 
 | **Tier** | **Focus** | **Guidance** |
 | --- | --- | --- |
@@ -53,12 +52,11 @@ providers to measure and improve how effectively agents can discover, retrieve, 
 documentation content; categories cover content discoverability, markdown availability, page
 size and truncation risk, content structure, URL stability, observability, and authentication
 
-**Example**: [`afdocs`](https://afdocs.dev/) is a companion CLI tool and Node.js library that
-implements the spec; running `npx afdocs check https://docs.example.com --format scorecard`
-produces a scorecard with category breakdowns, system-level diagnostics, and per-check results
-with fix suggestions, and includes a vitest helper for CI integration to catch regressions;
-[Fern's Agent Score](https://buildwithfern.com/agent-score) ships the same 22 checks as a single
-number
+**Example**: [`afdocs`](https://afdocs.dev/) is a companion CLI tool and `Node.js` library that
+implements the spec; produces a scorecard with category breakdowns, system-level diagnostics, and
+per-check results with fix suggestions, and includes a vitest helper for CI integration to catch
+regressions; [Fern's Agent Score](https://buildwithfern.com/agent-score) ships the same 22 checks as
+a single number
 
 **Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
 [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
@@ -249,8 +247,8 @@ agent with only the page's last few paragraphs even though the full page loaded 
 
 **Sources**:
 
-- [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
 - [Agent-Friendly Documentation Spec: "Agent platform comparisons" by Dachary Carey, Rhyannon Rodriguez](https://agentdocsspec.com/platforms/)
+- [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
 
 ---
 

@@ -24,10 +24,10 @@ relevance filtering - rather than agent reasoning; uses a task-first design to a
 the agent's relevance layer, with canary reporting separated into a post-task phase and
 human-side scoring to avoid self-assessment bias
 
-**Scoring**: 20 points across 10 tasks — 16 from canary tokens at specific page positions,
+**Scoring**: 20 points across 10 tasks; 16 from canary tokens at specific page positions,
 10K, 40K, 75K, 100K, 130K characters - and 4 from qualitative assessment of task responses;
 an agent that scores 12 with all truncation canaries, but no tabbed content tells a different
-story than one that scores 12 with tabs but no content past 40K
+story than one that scores 12 with tabs, but no content past 40K
 
 | **Finding** | **Description** |
 | --- | --- |
