@@ -574,6 +574,15 @@ translation and a human-produced translation
 
 ---
 
+### Hawthorne effect
+
+- type of behavioral reactivity in which individuals modify an aspect of their behavior in response to their awareness of being observed
+- observed in agent evaluation in which the agent becomes a more motivated, persistent reader than during normal use
+
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#hawthorne-effect)
+
+---
+
 ### HellaSwag
 
 - acronym for _Harder Endings, Longer contexts and Low-Shot Activities for Situations With Adversarial Generations_
@@ -1104,6 +1113,15 @@ translation and a human-produced translation
 
 ---
 
+### separation of concerns
+
+- evaluation design principle in which a complex problem is divided into distinct aspects or issues
+- aspects addressed and/or managed individually, even when they belong to the same system 
+
+**Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#separation-of-concerns)
+
+---
+
 ### SimpleQA
 
 - OpenAI fact-seeking benchmark for measuring an LLM's ability to provide verifiable answers
@@ -1182,6 +1200,16 @@ translation and a human-produced translation
 - AI tailored to a research question: rule-based algorithms, historical data replication, or reinforcement learning
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#stylized-ai-experiment)
+
+---
+
+### summarization layer
+
+- context management mechanism that condenses conversation history, tool outputs, and/or
+retrieved content as an agent's context nears its window limit
+- operates continuously as part of general context engineering
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#summarization-layer)
 
 ---
 

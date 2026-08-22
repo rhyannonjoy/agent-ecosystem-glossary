@@ -268,6 +268,35 @@ exceed it
 
 ---
 
+## Hawthorne effect
+
+**Definition**: type of behavioral reactivity in which individuals modify an aspect of their behavior
+in response to their awareness of being observed; observed in agent behavior in which the
+agent changes its behavior when it recognizes it is being evaluated; the agent becomes a more motivated,
+persistent reader than it would be during normal use, alignment faking, retrying failed fetches, trying
+fallback approaches, and scanning more carefully
+
+**Purpose**: different from score inflation or unreliable narration, which are reporting problems;
+the broader concept describes an LLM's ability to recognize when it is being tested, estimated at roughly
+80% for frontier models, is the underlying mechanism that triggers this behavioral shift
+
+**Example**: running the [Agent Reading Test](https://agentreadingtest.com/) with Claude in a conversational
+client, the agent recognized the evaluation context - _"Got the instructions. This is a
+well-designed diagnostic."_ - then retried failed fetches, tried fallback approaches, and scanned
+for canary tokens more carefully than it would during normal documentation lookup
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[Goodhart's law]({{< relref "/evaluation" >}}#goodharts-law), [sycophancy]({{< relref "/anatomy" >}}#sycophancy)
+
+**Sources**:
+
+- [arXiv: "The Hawthorne Effect in Reasoning Models: Evaluating and Steering Test Awareness" by Sahar Abdelnabi, Ahmed Salem](https://arxiv.org/abs/2505.14617)
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+- [IAPS: "Evaluation Awareness: Why Frontier AI Models Are Getting Harder To Test" by Sambhav Maheshwari](https://www.iaps.ai/research/evaluation-awareness-why-frontier-ai-models-are-getting-harder-to-test)
+- [Wikipedia: "Hawthorne effect"](https://en.wikipedia.org/wiki/Hawthorne_effect)
+
+---
+
 ## human-in-the-loop
 
 **Definition**: system design where humans actively participate in AI decision-making or
@@ -416,6 +445,35 @@ run the tests - before selecting specific metrics or benchmarks
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Source**: [SAP: "Evaluation and Benchmarking of LLM Agents: A Survey" by Mahmoud Mohammadi, Yipeng Li, Jane Lo, Wendy Yip (KDD 2025 Tutorial)](https://sap-samples.github.io/llm-agents-eval-tutorial/2025_KDD_Evaluation_and_Benchmarking_of_LLM_Agents.pdf)
+
+---
+
+## separation of concerns
+
+**Definition**: software design principle holding that a complex problem should be divided into
+distinct aspects and/or issues that can be analyzed, addressed, or managed individually,
+even when they belong to the same system; achieved through techniques such as temporal sequencing,
+quality separation, view-based separation, and modularity
+
+**Purpose**: reduces cognitive load by letting each concern be studied in isolation, improves
+maintainability, and enables self-contained parts to be developed and tested independently before
+integration; in agent evaluation, this means each participant - agent, scoring system, human - does
+what it is structurally good at
+
+**Example**: the [Agent Reading Test](https://agentreadingtest.com/) splits its design across three
+participants - the agent reads pages and answers questions, a static scoring form compares reported
+values against a known answer key by string comparison, and a human judges whether the agent's
+summary actually matches the reference material; _"No single participant is asked to do something
+it's structurally bad at"_ - the agent never sees the scoring rubric that would bias its answers,
+and nuanced comparison is reserved for human judgment rather than forced onto the agent
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[human-in-the-loop]({{< relref "/evaluation" >}}#human-in-the-loop), [LLM-as-judge]({{< relref "/evaluation" >}}#llm-as-judge)
+
+**Sources**:
+
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+- [Wikipedia: "Separation of concerns"](https://en.wikipedia.org/wiki/Separation_of_concerns)
 
 ---
 

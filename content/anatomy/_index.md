@@ -270,6 +270,33 @@ well a documentation site serves coding agents
 
 ---
 
+## summarization layer
+
+**Definition**: context management mechanism that condenses conversation history, tool outputs,
+and/or retrieved content into a shorter form as an agent's context nears its window limit;
+operates continuously as part of general context engineering, not only when an agent is
+retrieving information from the web
+
+**Purpose**: explains why an agent may lose access to content it could theoretically process in
+full; the layer distills what it judges relevant into a summary and reinitiates a new context
+window so processing can continue, meaning what a source actually serves may not be what the
+agent actually sees; distinct from truncation, which is a hard size limit, because summarization
+is content-dependent and relevance-dependent
+
+**Example**: when an agent fetches docs mid-task, the layer sits between the HTTP
+response and the agent, filtering content based on perceived relevance to the
+agent's stated query - meaning what a documentation site serves may not be what the agent processes
+
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [hallucination]({{< relref "anatomy" >}}#hallucination),
+[harness]({{< relref "anatomy" >}}#harness), [memory]({{< relref "anatomy" >}}#memory)
+
+**Sources**:
+
+- [Anthropic: "Effective Context Engineering for AI Agents"](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+
+---
+
 ## sycophancy
 
 **Definition**: LLM tendency to agree, comply, or validate user input rather than reason independently;

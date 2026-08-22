@@ -30,7 +30,8 @@ an agent that scores 12 with all truncation canaries, but no tabbed content tell
 story than one that scores 12 with tabs but no content past 40K
 
 **Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
-[evaluation]({{< relref "/evaluation" >}}#evaluation-1)
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Hawthorne effect]({{< relref "/evaluation" >}}#hawthorne-effect),
+[summarization layer]({{< relref "/anatomy" >}}#summarization-layer)
 
 **Sources**:
 
