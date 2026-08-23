@@ -12,6 +12,20 @@ evaluating agentic systems.
 
 ---
 
+## confidence interval
+
+**Definition**: range of values likely to contain the true effect size, given the statistical
+model's assumptions; commonly reported as a _95% confidence interval_ - if computed repeatedly
+under valid conditions, 95% of such intervals will contain the true value
+
+**Purpose**: width indicates the precision of an estimate, with narrower intervals signaling more
+precise estimates; not to be confused with a _"95% probability the true value is in this range"_ for
+any single interval
+
+**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [_p_-value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+
+---
+
 ## Cohen's kappa coefficient
 
 **Definition**: statistical measure of inter-rater agreement for categorical items; quantifies the
@@ -33,17 +47,24 @@ facilitate human validation of their coding scheme, but don't implement it
 
 ---
 
-## confidence interval
+## Krippendorff's alpha
 
-**Definition**: range of values likely to contain the true effect size, given the statistical
-model's assumptions; commonly reported as a _95% confidence interval_ - if computed repeatedly
-under valid conditions, 95% of such intervals will contain the true value
+**Definition**: statistical measure of inter-rater agreement for categorical items; generalizes
+Cohen's kappa to handle multiple raters, missing data, and different measurement levels
 
-**Purpose**: width indicates the precision of an estimate, with narrower intervals signaling more
-precise estimates; not to be confused with a _"95% probability the true value is in this range"_ for
-any single interval
+**Purpose**: verifies that a codebook is applied consistently across raters, supporting the
+reliability of qualitative coding
 
-**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [_p_-value]({{< relref "/research/quantitative" >}}#p-value), [statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
+**Example**: Gao and Chen cite Krippendorff's alpha in their _"From Agent Behaviour to Agent-Friendly Documentation"_
+as part of an established reliability apparatus for classifying documentation interactions,
+facilitate human validation of their coding scheme, but don't implement it
+
+**Related Terms**: [Cohen's kappa coefficient]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient), [codebook]({{< relref "/research/qualitative" >}}#codebook)
+
+**Sources**:
+
+- [arXiv: "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation" by Zhijun Gao, Jing Chen](https://arxiv.org/abs/2608.20195)
+- [Wikipedia: "Krippendorff's alpha"](https://en.wikipedia.org/wiki/Krippendorff%27s_alpha)
 
 ---
 
