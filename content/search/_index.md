@@ -33,12 +33,19 @@ measures bot access control, protocol adoption; prioritize the following -
 | **Protocol Layer Adoption** | _Content already visible and discoverable?_ | Markdown content negotiation has the best return; don't implement a standard just to score points |
 | **Real World Testing** | _Does this hold up against a real agent?_ | Point Claude at docs and watch what happens |
 
-**Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
-[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [GEO]({{< relref "search" >}}#geo),
-[`llms.txt`]({{< relref "search" >}}#llmstxt), [MCP server]({{< relref "/interaction" >}}#mcp-server),
-[`robots.txt`]({{< relref "search" >}}#robotstxt), [truncation budget]({{< relref "search" >}}#truncation-budget)
+**Example**: Gao and Chen observed that with local repository access, agents read and write primarily from their own artifacts -
+`AGENTS.md` and `CLAUDE.md`, while API references are rarely the first failure-recovery resource, and absent from validation
+sequences, suggesting that agent-friendliness may depend more on machine-curated files than traditional documentation quality
 
-**Source**: [Dachary Carey: "What Agent Score Can Tell You"](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/)
+**Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
+[`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [GEO]({{< relref "search" >}}#geo),
+[`llms.txt`]({{< relref "search" >}}#llmstxt), [MCP server]({{< relref "/interaction" >}}#mcp-server), [`robots.txt`]({{< relref "search" >}}#robotstxt),
+[truncation budget]({{< relref "search" >}}#truncation-budget)
+
+**Sources**:
+
+- [arXiv: "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation" by Zhijun Gao, Jing Chen](https://arxiv.org/abs/2608.20195)
+- [Dachary Carey: "What Agent Score Can Tell You"](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/)
 
 ---
 

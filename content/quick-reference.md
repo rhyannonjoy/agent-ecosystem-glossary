@@ -251,7 +251,7 @@ translation and a human-produced translation
 ### Cohen's kappa coefficient
 
 - statistical measure of inter-rater agreement for categorical items
-- measures the level of agreement between two raters while accounting for chance agreement
+- quantifies the level of agreement between two raters while accounting for chance agreement
 
 **Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient)
 
@@ -634,6 +634,19 @@ translation and a human-produced translation
 - human provides feedback, validation, or intervention at critical points
 
 **Glossary Term Entry Location**: [Evaluation]({{< relref "evaluation" >}}#human-in-the-loop)
+
+---
+
+## K
+
+---
+
+### Krippendorff's alpha
+
+- statistical measure of inter-rater agreement for categorical items
+- generalizes Cohen's kappa to handle multiple raters, missing data, and different measurement levels
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#krippendorffs-alpha)
 
 ---
 
@@ -1424,6 +1437,15 @@ retrieved content as an agent's context nears its window limit
 - sanity check rather than differentiator due to high scores and saturation
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#webvoyager)
+
+---
+
+### Wilson interval
+
+- method for estimating a confidence interval for a population proportion
+- adjusts the Clopper-Pearson interval to have better coverage properties for small sample sizes
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#wilson-interval)
 
 ---
 
