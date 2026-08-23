@@ -20,7 +20,16 @@ level of agreement between two raters while accounting for chance agreement
 **Purpose**: verifies that a codebook is applied consistently across raters, supporting the
 reliability of qualitative coding
 
+**Example**: Gao and Chen cite Cohen's kappa in their _"From Agent Behaviour to Agent-Friendly Documentation"_
+as part of an established reliability apparatus for classifying documentation interactions,
+facilitate human validation of their coding scheme, but don't implement it
+
 **Related Terms**: [codebook]({{< relref "/research/qualitative" >}}#codebook), [qualitative research]({{< relref "/research/qualitative" >}}#qualitative-research)
+
+**Sources**:
+
+- [arXiv: "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation" by Zhijun Gao, Jing Chen](https://arxiv.org/abs/2608.20195)
+- [Wikipedia: "Cohen's kappa"](https://en.wikipedia.org/wiki/Cohen%27s_kappa)
 
 ---
 
