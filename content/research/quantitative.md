@@ -12,23 +12,6 @@ evaluating agentic systems.
 
 ---
 
-## confidence interval
-
-**Definition**: range of values likely to contain the true effect size, given the statistical
-model's assumptions; commonly reported as a _95% confidence interval_ - if computed repeatedly
-under valid conditions, 95% of such intervals will contain the true value
-
-**Purpose**: width indicates the precision of an estimate, with narrower intervals signaling more
-precise estimates; not to be confused with a _"95% probability the true value is in this range"_ for
-any single interval
-
-**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [_p_-value]({{< relref "/research/quantitative" >}}#p-value),
-[statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference)
-
-**Source**: [Wikipedia: "Confidence interval"](https://en.wikipedia.org/wiki/Confidence_interval)
-
----
-
 ## Cohen's kappa coefficient
 
 **Definition**: statistical measure of inter-rater agreement for categorical items; quantifies the
@@ -47,6 +30,31 @@ facilitate human validation of their coding scheme, but don't implement it
 
 - [arXiv: "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation" by Zhijun Gao, Jing Chen](https://arxiv.org/abs/2608.20195)
 - [Wikipedia: "Cohen's kappa"](https://en.wikipedia.org/wiki/Cohen%27s_kappa)
+
+---
+
+## confidence interval
+
+**Definition**: range of values likely to contain the true effect size, given the statistical
+model's assumptions; commonly reported as a _95% confidence interval_ - if computed repeatedly
+under valid conditions, 95% of such intervals will contain the true value
+
+**Purpose**: width indicates the precision of an estimate, with narrower intervals signaling more
+precise estimates; not to be confused with a _"95% probability the true value is in this range"_ for
+any single interval
+
+**Example**: interval selection depends on the data structure and underlying assumptions;
+Gao and Chen chose cluster bootstraps over Wilson intervals for their primary analysis in
+_"From Agent Behaviour to Agent-Friendly Documentation"_ for their primary analysis because standard intervals
+like Wilson assume independence, which is violated in clustered agent interaction data
+
+**Related Terms**: [null hypothesis]({{< relref "/research/quantitative" >}}#null-hypothesis), [_p_-value]({{< relref "/research/quantitative" >}}#p-value),
+[statistical inference]({{< relref "/research/quantitative" >}}#statistical-inference), [Wilson interval]({{< relref "/research/quantitative" >}}#wilson-interval)
+
+**Sources**:
+
+- [arXiv: "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation" by Zhijun Gao, Jing Chen](https://arxiv.org/abs/2608.20195)
+- [Wikipedia: "Confidence interval"](https://en.wikipedia.org/wiki/Confidence_interval)
 
 ---
 
@@ -283,7 +291,8 @@ experiments
 **Example**: Gao and Chen cite Wilson intervals in their _"From Agent Behaviour to Agent-Friendly Documentation"_
 as a reference for small and zero counts in their primary intervals, which are cluster bootstraps
 
-**Related Terms**: [A/B test]({{< relref "/research" >}}#ab-test), [Cohen's kappa coefficient]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient), [Krippendorff's alpha]({{< relref "/research/quantitative" >}}#krippendorffs-alpha)
+**Related Terms**: [A/B test]({{< relref "/research" >}}#ab-test), [Cohen's kappa coefficient]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient),
+[confidence interval]({{< relref "/research/quantitative" >}}#confidence-interval), [Krippendorff's alpha]({{< relref "/research/quantitative" >}}#krippendorffs-alpha)
 
 **Sources**:
 
