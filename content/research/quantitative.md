@@ -38,7 +38,7 @@ reliability of qualitative coding
 as part of an established reliability apparatus for classifying documentation interactions,
 facilitate human validation of their coding scheme, but don't implement it
 
-**Related Terms**: [codebook]({{< relref "/research/qualitative" >}}#codebook), [qualitative research]({{< relref "/research/qualitative" >}}#qualitative-research)
+**Related Terms**: [codebook]({{< relref "/research/qualitative" >}}#codebook), [Krippendorff's alpha]({{< relref "/research/quantitative" >}}#krippendorffs-alpha), [Wilson interval]({{< relref "/research/quantitative" >}}#wilson-interval)
 
 **Sources**:
 
@@ -59,7 +59,9 @@ reliability of qualitative coding
 as part of an established reliability apparatus for classifying documentation interactions,
 facilitate human validation of their coding scheme, but don't implement it
 
-**Related Terms**: [Cohen's kappa coefficient]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient), [codebook]({{< relref "/research/qualitative" >}}#codebook)
+**Related Terms**: [codebook]({{< relref "/research/qualitative" >}}#codebook),
+[Cohen's kappa coefficient]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient),
+[Wilson interval]({{< relref "/research/quantitative" >}}#wilson-interval)
 
 **Sources**:
 
@@ -262,6 +264,28 @@ may not be predicted precisely
 governed by randomness
 
 **Related Terms**: [probability]({{< relref "/research/quantitative" >}}#probability), [uncertainty quantification]({{< relref "/research/quantitative" >}}#uncertainty-quantification)
+
+---
+
+## Wilson interval
+
+**Definition**: method for estimating a confidence interval for a population proportion; adjusts
+the Clopper-Pearson interval to have better coverage properties for small sample sizes and
+extreme proportions
+
+**Purpose**: provides more accurate coverage than the Wald interval, especially when the sample
+size is small or the proportion is near 0 or 1; commonly used in A/B testing and comparative
+experiments
+
+**Example**: Gao and Chen cite Wilson intervals in their _"From Agent Behaviour to Agent-Friendly Documentation"_
+as a reference for small and zero counts in their primary intervals, which are cluster bootstraps
+
+**Related Terms**: [A/B test]({{< relref "/research" >}}#ab-test), [Cohen's kappa coefficient]({{< relref "/research/quantitative" >}}#cohens-kappa-coefficient), [Krippendorff's alpha]({{< relref "/research/quantitative" >}}#krippendorffs-alpha)
+
+**Sources**:
+
+- [arXiv: "From Agent Behaviour to Agent-Friendly Documentation: An Empirical Study of How Coding Agents Discover, Read, and Write Technical Documentation" by Zhijun Gao, Jing Chen](https://arxiv.org/abs/2608.20195)
+- [Wikipedia: "Binomial proportion confidence interval"](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval)
 
 ---
 

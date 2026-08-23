@@ -1440,6 +1440,15 @@ retrieved content as an agent's context nears its window limit
 
 ---
 
+### Wilson interval
+
+- method for estimating a confidence interval for a population proportion
+- adjusts the Clopper-Pearson interval to have better coverage properties for small sample sizes
+
+**Glossary Term Entry Location**: [Research, Quantitative]({{< relref "/research/quantitative" >}}#wilson-interval)
+
+---
+
 ### Winogrande
 
 - benchmark evaluating an LLM's commonsense reasoning capabilities
