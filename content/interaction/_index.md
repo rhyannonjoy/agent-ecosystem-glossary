@@ -204,11 +204,19 @@ context for a specific domain or task
 subject to the same context window attention dynamics as other injected content; distinct from
 hooks and slash commands
 
+**Example**: [The Open Agent Skills Ecosystem](https://www.skills.sh/) is a community-driven registry
+where developers publish, discover, and install `/SKILL` bundles for common agent tasks;
+[MongoDB Agent Skills](https://www.mongodb.com/docs/agent-skills/) provide pre-built skills for database
+operations, allowing agents to interact with MongoDB collections and documents through structured instruction bundles
+
 **Related Terms**: [context window]({{< relref "/anatomy" >}}#context-window), [hook]({{< relref "interaction" >}}#hook),
 [prompt]({{< relref "interaction" >}}#prompt), [slash command]({{< relref "interaction" >}}#slash-command),
 [system prompt]({{< relref "interaction" >}}#system-prompt)
 
-**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Sources**:
+
+- [Agent Skills](https://agentskills.io/)
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 
