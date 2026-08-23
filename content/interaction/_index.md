@@ -198,11 +198,13 @@ distinguishes more sophisticated agents from basic reactive systems
 ## `/SKILL`
 
 **Definition**: bundle of instructions and reference material that gives an agent just-in-time
-context for a specific domain or task
+context for a specific domain or task; distinc from hooks or slash commands in that they
+work through LLM interpretation rather than deterministic execution, and subject to the same
+context window attention dynamics as other injected context
 
-**Purpose**: works through LLM interpretation rather than deterministic execution, so it is
-subject to the same context window attention dynamics as other injected content; distinct from
-hooks and slash commands
+**Purpose**: extend an agent's capabilities for specific domains or tasks by injecting relevant
+context at runtime, enabling more accurate and specialized behavior without modifying the core model
+or system configuration
 
 **Example**: [The Open Agent Skills Ecosystem](https://www.skills.sh/) is a community-driven registry
 where developers publish, discover, and install `/SKILL` bundles for common agent tasks;
