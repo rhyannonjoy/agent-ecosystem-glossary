@@ -13,9 +13,14 @@
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
         const searchContainer = document.getElementById('pagefind-search-container');
-        const sidebar = document.querySelector('.book-menu');
-        if (sidebar && searchContainer) {
-            sidebar.insertBefore(searchContainer, sidebar.firstChild);
+        const mainContent = document.querySelector('.book-page');
+        if (mainContent && searchContainer) {
+            const header = mainContent.querySelector('.book-header');
+            if (header) {
+                header.insertAdjacentElement('afterend', searchContainer);
+            } else {
+                mainContent.insertBefore(searchContainer, mainContent.firstChild);
+            }
         }
         
         new PagefindUI({ element: "#pagefind-search-container", showSubResults: true });
