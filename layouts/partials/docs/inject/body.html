@@ -23,6 +23,47 @@
             }
         }
         
-        new PagefindUI({ element: "#pagefind-search-container", showSubResults: true });
+        new PagefindUI({ 
+            element: "#pagefind-search-container", 
+            showSubResults: true
+        });
+
+        // Function to apply orange highlight to mark elements
+        function applyOrangeHighlight() {
+            // Try multiple selectors to catch all possible mark elements
+            const selectors = [
+                '#pagefind-search-container mark.pagefind-search-term',
+                '.pagefind-ui mark.pagefind-search-term',
+                'mark.pagefind-search-term'
+            ];
+            
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+            const highlightColor = isDarkMode ? '#e07b5e' : '#b7442a';
+            
+            selectors.forEach(selector => {
+                const marks = document.querySelectorAll(selector);
+                marks.forEach(mark => {
+                    mark.style.cssText = `background-color: ${highlightColor} !important; background: ${highlightColor} !important; color: inherit !important;`;
+                });
+            });
+        }
+
+        // Apply immediately to any existing marks
+        applyOrangeHighlight();
+
+        // Set up a MutationObserver to watch for new mark elements
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'childList') {
+                    applyOrangeHighlight();
+                }
+            });
+        });
+
+        // Start observing the search container for changes
+        observer.observe(searchContainer, {
+            childList: true,
+            subtree: true
+        });
     });
 </script>
