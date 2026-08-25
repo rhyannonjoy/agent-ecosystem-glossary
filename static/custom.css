@@ -167,7 +167,7 @@ body,
 #pagefind-search-container mark {
   background-color: #FA8128 !important;
   background: #FA8128 !important;
-  color: inherit !important;
+  color: #000000 !important;
 }
 
 html[data-theme="dark"] #pagefind-search-container .pagefind-ui mark.pagefind-search-term,
@@ -175,7 +175,7 @@ html[data-theme="dark"] #pagefind-search-container mark.pagefind-search-term,
 html[data-theme="dark"] #pagefind-search-container mark {
   background-color: #FA8128 !important;
   background: #FA8128 !important;
-  color: inherit !important;
+  color: #000000 !important;
 }
 
 /* Brand block */
