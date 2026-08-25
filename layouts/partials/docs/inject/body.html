@@ -12,8 +12,20 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        const searchContainer = document.getElementById('pagefind-search-container');
+        // Move theme toggle to top right above TOC for glossary content
+        const themeToggle = document.querySelector('.book-theme-inline');
+        const toc = document.querySelector('.book-toc');
         const mainContent = document.querySelector('.book-page');
+        
+        if (themeToggle && toc && mainContent) {
+            // Insert the theme toggle before the TOC
+            toc.insertAdjacentElement('beforebegin', themeToggle);
+            // Add a class for styling
+            themeToggle.classList.add('book-theme-inline-toc');
+        }
+        
+        // Move search container
+        const searchContainer = document.getElementById('pagefind-search-container');
         if (mainContent && searchContainer) {
             const header = mainContent.querySelector('.book-header');
             if (header) {
@@ -37,8 +49,7 @@
                 'mark.pagefind-search-term'
             ];
             
-            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-            const highlightColor = isDarkMode ? '#e07b5e' : '#b7442a';
+            const highlightColor = '#FA8128';
             
             selectors.forEach(selector => {
                 const marks = document.querySelectorAll(selector);
