@@ -110,6 +110,57 @@ body,
   border-color: var(--dark-text) !important;
 }
 
+/* Pagefind UI Overrides */
+#pagefind-search-container {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pagefind-ui {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: var(--dark-text);
+  --pagefind-ui-text: var(--dark-text);
+  --pagefind-ui-background: var(--cream-lighter);
+  --pagefind-ui-border: var(--border-color);
+  --pagefind-ui-tag: var(--cream-darker);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 4px;
+  --pagefind-ui-image-border-radius: 4px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: 'Open Sauce One', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.pagefind-ui__results-count {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.pagefind-ui__result {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pagefind-ui__result-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pagefind-ui__result-title a {
+  color: var(--accent-link);
+  text-decoration: none;
+}
+
+.pagefind-ui__result-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+mark.pagefind-search-term {
+  background-color: rgba(255, 255, 0, 0.3);
+  color: inherit;
+}
+
 /* Brand block */
 .book-brand,
 .book-brand a {

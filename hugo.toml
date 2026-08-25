@@ -14,6 +14,6 @@ title = "Agent Ecosystem Glossary"
 [params]
   BookRepo = 'https://github.com/rhyannonjoy/agent-ecosystem-glossary'
   BookEditPath = 'edit/main'
-  BookSearch = true
   BookToC = true  # This enables the right sidebar TOC
   BookSection = '*'
+  BookSearch = false

@@ -4,3 +4,20 @@
     <span class="theme-toggle-label">dark</span>
   </button>
 </div>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<div id="pagefind-search-container"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const searchContainer = document.getElementById('pagefind-search-container');
+        const sidebar = document.querySelector('.book-menu');
+        if (sidebar && searchContainer) {
+            sidebar.insertBefore(searchContainer, sidebar.firstChild);
+        }
+        
+        new PagefindUI({ element: "#pagefind-search-container", showSubResults: true });
+    });
+</script>
