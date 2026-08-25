@@ -27,6 +27,12 @@ jobs:
           hugo-version: latest
           extended: true
       
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - run: npm ci
+      
       - run: hugo --minify
       
       - name: Remove symlinks
@@ -48,7 +54,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-pages-artifact@v3
         with:
           name: github-pages
           path: ./public
