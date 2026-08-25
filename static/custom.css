@@ -158,9 +158,20 @@ body,
   line-height: 1.5;
 }
 
-mark.pagefind-search-term {
-  background-color: var(--accent-hover);
-  color: inherit;
+#pagefind-search-container .pagefind-ui mark.pagefind-search-term,
+#pagefind-search-container mark.pagefind-search-term,
+#pagefind-search-container mark {
+  background-color: #FA8128 !important;
+  background: #FA8128 !important;
+  color: inherit !important;
+}
+
+html[data-theme="dark"] #pagefind-search-container .pagefind-ui mark.pagefind-search-term,
+html[data-theme="dark"] #pagefind-search-container mark.pagefind-search-term,
+html[data-theme="dark"] #pagefind-search-container mark {
+  background-color: #FA8128 !important;
+  background: #FA8128 !important;
+  color: inherit !important;
 }
 
 /* Brand block */
