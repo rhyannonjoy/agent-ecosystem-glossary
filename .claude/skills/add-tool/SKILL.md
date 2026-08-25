@@ -54,6 +54,6 @@ Each tool entry should include:
 ## Notes
 
 - Tools are NOT full glossary entries with Definition/Purpose/Example sections
-- Add tools to `quick-reference.md` as individual entries that point to the main tool table
+- Tools are NOT added to `quick-reference.md` as individual entries (this would be redundant with the Tools category table)
 - Focus on factual descriptions, not promotional language
 - Update the table of contents if needed
