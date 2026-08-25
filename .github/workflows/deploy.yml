@@ -41,6 +41,12 @@ jobs:
       - name: Run Pagefind
         run: npx pagefind --site public
       
+      - name: List public directory
+        run: ls -la public
+      
+      - name: List pagefind directory
+        run: ls -la public/pagefind
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
