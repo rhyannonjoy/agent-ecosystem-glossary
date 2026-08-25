@@ -21,11 +21,11 @@ that are foundational to the agent ecosystem.
 Tools are added to `content/tools/_index.md` as a Markdown table:
 
 ```markdown
-## Tool Name
+## Platforms
 
 | **Name** | **Description** |
 | --- | --- |
-| [Website](https://example.com) | Brief description of what the tool does |
+| [Tool Name](https://example.com) | Brief description of what the tool does |
 ```
 
 ### Entry Structure
