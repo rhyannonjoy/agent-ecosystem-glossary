@@ -110,6 +110,74 @@ body,
   border-color: var(--dark-text) !important;
 }
 
+/* Pagefind UI Overrides */
+#pagefind-search-container {
+  padding: 0.25rem 1rem;
+  background-color: var(--cream-bg);
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.pagefind-ui {
+  --pagefind-ui-scale: 0.8;
+  --pagefind-ui-primary: var(--dark-text);
+  --pagefind-ui-text: var(--dark-text);
+  --pagefind-ui-background: var(--cream-lighter);
+  --pagefind-ui-border: var(--border-color);
+  --pagefind-ui-tag: var(--cream-darker);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 4px;
+  --pagefind-ui-image-border-radius: 4px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: 'Open Sauce One', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.pagefind-ui__results-count {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.pagefind-ui__result {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pagefind-ui__result-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pagefind-ui__result-title a {
+  color: var(--accent-link);
+  text-decoration: none;
+}
+
+.pagefind-ui__result-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#pagefind-search-container .pagefind-ui mark.pagefind-search-term,
+#pagefind-search-container mark.pagefind-search-term,
+#pagefind-search-container mark {
+  background-color: #FA8128 !important;
+  background: #FA8128 !important;
+  color: #000000 !important;
+}
+
+html[data-theme="dark"] #pagefind-search-container .pagefind-ui mark.pagefind-search-term,
+html[data-theme="dark"] #pagefind-search-container mark.pagefind-search-term,
+html[data-theme="dark"] #pagefind-search-container mark {
+  background-color: #FA8128 !important;
+  background: #FA8128 !important;
+  color: #000000 !important;
+}
+
 /* Brand block */
 .book-brand,
 .book-brand a {
@@ -192,6 +260,10 @@ table td {
 }
 
 /* Table of Contents (right sidebar) */
+.book-toc {
+  position: relative;
+}
+
 .book-toc nav {
   background-color: var(--cream-bg) !important;
 }
@@ -295,6 +367,21 @@ main {
 }
 
 .book-theme-inline .theme-toggle {
+  margin-left: 0;
+}
+
+/* Theme toggle in TOC position */
+.book-theme-inline-toc {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 0.5rem;
+  margin: 0;
+  background-color: transparent !important;
+}
+
+.book-theme-inline-toc .theme-toggle {
   margin-left: 0;
 }
 

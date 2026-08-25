@@ -4,3 +4,77 @@
     <span class="theme-toggle-label">dark</span>
   </button>
 </div>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+
+<div id="pagefind-search-container"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Move theme toggle to top right above TOC for glossary content
+        const themeToggle = document.querySelector('.book-theme-inline');
+        const toc = document.querySelector('.book-toc');
+        const mainContent = document.querySelector('.book-page');
+        
+        if (themeToggle && toc && mainContent) {
+            // Insert the theme toggle before the TOC
+            toc.insertAdjacentElement('beforebegin', themeToggle);
+            // Add a class for styling
+            themeToggle.classList.add('book-theme-inline-toc');
+        }
+        
+        // Move search container
+        const searchContainer = document.getElementById('pagefind-search-container');
+        if (mainContent && searchContainer) {
+            const header = mainContent.querySelector('.book-header');
+            if (header) {
+                header.insertAdjacentElement('afterend', searchContainer);
+            } else {
+                mainContent.insertBefore(searchContainer, mainContent.firstChild);
+            }
+        }
+        
+        new PagefindUI({ 
+            element: "#pagefind-search-container", 
+            showSubResults: true
+        });
+
+        // Function to apply orange highlight to mark elements
+        function applyOrangeHighlight() {
+            // Try multiple selectors to catch all possible mark elements
+            const selectors = [
+                '#pagefind-search-container mark.pagefind-search-term',
+                '.pagefind-ui mark.pagefind-search-term',
+                'mark.pagefind-search-term'
+            ];
+            
+            const highlightColor = '#FA8128';
+            
+            selectors.forEach(selector => {
+                const marks = document.querySelectorAll(selector);
+                marks.forEach(mark => {
+                    mark.style.cssText = `background-color: ${highlightColor} !important; background: ${highlightColor} !important; color: #000000 !important;`;
+                });
+            });
+        }
+
+        // Apply immediately to any existing marks
+        applyOrangeHighlight();
+
+        // Set up a MutationObserver to watch for new mark elements
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'childList') {
+                    applyOrangeHighlight();
+                }
+            });
+        });
+
+        // Start observing the search container for changes
+        observer.observe(searchContainer, {
+            childList: true,
+            subtree: true
+        });
+    });
+</script>

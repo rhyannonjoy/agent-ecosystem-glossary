@@ -1,8 +1,3 @@
-# test locally
-# rm -rf resources/
-# rm -rf public/
-# hugo server -D
-
 baseURL = 'https://rhyannonjoy.github.io/agent-ecosystem-glossary/'
 locale = 'en-us'
 title = "Agent Ecosystem Glossary"
@@ -14,6 +9,6 @@ title = "Agent Ecosystem Glossary"
 [params]
   BookRepo = 'https://github.com/rhyannonjoy/agent-ecosystem-glossary'
   BookEditPath = 'edit/main'
-  BookSearch = true
   BookToC = true  # This enables the right sidebar TOC
   BookSection = '*'
+  BookSearch = false

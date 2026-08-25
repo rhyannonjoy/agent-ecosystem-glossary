@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "pagefind": "^1.5.2"
+  },
+  "scripts": {
+    "build": "hugo --minify --baseURL \"http://localhost:3000/\" && npx pagefind --site public",
+    "serve": "npx serve public -l 3000"
+  }
+}

@@ -1,2 +1,23 @@
 <link rel="stylesheet" href="{{ "custom.css" | relURL }}?v=3">
 <script src="{{ "theme-toggle.js" | relURL }}"></script>
+
+<style>
+  /* Override Pagefind UI mark highlighting */
+  #pagefind-search-container .pagefind-ui mark.pagefind-search-term,
+  #pagefind-search-container mark.pagefind-search-term,
+  .pagefind-ui mark.pagefind-search-term,
+  mark.pagefind-search-term {
+    background-color: #FA8128 !important;
+    background: #FA8128 !important;
+    color: #000000 !important;
+  }
+
+  html[data-theme="dark"] #pagefind-search-container .pagefind-ui mark.pagefind-search-term,
+  html[data-theme="dark"] #pagefind-search-container mark.pagefind-search-term,
+  html[data-theme="dark"] .pagefind-ui mark.pagefind-search-term,
+  html[data-theme="dark"] mark.pagefind-search-term {
+    background-color: #FA8128 !important;
+    background: #FA8128 !important;
+    color: #000000 !important;
+  }
+</style>

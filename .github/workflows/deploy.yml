@@ -31,6 +31,9 @@ jobs:
       
       - name: Remove symlinks
         run: find ./public -type l -delete
+
+      - name: Run Pagefind
+        run: npx pagefind --site public
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
