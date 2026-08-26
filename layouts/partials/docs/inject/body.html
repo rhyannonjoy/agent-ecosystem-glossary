@@ -12,14 +12,14 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        // Move theme toggle to top right above TOC for glossary content
+        // Move theme toggle above the first header in the TOC for glossary content
         const themeToggle = document.querySelector('.book-theme-inline');
-        const toc = document.querySelector('.book-toc');
+        const tocContent = document.querySelector('.book-toc-content');
         const mainContent = document.querySelector('.book-page');
-        
-        if (themeToggle && toc && mainContent) {
-            // Insert the theme toggle before the TOC
-            toc.insertAdjacentElement('beforebegin', themeToggle);
+
+        if (themeToggle && tocContent && mainContent) {
+            // Insert the theme toggle before the TOC's heading list
+            tocContent.insertBefore(themeToggle, tocContent.firstChild);
             // Add a class for styling
             themeToggle.classList.add('book-theme-inline-toc');
         }

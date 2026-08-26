@@ -67,6 +67,8 @@ or automated agents to reduce manual effort and increase consistency
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [agent]({{< relref "anatomy" >}}#agent),after
 [harness]({{< relref "anatomy" >}}#harness)
 
+**Source**: [Wikipedia: "Automation"](https://en.wikipedia.org/wiki/Automation)
+
 ---
 
 ## context window
@@ -163,6 +165,8 @@ unavailable
 
 **Related Terms**: [planning]({{< relref "/interaction" >}}#planning), [self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
+**Source**: [Wikipedia: "Heuristic"](https://en.wikipedia.org/wiki/Heuristic)
+
 ---
 
 ## LLM
@@ -173,10 +177,21 @@ data to understand and generate human language; also known as _"the agent's brai
 **Purpose**: not all AI is LLM-based - computer vision models and recommendation systems are
 common non-LLM examples; the LLM is the reasoning component an agent's harness wraps around
 
-**Example**: `GPT` - _Generative Pre-trained Transformer_, Claude, and Llama
+**Notable LLMs**:
+
+| **Model** | **Company** |
+| --- | --- |
+| `Claude` - `Haiku`, `Sonnet`, `Opus`, `Fable` | [Anthropic](https://anthropic.com) |
+| `Command A`, `Command R` | [Cohere](https://cohere.com) |
+| `Gemini` - `Pro`, `Ultra` | [Google](https://gemini.google.com) |
+| `GPT` - `Luna`, `Sol`, `Terra` | [OpenAI](https://openai.com) |
+| `LLaMA` | [Meta AI](https://ai.meta.com) |
+| `Mistral` |  [Mistral](https://mistral.ai) |
 
 **Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [harness]({{< relref "anatomy" >}}#harness),
 [temperature]({{< relref "anatomy" >}}#temperature)
+
+**Source**: [Geeks for Geeks: "Large Language Model (LLM)"](https://www.geeksforgeeks.org/artificial-intelligence/large-language-model-llm/)
 
 ---
 
@@ -191,6 +206,8 @@ include short-term - current task, long-term - across sessions, and episodic - s
 
 **Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [planning]({{< relref "/interaction" >}}#planning),
 [self-reflection]({{< relref "/interaction" >}}#self-reflection)
+
+**Source**: [IBM: "What is AI agent memory?" by Cole Stryker](https://www.ibm.com/think/topics/ai-agent-memory)
 
 ---
 
@@ -277,6 +294,8 @@ well a documentation site serves coding agents
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction),
 [harness]({{< relref "anatomy" >}}#harness), [MCP server]({{< relref "/interaction" >}}#mcp-server)
 
+**Source**: [Wikipedia: "Specification (technical standard)"](https://en.wikipedia.org/wiki/Specification_(technical_standard))
+
 ---
 
 ## summarization layer
@@ -355,3 +374,5 @@ learns by processing examples and adjusting internal parameters
 **Purpose**: quality and composition of training data directly affects LLM capabilities and biases
 
 **Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [LLM]({{< relref "anatomy" >}}#llm)
+
+**Source**: [IBM: "What is training data?"](https://www.ibm.com/think/topics/training-data)
