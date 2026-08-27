@@ -1431,6 +1431,16 @@ retrieved content as an agent's context nears its window limit
 
 ---
 
+### WebGames
+
+- benchmark for evaluating web agent perception, reasoning, planning, and tool use
+- calibrated against a 95.7% human baseline
+- failures cluster into vision, real-time-reaction, and precision-control categories
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#webgames)
+
+---
+
 ### WebVoyager
 
 - benchmark evaluating a web agent's ability to complete tasks on live websites
