@@ -89,6 +89,7 @@ in a few ways:
 | **Compaction** | LLM summarization / rewriting, or server-side opaque compression |
 | **Context Rot** | Performance degradation as length increases ~30k+ tokens |
 | **Lost in the Middle** | LLMs use info at context beginning, end more than middle |
+| **Tiered Retention** | keep only current page state; trim snapshot with lightweight model before it reaches primary LLM; compress older turns into a persistent, agent-authored `memory` field instead of retaining raw history to hold token use roughly constant |
 
 **Related Terms**: [memory]({{< relref "anatomy" >}}#memory), [`/SKILL`]({{< relref "/interaction" >}}#skill),
 [system prompt]({{< relref "/interaction" >}}#system-prompt), [temperature]({{< relref "anatomy" >}}#temperature)
@@ -96,6 +97,7 @@ in a few ways:
 **Sources**:
 
 - [Anthropic: "Effective Context Engineering for AI Agents"](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
 - [Chroma: "Context Rot Report"](https://research.trychroma.com/context-rot)
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
