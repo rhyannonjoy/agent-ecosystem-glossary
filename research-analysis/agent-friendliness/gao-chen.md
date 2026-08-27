@@ -6,7 +6,6 @@
 **DOI/URL**: https://arxiv.org/abs/2608.20195
 **SKILL used**: [analyzing-research-papers](https://www.skills.sh/seabbs/skills/analyzing-research-papers)
 
-
 ## Overview
 
 This paper investigates the intersection of software engineering documentation and AI agent behavior through a large-scale empirical study. It addresses the critical gap in understanding how documentation practices in software repositories (specifically pull requests) interact with and influence the performance and behavior of LLM-based coding agents. The core contribution is the identification and quantification of a "documentation gap" where agent-facing artifacts (e.g., diffs, test logs) vastly outnumber human-oriented classical documentation (e.g., README, design docs), suggesting a fundamental mismatch in current repository structures.
