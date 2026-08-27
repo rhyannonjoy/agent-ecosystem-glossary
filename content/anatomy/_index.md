@@ -64,7 +64,7 @@ from basic rule-based systems to complex machine learning models
 **Purpose**: in an AI context, delegates decision-making or execution to algorithms, robots,
 or automated agents to reduce manual effort and increase consistency
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [agent]({{< relref "anatomy" >}}#agent),after
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [agent]({{< relref "anatomy" >}}#agent),
 [harness]({{< relref "anatomy" >}}#harness)
 
 **Source**: [Wikipedia: "Automation"](https://en.wikipedia.org/wiki/Automation)
