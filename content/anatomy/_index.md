@@ -138,7 +138,7 @@ and infrastructure above for managed environments; the same harness can run diff
 or infrastructure
 
 **Example**: code search, file operations, shell execution, web access, content management
-strategy, and temperature settings; Browser Use, Agent S, GTA1, and CoACT are harnesses distinct
+strategy, and temperature settings; `Agent S`, `Browser Use`, `CoACT`, `GTA1`, and are harnesses distinct
 from the LLMs and infrastructure they run on
 
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [accessibility tree snapshot]({{< relref "/interaction" >}}#accessibility-tree-snapshot),
