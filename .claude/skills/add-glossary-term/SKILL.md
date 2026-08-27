@@ -17,13 +17,20 @@ resolves.
 
 | Category | Description |
 |---|---|
-| `content/core-concepts/_index.md` | Foundational agent/LLM mechanics (`agent`, `harness`, `LLM`, `temperature`) |
+| `content/anatomy/_index.md` | What agents *are*: structural components and training that define abilities/limitations (`agent`, `harness`, `LLM`, `temperature`) |
+| `content/interaction/_index.md` | What agents *do*: behavior, commands, communication, and the mechanisms that govern responses (`hook`, `MCP server`, `planning`, `system prompt`) |
 | `content/evaluation/_index.md` | Evaluation methodology (`evaluation`, `LLM-as-a-Judge`, `robustness`) |
 | `content/evaluation/benchmarks.md` | Named benchmark datasets (`MMLU`, `HumanEval`) |
 | `content/evaluation/metrics.md` | Output metrics (`BLEU`, `CSAT`, `pass@k`) |
 | `content/research/_index.md` | Research methodology (`experimental design`, `taxonomy`) |
 | `content/research/qualitative.md` | Non-numerical research methods (`affinity mapping`, `codebook`) |
 | `content/research/quantitative.md` | Statistical methods — including stats formulas used *on* qualitative data, e.g. Cohen's kappa (`P value`, `confidence interval`) |
+| `content/search/_index.md` | How agents find content: access control, retrieval mechanics, visibility (`GEO`, `robots.txt`, `retrieval pool`) |
+
+`content/tools/_index.md` is out of scope for this skill — named products/platforms
+(e.g. `Playwright MCP`, `LangChain`) use the **add-tool** skill instead, which
+writes a bare name/description table row with no Definition/Purpose/Example
+sections and no quick-reference stub.
 
 If a term could plausibly sit in more than one place, look at how the term
 itself is worded: if the existing quick-reference bullets already say
@@ -63,13 +70,15 @@ except proper nouns/acronyms, no trailing period
 - Link text is just the term.
 - The `{{< relref >}}` target is always the **full path to the file the
   heading lives in**, even for links from within that same file:
-  - `core-concepts/_index.md` → `{{< relref "core-concepts" >}}`
+  - `anatomy/_index.md` → `{{< relref "anatomy" >}}` (self) or `{{< relref "/anatomy" >}}` (from elsewhere — both work, but match whichever style the surrounding file already uses)
+  - `interaction/_index.md` → `{{< relref "interaction" >}}` (self) or `{{< relref "/interaction" >}}` (from elsewhere)
   - `evaluation/_index.md` → `{{< relref "evaluation" >}}` (self) or `{{< relref "/evaluation" >}}` (from elsewhere — both work, but match whichever style the surrounding file already uses)
   - `evaluation/metrics.md` → `{{< relref "/evaluation/metrics" >}}`
   - `evaluation/benchmarks.md` → `{{< relref "/evaluation/benchmarks" >}}`
   - `research/_index.md` → `{{< relref "/research" >}}`
   - `research/qualitative.md` → `{{< relref "/research/qualitative" >}}`
   - `research/quantitative.md` → `{{< relref "/research/quantitative" >}}`
+  - `search/_index.md` → `{{< relref "search" >}}` (self) or `{{< relref "/search" >}}` (from elsewhere)
 - Never write a plain Markdown relative link (`[x](page.md#term)`). Hugo
   doesn't publish `.md` files or rewrite `.md` links, and this repo has no
   custom render hook — a raw `.md` link 404s. `{{< relref >}}` is the only
@@ -97,7 +106,7 @@ Format:
 ```
 
 **Label** depends on where the full entry lives:
-- Parent page (`_index.md`) → just the category name: `[Core Concepts]`, `[Evaluation]`, `[Research]`
+- Parent page (`_index.md`) → just the category name: `[Anatomy]`, `[Interaction]`, `[Evaluation]`, `[Research]`, `[Search]`
 - Child page → `[Parent, Subcategory]`: `[Evaluation, Metrics & Scoring]`, `[Evaluation, Benchmarks]`, `[Research, Qualitative]`, `[Research, Quantitative]`
 
 If the term already has quick-reference bullets but no full entry yet, keep
