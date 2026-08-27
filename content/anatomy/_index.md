@@ -174,24 +174,24 @@ unavailable
 **Definition**: acronym for _Large Language Model_; model trained on vast amounts of text
 data to understand and generate human language; also known as _"the agent's brain"_
 
-**Purpose**: not all AI is LLM-based - computer vision models and recommendation systems are
+**Purpose**: _not all AI is LLM-based_ - computer vision models and recommendation systems are
 common non-LLM examples; the LLM is the reasoning component an agent's harness wraps around
 
-**Notable LLMs**:
+**Open-weight vs. Open-source**:
 
-| **Model** | **Company** |
-| --- | --- |
-| `Claude` - `Haiku`, `Sonnet`, `Opus`, `Fable` | [Anthropic](https://anthropic.com) |
-| `Command A`, `Command R` | [Cohere](https://cohere.com) |
-| `Gemini` - `Pro`, `Ultra` | [Google](https://gemini.google.com) |
-| `GPT` - `Luna`, `Sol`, `Terra` | [OpenAI](https://openai.com) |
-| `LLaMA` | [Meta AI](https://ai.meta.com) |
-| `Mistral` |  [Mistral](https://mistral.ai) |
+| **Term** | **Description** | **Examples** |
+| --- | --- | --- |
+| **Open-source** | Entire pipeline released for full reproducibility, research | [Ai2 Olmo](https://allenai.org/olmo), [Falcon](https://falconllm.tii.ae/) |
+| **Open-weight** | Model weights released publicly for deployment, fine-tuning, inference; architecture, data, training code may not be included | [LLaMA](https://ai.meta.com), [Mistral](https://mistral.ai) |
+| **Proprietary** | Weights closed; access typically via API | [`Claude`](https://anthropic.com), [`Gemini`](https://gemini.google.com),[`GPT`](https://openai.com) |
 
 **Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [harness]({{< relref "anatomy" >}}#harness),
 [temperature]({{< relref "anatomy" >}}#temperature)
 
-**Source**: [Geeks for Geeks: "Large Language Model (LLM)"](https://www.geeksforgeeks.org/artificial-intelligence/large-language-model-llm/)
+**Sources**:
+
+- [Geeks for Geeks: "Large Language Model (LLM)"](https://www.geeksforgeeks.org/artificial-intelligence/large-language-model-llm/)
+- [Wikipedia: "Open-source artificial intelligence"](https://en.wikipedia.org/wiki/Open-source_artificial_intelligence)
 
 ---
 
