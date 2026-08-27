@@ -220,12 +220,20 @@ conceptual authorization and/or guardrails
 boundaries on what an agent may execute
 
 **Example**: requiring confirmation before running shell commands, restricting file access to
-specific directories, or blocking certain categories of action entirely
+specific directories, or blocking certain categories of action entirely; a production browser
+agent's execution layer blocks clicks on elements labeled _"refund,"_ _"delete,"_ or _"transfer"_
+unless explicit confirmation is given, and restricts navigation to an allowlisted set of domains -
+enforcing the boundary in code instead of relying on the LLM to police its own actions, since
+prompt injection can override LLM-level judgment but not a deterministic check it never reaches
 
 **Related Terms**: [harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability),
+[prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability),
 [rule]({{< relref "/interaction" >}}#rule)
 
-**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Sources**:
+
+- [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 

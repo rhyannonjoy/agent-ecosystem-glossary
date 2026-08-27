@@ -386,7 +386,7 @@ AI, and security evaluation
 page, PDF, email, or filename that the agent perceives while browsing can redirect it to act with
 the user's own authenticated identity and session rather than the user's actual intent
 
-**Related Terms**: [bias and fairness score]({{< relref "/evaluation/metrics" >}}#bias-and-fairness-score), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [policy adherence rate]({{< relref "/evaluation/metrics" >}}#policy-adherence-rate)
+**Related Terms**: [bias and fairness score]({{< relref "/evaluation/metrics" >}}#bias-and-fairness-score), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [functional correctness]({{< relref "/evaluation" >}}#functional-correctness), [permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems), [policy adherence rate]({{< relref "/evaluation/metrics" >}}#policy-adherence-rate)
 
 **Sources**:
 
