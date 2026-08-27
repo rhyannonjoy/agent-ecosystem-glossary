@@ -22,15 +22,6 @@ Brief definitions and complete entry locations, organized by the following secti
 
 ---
 
-### abstraction
-
-- label and/or concept that bundles together a set of underlying components or capabilities
-- streamlines communication by hiding implementation details
-
-**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#abstraction)
-
----
-
 ### ablation study
 
 - experimental method that systematically removes model components to measure their contribution
@@ -40,12 +31,30 @@ Brief definitions and complete entry locations, organized by the following secti
 
 ---
 
+### abstraction
+
+- label and/or concept that bundles together a set of underlying components or capabilities
+- streamlines communication by hiding implementation details
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#abstraction)
+
+---
+
 ### A/B test
 
 - also known as split testing and/or randomized controlled trial
 - experimental method that compares two versions of something to determine which performs better
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#ab-test)
+
+---
+
+### accessibility tree snapshot
+
+- structured, text-based page representation pulled from the browser's accessibility API, not raw HTML or a screenshot
+- gives an agent compact, semantic, stable element references; often paired with vision for canvas-based content
+
+**Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#accessibility-tree-snapshot)
 
 ---
 

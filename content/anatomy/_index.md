@@ -21,8 +21,8 @@ often necessary for diagnosing unexpected behavior
 
 **Example**: _"agent"_ is an abstraction for a system of distinct parts
 
-**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [automation]({{< relref "anatomy" >}}#automation)
- [harness]({{< relref "anatomy" >}}#harness), [spec]({{< relref "anatomy" >}}#spec)
+**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [automation]({{< relref "anatomy" >}}#automation),
+[harness]({{< relref "anatomy" >}}#harness), [spec]({{< relref "anatomy" >}}#spec)
 
 **Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
@@ -139,8 +139,8 @@ or infrastructure
 strategy, and temperature settings; Browser Use, Agent S, GTA1, and CoACT are harnesses distinct
 from the LLMs and infrastructure they run on
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation),
-[gate]({{< relref "/interaction" >}}#gate), [hook]({{< relref "/interaction" >}}#hook),
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [accessibility tree snapshot]({{< relref "/interaction" >}}#accessibility-tree-snapshot),
+[automation]({{< relref "anatomy" >}}#automation), [gate]({{< relref "/interaction" >}}#gate), [hook]({{< relref "/interaction" >}}#hook),
 [MCP server]({{< relref "/interaction" >}}#mcp-server),
 [permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems),
 [temperature]({{< relref "anatomy" >}}#temperature)
@@ -226,7 +226,8 @@ unless explicit confirmation is given, and restricts navigation to an allowliste
 enforcing the boundary in code instead of relying on the LLM to police its own actions, since
 prompt injection can override LLM-level judgment but not a deterministic check it never reaches
 
-**Related Terms**: [harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability),
+**Related Terms**: [accessibility tree snapshot]({{< relref "/interaction" >}}#accessibility-tree-snapshot),
+[harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability),
 [prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability),
 [rule]({{< relref "/interaction" >}}#rule)
 

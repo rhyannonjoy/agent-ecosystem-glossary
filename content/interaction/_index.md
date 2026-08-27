@@ -10,6 +10,31 @@ _What agents do_: behavior, commands, communication, and the mechanisms that gov
 
 ---
 
+## accessibility tree snapshot
+
+**Definition**: structured, text-based representation of a web page's roles, labels,
+descriptions, focus state, and interactive elements, pulled from the browser's
+accessibility API rather than raw HTML or a screenshot
+
+**Purpose**: gives an agent a compact, semantic view of a page's interactive surface -
+far fewer tokens than raw DOM, more stable references than pixel coordinates - so the
+LLM can plan against addressable elements and the harness can enforce action-level
+safety checks on semantic labels; typically paired with vision as a fallback for
+canvas-based or non-DOM content the tree doesn't expose
+
+**Example**: a form field labeled _"Total Weight (kg)"_ that requires 100+ lines of
+nested HTML with ARIA attributes collapses to `ref=38 heading "Total Weight (kg)..."`
+and `ref=39 textbox "Total Weight (kg)..." focusable focused required`, which the agent
+references directly in a `type` tool call instead of parsing markup; `Playwright MCP` and
+`Chrome DevTools MCP` both generate these snapshots instead of forwarding raw HTML
+
+**Related Terms**: [harness]({{< relref "/anatomy" >}}#harness), [MCP server]({{< relref "interaction" >}}#mcp-server),
+[permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems)
+
+**Source**: [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
+
+---
+
 ## `AGENTS.md`
 
 **Definition**: Markdown file placed at a repository's root that gives coding agents
@@ -89,7 +114,8 @@ capabilities to an agent - tools, resources, and/or prompts
 server is built to access; facilitates portable behavior across agent platforms because
 implementation lives in the server rather than the harness
 
-**Related Terms**: [agent-friendliness]({{< relref "/search" >}}#agent-friendliness), [harness]({{< relref "/anatomy" >}}#harness)
+**Related Terms**: [accessibility tree snapshot]({{< relref "interaction" >}}#accessibility-tree-snapshot),
+[agent-friendliness]({{< relref "/search" >}}#agent-friendliness), [harness]({{< relref "/anatomy" >}}#harness)
 
 **Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
