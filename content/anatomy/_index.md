@@ -21,8 +21,8 @@ often necessary for diagnosing unexpected behavior
 
 **Example**: _"agent"_ is an abstraction for a system of distinct parts
 
-**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [automation]({{< relref "anatomy" >}}#automation)
- [harness]({{< relref "anatomy" >}}#harness), [spec]({{< relref "anatomy" >}}#spec)
+**Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [automation]({{< relref "anatomy" >}}#automation),
+[harness]({{< relref "anatomy" >}}#harness), [spec]({{< relref "anatomy" >}}#spec)
 
 **Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
@@ -89,6 +89,7 @@ in a few ways:
 | **Compaction** | LLM summarization / rewriting, or server-side opaque compression |
 | **Context Rot** | Performance degradation as length increases ~30k+ tokens |
 | **Lost in the Middle** | LLMs use info at context beginning, end more than middle |
+| **Tiered Retention** | keep only current page state; trim snapshot with lightweight model before it reaches primary LLM; compress older turns into a persistent, agent-authored `memory` field instead of retaining raw history to hold token use roughly constant |
 
 **Related Terms**: [memory]({{< relref "anatomy" >}}#memory), [`/SKILL`]({{< relref "/interaction" >}}#skill),
 [system prompt]({{< relref "/interaction" >}}#system-prompt), [temperature]({{< relref "anatomy" >}}#temperature)
@@ -96,6 +97,7 @@ in a few ways:
 **Sources**:
 
 - [Anthropic: "Effective Context Engineering for AI Agents"](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+- [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
 - [Chroma: "Context Rot Report"](https://research.trychroma.com/context-rot)
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
@@ -136,11 +138,11 @@ and infrastructure above for managed environments; the same harness can run diff
 or infrastructure
 
 **Example**: code search, file operations, shell execution, web access, content management
-strategy, and temperature settings; Browser Use, Agent S, GTA1, and CoACT are harnesses distinct
+strategy, and temperature settings; `Agent S`, `Browser Use`, `CoACT`, `GTA1`, and are harnesses distinct
 from the LLMs and infrastructure they run on
 
-**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [automation]({{< relref "anatomy" >}}#automation),
-[gate]({{< relref "/interaction" >}}#gate), [hook]({{< relref "/interaction" >}}#hook),
+**Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [accessibility tree snapshot]({{< relref "/interaction" >}}#accessibility-tree-snapshot),
+[automation]({{< relref "anatomy" >}}#automation), [gate]({{< relref "/interaction" >}}#gate), [hook]({{< relref "/interaction" >}}#hook),
 [MCP server]({{< relref "/interaction" >}}#mcp-server),
 [permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems),
 [temperature]({{< relref "anatomy" >}}#temperature)
@@ -174,24 +176,24 @@ unavailable
 **Definition**: acronym for _Large Language Model_; model trained on vast amounts of text
 data to understand and generate human language; also known as _"the agent's brain"_
 
-**Purpose**: not all AI is LLM-based - computer vision models and recommendation systems are
+**Purpose**: _not all AI is LLM-based_ - computer vision models and recommendation systems are
 common non-LLM examples; the LLM is the reasoning component an agent's harness wraps around
 
-**Notable LLMs**:
+**Open-weight vs. Open-source**:
 
-| **Model** | **Company** |
-| --- | --- |
-| `Claude` - `Haiku`, `Sonnet`, `Opus`, `Fable` | [Anthropic](https://anthropic.com) |
-| `Command A`, `Command R` | [Cohere](https://cohere.com) |
-| `Gemini` - `Pro`, `Ultra` | [Google](https://gemini.google.com) |
-| `GPT` - `Luna`, `Sol`, `Terra` | [OpenAI](https://openai.com) |
-| `LLaMA` | [Meta AI](https://ai.meta.com) |
-| `Mistral` |  [Mistral](https://mistral.ai) |
+| **Term** | **Description** | **Examples** |
+| --- | --- | --- |
+| **Open-source** | Entire pipeline released for full reproducibility, research | [Ai2 Olmo](https://allenai.org/olmo), [Falcon](https://falconllm.tii.ae/) |
+| **Open-weight** | Model weights released publicly for deployment, fine-tuning, inference; architecture, data, training code may not be included | [LLaMA](https://ai.meta.com), [Mistral](https://mistral.ai) |
+| **Proprietary** | Weights closed; access typically via API | [`Claude`](https://anthropic.com), [`Gemini`](https://gemini.google.com),[`GPT`](https://openai.com) |
 
 **Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [harness]({{< relref "anatomy" >}}#harness),
 [temperature]({{< relref "anatomy" >}}#temperature)
 
-**Source**: [Geeks for Geeks: "Large Language Model (LLM)"](https://www.geeksforgeeks.org/artificial-intelligence/large-language-model-llm/)
+**Sources**:
+
+- [Geeks for Geeks: "Large Language Model (LLM)"](https://www.geeksforgeeks.org/artificial-intelligence/large-language-model-llm/)
+- [Wikipedia: "Open-source artificial intelligence"](https://en.wikipedia.org/wiki/Open-source_artificial_intelligence)
 
 ---
 
@@ -220,12 +222,21 @@ conceptual authorization and/or guardrails
 boundaries on what an agent may execute
 
 **Example**: requiring confirmation before running shell commands, restricting file access to
-specific directories, or blocking certain categories of action entirely
+specific directories, or blocking certain categories of action entirely; a production browser
+agent's execution layer blocks clicks on elements labeled _"refund,"_ _"delete,"_ or _"transfer"_
+unless explicit confirmation is given, and restricts navigation to an allowlisted set of domains -
+enforcing the boundary in code instead of relying on the LLM to police its own actions, since
+prompt injection can override LLM-level judgment but not a deterministic check it never reaches
 
-**Related Terms**: [harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability),
+**Related Terms**: [accessibility tree snapshot]({{< relref "/interaction" >}}#accessibility-tree-snapshot),
+[harness]({{< relref "anatomy" >}}#harness), [observability]({{< relref "/interaction" >}}#observability),
+[prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability),
 [rule]({{< relref "/interaction" >}}#rule)
 
-**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Sources**:
+
+- [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
 

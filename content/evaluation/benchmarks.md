@@ -326,13 +326,39 @@ benchmarks because fixed environments reward memorization over adaptability
 **Example**: public tasks include _"What is the top-1 best-selling product in 2022?"_ and
 _"Tell me the full address of all international airports that are within a driving distance of 50 km to Carnegie Mellon University."_
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Online-Mind2Web]({{< relref "/evaluation/benchmarks" >}}#online-mind2web), [OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld), [WebVoyager]({{< relref "/evaluation/benchmarks" >}}#webvoyager)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Online-Mind2Web]({{< relref "/evaluation/benchmarks" >}}#online-mind2web), [OSWorld]({{< relref "/evaluation/benchmarks" >}}#osworld), [WebGames]({{< relref "/evaluation/benchmarks" >}}#webgames), [WebVoyager]({{< relref "/evaluation/benchmarks" >}}#webvoyager)
 
 **Sources**:
 
 - [arXiv: "A Real-World Web Environment for Building Autonomous Agents" by Zhou et al.](https://arxiv.org/abs/2307.13854)
 - [o-mega: "AI Computer Use Benchmarks 2026: Top Agents Ranked"](https://o-mega.ai/articles/the-2025-2026-guide-to-ai-computer-use-benchmarks-and-top-ai-agents)
 - [Steel.dev: WebArena Leaderboard](https://leaderboard.steel.dev/leaderboards/webarena/)
+
+---
+
+## WebGames
+
+**Definition**: benchmark of 53 diverse challenges evaluating web agent capabilities across
+perception, reasoning, planning, and tool use; calibrated against a human baseline
+
+**Purpose**: separates reasoning and tool-use capability from perception and latency limits by
+clustering unsolved challenges into distinct failure categories rather than a single pass/fail
+score; human subjects achieve a 95.7% success rate, setting the ceiling agent performance is
+measured against
+
+**Example**: a production browser agent achieved approximately 85% success, 45/53 challenges,
+compared to approximately 50% reported for the benchmark authors' own best-performing tested
+agent - `Gemini 2.5 Pro` with the `Browser Use` framework; the 8 unsolved challenges clustered into
+advanced vision requirements, _"Slider Symphony,"_ _"Pixel Copy"_, real-time interaction
+requiring sub-second reactions, _"Brick Buster,"_ _"Frog Crossing"_, and continuous
+precision control, _"Block Stack"_
+
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [WebArena]({{< relref "/evaluation/benchmarks" >}}#webarena), [WebVoyager]({{< relref "/evaluation/benchmarks" >}}#webvoyager)
+
+**Sources**:
+
+- [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
+- [Convergence: WebGames](https://webgames.convergence.ai/)
 
 ---
 
@@ -347,7 +373,7 @@ sanity check rather than a differentiator
 
 **Example**: public tasks include _"Provide a recipe for vegetarian lasagna with more than 100 reviews and a rating of at least 4.5 stars suitable for 6 people"_ and _"Search an Xbox Wireless controller with green color and rated above 4 stars."_
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Online-Mind2Web]({{< relref "/evaluation/benchmarks" >}}#online-mind2web), [WebArena]({{< relref "/evaluation/benchmarks" >}}#webarena)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [Online-Mind2Web]({{< relref "/evaluation/benchmarks" >}}#online-mind2web), [WebArena]({{< relref "/evaluation/benchmarks" >}}#webarena), [WebGames]({{< relref "/evaluation/benchmarks" >}}#webgames)
 
 **Sources**:
 

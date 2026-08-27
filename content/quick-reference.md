@@ -22,15 +22,6 @@ Brief definitions and complete entry locations, organized by the following secti
 
 ---
 
-### abstraction
-
-- label and/or concept that bundles together a set of underlying components or capabilities
-- streamlines communication by hiding implementation details
-
-**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#abstraction)
-
----
-
 ### ablation study
 
 - experimental method that systematically removes model components to measure their contribution
@@ -40,12 +31,30 @@ Brief definitions and complete entry locations, organized by the following secti
 
 ---
 
+### abstraction
+
+- label and/or concept that bundles together a set of underlying components or capabilities
+- streamlines communication by hiding implementation details
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#abstraction)
+
+---
+
 ### A/B test
 
 - also known as split testing and/or randomized controlled trial
 - experimental method that compares two versions of something to determine which performs better
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#ab-test)
+
+---
+
+### accessibility tree snapshot
+
+- structured, text-based page representation pulled from the browser's accessibility API, not raw HTML or a screenshot
+- gives an agent compact, semantic, stable element references; often paired with vision for canvas-based content
+
+**Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#accessibility-tree-snapshot)
 
 ---
 
@@ -205,6 +214,15 @@ Brief definitions and complete entry locations, organized by the following secti
 translation and a human-produced translation
 
 **Glossary Term Entry Location**: [Evaluation, Metrics & Scoring]({{< relref "evaluation/metrics" >}}#bleu)
+
+---
+
+### bulk action
+
+- also known as action batching
+- grouping of multiple independent tool calls into one dispatched request
+
+**Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#bulk-action)
 
 ---
 
@@ -1428,6 +1446,16 @@ retrieved content as an agent's context nears its window limit
 - measures reproducible web task completion in an offline setting
 
 **Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#webarena)
+
+---
+
+### WebGames
+
+- benchmark for evaluating web agent perception, reasoning, planning, and tool use
+- calibrated against a 95.7% human baseline
+- failures cluster into vision, real-time-reaction, and precision-control categories
+
+**Glossary Term Entry Location**: [Evaluation, Benchmarks]({{< relref "evaluation/benchmarks" >}}#webgames)
 
 ---
 

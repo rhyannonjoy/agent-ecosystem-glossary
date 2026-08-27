@@ -10,6 +10,31 @@ _What agents do_: behavior, commands, communication, and the mechanisms that gov
 
 ---
 
+## accessibility tree snapshot
+
+**Definition**: structured, text-based representation of a web page's roles, labels,
+descriptions, focus state, and interactive elements, pulled from the browser's
+accessibility API rather than raw HTML or a screenshot
+
+**Purpose**: gives an agent a compact, semantic view of a page's interactive surface -
+far fewer tokens than raw DOM, more stable references than pixel coordinates - so the
+LLM can plan against addressable elements and the harness can enforce action-level
+safety checks on semantic labels; typically paired with vision as a fallback for
+canvas-based or non-DOM content the tree doesn't expose
+
+**Example**: a form field labeled _"Total Weight (kg)"_ that requires 100+ lines of
+nested HTML with ARIA attributes collapses to `ref=38 heading "Total Weight (kg)..."`
+and `ref=39 textbox "Total Weight (kg)..." focusable focused required`, which the agent
+references directly in a `type` tool call instead of parsing markup; `Playwright MCP` and
+`Chrome DevTools MCP` both generate these snapshots instead of forwarding raw HTML
+
+**Related Terms**: [bulk action]({{< relref "interaction" >}}#bulk-action), [harness]({{< relref "/anatomy" >}}#harness),
+[MCP server]({{< relref "interaction" >}}#mcp-server), [permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems)
+
+**Source**: [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
+
+---
+
 ## `AGENTS.md`
 
 **Definition**: Markdown file placed at a repository's root that gives coding agents
@@ -47,6 +72,26 @@ conversation history that informs subsequent responses
 [user message]({{< relref "interaction" >}}#user-message)
 
 **Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
+---
+
+## bulk action
+
+**Definition**: also known as action batching; grouping of multiple independent tool calls into a
+single dispatched request instead of executing them one at a time
+
+**Purpose**: reduces network round-trips and LLM inference overhead for tasks that don't require
+intermediate verification between steps, such as populating several fields in a form; contrasts
+with sequential execution, where the agent waits on each action's result before issuing the next
+
+**Example**: on a 28-field form, batching field fills and dropdown selections into one bulk action
+cut tool calls by 74%, 10 vs. 38, execution time by 57%, 104.5s vs. 245.1s, and tokens consumed
+by 41%, 154K vs. 260K, compared to issuing each field as a separate sequential action
+
+**Related Terms**: [accessibility tree snapshot]({{< relref "interaction" >}}#accessibility-tree-snapshot),
+[context window]({{< relref "/anatomy" >}}#context-window), [harness]({{< relref "/anatomy" >}}#harness)
+
+**Source**: [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
 
 ---
 
@@ -89,7 +134,8 @@ capabilities to an agent - tools, resources, and/or prompts
 server is built to access; facilitates portable behavior across agent platforms because
 implementation lives in the server rather than the harness
 
-**Related Terms**: [agent-friendliness]({{< relref "/search" >}}#agent-friendliness), [harness]({{< relref "/anatomy" >}}#harness)
+**Related Terms**: [accessibility tree snapshot]({{< relref "interaction" >}}#accessibility-tree-snapshot),
+[agent-friendliness]({{< relref "/search" >}}#agent-friendliness), [harness]({{< relref "/anatomy" >}}#harness)
 
 **Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 

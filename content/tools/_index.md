@@ -50,6 +50,7 @@ _Platforms and infrastructural frameworks that enable agent development, researc
 | [Cohere](https://cohere.com) | Enterprise AI platform for building language models |
 | [Google Gemini](https://gemini.google.com) | Google's multimodal AI model and platform |
 | [Inflection AI](https://inflection.ai) | AI company focused on personal AI assistants |
+| [Lowdown Labs](https://gimmelowdown.com) | AI models using Fourier Neural Operators, linear attention, commodity hardware |
 | [Meta AI](https://ai.meta.com) | AI research lab developing LLaMA models and open-source AI tools |
 | [Mistral](https://mistral.ai) | Open-weight LLM company specializing in efficient models |
 | [OpenAI](https://openai.com) | AI research company that develops GPT models and API platform |
