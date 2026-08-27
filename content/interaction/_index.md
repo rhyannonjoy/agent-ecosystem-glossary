@@ -28,8 +28,8 @@ and `ref=39 textbox "Total Weight (kg)..." focusable focused required`, which th
 references directly in a `type` tool call instead of parsing markup; `Playwright MCP` and
 `Chrome DevTools MCP` both generate these snapshots instead of forwarding raw HTML
 
-**Related Terms**: [harness]({{< relref "/anatomy" >}}#harness), [MCP server]({{< relref "interaction" >}}#mcp-server),
-[permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems)
+**Related Terms**: [bulk action]({{< relref "interaction" >}}#bulk-action), [harness]({{< relref "/anatomy" >}}#harness),
+[MCP server]({{< relref "interaction" >}}#mcp-server), [permission and safety systems]({{< relref "/anatomy" >}}#permission-and-safety-systems)
 
 **Source**: [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
 
@@ -72,6 +72,26 @@ conversation history that informs subsequent responses
 [user message]({{< relref "interaction" >}}#user-message)
 
 **Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
+---
+
+## bulk action
+
+**Definition**: also known as action batching; grouping of multiple independent tool calls into a
+single dispatched request instead of executing them one at a time
+
+**Purpose**: reduces network round-trips and LLM inference overhead for tasks that don't require
+intermediate verification between steps, such as populating several fields in a form; contrasts
+with sequential execution, where the agent waits on each action's result before issuing the next
+
+**Example**: on a 28-field form, batching field fills and dropdown selections into one bulk action
+cut tool calls by 74%, 10 vs. 38, execution time by 57%, 104.5s vs. 245.1s, and tokens consumed
+by 41%, 154K vs. 260K, compared to issuing each field as a separate sequential action
+
+**Related Terms**: [accessibility tree snapshot]({{< relref "interaction" >}}#accessibility-tree-snapshot),
+[context window]({{< relref "/anatomy" >}}#context-window), [harness]({{< relref "/anatomy" >}}#harness)
+
+**Source**: [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
 
 ---
 

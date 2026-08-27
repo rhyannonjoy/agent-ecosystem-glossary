@@ -217,6 +217,15 @@ translation and a human-produced translation
 
 ---
 
+### bulk action
+
+- also known as action batching
+- grouping of multiple independent tool calls into one dispatched request
+
+**Glossary Term Entry Location**: [Interaction]({{< relref "interaction" >}}#bulk-action)
+
+---
+
 ## C
 
 ---
