@@ -268,6 +268,30 @@ building secure agents; the root cause of many agent security failures
 
 ---
 
+## RAG
+
+**Definition**: acronym for _retrieval-augmented generation_; architecture where LLM retrieves
+context from external sources before generating responses; typically uses vector databases to
+store and retrieve documents as numerical embeddings
+
+**Purpose**: extends LLM capabilities beyond training data cutoff dates; enables agents to ground
+answers in current, specific information, but also creates new attack surface through poisoned
+retrieval sources
+
+**Example**: [PoisonedRAG](https://arxiv.org/abs/2402.07867) attack that corrupted system answers
+by inserting 5 malicious passages into millions of documents, reaching 90% success rate on targeted
+questions
+
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window),
+[LLM]({{< relref "anatomy" >}}#llm), [summarization layer]({{< relref "anatomy" >}}#summarization-layer)
+
+**Sources**:
+
+- [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
+- [Wikipedia: "Retrieval-augmented generation"](https://en.wikipedia.org/wiki/Retrieval-augmented_generation)
+
+---
+
 ## RLHF
 
 **Definition**: acronym for _reinforcement learning from human feedback_; training methodology in

@@ -1059,6 +1059,15 @@ translation and a human-produced translation
 
 ---
 
+### RAG
+
+- acronym for _retrieval-augmented generation_
+- architecture where LLM retrieves context from external sources before generating responses
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#rag)
+
+---
+
 ### recall
 
 - also called the sensitivity rate
