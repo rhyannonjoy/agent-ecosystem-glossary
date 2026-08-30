@@ -242,22 +242,29 @@ prompt injection can override LLM-level judgment but not a deterministic check i
 
 ## prompt injection
 
-**Definition**: attack that supplies instruction-like text to an LLM so output conforms to attacker
-instructions instead of operator intent; exploits the absence of a boundary between instructions
+**Definition**: traditional command injection applied to realm of natural language;
+manipulation of LLM behavior by crafting malicious or misleading prompts, often by bypassing safety
+filters and executing unintended instructions; exploits the absence of a boundary between instructions
 and data in token sequences
 
 **Purpose**: fundamental security vulnerability in LLM systems; understanding it is essential for
 building secure agents; the root cause of many agent security failures
 
-**Example**: [EchoLeak CVE-2025-32711](https://github.com/advisories/GHSA-h2w9-p5qf-qmrh) where hidden
-instructions in an email caused Microsoft 365 Copilot to retrieve internal files and transmit them to
-an external server without user interaction
+**Direct vs Indirect**:
+
+| **Type** | **Route** | **Description** | **Example** |
+| --- | --- | --- | --- |
+| **Direct** | User input | Hostile instruction typed into chat box | User asks agent to ignore previous instructions |
+| **Indirect** | Retrieved content | Instruction embedded in legitimate tasks - docs, emails, web pages | [EchoLeak CVE-2025-32711](https://github.com/advisories/GHSA-h2w9-p5qf-qmrh) - hidden email instructions caused data exfiltration |
 
 **Related Terms**: [context window]({{< relref "anatomy" >}}#context-window),
 [LLM]({{< relref "anatomy" >}}#llm), [permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems),
-[prompt injection vulnerability]({{< relref "prompt injection vulnerability" >}}#prompt-injection-vulnerability)
+[prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
 
-**Source**: [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
+**Sources**:
+
+- [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
+- [OWASP: "Prompt Injection"](https://owasp.org/www-community/attacks/PromptInjection)
 
 ---
 

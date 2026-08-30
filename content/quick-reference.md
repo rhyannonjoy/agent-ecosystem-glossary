@@ -980,7 +980,7 @@ translation and a human-produced translation
 
 ### prompt injection
 
-- attack that supplies instruction-like text to an LLM
+- manipulation of LLM behavior through malicious or misleading prompts
 - exploits the absence of a boundary between instructions and data in token sequences
 
 **Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#prompt-injection)
