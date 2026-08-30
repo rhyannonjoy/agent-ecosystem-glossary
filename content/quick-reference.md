@@ -978,6 +978,15 @@ translation and a human-produced translation
 
 ---
 
+### prompt injection
+
+- attack that supplies instruction-like text to an LLM
+- exploits the absence of a boundary between instructions and data in token sequences
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#prompt-injection)
+
+---
+
 ### prompt injection vulnerability
 
 - ethical and security evaluation metric measuring the success rate of adversarial prompts that alter an agent's intended behavior

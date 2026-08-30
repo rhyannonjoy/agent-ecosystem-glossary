@@ -240,6 +240,27 @@ prompt injection can override LLM-level judgment but not a deterministic check i
 
 ---
 
+## prompt injection
+
+**Definition**: attack that supplies instruction-like text to an LLM so output conforms to attacker
+instructions instead of operator intent; exploits the absence of a boundary between instructions
+and data in token sequences
+
+**Purpose**: fundamental security vulnerability in LLM systems; understanding it is essential for
+building secure agents; the root cause of many agent security failures
+
+**Example**: [EchoLeak CVE-2025-32711](https://github.com/advisories/GHSA-h2w9-p5qf-qmrh) where hidden
+instructions in an email caused Microsoft 365 Copilot to retrieve internal files and transmit them to
+an external server without user interaction
+
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window),
+[LLM]({{< relref "anatomy" >}}#llm), [permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems),
+[prompt injection vulnerability]({{< relref "prompt injection vulnerability" >}}#prompt-injection-vulnerability)
+
+**Source**: [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
+
+---
+
 ## RLHF
 
 **Definition**: acronym for _reinforcement learning from human feedback_; training methodology in
