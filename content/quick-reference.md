@@ -742,8 +742,8 @@ translation and a human-produced translation
 
 ### memory
 
-- stores and retrieve information across interactions and tasks
 - enables agents to maintain context, learn from experience, and reference past actions
+- stores and retrieves information across interactions and tasks
 
 **Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#memory)
 
