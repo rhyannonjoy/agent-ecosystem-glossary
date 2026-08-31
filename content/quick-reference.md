@@ -978,6 +978,15 @@ translation and a human-produced translation
 
 ---
 
+### prompt injection
+
+- manipulation of LLM behavior through malicious or misleading prompts
+- exploits the absence of a boundary between instructions and data in token sequences
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#prompt-injection)
+
+---
+
 ### prompt injection vulnerability
 
 - ethical and security evaluation metric measuring the success rate of adversarial prompts that alter an agent's intended behavior
@@ -1047,6 +1056,15 @@ translation and a human-produced translation
 ---
 
 ## R
+
+---
+
+### RAG
+
+- acronym for _retrieval-augmented generation_
+- architecture where LLM retrieves context from external sources before generating responses
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#rag)
 
 ---
 

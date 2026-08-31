@@ -6,7 +6,7 @@ bookToc: true
 
 # Anatomy
 
-_What agents are_: structural components and training that define their abilities and limitations.
+_What agents are_: structural components and training that define their abilities and limitations
 
 ---
 
@@ -114,7 +114,15 @@ diagnose failures and informs evaluation of truthfulness and robustness
 **Example**: in the [Agent Reading Test](https://agentreadingtest.com/), GitHub Copilot reported
 _"25 canary tokens found"_ in its summary, but its own JSON report listed only 16, with only 23
 canaries total across all pages; agent hallucinated a count of its own reported data, inflating
-a number it had just generated
+a number it had just generated; LLMs don't understand truth, fill gaps in training data, oversimplify
+patterns, and lack real-world verification to produce different types of hallucinations -
+
+| **Type** | **Description** |
+| --- | --- |
+| **Creative** | Produces completely fictional explanation to a scientific question |
+| **Fabricated** | Creates references or sources that don't exist |
+| **Factual** | Generates incorrect facts, asserting a fictional event as historical |
+| **Logical** | Delivers contradicting outputs or lack consistency |
 
 **Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
 [agent]({{< relref "anatomy" >}}#agent), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
@@ -122,7 +130,10 @@ a number it had just generated
 [observability]({{< relref "/interaction" >}}#observability), [self-reflection]({{< relref "/interaction" >}}#self-reflection),
 [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
 
-**Source**: [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+**Sources**:
+
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+- [Geeks for Geeks: "What is AI Hallucination? Understanding and Mitigating AI Hallucination"](https://www.geeksforgeeks.org/artificial-intelligence/what-is-ai-hallucination/)
 
 ---
 
@@ -219,7 +230,15 @@ include short-term - current task, long-term - across sessions, and episodic - s
 conceptual authorization and/or guardrails
 
 **Purpose**: shape agent behavior independently of the underlying LLM and enforce safety
-boundaries on what an agent may execute
+boundaries on what an agent may execute, largely in response to security concepts -
+
+| **Concept** | **Description** |
+| --- | --- |
+| **Data Poisoning** | Insertion of malicious data into training sets or sources to alter LLM behavior; only requires sampling for backdoor installation |
+| **Defense in Depth** | Realistic posture for LLM systems as no single filter holds all the time; process of layering independent security controls, so that failure of one is contained by another - input validation, retrieval sources cleaning, minimum tool permission scope, model sanitation, monitoring, human review |
+| **Excessive Agency** | When an agent holds more permission than its task requires; arises from the lethal trifecta: simultaneous access to private data, exposure to untrusted content, a channel to act externally |
+| **Model Theft** | Extraction of model weights or architecture through API queries; typically expensive, bounded, but remains a risk for teams hosting open weights or running their own training pipelines |
+| **Supply Chain Security** | Verifying provenance of models, adapters, vector stores, and tools before deployment; bypasses runtime defenses because the threat is present before input validation runs |
 
 **Example**: requiring confirmation before running shell commands, restricting file access to
 specific directories, or blocking certain categories of action entirely; a production browser
@@ -236,7 +255,61 @@ prompt injection can override LLM-level judgment but not a deterministic check i
 **Sources**:
 
 - [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
+- [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+
+---
+
+## prompt injection
+
+**Definition**: traditional command injection applied to realm of natural language;
+manipulation of LLM behavior by crafting malicious or misleading prompts, often by bypassing safety
+filters and executing unintended instructions; exploits the absence of a boundary between instructions
+and data in token sequences
+
+**Purpose**: fundamental security vulnerability in LLM systems; understanding it is essential for
+building secure agents; the root cause of many agent security failures
+
+**Direct vs Indirect**:
+
+| **Type** | **Route** | **Description** | **Example** |
+| --- | --- | --- | --- |
+| **Direct** | User input | Hostile instruction typed into chat box | User asks agent to ignore previous instructions |
+| **Indirect** | Retrieved content | Instruction embedded in legitimate tasks - docs, emails, web pages | [EchoLeak CVE-2025-32711](https://github.com/advisories/GHSA-h2w9-p5qf-qmrh) - hidden email instructions caused data exfiltration |
+
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window),
+[LLM]({{< relref "anatomy" >}}#llm), [permission and safety systems]({{< relref "anatomy" >}}#permission-and-safety-systems),
+[prompt injection vulnerability]({{< relref "/evaluation/metrics" >}}#prompt-injection-vulnerability)
+
+**Sources**:
+
+- [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
+- [OWASP: "Prompt Injection"](https://owasp.org/www-community/attacks/PromptInjection)
+
+---
+
+## RAG
+
+**Definition**: acronym for _retrieval-augmented generation_; architecture where LLM retrieves
+context from external sources before generating responses; typically uses
+[vector databases](https://en.wikipedia.org/wiki/Vector_database) to store and retrieve documents
+as numerical embeddings
+
+**Purpose**: extends LLM capabilities beyond training data cutoff dates; enables agents to ground
+answers in current, specific information, but also creates new attack surface through poisoned
+retrieval sources
+
+**Example**: [PoisonedRAG](https://arxiv.org/abs/2402.07867) attack that corrupted system answers
+by inserting 5 malicious passages into millions of documents, reaching 90% success rate on targeted
+questions
+
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window),
+[LLM]({{< relref "anatomy" >}}#llm), [summarization layer]({{< relref "anatomy" >}}#summarization-layer)
+
+**Sources**:
+
+- [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
+- [Wikipedia: "Retrieval-augmented generation"](https://en.wikipedia.org/wiki/Retrieval-augmented_generation)
 
 ---
 

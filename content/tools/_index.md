@@ -6,7 +6,7 @@ bookToc: true
 
 # Tools
 
-_Platforms and infrastructural frameworks that enable agent development, research, and deployment._
+Platforms and infrastructural frameworks that enable agent development, research, and deployment
 
 ---
 

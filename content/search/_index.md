@@ -6,7 +6,7 @@ bookToc: true
 
 # Search
 
-_How agents find content_: access control, retrieval mechanics, visibility, and the strategies that determine response quality.
+_How agents find content_: access control, retrieval mechanics, and response quality strategies
 
 ---
 

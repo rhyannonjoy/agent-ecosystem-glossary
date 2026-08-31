@@ -7,8 +7,8 @@ parent: "evaluation"
 
 # Benchmarks
 
-Standardized datasets and tasks used to measure and compare LLM and/or agent
-performance across capabilities.
+Standardized datasets used to measure and compare LLM and/or agent
+performance across capabilities
 
 ---
 
