@@ -114,7 +114,15 @@ diagnose failures and informs evaluation of truthfulness and robustness
 **Example**: in the [Agent Reading Test](https://agentreadingtest.com/), GitHub Copilot reported
 _"25 canary tokens found"_ in its summary, but its own JSON report listed only 16, with only 23
 canaries total across all pages; agent hallucinated a count of its own reported data, inflating
-a number it had just generated
+a number it had just generated; LLMs don't understand truth, fill gaps in training data, oversimplify
+patterns, and lack real-world verification to produce different types of hallucinations -
+
+| **Type** | **Description** |
+| --- | --- |
+| **Creative** | Produces completely fictional explanation to a scientific question |
+| **Fabricated** | Creates references or sources that don't exist |
+| **Factual** | Generates incorrect facts, asserting a fictional event as historical |
+| **Logical** | Delivers contradicting outputs or lack consistency |
 
 **Related Terms**: [Agent Reading Test]({{< relref "/evaluation/benchmarks" >}}#agent-reading-test),
 [agent]({{< relref "anatomy" >}}#agent), [canary phrase]({{< relref "/evaluation" >}}#canary-phrase),
@@ -122,7 +130,10 @@ a number it had just generated
 [observability]({{< relref "/interaction" >}}#observability), [self-reflection]({{< relref "/interaction" >}}#self-reflection),
 [SimpleQA]({{< relref "/evaluation/benchmarks" >}}#simpleqa)
 
-**Source**: [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+**Sources**:
+
+- [Dachary Carey: "Designing an Agent Reading Test"](https://dacharycarey.com/2026/04/06/designing-agent-reading-test/)
+- [Geeks for Geeks: "What is AI Hallucination? Understanding and Mitigating AI Hallucination"](https://www.geeksforgeeks.org/artificial-intelligence/what-is-ai-hallucination/)
 
 ---
 
