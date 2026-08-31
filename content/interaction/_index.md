@@ -127,17 +127,25 @@ applies at its own discretion
 
 ## MCP server
 
-**Definition**: acronym for _Model Context Protocol_ server; external server that exposes
-capabilities to an agent - tools, resources, and/or prompts
+**Definition**: acronym for _Model Context Protocol_ server; open-source standard for connecting AI
+applications to external systems; external server that exposes capabilities to an agent - tools,
+resources, and/or prompts
 
 **Purpose**: lets agents interact with databases, APIs, cloud services, or custom systems the
 server is built to access; facilitates portable behavior across agent platforms because
 implementation lives in the server rather than the harness
 
+**Example**: MCPs introduce security risk,
+[Anthropic's Git MCP server received three injection-related CVEs, _common vulnerabilities and exposures_, in 2025](https://nvd.nist.gov/vuln/detail/cve-2025-68143)
+
 **Related Terms**: [accessibility tree snapshot]({{< relref "interaction" >}}#accessibility-tree-snapshot),
 [agent-friendliness]({{< relref "/search" >}}#agent-friendliness), [harness]({{< relref "/anatomy" >}}#harness)
 
-**Source**: [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+**Sources**:
+
+- [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
+- [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
+- [LF Projects, LLC: "What is the Model Context Protocol (MCP)?"](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro)
 
 ---
 
