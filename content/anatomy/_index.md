@@ -230,7 +230,15 @@ include short-term - current task, long-term - across sessions, and episodic - s
 conceptual authorization and/or guardrails
 
 **Purpose**: shape agent behavior independently of the underlying LLM and enforce safety
-boundaries on what an agent may execute
+boundaries on what an agent may execute, largely in response to security concepts -
+
+| **Concept** | **Description** |
+| --- | --- |
+| **Data Poisoning** | Insertion of malicious data into training sets or sources to alter LLM behavior; only requires sampling for backdoor installation |
+| **Defense in Depth** | Realistic posture for LLM systems as no single filter holds all the time; process of layering independent security controls, so that failure of one is contained by another - input validation, retrieval sources cleaning, minimum tool permission scope, model sanitation, monitoring, human review |
+| **Excessive Agency** | When an agent holds more permission than its task requires; arises from the lethal trifecta: simultaneous access to private data, exposure to untrusted content, a channel to act externally |
+| **Model Theft** | Extraction of model weights or architecture through API queries; typically expensive, bounded, but remains a risk for teams hosting open weights or running their own training pipelines |
+| **Supply Chain Security** | Verifying provenance of models, adapters, vector stores, and tools before deployment; bypasses runtime defenses because the threat is present before input validation runs |
 
 **Example**: requiring confirmation before running shell commands, restricting file access to
 specific directories, or blocking certain categories of action entirely; a production browser
@@ -247,6 +255,7 @@ prompt injection can override LLM-level judgment but not a deterministic check i
 **Sources**:
 
 - [arXiv: "Building Browser Agents: Architecture, Security, and Practical Solutions" by Aram Vardanyan](https://arxiv.org/abs/2511.19477)
+- [ByteByteGo: "LLM Security Basics: The Full Threat Model"](https://blog.bytebytego.com/p/llm-security-basics-the-full-threat)
 - [Dachary Carey: "An Agent is More Than Its Brain"](https://dacharycarey.com/2026/03/02/an-agent-is-more-than-its-brain/)
 
 ---
