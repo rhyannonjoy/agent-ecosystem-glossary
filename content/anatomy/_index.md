@@ -210,17 +210,36 @@ common non-LLM examples; the LLM is the reasoning component an agent's harness w
 
 ## memory
 
-**Definition**: in an agent context, ability to store and retrieve information across
-interactions and tasks; enables agents to maintain context, learn from experience, and
-reference past actions
+**Definition**: enables agents to maintain context, learn from experience, and
+reference past actions; ability to store and retrieve information across interactions
+and tasks
 
 **Purpose**: critical for multi-step reasoning and adapting behavior based on history; types
 include short-term - current task, long-term - across sessions, and episodic - specific events
 
+**Example**: 100K-word prompts are more expensive than short ones due to
+[KV caching](https://huggingface.co/blog/not-lain/kv-caching) - working memory separate from the LLM's
+weights that store key-value vectors for every token processed; grows linearly with token count and
+batch size; decoding reads the entire cache on every generated token makes it a bandwidth cost
+as much as a storage one, techniques include -
+
+| **Technique** | **Description** |
+| --- | --- |
+| **Eviction** | Drops token entries from the cache to reduce its size; keeps recent tokens and a few opening tokens, while less relevant entries are discarded - risks losing information the generation later needs |
+| **Grouped-query Attention** | Lets multiple query heads share a single key-value head, sharply reducing the number of stored vector sets; the standard trade-off between full multi-head attention and the more aggressive multi-query variant |
+| **Multi-head latent Attention** | Projects keys and values into a smaller latent representation before caching, then expands them on read; large memory savings but adds serving complexity, compression adds work on every read and pairs awkwardly with standard attention implementations |
+| **Multi-query Attention** | Extreme head-sharing variant where every query head shares one key-value head; saves the most memory, but can degrade quality and training stability |
+| **Paged Attention** | Borrows OS-style fixed-size page management to eliminate cache fragmentation; systems that wasted 60–80% of cache memory to fragmentation dropped below 4% |
+| **Prefix Caching** | Shares cached blocks across requests that begin with identical text, such as a repeated system prompt; API providers report 50–90% cost and latency reductions on cache hits - risk is prompt info leaking by sharing state |
+| **Quantization** | Rounds key and value vectors from 16 bits to 8 or 4 bits; 8-bit costs under 1% accuracy, 4-bit saves more, but shows measurable losses on demanding retrieval tasks |
+
 **Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [planning]({{< relref "/interaction" >}}#planning),
 [self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
-**Source**: [IBM: "What is AI agent memory?" by Cole Stryker](https://www.ibm.com/think/topics/ai-agent-memory)
+**Sources**:
+
+- [ByteByteGo: "Why An LLM’s Memory Gets Expensive and How to Fix It"](https://blog.bytebytego.com/p/why-an-llms-memory-gets-expensive)
+- [IBM: "What is AI agent memory?" by Cole Stryker](https://www.ibm.com/think/topics/ai-agent-memory)
 
 ---
 
