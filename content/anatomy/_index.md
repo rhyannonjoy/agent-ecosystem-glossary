@@ -227,7 +227,7 @@ as much as a storage one, techniques include -
 | --- | --- |
 | **Eviction** | Drops token entries from the cache to reduce its size; keeps recent tokens and a few opening tokens, while less relevant entries are discarded - risks losing information the generation later needs |
 | **Grouped-query Attention** | Lets multiple query heads share a single key-value head, sharply reducing the number of stored vector sets; the standard trade-off between full multi-head attention and the more aggressive multi-query variant |
-| **Multi-head latent Attention** | Projects keys and values into a smaller latent representation before caching, then expands them on read; large memory savings but adds serving complexity, compression adds work on every read and pairs awkwardly with standard attention implementations |
+| **Multi-head Latent Attention** | Projects keys and values into a smaller latent representation before caching, then expands them on read; large memory savings but adds serving complexity, compression adds work on every read and pairs awkwardly with standard attention implementations |
 | **Multi-query Attention** | Extreme head-sharing variant where every query head shares one key-value head; saves the most memory, but can degrade quality and training stability |
 | **Paged Attention** | Borrows OS-style fixed-size page management to eliminate cache fragmentation; systems that wasted 60–80% of cache memory to fragmentation dropped below 4% |
 | **Prefix Caching** | Shares cached blocks across requests that begin with identical text, such as a repeated system prompt; API providers report 50–90% cost and latency reductions on cache hits - risk is prompt info leaking by sharing state |
