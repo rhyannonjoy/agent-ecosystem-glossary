@@ -271,8 +271,9 @@ building secure agents; the root cause of many agent security failures
 ## RAG
 
 **Definition**: acronym for _retrieval-augmented generation_; architecture where LLM retrieves
-context from external sources before generating responses; typically uses vector databases to
-store and retrieve documents as numerical embeddings
+context from external sources before generating responses; typically uses
+[vector databases](https://en.wikipedia.org/wiki/Vector_database) to store and retrieve documents
+as numerical embeddings
 
 **Purpose**: extends LLM capabilities beyond training data cutoff dates; enables agents to ground
 answers in current, specific information, but also creates new attack surface through poisoned
