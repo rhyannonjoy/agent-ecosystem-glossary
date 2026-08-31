@@ -6,7 +6,7 @@ bookToc: true
 
 # Interaction
 
-_What agents do_: behavior, commands, communication, and the mechanisms that govern responses.
+_What agents do_: behavior, commands, communication, and the mechanisms that govern responses
 
 ---
 

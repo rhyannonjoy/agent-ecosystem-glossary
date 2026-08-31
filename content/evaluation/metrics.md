@@ -7,8 +7,8 @@ parent: "evaluation"
 
 # Metrics & Scoring
 
-Approaches used to quantify LLM and/or agent performance across the
-benchmarks and customized evaluations.
+Approaches used to quantify LLM and/or agent performance across
+benchmarks and customized evals
 
 ---
 

@@ -6,7 +6,7 @@ bookToc: true
 
 # Anatomy
 
-_What agents are_: structural components and training that define their abilities and limitations.
+_What agents are_: structural components and training that define their abilities and limitations
 
 ---
 
