@@ -700,6 +700,15 @@ translation and a human-produced translation
 
 ---
 
+### LLM distillation
+
+- specialized form of knowledge distillation that compresses LLMs into smaller, faster models
+- used to transfer capabilities between teacher-student LLMs while maintaining efficiency, performance
+
+**Glossary Term Entry Location**: [Anatomy]({{< relref "anatomy" >}}#llm-distillation)
+
+---
+
 ### LLM leaderboard
 
 - published ranking of LLMs based on a variety of benchmarks
