@@ -257,6 +257,15 @@ translation and a human-produced translation
 
 ---
 
+### Cloudflare Monetization Gateway
+
+- reverse proxy infrastructure intending to resolve identity, permission, payment inside one `HTTP` request
+- enables per-request charging for automated traffic using `x402` protocol
+
+**Glossary Term Entry Location**: [Search]({{< relref "search" >}}#cloudflare-monetization-gateway)
+
+---
+
 ### codebook
 
 - structured guide used in qualitative research to categorize and tag data consistently

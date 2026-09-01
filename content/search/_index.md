@@ -38,7 +38,8 @@ measures bot access control, protocol adoption; prioritize the following -
 sequences, suggesting that agent-friendliness may depend more on machine-curated files than traditional documentation quality
 
 **Related Terms**: [Agent-Friendly Documentation Spec]({{< relref "search" >}}#agent-friendly-documentation-spec),
-[`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [GEO]({{< relref "search" >}}#geo),
+[`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [Cloudflare Monetization Gateway]({{< relref "search" >}}#cloudflare-monetization-gateway),
+[evaluation]({{< relref "/evaluation" >}}#evaluation-1), [GEO]({{< relref "search" >}}#geo),
 [`llms.txt`]({{< relref "search" >}}#llmstxt), [MCP server]({{< relref "/interaction" >}}#mcp-server), [`robots.txt`]({{< relref "search" >}}#robotstxt),
 [truncation budget]({{< relref "search" >}}#truncation-budget)
 
@@ -92,7 +93,7 @@ dropping to 0.52%, an 86.4% relative decline in citation share
 **Related Terms**: [GEO]({{< relref "search" >}}#geo), [query fan-out]({{< relref "search" >}}#query-fan-out),
 [retrieval pool]({{< relref "search" >}}#retrieval-pool)
 
-**Source**:
+**Sources**:
 
 - [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
 - [GEO Rankings: "Citation Share vs Share of Voice vs Visibility Score: What Each Metric Actually Measures (And Which to Track)"](https://www.geosoftwarerankings.com/blog/citation-share-share-voice-visibility-score-each-metric/)
@@ -111,12 +112,42 @@ Reddit cut off `ChatGPT`'s access despite an existing partnership
 **Example**: the May 2024 OpenAI-Reddit data-licensing partnership that gave OpenAI structured
 API access for training and product use, separate from ordinary web crawling
 
-**Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [`robots.txt`]({{< relref "search" >}}#robotstxt),
-[training data]({{< relref "/anatomy" >}}#training-data)
+**Related Terms**: [citation share]({{< relref "search" >}}#citation-share), [Cloudflare Monetization Gateway]({{< relref "search" >}}#cloudflare-monetization-gateway),
+[`robots.txt`]({{< relref "search" >}}#robotstxt), [training data]({{< relref "/anatomy" >}}#training-data)
 
-**Source**:
+**Source**: [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
 
-- [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
+---
+
+## Cloudflare Monetization Gateway
+
+**Definition**: reverse proxy infrastructure intending to resolve identity, permission, and payment
+inside a single `HTTP` request at the edge, before the origin server responds; enables
+per-request charging for automated traffic using the `x402` protocol
+
+**Purpose**: addresses [the monetization gap](https://blog.cloudflare.com/monetization-gateway/) created
+when agent traffic bypasses traditional advertising and subscription models; allows content providers to
+charge crawlers and agents for access to premium content
+
+**Example**: [Cloudflare's Pay Per Crawl](https://blog.cloudflare.com/introducing-pay-per-crawl/) feature
+lets site owners set per-request prices for automated traffic, with Cloudflare handling billing as merchant
+of record, moving value settlement from after the request to inside it, risks of this emerging technology include -
+
+| Risk | Description |
+| --- | --- |
+| **Adoption Dependency** | Revenue depends on callers recognizing the `402` response; adoption is currently minimal |
+| **Agent Definition Conflation** | Conflates LLM agents with crawlers and training bots, diluting the specific meaning of _"agent"_ |
+| **Concentration Risk** | Too much infrastructure running through a single provider creates systemic risk |
+| **Pricing Difficulty** | Pay Per Use aligns payment with value, but is harder to measure and verify than per-crawl pricing |
+| **Protocol Adoption Gap** | Content Signals, MCP Server Cards, and Web Bot Auth have near-zero agent consumption today |
+
+**Related Terms**: [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
+[data-licensing]({{< relref "search" >}}#data-licensing), [`robots.txt`]({{< relref "search" >}}#robotstxt)
+
+**Sources**:
+
+- [ByteByteGo: "How Cloudflare Is Making AI Pay for Content"](https://blog.bytebytego.com/p/how-cloudflare-is-making-ai-pay-for)
+- [Dachary Carey: "What Agent Score Can Tell You"](https://dacharycarey.com/2026/04/18/what-agent-score-can-tell-you/)
 
 ---
 
@@ -135,9 +166,7 @@ questions about a product, rather than trying to rank on Google's first page
 **Related Terms**: [context window]({{< relref "/anatomy" >}}#context-window), [LLM]({{< relref "/anatomy" >}}#llm),
 [planning]({{< relref "/interaction" >}}#planning), [query fan-out]({{< relref "search" >}}#query-fan-out)
 
-**Source**:
-
-- [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
+**Source**: [explainx.ai: "Reddit's ChatGPT Citations Collapsed 86% on August 14 — What Happened" by Yash Thakker](https://www.explainx.ai/blog/reddit-citations-chatgpt-search-drop-august-2026)
 
 ---
 
@@ -222,6 +251,7 @@ caused `ChatGPT`'s citation share from Reddit to collapse from 3.83% to 0.52% in
 
 **Related Terms**: [agent]({{< relref "/anatomy" >}}#agent), [agent-friendliness]({{< relref "search" >}}#agent-friendliness),
 [`AGENTS.md`]({{< relref "/interaction" >}}#agentsmd), [citation share]({{< relref "search" >}}#citation-share),
+[Cloudflare Monetization Gateway]({{< relref "search" >}}#cloudflare-monetization-gateway),
 [GEO]({{< relref "search" >}}#geo), [`llms.txt`]({{< relref "search" >}}#llmstxt),
 [retrieval pool]({{< relref "search" >}}#retrieval-pool)
 
