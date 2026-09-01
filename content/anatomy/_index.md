@@ -199,7 +199,7 @@ common non-LLM examples; the LLM is the reasoning component an agent's harness w
 | **Proprietary** | Weights closed; access typically via API | [`Claude`](https://anthropic.com), [`Gemini`](https://gemini.google.com),[`GPT`](https://openai.com) |
 
 **Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [harness]({{< relref "anatomy" >}}#harness),
-[temperature]({{< relref "anatomy" >}}#temperature), [LLM distillation]({{< relref "anatomy" >}}#llm-distillation)
+[LLM distillation]({{< relref "anatomy" >}}#llm-distillation), [temperature]({{< relref "anatomy" >}}#temperature),
 
 **Sources**:
 
@@ -222,19 +222,17 @@ than parameter quantity, knowledge loss, may require continued fine-tuning
 
 **Example**: [Google's Gemma models are distilled from Gemini](https://developers.googleblog.com/en/gemma-explained-embeddinggemma-architecture-and-recipe/);
 [DeepSeek used distillation](https://arxiv.org/abs/2501.12948) to create a 7B student that outperformed
-a 32B LLM on competition mathematics
-
-### Techniques
+a 32B LLM on competition mathematics; techniques include -
 
 | Technique | Description |
 | --- | --- |
 | **Feature-Based** | Copies hidden representations from intermediate layers to capture deeper knowledge |
 | **Multi-Teacher** | Combines knowledge from multiple teacher-models for robustness |
-| **Output-Based** | Student learns from teacher model's soft probability distributions, soft targets, using KL divergence loss |
+| **Output-Based** | Learns from teacher-model's soft probability distributions, soft targets, using KL divergence loss |
 | **Prompt-Based** | Compresses long prompts into shorter, efficient versions |
-| **RL-Based** | Uses reinforcement learning feedback signals to iteratively improve student-model performance |
+| **RL-Based** | Uses reinforcement learning feedback signals to iteratively improve |
 | **Synthetic Data Augmentation** | Expands training data using teacher-generated examples for improvement |
-| **Task-Specific** | Fine-tunes student-model for specific downstream applications |
+| **Task-Specific** | Fine-tunes for specific downstream applications |
 
 **Related Terms**: [LLM]({{< relref "anatomy" >}}#llm), [training data]({{< relref "anatomy" >}}#training-data),
 [harness]({{< relref "anatomy" >}}#harness), [training data]({{< relref "anatomy">}}#training-data)
