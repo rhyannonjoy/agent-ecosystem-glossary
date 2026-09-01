@@ -199,12 +199,50 @@ common non-LLM examples; the LLM is the reasoning component an agent's harness w
 | **Proprietary** | Weights closed; access typically via API | [`Claude`](https://anthropic.com), [`Gemini`](https://gemini.google.com),[`GPT`](https://openai.com) |
 
 **Related Terms**: [agent]({{< relref "anatomy" >}}#agent), [harness]({{< relref "anatomy" >}}#harness),
-[temperature]({{< relref "anatomy" >}}#temperature)
+[temperature]({{< relref "anatomy" >}}#temperature), [LLM distillation]({{< relref "anatomy" >}}#llm-distillation)
 
 **Sources**:
 
 - [Geeks for Geeks: "Large Language Model (LLM)"](https://www.geeksforgeeks.org/artificial-intelligence/large-language-model-llm/)
 - [Wikipedia: "Open-source artificial intelligence"](https://en.wikipedia.org/wiki/Open-source_artificial_intelligence)
+
+---
+
+## LLM distillation
+
+**Definition**: specialized form of [knowledge distillation](https://www.geeksforgeeks.org/machine-learning/knowledge-distillation/)
+that compresses LLMs for efficiency while preserving performance; while compression shrinks LLMs through
+quantizing or pruning, distillation produces a separate student-model with its own parameters and different
+design whose goal is to emulate teacher-model behavior
+
+**Purpose**: enables deployment of capable models in resource-constrained environments - edge
+devices, mobile, low-latency applications; reduces computational costs and energy consumption; limits include
+static student-model performance level, too large a gap between levels risk degradation, design impacts more
+than parameter quantity, knowledge loss, may require continued fine-tuning
+
+**Example**: [Google's Gemma models are distilled from Gemini](https://developers.googleblog.com/en/gemma-explained-embeddinggemma-architecture-and-recipe/);
+[DeepSeek used distillation](https://arxiv.org/abs/2501.12948) to create a 7B student that outperformed
+a 32B LLM on competition mathematics
+
+### Techniques
+
+| Technique | Description |
+| --- | --- |
+| **Feature-Based** | Copies hidden representations from intermediate layers to capture deeper knowledge |
+| **Multi-Teacher** | Combines knowledge from multiple teacher-models for robustness |
+| **Output-Based** | Student learns from teacher model's soft probability distributions, soft targets, using KL divergence loss |
+| **Prompt-Based** | Compresses long prompts into shorter, efficient versions |
+| **RL-Based** | Uses reinforcement learning feedback signals to iteratively improve student-model performance |
+| **Synthetic Data Augmentation** | Expands training data using teacher-generated examples for improvement |
+| **Task-Specific** | Fine-tunes student-model for specific downstream applications |
+
+**Related Terms**: [LLM]({{< relref "anatomy" >}}#llm), [training data]({{< relref "anatomy" >}}#training-data),
+[harness]({{< relref "anatomy" >}}#harness), [training data]({{< relref "anatomy">}}#training-data)
+
+**Sources**:
+
+- [ByteByteGo: "How Big Models Teach Small Models to Be Smart"](https://blog.bytebytego.com/p/how-big-models-teach-small-models)
+- [GeeksforGeeks: "What is LLM Distillation?"](https://www.geeksforgeeks.org/nlp/what-is-llm-distillation/)
 
 ---
 
@@ -476,6 +514,7 @@ learns by processing examples and adjusting internal parameters
 
 **Purpose**: quality and composition of training data directly affects LLM capabilities and biases
 
-**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [LLM]({{< relref "anatomy" >}}#llm)
+**Related Terms**: [context window]({{< relref "anatomy" >}}#context-window), [LLM]({{< relref "anatomy" >}}#llm),
+[LLM distillation]({{< relref "anatomy" >}}#llm-distillation)
 
 **Source**: [IBM: "What is training data?"](https://www.ibm.com/think/topics/training-data)
