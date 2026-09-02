@@ -35,25 +35,39 @@ actions to achieve goals; given an objective expressed in natural language, choo
 next action from a set of tools, executes that action against an external environment,
 observes the result, repeats the cycle until it judges the goal met or gives up
 
-**Historical**: while researchers have described systems that _sense->decide->act->adapt_ since
+**Historical**: while researchers have described systems that _sense→decide→act→adapt_ since
 the 1960s, current differences in agent infrastructure include tool use as a first-class feature,
 larger context windows, and observability frameworks; problem domains throughout history consistently
 include commitment instability, evaluation at scale, goal specification/spec gaming, plan-execution drift,
 representation and/or framing; common industry pitfalls include conflating historical novelty with
 technical novelty -
 
-| **Era** | **Influential Events/Works** |
+| **Era** | **Influential Works** |
 | ---- | ---- |
-| **Symbolic, GOFAI: 1956-1985** | AI named at 1956 Dartmouth workshop, influenced dominance of GOFAI, _good old-fashioned AI_ paradigm: _"intelligence"_ uncovered from manipulating logic symbols according to rules, path to agency through increasingly elaborate reasoning systems; [STRIPS](https://en.wikipedia.org/wiki/Stanford_Research_Institute_Problem_Solver) shaped [PDDL](https://en.wikipedia.org/wiki/Planning_Domain_Definition_Language), [SHRDLU](https://en.wikipedia.org/wiki/SHRDLU), rise of expert systems like [MYCIN](https://en.wikipedia.org/wiki/Mycin), [DENDRAL](https://en.wikipedia.org/wiki/Dendral) |
+| **Symbolic, GOFAI: 1956-1985** | 1956 Dartmouth workshop influenced dominance of GOFAI, _good old-fashioned AI_ paradigm: _"intelligence"_ uncovered from manipulating logic symbols according to rules, path to agency through reasoning systems; [STRIPS](https://en.wikipedia.org/wiki/Stanford_Research_Institute_Problem_Solver) shaped [PDDL](https://en.wikipedia.org/wiki/Planning_Domain_Definition_Language), [SHRDLU](https://en.wikipedia.org/wiki/SHRDLU), rise of expert systems such as [MYCIN](https://en.wikipedia.org/wiki/Mycin), [DENDRAL](https://en.wikipedia.org/wiki/Dendral) |
 | **BDI, Multi-Agent: 1986-1999** | _[Belief-Desires-Intention](https://en.wikipedia.org/wiki/Belief%E2%80%93desire%E2%80%93intention_software_model)_ models, [FIPA standards](https://en.wikipedia.org/wiki/Foundation_for_Intelligent_Physical_Agents), Russell and Norvig's _[Artificial Intelligence: A Modern Approach](https://en.wikipedia.org/wiki/Artificial_Intelligence%3A_A_Modern_Approach)_ |
-| **Reinforcement Learning, Quiet Agents: 2000-2019** | Specifying a reward is harder than it sounds - Sutton and Barto's _[Reinforcement Learning](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)_, [Tesauro's TD-Gammon](https://en.wikipedia.org/wiki/TD-Gammon), [DARPA Grand Challenges](https://en.wikipedia.org/wiki/DARPA_Grand_Challenge), [DeepMind's AlphaGo](https://en.wikipedia.org/wiki/AlphaGo) |
-| **LLM Inflection: 2020-2022** | OpenAI's `GPT-3` API and InstructGPT, Wei's ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903), Yao's ["ReAct: Synergizing Reasoning and Acting in Language Models"](https://arxiv.org/abs/2210.03629) |
+| **Reinforcement Learning, Quiet Agents: 2000-2019** | Sutton and Barto's _[Reinforcement Learning](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)_, [Tesauro's TD-Gammon](https://en.wikipedia.org/wiki/TD-Gammon), [DARPA Grand Challenges](https://en.wikipedia.org/wiki/DARPA_Grand_Challenge), [DeepMind's AlphaGo](https://en.wikipedia.org/wiki/AlphaGo) |
+| **LLM Inflection: 2020-2022** | OpenAI's `GPT-3` API and [InstructGPT](https://openai.com/index/instruction-following/), Wei's ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903), Yao's ["ReAct: Synergizing Reasoning and Acting in Language Models"](https://arxiv.org/abs/2210.03629) |
 | **Tool-Use Turn: 2023-2024** | Richards' [AutoGPT](https://en.wikipedia.org/wiki/AutoGPT), Anthropic and OpenAI tool-use APIs, Anthropic's _[computer-use](https://aiwiki.ai/wiki/anthropic_computer_use)_ preview, specialized frameworks trading breadth for coherence: [LangChain](https://en.wikipedia.org/wiki/LangChain), [CrewAI](https://en.wikipedia.org/wiki/CrewAI), [AutoGen](https://aiwiki.ai/wiki/autogen), [smolagents](https://aiwiki.ai/wiki/smolagents); observability stacks from [Braintrust](https://en.wikipedia.org/wiki/Braintrust), [Phoenix](https://aiwiki.ai/wiki/arize_phoenix), [Opik](https://www.comet.com/site/products/opik/) |
 | **Standardization: 2025-present** | Anthropic's [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2026-07-28), OpenAI's [Agent SDK with Responses API](https://aiwiki.ai/wiki/openai_agents_sdk), Google's [Agent Development Kit](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk), [Mistral](https://aiwiki.ai/wiki/mistral_ai), [Cohere](https://aiwiki.ai/wiki/cohere), evaluation tooling matured, [EU AI Act](https://en.wikipedia.org/wiki/Artificial_Intelligence_Act) phased application |
 
 **Purpose**: current iterations convert raw LLM capability into goal-directed, self-directed task execution;
 distinct from chatbots, process automation, and workflow engines through nondeterministic
 autonomy
+
+**Examples**: Caldwell's taxonomy serves as a design resource for agentic implementation;
+_higher isn't better_; common design pitfalls include treating LLM output as ground truth, assuming longer
+thinking equals better answers, confusing breadth of tools with capability, building an agent when
+something simpler works - _the right level for the problem is the lowest one that can solve it_ -
+
+| **Level** | **Category** | **Description** | **Failure Modes → Mitigation** |
+| --- | --- | ---- | ---- |
+| **0** | _Scripted Automation_ | Deterministic program without an LLM: cron job moves files, rules engine prices mortgages, regex parses log lines | Shipping LLM-powered system when a competent script is faster, cheaper, lower variance |
+| **1** | _LLM as Text Function_ | LLM call wrapped behind deterministic interface without tools, loops, state: calling code handles input validation, output parsing, error paths in a _summarize→classify→extract_ process | Prompt engineering, constrained decoding, schema validation to treat LLM output as untrusted string to fix classification errors, prompt-injection from untrusted input and/or malformed inputs |
+| **2** | _Tool-using LLM_ | Tools available in short sequence: _thoughtht→action→observation→thought_ pattern in retrieval-augmentated chat assistants deciding search, coding assistants deciding testing strategy, customer-service bots deciding when to retrieve orders | Strict step budgets, schema-validated tool arguments, observability to resolve infinite loops, wrong tool selection, hallucinated tool arguments |
+| **3** | _Goal-directed Agent_ | Tool-using LLM with explicit planning, task-decomposition mechanism: multi-step research/coding agents as orchestrators; given a goal, produces-maintains plan, executes steps, revises for failure recovery | Explicit plan validation, termination checks, periodic plan-vs-execution reconcilitation to remediate plan-execution drift in which execution quietly deviates, premature termination as agents claim success without meeting the goal, cascading hallucination as early mistake contaminates later reasoning |
+| **4** | _Adaptive Agent with Persistent Memory_ | Carries state across sessions: commonly claimed, but likely `Level 3` with key-value cache attached | Disciplined memory design to catch drift, privacy leakage across users, users deliberately teaching agent falsehoods |
+| **5** | _Autonomous Multi-agent Systems, General-purpose Computer Use_ | Systems composed of multiple `Level 3`+ agents: ability to operate heterogeneous environments - browser, desktop, shell through interfaces rather than narrowly-scoped tools | Safety, observability, evaluation techniques as failure modes at lower levels compound with inter-agent prompt injection, emergent coordination bugs, long-horizon goal drift |
 
 **Coding Agent vs Training Crawler**: coding assistants' web fetch methods don't include
 traditional scraping by default; products like [Claude Code](https://claude.com/product/claude-code)
@@ -63,20 +77,6 @@ task using generic `HTTP` client signatures like `axios/1.8.4`, while training c
 strings that respect `robots.txt`; most agent-detection mechanisms such as user-agent sniffing, the
 `RFC 9421` `Signature-Agent` header, bot-management JS challenges - catch training crawlers and
 answer-engine bots, not coding agents, which remain effectively invisible to them
-
-**Examples**: Caldwell's taxonomy serves as a design resource for agentic implementation;
-_higher isn't better_; common design pitfalls include treating LLM output as ground truth, assuming longer
-thinking equals better answers, confusing breadth of tools with capability, building an agent when
-something simpler works - _the right level for the problem is the lowest one that can solve it_ -
-
-| **Level** | **Category** | **Description** | **Failure/Mitigation** |
-| --- | --- | ---- | ---- |
-| **0** | _Scripted Automation_ | Deterministic program without an LLM: cron job moves files, rules engine prices mortgages, regex parses log lines | Shipping LLM-powered system when a competent script is faster, cheaper, lower variance |
-| **1** | _LLM as Text Function_ | LLM call wrapped behind deterministic interface without tools, loops, state: calling code handles input validation, output parsing, error paths in a _summarize->classify->extract_ process | Prompt engineering, constrained decoding, schema validation to treat LLM output as untrusted string to fix classification errors, prompt-injection from untrusted input and/or malformed inputs |
-| **2** | _Tool-using LLM_ | Tools available in short sequence: _thought->action->observation->thought_ pattern in retrieval-augmentated chat assistants deciding search, coding assistants deciding testing strategy, customer-service bots deciding when to retrieve orders | Strict step budgets, schema-validated tool arguments, observability to resolve infinite loops, wrong tool selection, hallucinated tool arguments |
-| **3** | _Goal-directed Agent_ | Tool-using LLM with explicit planning, task-decomposition mechanism: multi-step research/coding agents as orchestrators; given a goal, produces-maintains plan, executes steps, revises for failure recovery | Explicit plan validation, termination checks, periodic plan-vs-execution reconcilitation to remediate plan-execution drift in which execution quietly deviates, premature termination as agents claim success without meeting the goal, cascading hallucination as early mistake contaminates later reasoning |
-| **4** | _Adaptive Agent with Persistent Memory_ | Carries state across sessions: commonly claimed, but likely `Level 3` with key-value cache attached | Disciplined memory design to catch drift, privacy leakage across users, users deliberately teaching agent falsehoods |
-| **5** | _Autonomous Multi-agent Systems, General-purpose Computer Use_ | Systems composed of multiple `Level 3`+ agents: ability to operate heterogeneous environments - browser, desktop, shell through interfaces rather than narrowly-scoped tools | Safety, observability, evaluation techniques as failure modes at lower levels compound with inter-agent prompt injection, emergent coordination bugs, long-horizon goal drift |
 
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
 [automation]({{< relref "anatomy" >}}#automation), [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning),
