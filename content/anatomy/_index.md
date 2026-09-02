@@ -39,7 +39,7 @@ observes the result, repeats the cycle until it judges the goal met or gives up
 the 1960s, current differences in agent infrastructure include tool use as a first-class feature,
 larger context windows, and observability frameworks; problem domains throughout history consistently
 include commitment instability, evaluation at scale, goal specification/spec gaming, plan-execution drift,
-representation and/or framing; common industry pitfalls include conflating historical novelty with
+representation and/or framing; common industry pitfalls include conflating historical and
 technical novelty -
 
 | **Era** | **Influential Works** |
@@ -49,11 +49,10 @@ technical novelty -
 | **Reinforcement Learning, Quiet Agents: 2000-2019** | Sutton and Barto's _[Reinforcement Learning](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)_, [Tesauro's TD-Gammon](https://en.wikipedia.org/wiki/TD-Gammon), [DARPA Grand Challenges](https://en.wikipedia.org/wiki/DARPA_Grand_Challenge), [DeepMind's AlphaGo](https://en.wikipedia.org/wiki/AlphaGo) |
 | **LLM Inflection: 2020-2022** | OpenAI's `GPT-3` API and [InstructGPT](https://openai.com/index/instruction-following/), Wei's ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903), Yao's ["ReAct: Synergizing Reasoning and Acting in Language Models"](https://arxiv.org/abs/2210.03629) |
 | **Tool-Use Turn: 2023-2024** | Richards' [AutoGPT](https://en.wikipedia.org/wiki/AutoGPT), Anthropic and OpenAI tool-use APIs, Anthropic's _[computer-use](https://aiwiki.ai/wiki/anthropic_computer_use)_ preview, specialized frameworks trading breadth for coherence: [LangChain](https://en.wikipedia.org/wiki/LangChain), [CrewAI](https://en.wikipedia.org/wiki/CrewAI), [AutoGen](https://aiwiki.ai/wiki/autogen), [smolagents](https://aiwiki.ai/wiki/smolagents); observability stacks from [Braintrust](https://en.wikipedia.org/wiki/Braintrust), [Phoenix](https://aiwiki.ai/wiki/arize_phoenix), [Opik](https://www.comet.com/site/products/opik/) |
-| **Standardization: 2025-present** | Anthropic's [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2026-07-28), OpenAI's [Agent SDK with Responses API](https://aiwiki.ai/wiki/openai_agents_sdk), Google's [Agent Development Kit](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk), [Mistral](https://aiwiki.ai/wiki/mistral_ai), [Cohere](https://aiwiki.ai/wiki/cohere), evaluation tooling matured, [EU AI Act](https://en.wikipedia.org/wiki/Artificial_Intelligence_Act) phased application |
+| **Standardization: 2025-present** | Anthropic's [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2026-07-28), OpenAI's [Agent SDK with Responses API](https://aiwiki.ai/wiki/openai_agents_sdk), Google's [Agent Development Kit](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk), [Mistral](https://aiwiki.ai/wiki/mistral_ai), [Cohere](https://aiwiki.ai/wiki/cohere), evaluation tooling maturing, [EU AI Act](https://en.wikipedia.org/wiki/Artificial_Intelligence_Act) phased application |
 
 **Purpose**: current iterations convert raw LLM capability into goal-directed, self-directed task execution;
-distinct from chatbots, process automation, and workflow engines through nondeterministic
-autonomy
+distinct from chatbots, process automation, and workflow engines through nondeterministic autonomy
 
 **Examples**: Caldwell's taxonomy serves as a design resource for agentic implementation;
 _higher isn't better_; common design pitfalls include treating LLM output as ground truth, assuming longer
