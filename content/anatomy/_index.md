@@ -45,7 +45,8 @@ that _sense->decide->act->adapt_ since the 1960s, current agentic systems are di
 that they include infrastructure changes including tool use as a first-class feature, larger
 context windows, and observability frameworks
 
-**Coding Agent vs Training Crawler**: coding assistants like [Claude Code](https://claude.com/product/claude-code),
+**Coding Agent vs Training Crawler**: coding assistants' web fetch methods don't include
+traditional scraping by default; products like [Claude Code](https://claude.com/product/claude-code)
 and [GitHub Copilot](https://github.com/features/copilot) make real time `HTTP` requests during a
 task using generic `HTTP` client signatures like `axios/1.8.4`, while training crawlers like `GPTBot`,
 `ClaudeBot`, `CCBot` scrape the web for LLM training data and self-identify via distinct user-agent
