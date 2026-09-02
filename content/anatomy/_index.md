@@ -31,14 +31,19 @@ often necessary for diagnosing unexpected behavior
 ## agent
 
 **Definition**: autonomous system that perceives its environment, makes decisions, and takes
-actions to achieve goals; typically LLM-based, able to use tools, maintain memory, and
-execute multi-step tasks
+actions to achieve goals; given an objective expressed in natural language, chooses its own
+next action from a set of tools, executes that action against an external environment,
+observes the result, repeats the cycle until it judges the goal met or gives up
 
 **Purpose**: converts raw LLM capability into goal-directed, self-directed task execution;
-distinct from chatbots, process automation, and workflow engines through autonomy
+distinct from chatbots, process automation, and workflow engines through nondeterministic
+autonomy
 
 **Example**: an agent that retrieves a file, edits it, and runs a command to complete a
-request without step-by-step human instruction
+request without step-by-step human instruction; while researchers have described systems
+that _sense->decide->act->adapt_ since the 1960s, current agentic systems are different in
+that they include infrastructure changes including tool use as a first-class feature, larger
+context windows, and observability frameworks
 
 **Coding Agent vs Training Crawler**: coding agents such as Claude Code, Cursor, GitHub Copilot, make
 real time HTTP requests during a task using generic HTTP client signatures like `axios/1.8.4`,
@@ -52,7 +57,10 @@ effectively invisible to them
 [automation]({{< relref "anatomy" >}}#automation), [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning),
 [`robots.txt`]({{< relref "/search" >}}#robotstxt), [self-reflection]({{< relref "/interaction" >}}#self-reflection)
 
-**Source**: [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
+**Sources**:
+
+- Caldwell, Thomas R. _The Agentic AI Bible_. Thomas R. Caldwell, April 2026.
+- [Dachary Carey: "How to Evaluate a Platform-Written Spec"](https://dacharycarey.com/2026/03/28/how-to-evaluate-platform-written-spec/)
 
 ---
 
