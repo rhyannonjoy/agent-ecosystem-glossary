@@ -35,7 +35,23 @@ actions to achieve goals; given an objective expressed in natural language, choo
 next action from a set of tools, executes that action against an external environment,
 observes the result, repeats the cycle until it judges the goal met or gives up
 
-**Purpose**: converts raw LLM capability into goal-directed, self-directed task execution;
+**Historical**: while researchers have described systems that _sense->decide->act->adapt_ since
+the 1960s, current differences in agent infrastructure include tool use as a first-class feature,
+larger context windows, and observability frameworks; problem domains throughout history consistently
+include commitment instability, evaluation at scale, goal specification/spec gaming, plan-execution drift,
+representation and/or framing; common industry pitfalls include conflating historical novelty with
+technical novelty -
+
+| **Era** | **Influential Events/Works** |
+| ---- | ---- |
+| **Symbolic, GOFAI: 1956-1985** | AI named at 1956 Dartmouth workshop, influenced dominance of GOFAI, _good old-fashioned AI_ paradigm: _"intelligence"_ uncovered from manipulating logic symbols according to rules, path to agency through increasingly elaborate reasoning systems; [STRIPS](https://en.wikipedia.org/wiki/Stanford_Research_Institute_Problem_Solver) shaped [PDDL](https://en.wikipedia.org/wiki/Planning_Domain_Definition_Language), [SHRDLU](https://en.wikipedia.org/wiki/SHRDLU), rise of expert systems like [MYCIN](https://en.wikipedia.org/wiki/Mycin), [DENDRAL](https://en.wikipedia.org/wiki/Dendral) |
+| **BDI, Multi-Agent: 1986-1999** | _[Belief-Desires-Intention](https://en.wikipedia.org/wiki/Belief%E2%80%93desire%E2%80%93intention_software_model)_ models, [FIPA standards](https://en.wikipedia.org/wiki/Foundation_for_Intelligent_Physical_Agents), Russell and Norvig's _[Artificial Intelligence: A Modern Approach](https://en.wikipedia.org/wiki/Artificial_Intelligence%3A_A_Modern_Approach)_ |
+| **Reinforcement Learning, Quiet Agents: 2000-2019** | Specifying a reward is harder than it sounds - Sutton and Barto's _[Reinforcement Learning](https://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf)_, [Tesauro's TD-Gammon](https://en.wikipedia.org/wiki/TD-Gammon), [DARPA Grand Challenges](https://en.wikipedia.org/wiki/DARPA_Grand_Challenge), [DeepMind's AlphaGo](https://en.wikipedia.org/wiki/AlphaGo) |
+| **LLM Inflection: 2020-2022** | OpenAI's `GPT-3` API and InstructGPT, Wei's ["Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903), Yao's ["ReAct: Synergizing Reasoning and Acting in Language Models"](https://arxiv.org/abs/2210.03629) |
+| **Tool-Use Turn: 2023-2024** | Richards' [AutoGPT](https://en.wikipedia.org/wiki/AutoGPT), Anthropic and OpenAI tool-use APIs, Anthropic's _[computer-use](https://aiwiki.ai/wiki/anthropic_computer_use)_ preview, specialized frameworks trading breadth for coherence: [LangChain](https://en.wikipedia.org/wiki/LangChain), [CrewAI](https://en.wikipedia.org/wiki/CrewAI), [AutoGen](https://aiwiki.ai/wiki/autogen), [smolagents](https://aiwiki.ai/wiki/smolagents); observability stacks from [Braintrust](https://en.wikipedia.org/wiki/Braintrust), [Phoenix](https://aiwiki.ai/wiki/arize_phoenix), [Opik](https://www.comet.com/site/products/opik/) |
+| **Standardization: 2025-present** | Anthropic's [Model Context Protocol specification](https://modelcontextprotocol.io/specification/2026-07-28), OpenAI's [Agent SDK with Responses API](https://aiwiki.ai/wiki/openai_agents_sdk), Google's [Agent Development Kit](https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk), [Mistral](https://aiwiki.ai/wiki/mistral_ai), [Cohere](https://aiwiki.ai/wiki/cohere), evaluation tooling matured, [EU AI Act](https://en.wikipedia.org/wiki/Artificial_Intelligence_Act) phased application |
+
+**Purpose**: current iterations convert raw LLM capability into goal-directed, self-directed task execution;
 distinct from chatbots, process automation, and workflow engines through nondeterministic
 autonomy
 
@@ -48,12 +64,10 @@ strings that respect `robots.txt`; most agent-detection mechanisms such as user-
 `RFC 9421` `Signature-Agent` header, bot-management JS challenges - catch training crawlers and
 answer-engine bots, not coding agents, which remain effectively invisible to them
 
-**Example**: while researchers have described systems that _sense->decide->act->adapt_ since the 1960s,
-current differences in agent infrastructure include tool use as a first-class feature, larger context windows,
-and observability frameworks; Caldwell's five-level taxonomy serves as a design resource for agentic implementation -
-_higher isn't better_ - common design pitfalls include treating LLM output as ground truth, assuming longer
+**Examples**: Caldwell's taxonomy serves as a design resource for agentic implementation;
+_higher isn't better_; common design pitfalls include treating LLM output as ground truth, assuming longer
 thinking equals better answers, confusing breadth of tools with capability, building an agent when
-something simpler works; the right level for the problem is the lowest one that can solve it -
+something simpler works - _the right level for the problem is the lowest one that can solve it_ -
 
 | **Level** | **Category** | **Description** | **Failure/Mitigation** |
 | --- | --- | ---- | ---- |
