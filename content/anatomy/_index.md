@@ -50,8 +50,10 @@ answer-engine bots, not coding agents, which remain effectively invisible to the
 
 **Example**: while researchers have described systems that _sense->decide->act->adapt_ since the 1960s,
 current differences in agent infrastructure include tool use as a first-class feature, larger context windows,
-and observability frameworks; Caldwell's five-level taxonomy serves as a design resource for agentic implementation,
-_higher isn't better_ -
+and observability frameworks; Caldwell's five-level taxonomy serves as a design resource for agentic implementation -
+_higher isn't better_ - common design pitfalls include treating LLM output as ground truth, assuming longer
+thinking equals better answers, confusing breadth of tools with capability, building an agent when
+something simpler works; the right level for the problem is the lowest one that can solve it -
 
 | **Level** | **Category** | **Description** | **Failure/Mitigation** |
 | --- | --- | ---- | ---- |
