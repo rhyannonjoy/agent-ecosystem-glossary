@@ -39,12 +39,6 @@ observes the result, repeats the cycle until it judges the goal met or gives up
 distinct from chatbots, process automation, and workflow engines through nondeterministic
 autonomy
 
-**Example**: an agent that retrieves a file, edits it, and runs a command to complete a
-request without step-by-step human instruction; while researchers have described systems
-that _sense->decide->act->adapt_ since the 1960s, current agentic systems are different in
-that they include infrastructure changes including tool use as a first-class feature, larger
-context windows, and observability frameworks
-
 **Coding Agent vs Training Crawler**: coding assistants' web fetch methods don't include
 traditional scraping by default; products like [Claude Code](https://claude.com/product/claude-code)
 and [GitHub Copilot](https://github.com/features/copilot) make real time `HTTP` requests during a
@@ -53,6 +47,20 @@ task using generic `HTTP` client signatures like `axios/1.8.4`, while training c
 strings that respect `robots.txt`; most agent-detection mechanisms such as user-agent sniffing, the
 `RFC 9421` `Signature-Agent` header, bot-management JS challenges - catch training crawlers and
 answer-engine bots, not coding agents, which remain effectively invisible to them
+
+**Example**: while researchers have described systems that _sense->decide->act->adapt_ since the 1960s,
+current differences in agent infrastructure include tool use as a first-class feature, larger context windows,
+and observability frameworks; Caldwell's five-level taxonomy serves as a design resource for agentic implementation,
+_higher isn't better_ -
+
+| **Level** | **Category** | **Description** | **Failure/Mitigation** |
+| --- | --- | ---- | ---- |
+| **0** | _Scripted Automation_ | Deterministic program without an LLM: cron job moves files, rules engine prices mortgages, regex parses log lines | Shipping LLM-powered system when a competent script is faster, cheaper, lower variance |
+| **1** | _LLM as Text Function_ | LLM call wrapped behind deterministic interface without tools, loops, state: calling code handles input validation, output parsing, error paths in a _summarize->classify->extract_ process | Prompt engineering, constrained decoding, schema validation to treat LLM output as untrusted string to fix classification errors, prompt-injection from untrusted input and/or malformed inputs |
+| **2** | _Tool-using LLM_ | Tools available in short sequence: _thought->action->observation->thought_ pattern in retrieval-augmentated chat assistants deciding search, coding assistants deciding testing strategy, customer-service bots deciding when to retrieve orders | Strict step budgets, schema-validated tool arguments, observability to resolve infinite loops, wrong tool selection, hallucinated tool arguments |
+| **3** | _Goal-directed Agent_ | Tool-using LLM with explicit planning, task-decomposition mechanism: multi-step research/coding agents as orchestrators; given a goal, produces-maintains plan, executes steps, revises for failure recovery | Explicit plan validation, termination checks, periodic plan-vs-execution reconcilitation to remediate plan-execution drift in which execution quietly deviates, premature termination as agents claim success without meeting the goal, cascading hallucination as early mistake contaminates later reasoning |
+| **4** | _Adaptive Agent with Persistent Memory_ | Carries state across sessions: commonly claimed, but likely `Level 3` with key-value cache attached | Disciplined memory design to catch drift, privacy leakage across users, users deliberately teaching agent falsehoods |
+| **5** | _Autonomous Multi-agent Systems, General-purpose Computer Use_ | Systems composed of multiple `Level 3`+ agents: ability to operate heterogeneous environments - browser, desktop, shell through interfaces rather than narrowly-scoped tools | Safety, observability, evaluation techniques as failure modes at lower levels compound with inter-agent prompt injection, emergent coordination bugs, long-horizon goal drift |
 
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
 [automation]({{< relref "anatomy" >}}#automation), [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning),
