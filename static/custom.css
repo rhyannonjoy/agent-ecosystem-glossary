@@ -99,6 +99,8 @@ body,
 .book-search input {
   background-color: var(--cream-lighter) !important;
   border: 1px solid var(--border-color) !important;
+  border-radius: 999px !important;
+  box-shadow: 0 2px 8px var(--shadow-color);
   color: var(--dark-text) !important;
 }
 
@@ -134,6 +136,29 @@ body,
   --pagefind-ui-image-border-radius: 4px;
   --pagefind-ui-image-box-ratio: 3 / 2;
   --pagefind-ui-font: 'Open Sauce One', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Search input: pill shape to match .theme-toggle (--pagefind-ui-border-radius
+   is shared with the clear button/tags/checkboxes, so it's overridden here
+   rather than raised globally) */
+#pagefind-search-container .pagefind-ui__search-input {
+  border-radius: 999px !important;
+  box-shadow: 0 2px 8px var(--shadow-color) !important;
+}
+
+/* Clear button: at its default size/inset (near-flush to the input's right
+   edge), its corners fall outside the input's pill curve regardless of its
+   own border-radius. Shrink and re-center it so it sits inside the curve,
+   then round it to match.
+   Note: it's positioned absolute within .pagefind-ui__form, which also
+   contains the results drawer below the input — so top must stay a fixed
+   px offset (matching the input's own top edge), never a % (that centers
+   against the whole form, including results, not just the input row). */
+#pagefind-search-container .pagefind-ui__search-clear {
+  top: calc(10px * var(--pagefind-ui-scale)) !important;
+  right: calc(8px * var(--pagefind-ui-scale)) !important;
+  height: calc(44px * var(--pagefind-ui-scale)) !important;
+  border-radius: 999px !important;
 }
 
 .pagefind-ui__results-count {
