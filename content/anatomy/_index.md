@@ -45,13 +45,13 @@ that _sense->decide->act->adapt_ since the 1960s, current agentic systems are di
 that they include infrastructure changes including tool use as a first-class feature, larger
 context windows, and observability frameworks
 
-**Coding Agent vs Training Crawler**: coding agents such as Claude Code, Cursor, GitHub Copilot, make
-real time HTTP requests during a task using generic HTTP client signatures like `axios/1.8.4`,
-while training crawlers like `GPTBot`, `ClaudeBot`, `CCBot` scrape the web for LLM training data
-and self-identify via distinct user-agent strings that respect `robots.txt`; most agent-detection
-mechanisms such as user-agent sniffing, the `RFC 9421` `Signature-Agent` header, bot-management JS
-challenges - catch training crawlers and answer-engine bots, not coding agents, which remain
-effectively invisible to them
+**Coding Agent vs Training Crawler**: coding assistants like [Claude Code](https://claude.com/product/claude-code),
+and [GitHub Copilot](https://github.com/features/copilot) make real time `HTTP` requests during a
+task using generic `HTTP` client signatures like `axios/1.8.4`, while training crawlers like `GPTBot`,
+`ClaudeBot`, `CCBot` scrape the web for LLM training data and self-identify via distinct user-agent
+strings that respect `robots.txt`; most agent-detection mechanisms such as user-agent sniffing, the
+`RFC 9421` `Signature-Agent` header, bot-management JS challenges - catch training crawlers and
+answer-engine bots, not coding agents, which remain effectively invisible to them
 
 **Related Terms**: [abstraction]({{< relref "anatomy" >}}#abstraction), [Agent-Friendly Documentation Spec]({{< relref "/search" >}}#agent-friendly-documentation-spec),
 [automation]({{< relref "anatomy" >}}#automation), [memory]({{< relref "anatomy" >}}#memory), [planning]({{< relref "/interaction" >}}#planning),
