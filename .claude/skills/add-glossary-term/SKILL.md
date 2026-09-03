@@ -8,7 +8,7 @@ description: >-
 
 # Add a Glossary Term
 
-Every term lives in two places: a **full entry** on a category page, and a
+Every term lives in two places - a **full entry** on a category page, and a
 **scannable stub** on `content/quick-reference.md` that links to it.
 Both are required — a term isn't "added" until both exist and the link
 resolves.
@@ -17,15 +17,15 @@ resolves.
 
 | Category | Description |
 |---|---|
-| `content/anatomy/_index.md` | What agents *are*: structural components and training that define abilities/limitations (`agent`, `harness`, `LLM`, `temperature`) |
-| `content/interaction/_index.md` | What agents *do*: behavior, commands, communication, and the mechanisms that govern responses (`hook`, `MCP server`, `planning`, `system prompt`) |
+| `content/anatomy/_index.md` | What agents _are_ - structural components, training that define abilities/limitations (`agent`, `harness`, `LLM`, `temperature`) |
+| `content/interaction/_index.md` | What agents _do_ - behavior, commands, communication, mechanisms that govern responses (`hook`, `MCP server`, `planning`, `system prompt`) |
 | `content/evaluation/_index.md` | Evaluation methodology (`evaluation`, `LLM-as-a-Judge`, `robustness`) |
 | `content/evaluation/benchmarks.md` | Named benchmark datasets (`MMLU`, `HumanEval`) |
 | `content/evaluation/metrics.md` | Output metrics (`BLEU`, `CSAT`, `pass@k`) |
 | `content/research/_index.md` | Research methodology (`experimental design`, `taxonomy`) |
 | `content/research/qualitative.md` | Non-numerical research methods (`affinity mapping`, `codebook`) |
 | `content/research/quantitative.md` | Statistical methods — including stats formulas used *on* qualitative data, e.g. Cohen's kappa (`P value`, `confidence interval`) |
-| `content/search/_index.md` | How agents find content: access control, retrieval mechanics, visibility (`GEO`, `robots.txt`, `retrieval pool`) |
+| `content/search/_index.md` | How agents find content - access control, retrieval mechanics, visibility (`GEO`, `robots.txt`, `retrieval pool`) |
 
 `content/tools/_index.md` is out of scope for this skill — named products/platforms
 (e.g. `Playwright MCP`, `LangChain`) use the **add-tool** skill instead, which
@@ -58,7 +58,7 @@ except proper nouns/acronyms, no trailing period
 ```
 
 - Do **not** add a `**Source**` or `**Sources**` field unless explicitly asked.
-  When a source field is present: use `**Source**:` (singular) for a single source
+  When a source field is present, use `**Source**:` (singular) for a single source
   with the link on the same line as the label (no newline or whitespace before the link);
   use `**Sources**:` (plural) for multiple sources, each on its own line as a list item.
 - Add 2-4 Related Terms, preferring terms that already exist as full entries.
