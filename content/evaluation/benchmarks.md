@@ -259,14 +259,18 @@ real-world software maintenance ability
 ## tau-bench
 
 **Definition**: also known as `τ`-bench and/or _Tool-Agent-User- interaction Benchmark_;
-benchmark measuring tool-use reliability in conversational customer-service settings; agents must correctly invoke tools while holding a natural back-and-forth dialogue with a user
+benchmark measuring tool-use reliability in conversational customer-service settings; agents must correctly
+invoke tools while holding a natural back-and-forth dialogue with a user
 
-**Purpose**: evaluates the combination of tool calling and dialogue handling rather than isolated function calls, reflecting how agents handle cases that mix conversation with API actions
+**Purpose**: evaluates the combination of tool calling and dialogue handling rather than isolated function calls,
+identifying how agents handle cases that mix conversation with API actions
 
 **Example**: public task types include conversation with interruptions, accents, and
 background noise, retrieving-reasoning over a knowledge base
 
-**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1), [function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation), [task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
+**Related Terms**: [benchmark]({{< relref "/evaluation" >}}#benchmark), [evaluation]({{< relref "/evaluation" >}}#evaluation-1),
+[function calling evaluation]({{< relref "/evaluation" >}}#function-calling-evaluation),
+[task completion rate]({{< relref "/evaluation/metrics" >}}#task-completion-rate)
 
 **Sources**:
 

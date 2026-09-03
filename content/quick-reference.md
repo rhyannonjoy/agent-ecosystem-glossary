@@ -1273,7 +1273,7 @@ translation and a human-produced translation
 ### stylized AI experiment
 
 - test type conducted in a controlled environment, since the AI typically doesn't exist outside the study
-- AI tailored to a research question: rule-based algorithms, historical data replication, or reinforcement learning
+- AI tailored to a research question withs rule-based algorithms, historical data replication, or reinforcement learning
 
 **Glossary Term Entry Location**: [Research]({{< relref "/research" >}}#stylized-ai-experiment)
 
