@@ -71,8 +71,8 @@ If term is closely related to existing entry:
 
 | If the term describes... | Place in... |
 |---|---|
-| What agents _are_: components, training, structure | `content/anatomy/_index.md` |
-| What agents _do_: behavior, commands, communication | `content/interaction/_index.md` |
+| What agents _are_ as in components, training, structure | `content/anatomy/_index.md` |
+| What agents _do_ - behavior, commands, communication | `content/interaction/_index.md` |
 | How to measure agent output | `content/evaluation/_index.md` |
 | Specific benchmark datasets | `content/evaluation/benchmarks.md` |
 | Output metrics | `content/evaluation/metrics.md` |
@@ -121,7 +121,7 @@ Each term must support:
 
 ### Source Handling
 - Do **not** add Source field unless explicitly asked
-- If adding: use singular for one source, plural for multiple
+- If adding, use singular for one source, plural for multiple
 - Place link on same line as label, no newline before link
 
 ## Output Format
