@@ -1,0 +1,44 @@
+# Agent Ecosystem Glossary
+
+A comprehensive glossary of terms related to AI agents, their architecture, evaluation, and research. This glossary provides scannable definitions for key concepts in the agent ecosystem.
+
+## Project Overview
+
+This is a Hugo-based static site that serves as a reference for terminology in the AI agent ecosystem. It covers agent anatomy, interaction patterns, evaluation methodologies, and research findings.
+
+## Key Sections
+
+### Anatomy
+Core components and structure of AI agents:
+- Agent: An AI system that can plan, use tools, and execute tasks
+- Harness: Infrastructure that wraps an LLM and provides tool access
+- Context Window: The amount of text an LLM can process at once
+- Memory: Systems that allow agents to retain information across sessions
+
+### Interaction
+How agents communicate and execute tasks:
+- Tool Use: How agents interact with external systems
+- Prompt Engineering: Crafting instructions for LLMs
+- Observability: Monitoring and debugging agent behavior
+
+### Evaluation
+Metrics and benchmarks for assessing agent performance:
+- Functional Correctness: Whether an agent completes tasks correctly
+- Efficiency: Resource usage and speed of agent operations
+- Robustness: How well agents handle edge cases and failures
+
+### Research
+Methodologies and findings in agent research:
+- Qualitative: Non-numerical analysis of agent behavior
+- Quantitative: Statistical analysis of agent performance
+- Benchmarks: Standardized datasets for comparing LLMs or agents
+
+## How to Use This Glossary
+
+1. **Scanning**: Use the quick reference page for rapid term lookup
+2. **Deep Dive**: Navigate to category pages for detailed definitions
+3. **Cross-References**: Follow links between related terms
+
+## License
+
+This glossary is maintained by Rhyannon Rodriguez
