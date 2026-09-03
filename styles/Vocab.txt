@@ -1,0 +1,9 @@
+[/* styles/Vocab.txt]
+# Custom vocabulary for Agent Ecosystem Glossary
+# Excludes "harness" from Banned word list
+
+[replace]
+harness = harness
+harnesses = harnesses
+harnessed = harnessed
+harnessing = harnessing

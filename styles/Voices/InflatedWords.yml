@@ -1,0 +1,35 @@
+# Derived from no-ai-slop (https://github.com/petergyang/no-ai-slop),
+# Copyright (c) 2026 Peter Yang, licensed under the MIT License. See NOTICE.
+#
+# Custom version for Agent Ecosystem Glossary - excludes domain-specific terms
+extends: substitution
+message: "Inflated word: use '%s' instead of '%s'."
+level: error
+ignorecase: true
+action:
+  name: replace
+swap:
+  utilize: use
+  utilizes: uses
+  utilized: used
+  utilizing: using
+  leverage: use
+  leverages: uses
+  leveraged: used
+  leveraging: using
+  # Removed: facilitate/facilitates/facilitated/facilitating - domain term
+  streamline: simplify
+  streamlines: simplifies
+  streamlined: simplified
+  streamlining: simplifying
+  elevate: raise
+  elevates: raises
+  elevated: raised
+  elevating: raising
+  supercharge: speed up
+  supercharges: speeds up
+  supercharged: sped up
+  supercharging: speeding up
+  # Removed: robust - domain term
+  meticulous: careful
+  intricate: complex
